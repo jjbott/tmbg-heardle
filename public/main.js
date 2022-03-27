@@ -708,7 +708,7 @@ var app = (function () {
             Q(a.$$.fragment),
             (l = x()),
             (u = w("h1")),
-            (u.textContent = "LOONA Heardle"),
+            (u.textContent = "TWICE Heardle"),
             (c = x()),
             (d = w("div")),
             Q(h.$$.fragment),
@@ -3634,7 +3634,7 @@ var app = (function () {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for TWICE songs.</p> \n\n<p class="mb-3">Each TWICE Heardle is randomly chosen from TWICE\'s discography. All copyright goes to JYP Entertainment.</p> \n\n<p class="mb-3">Songs included are OT9, sub-units, promotional songs, and OSTs. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. TWICE version made by <a href ="https://twitter.com/twicefiles">twicefiles</a>.</p>'),
+            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for TWICE songs.</p> \n\n<p class="mb-3">Each TWICE Heardle is randomly chosen from TWICE\'s discography. All copyright goes to JYP Entertainment.</p> \n\n<p class="mb-3">Songs included are OT9, sub-units, promotional songs, and OSTs. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. Special thanks to <a href="https://twitter.com/TokkiNeukdae">TokkiNeukdae</a>. TWICE version made by <a href="https://twitter.com/twicefiles">twicefiles</a>, <a href="https://twitter.com/minaszns">minaszns</a>.</p>'),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -3903,13 +3903,13 @@ var app = (function () {
       startDate: "2022-03-27",
     },
     Jt = [
-      "Preparing to leave LOONA Island...", // FAILED
-      "Haseul would be proud.", // First try
-      "You're pretty good!?",
+      "You just got deported from TWICELAND.", // FAILED
+      "Jeongyeon would be proud.", // First try
+      "You're pretty good!",
       "Hey, that was pretty good.",
       "Not bad.",
-      "Could've been worse... *Gowon voice* but I still love you.",
-      "Took you 6 tries... So What?", // Sixth try
+      "Could've been worse...",
+      "You took 6 tries? 1 to 10 more like 1 to 6🤣", // Sixth try
     ];
   function Kt(t) {
     let n, r;
@@ -4029,7 +4029,7 @@ var app = (function () {
             (f = w("div")),
             (m = w("div")),
             (k = w("div")),
-            (k.textContent = "Next LOONA song in:"),
+            (k.textContent = "Next TWICE song in:"),
             (b = x()),
             Q(S.$$.fragment),
             (D = x()),
@@ -4545,7 +4545,7 @@ var app = (function () {
           (t = w("div")),
             (n = w("div")),
             (n.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct LOONA song in the list.</p></div>'),
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct TWICE song in the list.</p></div>'),
             (r = x()),
             (s = w("div")),
             (s.innerHTML =
