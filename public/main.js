@@ -597,8 +597,7 @@ var app = (function () {
       c() {
         (t = k("svg")),
           (n = k("path")),
-          M(
-            n,
+          M(n,
             "d",
             "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
           ),
@@ -6331,7 +6330,6 @@ var app = (function () {
             t = (s = hn(e[i]).split("-")).length,
               n = (n = hn(e[i + 1])) ? n.split("-") : null;
             t > 0;
-
           ) {
             if ((r = mn(s.slice(0, t).join("-")))) return r;
             if (n && n.length >= t && dn(s, n) >= t - 1) break;
