@@ -3,22 +3,22 @@
   "short_name": "🍭 TWICE Heardle",
   "icons": [
     {
-      "src": "https://cdn.glitch.global/e94eda09-e161-4770-92ba-d1d3990a0c9f/preview_192x192.png?v=1648321437062",
+      "src": "https://cdn.glitch.global/54bc8408-7887-4265-9582-06b17f8cd4af/TWICELOGO1.png?v=1648357333465",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://cdn.glitch.global/e94eda09-e161-4770-92ba-d1d3990a0c9f/preview.png?v=1648320949245",
+      "src": "https://cdn.glitch.global/54bc8408-7887-4265-9582-06b17f8cd4af/TWICELOGO.png?v=1648357333968",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "https://cdn.glitch.global/e94eda09-e161-4770-92ba-d1d3990a0c9f/preview_32x32.png?v=1648321437063",
+      "src": "https://cdn.glitch.global/54bc8408-7887-4265-9582-06b17f8cd4af/TWICELOGO2.png?v=1648357333464",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "https://cdn.glitch.global/e94eda09-e161-4770-92ba-d1d3990a0c9f/preview_16x16.png?v=1648321437063",
+      "src": "https://cdn.glitch.global/54bc8408-7887-4265-9582-06b17f8cd4af/TWICELOGO3.png?v=1648357333465",
       "sizes": "16x16",
       "type": "image/png"
     }

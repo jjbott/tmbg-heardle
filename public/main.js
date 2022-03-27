@@ -8584,20 +8584,20 @@ var app = (function () {
     })();
   });
   const Cn = ue([
-      "A-FLOW with Choerry - YOU",
-      "LOONA - PTT (Paint The Town)",
-      "LOONA - PTT (Paint The Town) (Japanese ver.)",
-      "LOONA - Hula Hoop",
-      "LOONA - Hula Hoop (City Pop Ver.)",
-      "LOONA - A Different Night",
-      "LOONA - &",
+      "TWICE - Like Ooh-Ahh",
+      "TWICE - Cheer Up",
+      "TWICE - TT",
+      "TWICE - Knock Knock",
+      "TWICE - Signal",
+      "TWICE - Likey",
+      "TWICE - Heartshaker",
     ]),
     On = {
       subscribe: ue(
         [
                     {
-            url: "https://soundcloud.com/baunii/loona-haseul-heejin-hyunjin-the-carol",
-            answer: "Heejin, Hyunjin, Haseul - The Carol",
+            url: "https://soundcloud.com/twice-57013/like-ooh-ahh",
+            answer: "TWICE - Like Ooh-Ahh",
           },
           {
             url: "https://soundcloud.com/baunii/love-live",
