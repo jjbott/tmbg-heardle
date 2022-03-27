@@ -8603,12 +8603,16 @@ var app = (function () {
             answer: "TWICE - Good at Love",
           },
           {
-            url: "https://soundcloud.com/twice-57013/luv-me",
-            answer: "TWICE - LUV ME",
+            url: "https://soundcloud.com/twice-57013/look-at-me",
+            answer: "TWICE - Look At Me",
           },
           {
             url: "https://soundcloud.com/twice-57013/queen",
             answer: "TWICE - Queen",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/luv-me",
+            answer: "TWICE - LUV ME",
           },
           {
             url: "https://soundcloud.com/ana-julia-grosman/twice-im-gonna-be-a-star-mp3",
@@ -8617,10 +8621,6 @@ var app = (function () {
           {
             url: "https://soundcloud.com/twice-57013/candy",
             answer: "TWICE - Candy",
-          },
-          {
-            url: "https://soundcloud.com/twice-57013/look-at-me",
-            answer: "TWICE - Look At Me",
           },
           {
             url: "https://soundcloud.com/twice-57013/be-as-one",
