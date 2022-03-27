@@ -3631,7 +3631,7 @@ var app = (function () {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for WJSN songs.</p> \n\n<p class="mb-3">Each WJSN Heardle is randomly chosen from WJSN\'s discography.</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. TWICE version made by <a href ="https://twitter.com/twicefiles">twicefiles</a>, <a href ="https://twitter.com/minaszns>minaszns</a>.</p>'),
+            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for WJSN songs.</p> \n\n<p class="mb-3">Each WJSN Heardle is randomly chosen from WJSN\'s discography.</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. WJSN version made by <a href ="https://github.com/haseul/wjsn-heardle">mirai</a>.</p>'),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -3819,7 +3819,7 @@ var app = (function () {
       P(async function () {
         (async function () {
           const e = await fetch(
-            "https://twice-heardle.glitch.me/supporters.json"
+            "https://wjsn-heardle.glitch.me/supporters.json"
           );
           return await e.json();
         })().then((e) => {
@@ -3847,7 +3847,7 @@ var app = (function () {
             (r = x()),
             (s = w("p")),
             (s.innerHTML =
-              '<p class="mb-3">If you\'ve enjoyed playing TWICE Heardle, then please consider supporting the <a href="https://ko-fi.com/heardle">real Heardle devs</a>.</p>'),
+              '<p class="mb-3">If you\'ve enjoyed playing WJSN Heardle, then please consider supporting the <a href="https://ko-fi.com/heardle">real Heardle devs</a>.</p>'),
             (i = x()),
             (o = w("div")),
             Q(a.$$.fragment),
@@ -3900,13 +3900,13 @@ var app = (function () {
       startDate: "2022-03-27",
     },
     Jt = [
-      "You just got deported from TWICELAND.", // FAILED
-      "Jeongyeon would be proud.", // First try
-      "You're pretty good!",
-      "Hey, that was pretty good.",
-      "Not bad.",
-      "Could've been worse...",
-      "You took 6 tries? 1 to 10 more like 1 to 6🤣", // Sixth try
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
     ];
   function Kt(t) {
     let n, r;
@@ -4299,7 +4299,7 @@ var app = (function () {
     let n;
     return {
       c() {
-        n = _("You didn't get today's WJSN Heardle. Better luck tomorrow!");
+        n = _("You didn't get today's TWICE Heardle. Better luck tomorrow!");
       },
       m(e, t) {
         g(e, n, t);
@@ -4439,7 +4439,7 @@ var app = (function () {
         u,
         c,
         () => {
-          let e = "WJSN Heardle #" + (s.id + 1),
+          let e = "TWICE Heardle #" + (s.id + 1),
             t = "";
           a
             ? r.length < i.maxAttempts / 3
@@ -4456,7 +4456,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\nhttps://wjsn-heardle.glitch.me/";
+          let o = e + "\n\n" + t + "\n\nhttps://twice-heardle.glitch.me/";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -4542,7 +4542,7 @@ var app = (function () {
           (t = w("div")),
             (n = w("div")),
             (n.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct WJSN song in the list.</p></div>'),
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct TWICE song in the list.</p></div>'),
             (r = x()),
             (s = w("div")),
             (s.innerHTML =
@@ -8581,110 +8581,581 @@ var app = (function () {
     })();
   });
   const Cn = ue([
-    "Take My Breath - WJSN",
-    "Tick-Tock - WJSN",
-    "Catch Me - WJSN",
-    "Memories - WJSN",
-    "12 O'clock - WJSN",
-    "Masquerade - WJSN",
-    "Hurry Up - WJSN",
-    "Robot - WJSN",
-    "Our Garden - WJSN",
-    "HOLA - WJSN",
-    "BeBe - WJSN",
-    "Would You Kiss Me? - WJSN",
+      "TWICE - Like Ooh-Ahh",
+      "TWICE - Cheer Up",
+      "TWICE - TT",
+      "TWICE - Knock Knock",
+      "TWICE - Signal",
+      "TWICE - Likey",
+      "TWICE - Heartshaker",
   ]),
     On = {
       subscribe: ue(
         [
           {
-            url: "https://soundcloud.com/petcharaporn-kampee/wjsn-hug-u",
-            answer: "Hug U - WJSN",
+            url: "https://soundcloud.com/twice-57013/hello",
+            answer: "NAYEON, MOMO, CHAEYOUNG - HELLO",
           },
           {
-            url: "https://soundcloud.com/l2share150/wjsn-chocome-super-yuppers",
-            answer: "Super Yuppers! - WJSN CHOCOME",
+            url: "https://soundcloud.com/twice-57013/good-at-love",
+            answer: "TWICE - Good at Love",
           },
           {
-            url: "https://soundcloud.com/tina-tiara-350593675/wjsn-save-me-save-you-mp3",
-            answer: "Save Me, Save You - WJSN",
+            url: "https://soundcloud.com/twice-57013/luv-me",
+            answer: "TWICE - LUV ME",
           },
           {
-            url: "https://soundcloud.com/l2share94/wjsn-as-you-wish",
-            answer: "As You Wish - WJSN",
+            url: "https://soundcloud.com/twice-57013/queen",
+            answer: "TWICE - Queen",
           },
           {
-            url: "https://soundcloud.com/l2share77/wjsn-boogie-up",
-            answer: "Boogie Up - WJSN",
+            url: "https://soundcloud.com/ana-julia-grosman/twice-im-gonna-be-a-star-mp3",
+            answer: "TWICE - I’m Gonna Be A Star",
           },
           {
-            url: "https://soundcloud.com/destinee-nsombe/wjsn-cosmic-girls-i-wish",
-            answer: "I Wish - WJSN",
+            url: "https://soundcloud.com/twice-57013/candy",
+            answer: "TWICE - Candy",
           },
           {
-            url: "https://soundcloud.com/destinee-nsombe/wjsn-cosmic-girls-secret",
-            answer: "Secret - WJSN",
+            url: "https://soundcloud.com/twice-57013/look-at-me",
+            answer: "TWICE - Look At Me",
           },
           {
-            url: "https://soundcloud.com/l2share78/wjsn-la-la-love",
-            answer: "La La Love - WJSN",
+            url: "https://soundcloud.com/twice-57013/be-as-one",
+            answer: "TWICE - Be As One",
           },
           {
-            url: "https://soundcloud.com/yoonseok-is-real/wjsn-chocome-hmph",
-            answer: "Hmph! - WJSN CHOCOME",
+            url: "https://soundcloud.com/twice-57013/yes-or-yes",
+            answer: "TWICE - Yes or Yes",
           },
           {
-            url: "https://soundcloud.com/l2share131/wjsn-the-black-kiss-your-lips",
-            answer: "Kiss Your Lips - WJSN THE BLACK",
+            url: "https://soundcloud.com/twice-57013/precious-love",
+            answer: "TWICE - Precious Love",
           },
           {
-            url: "https://soundcloud.com/user-735126937-247708545/wjsn-last-dance",
-            answer: "Last Dance - WJSN"
+            url: "https://soundcloud.com/twice-57013/in-the-summer",
+            answer: "TWICE - In the summer",
           },
           {
-            url: "https://soundcloud.com/tina-tiara-350593675/wjsn-i-yah-ai-mp3",
-            answer: "I-Yah - WJSN",
+            url: "https://soundcloud.com/twice-57013/depend-on-you",
+            answer: "TWICE - Depend On You",
           },
           {
-            url: "https://soundcloud.com/kpop-gurl-952407856/dreams-come-true-wjsn-cosmic",
-            answer: "Dream Comes True - WJSN",
+            url: "https://soundcloud.com/twice-57013/do-it-again",
+            answer: "TWICE - Do It Again",
           },
           {
-            url: "https://soundcloud.com/chuurrascos/wjsn-pantomime-uploaded-by-chuurrascos",
-            answer: "Pantomine - WJSN",
+            url: "https://soundcloud.com/twice-57013/cruel",
+            answer: "TWICE - Cruel",
           },
           {
-            url: "https://soundcloud.com/jos-gregorio-su-rez-n-ez/wjsn-luckitty-cat",
-            answer: "Luckitty Cat - WJSN",
+            url: "https://soundcloud.com/twice-57013/firework",
+            answer: "TWICE - Firework",
           },
           {
-            url: "https://soundcloud.com/kpop-gurl-952407856/happy-wjsn-cosmic-girls",
-            answer: "HAPPY - WJSN",
+            url: "https://soundcloud.com/l2shareost33/twice-i-love-you-more-than-anyone-hospital-playlist-2-2-ost-part-4",
+            answer: "TWICE - I Love You More Than Anyone",
           },
           {
-            url: "https://soundcloud.com/puppy-kim-1/wjsn-you-got",
-            answer: "You Got - WJSN",
+            url: "https://soundcloud.com/twice-57013/turtle",
+            answer: "TWICE - Turtle",
           },
           {
-            url: "https://soundcloud.com/lxuminous/wjsn-cosmic-girls-oh-my-summer",
-            answer: "Oh My Summer - WJSN",
+            url: "https://soundcloud.com/twice-57013/thank-you-family",
+            answer: "TWICE - Thank you, Family",
           },
           {
-            url: "https://soundcloud.com/helen_mmyo14/easy-wjsn-the-black1",
-            answer: "EASY - WJSN THE BLACK",
+            url: "https://soundcloud.com/twice-57013/merry-happy",
+            answer: "TWICE - Merry & Happy",
           },
           {
-            url: "https://soundcloud.com/stanaespa/wjsn-unnatural",
-            answer: "Unnatural - WJSN",
+            url: "https://soundcloud.com/twice-57013/feel-special",
+            answer: "TWICE - Feel Special",
           },
           {
-            url: "https://soundcloud.com/ecah-mohamad/wjsn-butterfly",
-            answer: "Butterfly - WJSN",
+            url: "https://soundcloud.com/twice-57013/ffw",
+            answer: "TWICE - Ffw",
           },
           {
-            url: "https://soundcloud.com/user-280075287/yalla-by-wjsn",
-            answer: "Yalla - WJSN",
+            url: "https://soundcloud.com/twice-57013/truth",
+            answer: "TWICE - Truth",
           },
+          {
+            url: "https://soundcloud.com/twice-57013/kura-kura",
+            answer: "TWICE - Kura Kura",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/say-it-again",
+            answer: "TWICE - Say it Again",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/last-waltz",
+            answer: "TWICE - Last Waltz",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/jaljayo-good-night",
+            answer: "TWICE - Jaljayo Good Night",
+          },
+          {
+            url: "hhttps://soundcloud.com/twice-57013/handle-it",
+            answer: "TWICE - Handle It",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/sos",
+            answer: "TWICE - SOS",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/better",
+            answer: "TWICE - BETTER",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/like-a-fool",
+            answer: "TWICE - Like a Fool",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/rollin",
+            answer: "TWICE - Rollin'",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/1-to-10",
+            answer: "TWICE - 1 To 10",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/up-no-more",
+            answer: "TWICE - Up No More",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/cheer-up",
+            answer: "TWICE - Cheer Up",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/stuck",
+            answer: "TWICE - Stuck",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/21-29",
+            answer: "TWICE - 21:29",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/strawberry-moon",
+            answer: "TWICE - Strawberry Moon",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/dance-the-night-away",
+            answer: "TWICE - Dance The Night Away",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/girls-like-us",
+            answer: "TWICE - Girls Like Us",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/fanfare",
+            answer: "TWICE - Fanfare",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/24-7",
+            answer: "TWICE - 24/7",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/1-3-2",
+            answer: "JEONGYEON, MINA, TZUYU - 1,3,2",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/scandal",
+            answer: "TWICE - Scandal",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/tt",
+            answer: "TWICE - TT",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/just-be-yourself",
+            answer: "TWICE - Just be yourself",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/icon",
+            answer: "TWICE - ICON",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/rainbow",
+            answer: "TWICE - Rainbow",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/bdz",
+            answer: "TWICE - BDZ",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/missing-u",
+            answer: "TWICE - Missing U",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/pit-a-pat",
+            answer: "TWICE - Pit-a-Pat",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/dont-call-me-again",
+            answer: "TWICE - Don’t Call Me Again",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/one-in-a-million",
+            answer: "TWICE - One In A Million",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/baby-blue-love",
+            answer: "TWICE - Baby Blue Love",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/knock-knock",
+            answer: "TWICE - Knock Knock",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/rewind",
+            answer: "TWICE - Rewind",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/l-o-v-e",
+            answer: "TWICE - L.O.V.E",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/signal",
+            answer: "TWICE - Signal",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/strawberry",
+            answer: "TWICE - Strawberry",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/stuck-in-my-head",
+            answer: "TWICE - Stuck In My Head",
+          },
+          {
+            url: "https://soundcloud.com/sana17279/sotsugyou",
+            answer: "SANA - Sotsugyou",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/stay-by-my-side",
+            answer: "TWICE - Stay By My Side",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/dejavu",
+            answer: "TWICE - Dejavu",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/only-you",
+            answer: "TWICE - Only You",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/promise",
+            answer: "TWICE - Promise",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/shot-thru-the-heart",
+            answer: "TWICE - Shot Thru The Heart",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/touchdown",
+            answer: "TWICE - Touchdown",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/real-you",
+            answer: "TWICE - Real You",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/eye-eye-eyes",
+            answer: "TWICE - Eye Eye Eyes",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/oxygen",
+            answer: "TWICE - Oxygen",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/likey",
+            answer: "TWICE - Likey",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/someone-like-me",
+            answer: "TWICE - Someone Like Me",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/scientist",
+            answer: "TWICE - Scientist",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/ponytail",
+            answer: "TWICE - Ponytail",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/first-time",
+            answer: "TWICE - First Time",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/wow",
+            answer: "TWICE - Wow",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/next-page",
+            answer: "TWICE - Next Page",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/tuk-tok",
+            answer: "TWICE - Tuk Tok",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/say-you-love-me",
+            answer: "TWICE - Say You Love Me",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/cry-for-me",
+            answer: "TWICE - Cry For Me",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/wake-me-up",
+            answer: "TWICE - Wake Me Up",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/conversation",
+            answer: "TWICE - Conversation",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/sunset",
+            answer: "TWICE - Sunset",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/pieces-of-love",
+            answer: "TWICE - Pieces of Love",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/love-line",
+            answer: "TWICE - Love Line",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/candy-pop",
+            answer: "TWICE - Candy Pop",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/hell-in-heaven",
+            answer: "TWICE - Hell In Heaven",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/shadow",
+            answer: "TWICE - Shadow",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/like-ooh-ahh",
+            answer: "TWICE - Like Ooh-Ahh",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/go-hard",
+            answer: "TWICE - Go Hard",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/turn-it-up",
+            answer: "TWICE - Turn It Up",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/espresso",
+            answer: "TWICE - Espresso",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/three-times-a-day",
+            answer: "TWICE - Three Times A Day",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/what-is-love",
+            answer: "TWICE - What Is Love?",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/one-more-time",
+            answer: "TWICE - One More Time",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/make-me-go",
+            answer: "TWICE - Make Me Go",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/wishing",
+            answer: "TWICE - Wishing",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/ho",
+            answer: "TWICE - HO!",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/doughnut",
+            answer: "TWICE - Doughnut",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/hold-me-tight",
+            answer: "TWICE - Hold Me Tight",
+          },
+          {
+            url: "https://soundcloud.com/van-thinh-pham/twice-song",
+            answer: "TWICE - TWICE SONG",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/say-yes",
+            answer: "TWICE - Say Yes",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/chillax",
+            answer: "TWICE - Chillax",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/shot-clock",
+            answer: "TWICE - Shot Clock",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/cactus",
+            answer: "TWICE - Cactus",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/my-headphones-on",
+            answer: "TWICE - My Headphones On",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/i-want-you-back",
+            answer: "TWICE - I Want You Back",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/lalala",
+            answer: "TWICE - LALALA",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/bring-it-back",
+            answer: "TWICE - Bring It Back",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/pink-lemonade",
+            answer: "TWICE - Pink Lemonade",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/the-feels",
+            answer: "TWICE - The Feels",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/the-best-thing-i-ever-did",
+            answer: "TWICE - The Best Thing I Ever Did",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/fancy",
+            answer: "TWICE - Fancy",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/you-in-my-heart",
+            answer: "TWICE - You In My Heart",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/behind-the-mask",
+            answer: "TWICE - Behind The Mask",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/dont-give-up",
+            answer: "TWICE - Don't Give Up",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/ding-dong",
+            answer: "TWICE - Ding Dong",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/wonderful-day",
+            answer: "TWICE - Wonderful Day",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/woohoo",
+            answer: "TWICE - Woohoo",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/after-moon",
+            answer: "TWICE - After Moon",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/hot",
+            answer: "TWICE - HOT",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/more-more",
+            answer: "TWICE - More & More",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/jelly-jelly",
+            answer: "TWICE - Jelly Jelly",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/sweet-summer-day",
+            answer: "TWICE - Sweet Summer Day",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/scorpion",
+            answer: "TWICE - Scorpion",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/i-cant-stop-me",
+            answer: "TWICE - I Can’t Stop Me",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/four-leaf-clover",
+            answer: "TWICE - Four-leaf Clover",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/young-wild",
+            answer: "TWICE - Young & Wild",
+          },
+          {
+            url: "https://soundcloud.com/l2shareost42/jihyo-twice-stardust-love-song-twenty-five-twenty-one-ost-part-6",
+            answer: "JIHYO - Stardust love song",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/say-something",
+            answer: "TWICE - Say Something",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/sweet-talker",
+            answer: "TWICE - Sweet Talker",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/alcohol-free",
+            answer: "TWICE - Alcohol-Free",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/believer",
+            answer: "TWICE - Believer",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/moonlight",
+            answer: "TWICE - Moonlight",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/going-crazy",
+            answer: "TWICE - Going Crazy",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/do-what-we-like",
+            answer: "TWICE - Do What We Like",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/perfect-world",
+            answer: "TWICE - Perfect World",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/heart-shaker",
+            answer: "TWICE - Heart Shaker",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/push-pull",
+            answer: "JIHYO, SANA, DAHYUN - Push & Pull",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/candy-boy",
+            answer: "TWICE - Candy Boy",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/brand-new-girl",
+            answer: "TWICE - Brand New Girl",
+          },
+          {
+            url: "https://soundcloud.com/twice-57013/love-foolish",
+            answer: "TWICE - Love Foolish",
+          }
         ],
         Pn
       ).subscribe,
@@ -9032,12 +9503,12 @@ var app = (function () {
           Q(Y.$$.fragment),
           (C = x()),
           H && H.c(),
-          (An.title = "WJSN Heardle"),
+          (An.title = "TWICE Heardle - That TWICE song intros game"),
           M(t, "name", "description"),
           M(
             t,
             "content",
-            "Guess the WJSN song from the intro in as few tries as possible"
+            "Guess the TWICE song from the intro in as few tries as possible"
           ),
           M(n, "rel", "apple-touch-icon"),
           M(n, "sizes", "180x180"),
