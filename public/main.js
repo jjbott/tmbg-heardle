@@ -1310,7 +1310,9 @@ var app = (function () {
     let n;
     return {
       c() {
-        n = w("div");
+        (n = w("div")),
+          (n.innerHTML = '<span class="loader svelte-57p3aa"></span>'),
+          M(n, "class", "flex justify-center m-3");
       },
       m(e, t) {
         g(e, n, t);
@@ -3632,7 +3634,7 @@ var app = (function () {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for TWICE songs.</p> \n\n<p class="mb-3">Each TWICE Heardle is randomly chosen from TWICE\'s discography. All copyright goes to JYP Entertainment.</p> \n\n<p class="mb-3">Songs included are OT9, sub-units, promotional songs, and OSTs. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. Special thanks to <a href="https://twitter.com/TokkiNeukdae">TokkiNeukdae</a>. TWICE version made by <a href="https://twitter.com/twicefiles">twicefiles</a>, <a href="https://twitter.com/minaszns">minaszns</a>.</p>'),
+            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for TWICE songs.</p> \n\n<p class="mb-3">Each TWICE Heardle is randomly chosen from TWICE\'s discography. All copyright goes to JYP Entertainment.</p> \n\n<p class="mb-3">Songs included are OT9, sub-units, promotional songs, and OSTs. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. Special thanks to <a href="https://twitter.com/TokkiNeukdae">TokkiNeukdae</a>, <a href="https://twitter.com/tzuwo>tzuwo</a>, and <a href="https://twitter.com/tzuyutwt>tzuyutwt</a>. TWICE version made by <a href="https://twitter.com/twicefiles">twicefiles</a>, <a href="https://twitter.com/minaszns">minaszns</a>.</p>'),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -4457,7 +4459,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\n https://twice-heardle.glitch.me/";
+          let o = e + "\n\n" + t + "\n\nhttps://twice-heardle.glitch.me/";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
