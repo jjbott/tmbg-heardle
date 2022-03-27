@@ -4461,7 +4461,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\nhttps://twice-heardle.glitch.me/";
+          let o = e + "\n\n" + t + "\n\n https://twice-heardle.glitch.me/";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -8702,7 +8702,7 @@ var app = (function () {
             answer: "TWICE - Jaljayo Good Night",
           },
           {
-            url: "hhttps://soundcloud.com/twice-57013/handle-it",
+            url: "https://soundcloud.com/twice-57013/handle-it",
             answer: "TWICE - Handle It",
           },
           {
