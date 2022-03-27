@@ -4245,7 +4245,7 @@ var app = (function () {
       s = (e[0].length * e[1].attemptInterval) / 1e3 + "";
     return {
       c() {
-        (t = _("You got today's LOONA Heardle within the first ")),
+        (t = _("You got today's TWICE Heardle within the first ")),
           (n = _(s)),
           (r = _(" seconds."));
       },
@@ -4272,7 +4272,7 @@ var app = (function () {
       a = e[1].attemptIntervalAlt[e[0].length - 1] / 1e3 > 1 ? "s" : "";
     return {
       c() {
-        (t = _("You got today's LOONA Heardle within ")),
+        (t = _("You got today's TWICE Heardle within ")),
           (n = _(o)),
           (r = _("\n                second")),
           (s = _(a)),
@@ -4302,7 +4302,7 @@ var app = (function () {
     let n;
     return {
       c() {
-        n = _("You didn't get today's LOONA Heardle. Better luck tomorrow!");
+        n = _("You didn't get today's TWICE Heardle. Better luck tomorrow!");
       },
       m(e, t) {
         g(e, n, t);
@@ -4442,7 +4442,7 @@ var app = (function () {
         u,
         c,
         () => {
-          let e = "🌙 LOONA Heardle #" + (s.id + 1),
+          let e = "🍭 TWICE Heardle #" + (s.id + 1),
             t = "";
           a
             ? r.length < i.maxAttempts / 3
@@ -4459,7 +4459,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\nhttps://loona-heardle.glitch.me/";
+          let o = e + "\n\n" + t + "\n\nhttps://twice-heardle.glitch.me/";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -9310,12 +9310,12 @@ var app = (function () {
           Q(Y.$$.fragment),
           (C = x()),
           H && H.c(),
-          (An.title = "🌙 LOONA Heardle - That LOONA song intros game"),
+          (An.title = "🍭 TWICE Heardle - That TWICE song intros game"),
           M(t, "name", "description"),
           M(
             t,
             "content",
-            "Guess the LOONA song from the intro in as few tries as possible"
+            "Guess the TWICE song from the intro in as few tries as possible"
           ),
           M(n, "rel", "apple-touch-icon"),
           M(n, "sizes", "180x180"),
