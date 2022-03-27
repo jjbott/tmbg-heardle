@@ -4442,7 +4442,7 @@ var app = (function () {
         u,
         c,
         () => {
-          let e = "🍭 TWICE Heardle #" + (s.id + 1),
+          let e = "TWICE Heardle #" + (s.id + 1),
             t = "";
           a
             ? r.length < i.maxAttempts / 3
@@ -8591,7 +8591,7 @@ var app = (function () {
       "TWICE - Signal",
       "TWICE - Likey",
       "TWICE - Heartshaker",
-    ]),
+  ]),
     On = {
       subscribe: ue(
         [
