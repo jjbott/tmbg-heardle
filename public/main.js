@@ -8624,6 +8624,10 @@ var app = (function () {
             answer: "TWICE - Cheer Up",
           },
           {
+            url: "https://soundcloud.com/ana-julia-grosman/twice-im-gonna-be-a-star-mp3",
+            answer: "TWICE - I’m Gonna Be A Star",
+          },
+          {
             url: "https://soundcloud.com/twice-57013/precious-love",
             answer: "TWICE - Precious Love",
           },
