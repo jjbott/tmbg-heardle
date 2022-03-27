@@ -8596,8 +8596,8 @@ var app = (function () {
       subscribe: ue(
         [
           {
-            url: "https://soundcloud.com/twice-57013/like-ooh-ahh",
-            answer: "TWICE - Like Ooh-Ahh",
+            url: "https://soundcloud.com/twice-57013/good-at-love",
+            answer: "TWICE - Good at Love",
           },
           {
             url: "https://soundcloud.com/twice-57013/hello",
@@ -8944,8 +8944,8 @@ var app = (function () {
             answer: "TWICE - Shadow",
           },
           {
-            url: "https://soundcloud.com/twice-57013/good-at-love",
-            answer: "TWICE - Good at Love",
+            url: "https://soundcloud.com/twice-57013/like-ooh-ahh",
+            answer: "TWICE - Like Ooh-Ahh",
           },
           {
             url: "https://soundcloud.com/twice-57013/go-hard",
