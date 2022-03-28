@@ -8590,22 +8590,19 @@ var app = (function () {
   const Cn = ue([
       "태연 (TAEYEON) - 그대라는 시 (A Poem Titled You / All About You) [호텔 델루나 - Hotel Del Luna OST Part 3]",
       "TAEYEON (태연) - Weekend",
-      "TAEYEON (태연) - INVU
-",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "TAEYEON (태연) - INVU",
+      "Taeyeon 태연 _ 11:11 Acoustic Version",
+      "TAEYEON (태연) - Can't Control Myself",
+      "Taeyeon - Fine",
+      "태연 (TAEYEON) - Happy",
+      "Taeyeon (태연) - All With You (Moon Lovers Scarlet Heart Ryeo OST Part 5)",
+      "Circus - TAEYEON (태연)",
+      "TAEYEON (태연) - 그런 밤 (Some Nights)",
+      "If - Taeyeon (SNSD) Ost.Hong gil dong",
+      "KEY (키) - Hate that... (Feat. 태연 (TAEYEON))",
+      "태연 (TAEYEON) - Dear Me (내게 들려주고 싶은 말)",
+      "TAEYEON (태연) Spark (불티)",
+      "태연 (TAEYEON) - Drawing Our Moments (너를 그리는 시간)"
     ]),
     On = {
       subscribe: ue(
@@ -8621,8 +8618,63 @@ var app = (function () {
           {
             url: "https://soundcloud.com/l2share151/taeyeon-invu?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON (태연) - INVU"
+          },
+          {
+            url: "",
+            answer: "Taeyeon 태연 _ 11:11 Acoustic Version"
+          },
+          {
+            url: "",
+            answer: "TAEYEON (태연) - Can't Control Myself"
+          },
+          {
+            url: "",
+            answer: "Taeyeon - Fine"
+          },
+          {
+            url: "",
+            answer: "태연 (TAEYEON) - Happy"
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
+          },
+          {
+            url: "",
+            answer: ""
           }
-          
         ],
         Pn
       ).subscribe,
