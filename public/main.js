@@ -8599,7 +8599,7 @@ var app = (function () {
             answer: "NAYEON, MOMO, CHAEYOUNG - HELLO",
           },
           {
-            url: "https://soundcloud.com/twice-57013/good-at-love",
+            url: "https://soundcloud.com/twicefiles/good-at-love",
             answer: "TWICE - Good at Love",
           },
           {
