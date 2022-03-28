@@ -8659,32 +8659,32 @@ var app = (function () {
             answer: "Sejeong - What My Heart Says",
           },
           {
-            url: "https://soundcloud.com/twicefiles/say-it-again",
-            answer: "TWICE - Say it Again",
+            url: "https://soundcloud.com/ongdong-tour/cant-we-go-back-feat-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "MC Mong (FT. Sejeong) - Can't We Go Back",
           },
           {
-            url: "https://soundcloud.com/twice-57013/last-waltz",
-            answer: "TWICE - Last Waltz",
+            url: "https://soundcloud.com/ongdong-tour/meet-again?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Meet Again",
           },
           {
-            url: "https://soundcloud.com/twice-57013/jaljayo-good-night",
-            answer: "TWICE - Jaljayo Good Night",
+            url: "https://soundcloud.com/ongdong-tour/the-legend-of-the-blue-sea-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - If Only",
           },
           {
-            url: "https://soundcloud.com/twice-57013/handle-it",
-            answer: "TWICE - Handle It",
+            url: "https://soundcloud.com/v-di-n-541534797/like-me-like-me-not-taeil-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Like Me, Like Me not (with Taeil of BlockB)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/sos",
-            answer: "TWICE - SOS",
+            url: "https://soundcloud.com/l2share42/doyoung-sejeong-gugudan-star-blossom?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Star Blossom (With Doyoung of NCT)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/better",
-            answer: "TWICE - BETTER",
+            url: "https://soundcloud.com/l2share138/kim-sejeong-baby-i-love-u?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Baby I Love U",
           },
           {
-            url: "https://soundcloud.com/twice-57013/like-a-fool",
-            answer: "TWICE - Like a Fool",
+            url: "https://soundcloud.com/ongdong-tour/to-me-duet-kimsejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - To Me (With Jang Hye Jin)",
           },
           {
             url: "https://soundcloud.com/twice-57013/rollin",
