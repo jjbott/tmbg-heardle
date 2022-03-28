@@ -1,24 +1,24 @@
 {
-  "name": "TWICE Heardle - That TWICE song intros game",
-  "short_name": "TWICE Heardle",
+  "name": "Sejeong Heardle - That Sejeong song intros game",
+  "short_name": "Sejeong Heardle",
   "icons": [
     {
-      "src": "https://cdn.glitch.global/54bc8408-7887-4265-9582-06b17f8cd4af/TWICELOGO1.png?v=1648357333465",
+      "src": "https://ibb.co/4gVkKGV",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://cdn.glitch.global/54bc8408-7887-4265-9582-06b17f8cd4af/TWICELOGO.png?v=1648357333968",
+      "src": "https://ibb.co/4gVkKGV",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "https://cdn.glitch.global/54bc8408-7887-4265-9582-06b17f8cd4af/TWICELOGO2.png?v=1648357333464",
+      "src": "https://ibb.co/4gVkKGV",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "https://cdn.glitch.global/54bc8408-7887-4265-9582-06b17f8cd4af/TWICELOGO3.png?v=1648357333465",
+      "src": "https://ibb.co/4gVkKGV",
       "sizes": "16x16",
       "type": "image/png"
     }

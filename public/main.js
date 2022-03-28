@@ -3634,7 +3634,7 @@ var app = (function () {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for TWICE songs.</p> \n\n<p class="mb-3">Each TWICE Heardle is randomly chosen from TWICE\'s discography. All copyright goes to JYP Entertainment.</p> \n\n<p class="mb-3">Songs included are OT9, sub-units, promotional songs, and OSTs. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>.   Special thanks to <a href="https://twitter.com/TokkiNeukdae">TokkiNeukdae</a>, <a href="https://twitter.com/tzuwo">tzuwo</a>, and <a href="https://twitter.com/tzuyutwt">tzuyutwt</a>. TWICE version made by <a href="https://twitter.com/twicefiles">twicefiles</a>, <a href="https://twitter.com/minaszns">minaszns</a>.</p>'),
+            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for Sejeong songs.</p> \n\n<p class="mb-3">Each Sejeong Heardle is randomly chosen from Sejeong\'s discography. All copyright goes to Jellyfish Entertainment.</p> \n\n<p class="mb-3">Songs included are Sejeong\'s solo songs, OST. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>.   Special thanks to <a href="https://twitter.com/TokkiNeukdae">TokkiNeukdae</a>, <a href="https://twitter.com/tzuwo">tzuwo</a>, and <a href="https://twitter.com/tzuyutwt">tzuyutwt</a>. TWICE version made by <a href="https://twitter.com/twicefiles">twicefiles</a>, <a href="https://twitter.com/minaszns">minaszns</a>.</p>'),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -3850,7 +3850,7 @@ var app = (function () {
             (r = x()),
             (s = w("p")),
             (s.innerHTML =
-              '<p class="mb-3">If you\'ve enjoyed playing TWICE Heardle, then please consider supporting the <a href="https://ko-fi.com/heardle">real Heardle devs</a>.</p>'),
+              '<p class="mb-3">If you\'ve enjoyed playing Sejeong Heardle, then please consider supporting the <a href="https://ko-fi.com/heardle">real Heardle devs</a>.</p>'),
             (i = x()),
             (o = w("div")),
             Q(a.$$.fragment),
@@ -3903,13 +3903,13 @@ var app = (function () {
       startDate: "2022-03-27",
     },
     Jt = [
-      "You just got deported from TWICELAND.", // FAILED
-      "Jeongyeon would be proud.", // First try
-      "You're pretty good!",
-      "Hey, that was pretty good.",
-      "Not bad.",
-      "Could've been worse...",
-      "You took 6 tries? 1 to 10 more like 1 to 6🤣", // Sixth try
+      "Sejeong is nomu ttogttanghae.", // FAILED
+      "Samantha and Rachel are proud", // First try
+      "I like a pizza, I like a genius!",
+      "Congrats! You've just been promoted to oppa level!",
+      "Ogu baby!",
+      "IRONAAAA!!",
+      "Ahhh! You've been demoted to hyung-level", // Sixth try
     ];
   function Kt(t) {
     let n, r;
@@ -4029,14 +4029,14 @@ var app = (function () {
             (f = w("div")),
             (m = w("div")),
             (k = w("div")),
-            (k.textContent = "Next TWICE song in:"),
+            (k.textContent = "Next Sejeong song in:"),
             (b = x()),
             Q(S.$$.fragment),
             (D = x()),
             (T = w("div")),
             (Y = w("div")),
             (Y.innerHTML =
-              '<span class="text-custom-negative"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span> \n                <span class="px-1">TWICE Heardle?</span>'),
+              '<span class="text-custom-negative"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span> \n                <span class="px-1">Sejeong Heardle?</span>'),
             (C = x()),
             Q(O.$$.fragment),
             M(n, "class", "text-lg text-custom-line"),
@@ -4245,7 +4245,7 @@ var app = (function () {
       s = (e[0].length * e[1].attemptInterval) / 1e3 + "";
     return {
       c() {
-        (t = _("You got today's TWICE Heardle within the first ")),
+        (t = _("You got today's Sejeong Heardle within the first ")),
           (n = _(s)),
           (r = _(" seconds."));
       },
@@ -4272,7 +4272,7 @@ var app = (function () {
       a = e[1].attemptIntervalAlt[e[0].length - 1] / 1e3 > 1 ? "s" : "";
     return {
       c() {
-        (t = _("You got today's TWICE Heardle within ")),
+        (t = _("You got today's Sejeong Heardle within ")),
           (n = _(o)),
           (r = _("\n                second")),
           (s = _(a)),
@@ -4302,7 +4302,7 @@ var app = (function () {
     let n;
     return {
       c() {
-        n = _("You didn't get today's TWICE Heardle. Better luck tomorrow!");
+        n = _("You didn't get today's Sejeong Heardle. Better luck tomorrow!");
       },
       m(e, t) {
         g(e, n, t);
@@ -4442,7 +4442,7 @@ var app = (function () {
         u,
         c,
         () => {
-          let e = "TWICE Heardle #" + (s.id + 1),
+          let e = "Sejeong Heardle #" + (s.id + 1),
             t = "";
           a
             ? r.length < i.maxAttempts / 3
@@ -4545,7 +4545,7 @@ var app = (function () {
           (t = w("div")),
             (n = w("div")),
             (n.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct TWICE song in the list.</p></div>'),
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct Sejeong song in the list.</p></div>'),
             (r = x()),
             (s = w("div")),
             (s.innerHTML =
@@ -8583,13 +8583,13 @@ var app = (function () {
     })();
   });
   const Cn = ue([
-      "TWICE - Like Ooh-Ahh",
-      "TWICE - Cheer Up",
-      "TWICE - TT",
-      "TWICE - Knock Knock",
-      "TWICE - Signal",
-      "TWICE - Likey",
-      "TWICE - Heartshaker",
+      "Sejeong - Flower Road",
+      "Sejeong - Paramour",
+      "Sejeong - In My Dream",
+      "Sejeong - Achohol Free (Cover)",
+      "Sejeong - Teddy Bear",
+      "Sejeong - Star Blossom (With Doyoung of NCT)",
+      "Sejeong - Love is Like Rain Outside My Window",
     ]),
     On = {
       subscribe: ue(
