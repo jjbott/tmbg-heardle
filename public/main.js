@@ -8588,13 +8588,24 @@ var app = (function () {
     })();
   });
   const Cn = ue([
-      "Sejeong - Baby I Love U",
-      "Sejeong - Paramour",
-      "Sejeong - In My Dream",
-      "Sejeong - Achohol Free (Cover)",
-      "Sejeong - Teddy Bear",
-      "Sejeong - Star Blossom (With Doyoung of NCT)",
-      "Sejeong - Love is Like Rain Outside My Window",
+      "태연 (TAEYEON) - 그대라는 시 (A Poem Titled You / All About You) [호텔 델루나 - Hotel Del Luna OST Part 3]",
+      "TAEYEON (태연) - Weekend",
+      "TAEYEON (태연) - INVU
+",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ]),
     On = {
       subscribe: ue(
@@ -8606,6 +8617,10 @@ var app = (function () {
           {
             url: "https://soundcloud.com/l2shareost11/taeyeon-a-poem-titled-you-hotel-del-luna-ost-part-3?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "태연 (TAEYEON) - 그대라는 시 (A Poem Titled You / All About You) [호텔 델루나 - Hotel Del Luna OST Part 3]"
+          },
+          {
+            url: "https://soundcloud.com/l2share151/taeyeon-invu?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "TAEYEON (태연) - INVU"
           }
           
         ],
