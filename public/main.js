@@ -708,7 +708,7 @@ var app = (function () {
             Q(a.$$.fragment),
             (l = x()),
             (u = w("h1")),
-            (u.textContent = "TWICE Heardle"),
+            (u.textContent = "Sejeong Heardle"),
             (c = x()),
             (d = w("div")),
             Q(h.$$.fragment),
@@ -3634,7 +3634,7 @@ var app = (function () {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for Sejeong songs.</p> \n\n<p class="mb-3">Each Sejeong Heardle is randomly chosen from Sejeong\'s discography. All copyright goes to Jellyfish Entertainment.</p> \n\n<p class="mb-3">Songs included are Sejeong\'s solo songs, OST. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>.   Special thanks to <a href="https://twitter.com/TokkiNeukdae">TokkiNeukdae</a>, <a href="https://twitter.com/tzuwo">tzuwo</a>, and <a href="https://twitter.com/tzuyutwt">tzuyutwt</a>. TWICE version made by <a href="https://twitter.com/twicefiles">twicefiles</a>, <a href="https://twitter.com/minaszns">minaszns</a>.</p>'),
+            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for Sejeong songs.</p> \n\n<p class="mb-3">Each Sejeong Heardle is randomly chosen from Sejeong\'s discography. All copyright goes to Jellyfish Entertainment.</p> \n\n<p class="mb-3">Songs included are Sejeong\'s solo songs, OSTs, and collaborations. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>.   Sejeong Heardle is made by <a href="https://twitter.com/ongdong_tour">ongdont_tour</a>,  TWICE version made by <a href="https://twitter.com/twicefiles">twicefiles</a>, <a href="https://twitter.com/minaszns">minaszns</a>.</p>'),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -8595,20 +8595,20 @@ var app = (function () {
       subscribe: ue(
         [
           {
-            url: "https://soundcloud.com/twice-57013/hello",
-            answer: "NAYEON, MOMO, CHAEYOUNG - HELLO",
+            url: "https://soundcloud.com/l2share126/kim-sejeong-teddy-bear?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Teddy Bear",
           },
           {
-            url: "https://soundcloud.com/twicefiles/good-at-love",
-            answer: "TWICE - Good at Love",
+            url: "https://soundcloud.com/l2share126/kim-sejeong-do-dum-chit?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Do Dum Chit",
           },
           {
-            url: "https://soundcloud.com/twice-57013/look-at-me",
-            answer: "TWICE - Look At Me",
+            url: "https://soundcloud.com/l2share126/kim-sejeong-lets-go-home?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Let's Go Home",
           },
           {
-            url: "https://soundcloud.com/twice-57013/queen",
-            answer: "TWICE - Queen",
+            url: "https://soundcloud.com/l2share126/kim-sejeong-maybe-i-am?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Maybe I Am",
           },
           {
             url: "https://soundcloud.com/twice-57013/luv-me",
@@ -9505,12 +9505,12 @@ var app = (function () {
           Q(Y.$$.fragment),
           (C = x()),
           H && H.c(),
-          (An.title = "TWICE Heardle - That TWICE song intros game"),
+          (An.title = "Sejeong Heardle - That Sejeong song intros game"),
           M(t, "name", "description"),
           M(
             t,
             "content",
-            "Guess the TWICE song from the intro in as few tries as possible"
+            "Guess the Sejeong song from the intro in as few tries as possible"
           ),
           M(n, "rel", "apple-touch-icon"),
           M(n, "sizes", "180x180"),
