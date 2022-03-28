@@ -8605,10 +8605,6 @@ var app = (function () {
           {
             url: "https://soundcloud.com/l2share126/kim-sejeong-do-dum-chit?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "Sejeong - Do Dum Chit",
-          }
-          {
-            url: "https://soundcloud.com/l2share126/kim-sejeong-lets-go-home?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "Sejeong - Let's Go Home",
           },
           {
             url: "https://soundcloud.com/l2share126/kim-sejeong-maybe-i-am?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
@@ -8647,40 +8643,20 @@ var app = (function () {
             answer: "Sejeong - Swim Away",
           },
           {
+            url: "https://soundcloud.com/l2share126/kim-sejeong-lets-go-home?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Let's Go Home",
+          },
+          {
             url: "https://soundcloud.com/ongdong-tour/in-my-dream?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "Sejeong - In My Dream",
           },
           {
-            url: "https://soundcloud.com/l2shareost33/twice-i-love-you-more-than-anyone-hospital-playlist-2-2-ost-part-4",
-            answer: "TWICE - I Love You More Than Anyone",
+            url: "https://soundcloud.com/l2share126/kim-sejeong-teddy-bear?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Teddy Bear",
           },
           {
-            url: "https://soundcloud.com/ongdong-tour/hopes-for-tomorrow?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "Sejeong - Hopes For Tomorrow",
-          },
-          {
-            url: "https://soundcloud.com/twice-57013/thank-you-family",
-            answer: "TWICE - Thank you, Family",
-          },
-          {
-            url: "https://soundcloud.com/twice-57013/merry-happy",
-            answer: "TWICE - Merry & Happy",
-          },
-          {
-            url: "https://soundcloud.com/twice-57013/feel-special",
-            answer: "TWICE - Feel Special",
-          },
-          {
-            url: "https://soundcloud.com/twice-57013/ffw",
-            answer: "TWICE - Ffw",
-          },
-          {
-            url: "https://soundcloud.com/twice-57013/truth",
-            answer: "TWICE - Truth",
-          },
-          {
-            url: "https://soundcloud.com/twice-57013/kura-kura",
-            answer: "TWICE - Kura Kura",
+            url: "https://soundcloud.com/ongdong-tour/what-my-heart-says?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - What My Heart Says",
           },
           {
             url: "https://soundcloud.com/twicefiles/say-it-again",
