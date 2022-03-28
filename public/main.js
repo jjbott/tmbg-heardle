@@ -8611,36 +8611,36 @@ var app = (function () {
             answer: "Sejeong - Maybe I Am",
           },
           {
-            url: "https://soundcloud.com/twice-57013/luv-me",
-            answer: "TWICE - LUV ME",
+            url: "https://soundcloud.com/user-64036812/warning-feat-lllboi?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Warning",
           },
           {
-            url: "https://soundcloud.com/ana-julia-grosman/twice-im-gonna-be-a-star-mp3",
-            answer: "TWICE - I’m Gonna Be A Star",
+            url: "https://soundcloud.com/l2share91/sejeong-tunnel?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Tunnel",
           },
           {
-            url: "https://soundcloud.com/twice-57013/candy",
-            answer: "TWICE - Candy",
+            url: "https://soundcloud.com/user-309258560/kim-sejeong-flower-road?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Flower Road",
           },
           {
-            url: "https://soundcloud.com/twicefiles/be-as-one",
-            answer: "TWICE - Be As One",
+            url: "https://soundcloud.com/ding-dong-853054946/sejeong-plant-lyrics?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Plant",
           },
           {
-            url: "https://soundcloud.com/twice-57013/yes-or-yes",
-            answer: "TWICE - Yes or Yes",
+            url: "https://soundcloud.com/user-64036812/whale-kim-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Whale",
           },
           {
-            url: "https://soundcloud.com/twice-57013/precious-love",
-            answer: "TWICE - Precious Love",
+            url: "https://soundcloud.com/l2shareost23/sejeong-all-of-my-days-crash-landing-on-you-ost-part-8?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - All of My Days",
           },
           {
-            url: "https://soundcloud.com/twice-57013/in-the-summer",
-            answer: "TWICE - In the summer",
+            url: "https://soundcloud.com/l2shareost16/sejeong-gugudan-paramour-mr-sunshine-ost-part-13",
+            answer: "Sejeong - Paramour",
           },
           {
-            url: "https://soundcloud.com/twice-57013/depend-on-you",
-            answer: "TWICE - Depend On You",
+            url: "https://soundcloud.com/user-688061583/kim-sejeong-cover-the-light-runner-chinese-drama-ost?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - The Light Runner (COVER)",
           },
           {
             url: "https://soundcloud.com/twice-57013/do-it-again",
