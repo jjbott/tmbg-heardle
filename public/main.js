@@ -8595,7 +8595,7 @@ var app = (function () {
       subscribe: ue(
         [
           {
-            url: "https://soundcloud.com/ding-dong-853054946/sejeong-plant-lyrics?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing#t=0:01",
+            url: "https://soundcloud.com/ongdong-tour/plant?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "Sejeong - Plant",
           },
           {
@@ -8605,11 +8605,7 @@ var app = (function () {
           {
             url: "https://soundcloud.com/l2share126/kim-sejeong-do-dum-chit?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "Sejeong - Do Dum Chit",
-          },
-          {
-            url: "https://soundcloud.com/l2share126/kim-sejeong-teddy-bear?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "Sejeong - Teddy Bear",
-          },
+          }
           {
             url: "https://soundcloud.com/l2share126/kim-sejeong-lets-go-home?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "Sejeong - Let's Go Home",
@@ -8643,24 +8639,24 @@ var app = (function () {
             answer: "Sejeong - The Light Runner (COVER)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/do-it-again",
-            answer: "TWICE - Do It Again",
+            url: "https://soundcloud.com/ongdong-tour/skyline?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Skyline",
           },
           {
-            url: "https://soundcloud.com/twice-57013/cruel",
-            answer: "TWICE - Cruel",
+            url: "https://soundcloud.com/ongdong-tour/swim-away?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Swim Away",
           },
           {
-            url: "https://soundcloud.com/twice-57013/firework",
-            answer: "TWICE - Firework",
+            url: "https://soundcloud.com/ongdong-tour/in-my-dream?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - In My Dream",
           },
           {
             url: "https://soundcloud.com/l2shareost33/twice-i-love-you-more-than-anyone-hospital-playlist-2-2-ost-part-4",
             answer: "TWICE - I Love You More Than Anyone",
           },
           {
-            url: "https://soundcloud.com/twice-57013/turtle",
-            answer: "TWICE - Turtle",
+            url: "https://soundcloud.com/ongdong-tour/hopes-for-tomorrow?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Hopes For Tomorrow",
           },
           {
             url: "https://soundcloud.com/twice-57013/thank-you-family",
