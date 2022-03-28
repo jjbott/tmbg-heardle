@@ -8660,7 +8660,7 @@ var app = (function () {
           },
           {
             url: "https://soundcloud.com/ongdong-tour/cant-we-go-back-feat-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "MC Mong (FT. Sejeong) - Can't We Go Back",
+            answer: "MC Mong (FT. Sejeong) - Can I Go Back",
           },
           {
             url: "https://soundcloud.com/ongdong-tour/meet-again?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
@@ -8672,7 +8672,7 @@ var app = (function () {
           },
           {
             url: "https://soundcloud.com/v-di-n-541534797/like-me-like-me-not-taeil-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "Sejeong - Like Me, Like Me not (with Taeil of BlockB)",
+            answer: "Sejeong - Love or Not (with Taeil of BlockB)",
           },
           {
             url: "https://soundcloud.com/l2share42/doyoung-sejeong-gugudan-star-blossom?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
@@ -8687,23 +8687,23 @@ var app = (function () {
             answer: "Sejeong - To Me (With Jang Hye Jin)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/rollin",
-            answer: "TWICE - Rollin'",
+            url: "https://soundcloud.com/user-140048832/kim-sejeong-love-is-like-rain-outside-my-window-immortal-songs-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Love is Like Rain Outside My Window (COVER)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/1-to-10",
-            answer: "TWICE - 1 To 10",
+            url: "https://soundcloud.com/fluffy-blink/kim-sejeong-reflection-of-you?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Reflection of You in Your Smile (COVER)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/up-no-more",
-            answer: "TWICE - Up No More",
+            url: "https://soundcloud.com/qu-nh-anh-325517657/alcohol-free-twice-kim-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Alcohol Free (COVER)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/cheer-up",
-            answer: "TWICE - Cheer Up",
+            url: "https://soundcloud.com/user-570931672/kim-sejeong-my-sea?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - My Sea (COVER)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/stuck",
+            url: "https://soundcloud.com/ongdong-tour/sejeong-unbreakable-love-eric-chou?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TWICE - Stuck",
           },
           {
