@@ -8623,7 +8623,7 @@ var app = (function () {
             answer: "TWICE - Candy",
           },
           {
-            url: "https://soundcloud.com/twice-57013/be-as-one",
+            url: "https://soundcloud.com/twicefiles/be-as-one",
             answer: "TWICE - Be As One",
           },
           {
@@ -8687,7 +8687,7 @@ var app = (function () {
             answer: "TWICE - Kura Kura",
           },
           {
-            url: "https://soundcloud.com/twice-57013/say-it-again",
+            url: "https://soundcloud.com/twicefiles/say-it-again",
             answer: "TWICE - Say it Again",
           },
           {
@@ -8783,7 +8783,7 @@ var app = (function () {
             answer: "TWICE - Rainbow",
           },
           {
-            url: "https://soundcloud.com/twice-57013/bdz",
+            url: "https://soundcloud.com/twicefiles/bdz",
             answer: "TWICE - BDZ",
           },
           {
@@ -8815,7 +8815,7 @@ var app = (function () {
             answer: "TWICE - Rewind",
           },
           {
-            url: "https://soundcloud.com/twice-57013/l-o-v-e",
+            url: "https://soundcloud.com/twicefiles/love",
             answer: "TWICE - L.O.V.E",
           },
           {
@@ -8835,7 +8835,7 @@ var app = (function () {
             answer: "SANA - Sotsugyou",
           },
           {
-            url: "https://soundcloud.com/twice-57013/stay-by-my-side",
+            url: "https://soundcloud.com/twicefiles/stay-by-my-side",
             answer: "TWICE - Stay By My Side",
           },
           {
@@ -8911,7 +8911,7 @@ var app = (function () {
             answer: "TWICE - Cry For Me",
           },
           {
-            url: "https://soundcloud.com/twice-57013/wake-me-up",
+            url: "https://soundcloud.com/twicefiles/wake-me-up",
             answer: "TWICE - Wake Me Up",
           },
           {
@@ -8931,7 +8931,7 @@ var app = (function () {
             answer: "TWICE - Love Line",
           },
           {
-            url: "https://soundcloud.com/twice-57013/candy-pop",
+            url: "https://soundcloud.com/twicefiles/candy-pop",
             answer: "TWICE - Candy Pop",
           },
           {
@@ -8967,7 +8967,7 @@ var app = (function () {
             answer: "TWICE - What Is Love?",
           },
           {
-            url: "https://soundcloud.com/twice-57013/one-more-time",
+            url: "https://soundcloud.com/twicefiles/one-more-time",
             answer: "TWICE - One More Time",
           },
           {
@@ -8975,7 +8975,7 @@ var app = (function () {
             answer: "TWICE - Make Me Go",
           },
           {
-            url: "https://soundcloud.com/twice-57013/wishing",
+            url: "https://soundcloud.com/twicefiles/wishing",
             answer: "TWICE - Wishing",
           },
           {
@@ -9015,7 +9015,7 @@ var app = (function () {
             answer: "TWICE - My Headphones On",
           },
           {
-            url: "https://soundcloud.com/twice-57013/i-want-you-back",
+            url: "https://soundcloud.com/twicefiles/i-want-you-back",
             answer: "TWICE - I Want You Back",
           },
           {
@@ -9151,7 +9151,7 @@ var app = (function () {
             answer: "TWICE - Candy Boy",
           },
           {
-            url: "https://soundcloud.com/twice-57013/brand-new-girl",
+            url: "https://soundcloud.com/twicefiles/brand-new-girl",
             answer: "TWICE - Brand New Girl",
           },
           {
