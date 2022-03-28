@@ -3822,7 +3822,7 @@ var app = (function () {
       P(async function () {
         (async function () {
           const e = await fetch(
-            "https://twice-heardle.glitch.me/supporters.json"
+            "https://sejeong-heardle.glitch.me/supporters.json"
           );
           return await e.json();
         })().then((e) => {
@@ -4459,7 +4459,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\nhttps://twice-heardle.glitch.me/";
+          let o = e + "\n\n" + t + "\n\nhttps://sejeong-heardle.glitch.me/";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -8707,8 +8707,116 @@ var app = (function () {
             answer: "Sejeong - Reflection of You in Your Smile (COVER)",
           },
           {
-            url: "https://soundcloud.com/twice-57013/love-foolish",
-            answer: "TWICE - Love Foolish",
+            url: "https://soundcloud.com/l2shareost16/sejeong-gugudan-paramour-mr-sunshine-ost-part-13",
+            answer: "Sejeong - Paramour",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/in-my-dream?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - In My Dream",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/plant?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Plant",
+          },
+          {
+            url: "https://soundcloud.com/l2share42/doyoung-sejeong-gugudan-star-blossom?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Star Blossom (With Doyoung of NCT)",
+          },
+          {
+            url: "https://soundcloud.com/l2share91/sejeong-tunnel?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Tunnel",
+          },
+          {
+            url: "https://soundcloud.com/qu-nh-anh-325517657/alcohol-free-twice-kim-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Alcohol Free (COVER)",
+          },
+          {
+            url: "https://soundcloud.com/l2share126/kim-sejeong-do-dum-chit?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Do Dum Chit",
+          },
+          {
+            url: "https://soundcloud.com/l2share126/kim-sejeong-maybe-i-am?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Maybe I Am",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/the-legend-of-the-blue-sea-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - If Only",
+          },
+          {
+            url: "https://soundcloud.com/user-64036812/warning-feat-lllboi?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Warning",
+          },
+          {
+            url: "https://soundcloud.com/user-570931672/kim-sejeong-my-sea?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - My Sea (COVER)",
+          },
+          {
+            url: "https://soundcloud.com/user-309258560/kim-sejeong-flower-road?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Flower Road",
+          },
+          {
+            url: "https://soundcloud.com/user-64036812/whale-kim-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Whale",
+          },
+          {
+            url: "https://soundcloud.com/l2shareost23/sejeong-all-of-my-days-crash-landing-on-you-ost-part-8?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - All of My Days",
+          },
+          {
+            url: "https://soundcloud.com/user-688061583/kim-sejeong-cover-the-light-runner-chinese-drama-ost?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - The Light Runner (COVER)",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/skyline?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Skyline",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/swim-away?in=ongdong-tour/sets/kimsejeong-plant&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Swim Away",
+          },
+          {
+            url: "https://soundcloud.com/l2share126/kim-sejeong-lets-go-home?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Let's Go Home",
+          },
+          {
+            url: "https://soundcloud.com/user-140048832/kim-sejeong-love-is-like-rain-outside-my-window-immortal-songs-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Love is Like Rain Outside My Window (COVER)",
+          },
+          {
+            url: "https://soundcloud.com/l2share126/kim-sejeong-teddy-bear?in=l2share/sets/kimsejeong-im-warning&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Teddy Bear",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/what-my-heart-says?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - What My Heart Says",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/cant-we-go-back-feat-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "MC Mong (FT. Sejeong) - Can I Go Back",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/sejeong-unbreakable-love?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Unbreakable Love (COVER)",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/meet-again?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Meet Again",
+          },
+          {
+            url: "https://soundcloud.com/v-di-n-541534797/like-me-like-me-not-taeil-sejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Love or Not (with Taeil of BlockB)",
+          },
+          {
+            url: "https://soundcloud.com/l2share138/kim-sejeong-baby-i-love-u?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Baby I Love U",
+          },
+          {
+            url: "https://soundcloud.com/ongdong-tour/to-me-duet-kimsejeong?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - To Me (With Jang Hye Jin)",
+          },
+          {
+            url: "https://soundcloud.com/fluffy-blink/kim-sejeong-reflection-of-you?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "Sejeong - Reflection of You in Your Smile (COVER)",
           },
         ],
         Pn
