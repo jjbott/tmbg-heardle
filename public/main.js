@@ -4463,7 +4463,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\nhttps://kty-heardle.glitch.me/";
+          let o = e + "\n\n" + t + "\n\nPlay at https://kty-heardle.glitch.me/\nStream @TAEYEONsmtown - INVU youtu.be/AbZH7XWDW_k";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -9014,12 +9014,12 @@ var app = (function () {
           Q(Y.$$.fragment),
           (C = x()),
           H && H.c(),
-          (An.title = "Taeyeon Heardle - That Taeyeon song intros game"),
+          (An.title = "Taeyeon Heardle - The Taeyeon song intros game"),
           M(t, "name", "description"),
           M(
             t,
             "content",
-            "Guess the Taeyeon song from the intro in as few tries as possible"
+            "Guess the Taeyeon song based on the intro in as few tries as possible"
           ),
           M(n, "rel", "apple-touch-icon"),
           M(n, "sizes", "180x180"),
