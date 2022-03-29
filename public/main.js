@@ -3907,13 +3907,13 @@ var app = (function () {
       startDate: "2022-03-29",
     },
     Jt = [
-      "Sejeong is nomu ttogttanghae.", // FAILED
-      "Samantha and Rachel are proud", // First try
-      "I like a pizza, I like a genius!",
-      "Congrats! You've just been promoted to oppa level!",
-      "Ogu baby!",
-      "IRONAAAA!!",
-      "Ahhh! You've been demoted to hyung-level", // Sixth try
+      "smh you got me smoking cigarettes", // FAILED
+      "KING of Taeyeon Heardle!", // First try
+      "You're a real taengbba!",
+      "I'm All Ears for Taeyeon",
+      "Taeyeon loves you!",
+      "Zero loves you!",
+      "I'm in stress baby", // Sixth try
     ];
   function Kt(t) {
     let n, r;
