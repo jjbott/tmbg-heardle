@@ -3826,7 +3826,7 @@ var app = (function () {
       P(async function () {
         (async function () {
           const e = await fetch(
-            "https://taeyeon-heardle.glitch.me/supporters.json"
+            "https://kty-heardle.glitch.me/supporters.json"
           );
           return await e.json();
         })().then((e) => {
@@ -4463,7 +4463,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\nhttps://taeyeon-heardle.glitch.me/";
+          let o = e + "\n\n" + t + "\n\nhttps://kty-heardle.glitch.me/";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
