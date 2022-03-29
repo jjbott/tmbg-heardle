@@ -8636,7 +8636,8 @@ var app = (function () {
       "TAEYEON - To The Moon",
       "TAEYEON - Cold As Hell",
       "TAEYEON - Siren",
-      "TAEYEON - Toddler"
+      "TAEYEON - Toddler",
+      "챈슬러 (Chancellor) - Angel (Feat. 태연 (TAEYEON))"
     ]),
     On = {
       subscribe: ue(
@@ -8756,6 +8757,10 @@ var app = (function () {
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-stay?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - Stay"
+          },
+          {
+            url: "https://soundcloud.com/l2share84/chancellor-angel-feat-taeyeon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "챈슬러 (Chancellor) - Angel (Feat. 태연 (TAEYEON))"
           },
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-im-the-greatest?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
