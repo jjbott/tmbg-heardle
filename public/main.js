@@ -8602,7 +8602,41 @@ var app = (function () {
       "KEY (키) - Hate that... (Feat. 태연 (TAEYEON))",
       "태연 (TAEYEON) - Dear Me (내게 들려주고 싶은 말)",
       "TAEYEON (태연) Spark (불티)",
-      "태연 (TAEYEON) - Drawing Our Moments (너를 그리는 시간)"
+      "태연 (TAEYEON) - Drawing Our Moments (너를 그리는 시간)",
+      "TAEYEON - SIGNAL",
+      "TAEYEON - VOICE",
+      "TAEYEON - I Found You",
+      "TAEYEON - HORIZON",
+      "TAEYEON - Vanilla",
+      "TAEYEON - Blue",
+      "TAEYEON - Four Seasons",
+      "TAEYEON - Stay",
+      "TAEYEON - I'm The Greatest",
+      "TAEYEON - Something New",
+      "TAEYEON - One Day",
+      "TAEYEON - U R",
+      "TAEYEON - Gemini",
+      "TAEYEON - Stress",
+      "TAEYEON - Love You Like Crazy",
+      "TAEYEON - Better Babe",
+      "TAEYEON - LOL",
+      "TAEYEON - Gravity",
+      "TAEYEON - Christmas Without You",
+      "TAEYEON - I'm All Ears",
+      "TAEYEON - Lonely Night",
+      "TAEYEON - Curtain Call",
+      "TAEYEON - I Blame On You",
+      "TAEYEON - Time Lapse",
+      "TAEYEON - Night",
+      "TAEYEON - Fashion",
+      "TAEYEON - Worry Free Love",
+      "TAEYEON - Be Real",
+      "TAEYEON - Galaxy",
+      "TAEYEON - Wildfire",
+      "TAEYEON - To The Moon",
+      "TAEYEON - Cold As Hell",
+      "TAEYEON - Siren",
+      "TAEYEON - Toddler"
     ]),
     On = {
       subscribe: ue(
@@ -8676,6 +8710,10 @@ var app = (function () {
             answer: "TAEYEON - VOICE"
           },
           {
+            url: "https://soundcloud.com/hurryfrancisco/taeyeon-love-you-like-crazy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "TAEYEON - Love You Like Crazy"
+          },
+          {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-i-found-you?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - I Found You"
           },
@@ -8684,12 +8722,28 @@ var app = (function () {
             answer: "TAEYEON - HORIZON"
           },
           {
+            url: "https://soundcloud.com/hurryfrancisco/taeyeon-something-new?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "TAEYEON - Something New"
+          },
+          {
+            url: "https://soundcloud.com/hurryfrancisco/taeyeon-gravity?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "TAEYEON - Gravity"
+          },
+          {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-vanilla?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - Vanilla"
           },
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-blue?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - Blue"
+          },
+          {
+            url: "https://soundcloud.com/hurryfrancisco/taeyeon-wildfire?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "TAEYEON - Wildfire"
+          },
+          {
+            url: "https://soundcloud.com/hurryfrancisco/taeyeon-to-the-moon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "TAEYEON - To The Moon"
           },
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-four-seasons?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
@@ -8702,10 +8756,6 @@ var app = (function () {
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-im-the-greatest?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - I'm The Greatest"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-something-new?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Something New"
           },
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-one-day?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
@@ -8724,10 +8774,6 @@ var app = (function () {
             answer: "TAEYEON - Stress"
           },
           {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-love-you-like-crazy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Love You Like Crazy"
-          },
-          {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-better-babe?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - Better Babe"
           },
@@ -8736,8 +8782,8 @@ var app = (function () {
             answer: "TAEYEON - LOL"
           },
           {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-gravity?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Gravity"
+            url: "https://soundcloud.com/hurryfrancisco/taeyeon-night?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+            answer: "TAEYEON - Night"
           },
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-christmas-without-you?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
@@ -8762,10 +8808,6 @@ var app = (function () {
           {
             url: "https://soundcloud.com/hurryfrancisco/time-lapse?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - Time Lapse"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-night?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Night"
           },
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-fashion?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
