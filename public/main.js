@@ -8799,32 +8799,12 @@ var app = (function () {
             answer: "TAEYEON - Better Babe"
           },
           {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-night?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Night"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-lonely-night?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Lonely Night"
-          },
-          {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-toddler?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - Toddler"
           },
           {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-curtain-call?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Curtain Call"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-christmas-without-you?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Christmas Without You"
-          },
-          {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-cold-as-helll?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - Cold As Hell"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-i-blame-on-you?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - I Blame On You"
           },
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-siren?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
@@ -8833,14 +8813,6 @@ var app = (function () {
           {
             url: "https://soundcloud.com/hurryfrancisco/taeyeon-to-the-moon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON - To The Moon"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/time-lapse?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Time Lapse"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-fashion?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Fashion"
           }
         ],
         Pn
