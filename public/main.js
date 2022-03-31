@@ -2771,7 +2771,8 @@ var app = (function () {
                                 o.length || n.noResults)
                               ) {
                                 var u = new DocumentFragment();
-                                a.forEach(function (e, n) {
+                                // TODO: fix the autocomplete to not show duplicates
+                                a.filter((v,i,s) => { return s.indexOf(v) === i }).forEach(function (e, n) {
                                   var r = l(
                                     s.tag,
                                     t(
@@ -8606,7 +8607,6 @@ var app = (function () {
 "They Might Be Giants - Bastard Wants to Hit Me",
 "They Might Be Giants - Become a Robot",
 "They Might Be Giants - Bee of the Bird of the Moth",
-"They Might Be Giants - Birdhouse in Your Soul",
 "They Might Be Giants - Black Ops",
 "They Might Be Giants - Boat of Car",
 "They Might Be Giants - Boss of Me",
@@ -8642,7 +8642,6 @@ var app = (function () {
 "They Might Be Giants - Dirt Bike",
 "They Might Be Giants - Doctor Worm",
 "They Might Be Giants - Dog Walker",
-"They Might Be Giants - Don't Let's Start",
 "They Might Be Giants - Drown the Clown",
 "They Might Be Giants - Everything Right is Wrong Again",
 "They Might Be Giants - Experimental Film",
@@ -8689,7 +8688,6 @@ var app = (function () {
 "They Might Be Giants - Lady is a Tramp",
 "They Might Be Giants - Let Me Tell You About My Operation",
 "They Might Be Giants - Let Your Hair Hang Down",
-"They Might Be Giants - Let's Get This Over With",
 "They Might Be Giants - Letterbox",
 "They Might Be Giants - Lie Still, Little Bottle",
 "They Might Be Giants - Lord Snowdon",
@@ -8822,7 +8820,6 @@ var app = (function () {
 "They Might Be Giants - You'll Miss Me",
 "They Might Be Giants - Your Mom's Alright",
 "They Might Be Giants - Your Own Worst Enemy",
-"They Might Be Giants - Your Racist Friend",
 "They Might Be Giants - Your Racist Friend",
 "They Might Be Giants - Youth Culture Killed My Dog",
     ]),
