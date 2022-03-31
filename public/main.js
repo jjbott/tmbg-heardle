@@ -3909,11 +3909,11 @@ var app = (function () {
     Jt = [
       "It ended up really really really sad", // FAILED
       "Damn Good Times!", // First try
-      "",
-      "",
-      "",
-      "",
-      "", // Sixth try
+      "I won't lie-- you're on fire",
+      "I'm impressed",
+      "You made my day, now you have to sleep in it",
+      "Your ass is grass, and I'm a lawnmower",
+      "Telephone call for Mr. Horrible", // Sixth try
     ];
   function Kt(t) {
     let n, r;
@@ -4033,14 +4033,14 @@ var app = (function () {
             (f = w("div")),
             (m = w("div")),
             (k = w("div")),
-            (k.textContent = "Next Taeyeon song in:"),
+            (k.textContent = "Next TMBG song in:"),
             (b = x()),
             Q(S.$$.fragment),
             (D = x()),
             (T = w("div")),
             (Y = w("div")),
             (Y.innerHTML =
-              '<span class="text-custom-negative"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span> \n                <span class="px-1">Taeyeon Heardle?</span>'),
+              '<span class="text-custom-negative"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span> \n                <span class="px-1">TMBG Heardle?</span>'),
             (C = x()),
             Q(O.$$.fragment),
             M(n, "class", "text-lg text-custom-line"),
@@ -4249,7 +4249,7 @@ var app = (function () {
       s = (e[0].length * e[1].attemptInterval) / 1e3 + "";
     return {
       c() {
-        (t = _("You got today's Taeyeon Heardle within the first ")),
+        (t = _("You got today's TMBG Heardle within the first ")),
           (n = _(s)),
           (r = _(" seconds."));
       },
@@ -4276,7 +4276,7 @@ var app = (function () {
       a = e[1].attemptIntervalAlt[e[0].length - 1] / 1e3 > 1 ? "s" : "";
     return {
       c() {
-        (t = _("You got today's Taeyeon Heardle within ")),
+        (t = _("You got today's TMBG Heardle within ")),
           (n = _(o)),
           (r = _("\n                second")),
           (s = _(a)),
@@ -4306,7 +4306,7 @@ var app = (function () {
     let n;
     return {
       c() {
-        n = _("You didn't get today's Taeyeon Heardle. Better luck tomorrow!");
+        n = _("You didn't get today's TMBG Heardle. Better luck tomorrow!");
       },
       m(e, t) {
         g(e, n, t);
@@ -4446,7 +4446,7 @@ var app = (function () {
         u,
         c,
         () => {
-          let e = "Taeyeon Heardle #" + (s.id + 1),
+          let e = "TMBG Heardle #" + (s.id + 1),
             t = "";
           a
             ? r.length < i.maxAttempts / 3
@@ -4463,7 +4463,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\nPlay at https://kty-heardle.glitch.me/\nStream @TAEYEONsmtown - INVU youtu.be/AbZH7XWDW_k";
+          let o = e + "\n\n" + t + "\n\nPlay at https://tmbg-heardle.glitch.me/\nStream They Might Be Giants - Moonbeam Rays https://www.youtube.com/watch?v=KSJGduDku6w";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -4549,7 +4549,7 @@ var app = (function () {
           (t = w("div")),
             (n = w("div")),
             (n.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct Taeyeon song in the list.</p></div>'),
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct TMBG song in the list.</p></div>'),
             (r = x()),
             (s = w("div")),
             (s.innerHTML =
