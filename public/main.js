@@ -8587,7 +8587,6 @@ var app = (function () {
       );
     })();
   });
-  //TODO: fill in songs here
   const Cn = ue([
 "They Might Be Giants - (She Was A) Hotel Detective",
 "They Might Be Giants - 2082",
@@ -8821,9 +8820,9 @@ var app = (function () {
 "They Might Be Giants - You Don't Like Me",
 "They Might Be Giants - You Probably Get That a Lot",
 "They Might Be Giants - You'll Miss Me",
-"They Might Be Giants - You're on Fire",
 "They Might Be Giants - Your Mom's Alright",
 "They Might Be Giants - Your Own Worst Enemy",
+"They Might Be Giants - Your Racist Friend",
 "They Might Be Giants - Your Racist Friend",
 "They Might Be Giants - Youth Culture Killed My Dog",
     ]),
