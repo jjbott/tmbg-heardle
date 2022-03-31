@@ -712,7 +712,7 @@ var app = (function () {
             Q(a.$$.fragment),
             (l = x()),
             (u = w("h1")),
-            (u.textContent = "Taeyeon Heardle"),
+            (u.textContent = "TMBG Heardle"),
             (c = x()),
             (d = w("div")),
             Q(h.$$.fragment),
@@ -3638,7 +3638,7 @@ var app = (function () {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for Taeyeon\'s songs.</p> \n\n<p class="mb-3">Each Taeyeon Heardle is randomly chosen from Taeyeon\'s discography. All copyright goes to SM Entertainment.</p> \n\n<p class="mb-3">Songs included are Taeyeon\'s solo songs, OSTs, and collaborations. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>.         <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>.   Taeyeon Heardle is made by <a href="https://github.com/HFrancisco">HFrancisco</a>/<a href="https://twitter.com/HurryFrancisco">_wilson</a></p>'),
+            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://kty-heardle.glitch.me/" title="kty-heardle">Taeyon Heardle</a> but for They Might Be Giants songs.</p> \n\n<p class="mb-3">Each TMBG Heardle is randomly chosen from their discography.</p> \n\n<p class="mb-3">Songs included are songs from TMBG and any of the Johns\' sideprojects. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. TMBG Heardle is made by <a href="https://glitch.com/@ckolderup">@ckolderup</a>/</p>'),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -3854,7 +3854,7 @@ var app = (function () {
             (r = x()),
             (s = w("p")),
             (s.innerHTML =
-              '<p class="mb-3">If you\'ve enjoyed playing Taeyeon Heardle, then please consider supporting the <a href="https://ko-fi.com/heardle">real Heardle devs</a>.</p>'),
+              '<p class="mb-3">If you\'ve enjoyed playing TMBG Heardle, then please consider supporting the <a href="https://ko-fi.com/heardle">real Heardle devs</a>.</p>'),
             (i = x()),
             (o = w("div")),
             Q(a.$$.fragment),
@@ -3907,13 +3907,13 @@ var app = (function () {
       startDate: "2022-03-29",
     },
     Jt = [
-      "smh you got me smoking cigarettes", // FAILED
-      "KING of Taeyeon Heardle!", // First try
-      "You're a real taengbba!",
-      "I'm All Ears for Taeyeon",
-      "Taeyeon loves you!",
-      "Zero loves you!",
-      "I'm in stress baby", // Sixth try
+      "It ended up really really really sad", // FAILED
+      "Damn Good Times!", // First try
+      "",
+      "",
+      "",
+      "",
+      "", // Sixth try
     ];
   function Kt(t) {
     let n, r;
@@ -8587,57 +8587,10 @@ var app = (function () {
       );
     })();
   });
+  //TODO: fill in songs here
   const Cn = ue([
       "태연 (TAEYEON) - 그대라는 시 (A Poem Titled You / All About You) [호텔 델루나 - Hotel Del Luna OST Part 3]",
-      "TAEYEON (태연) - Weekend",
-      "TAEYEON (태연) - INVU",
-      "Taeyeon 태연 _ 11:11 Acoustic Version",
-      "TAEYEON (태연) - Can't Control Myself",
-      "Taeyeon - Fine",
-      "태연 (TAEYEON) - Happy",
-      "Taeyeon (태연) - All With You (Moon Lovers Scarlet Heart Ryeo OST Part 5)",
-      "Circus - TAEYEON (태연)",
-      "TAEYEON (태연) - 그런 밤 (Some Nights)",
-      "If - Taeyeon (SNSD) Ost.Hong gil dong",
-      "KEY (키) - Hate that... (Feat. 태연 (TAEYEON))",
-      "태연 (TAEYEON) - Dear Me (내게 들려주고 싶은 말)",
-      "TAEYEON (태연) Spark (불티)",
-      "태연 (TAEYEON) - Drawing Our Moments (너를 그리는 시간)",
-      "TAEYEON - SIGNAL",
-      "TAEYEON - VOICE",
-      "TAEYEON - I Found You",
-      "TAEYEON - HORIZON",
-      "TAEYEON - Vanilla",
-      "TAEYEON - Blue",
-      "TAEYEON - Four Seasons",
-      "TAEYEON - Stay",
-      "TAEYEON - I'm The Greatest",
-      "TAEYEON - Something New",
-      "TAEYEON - One Day",
-      "TAEYEON - U R",
-      "TAEYEON - Gemini",
-      "TAEYEON - Stress",
-      "TAEYEON - Love You Like Crazy",
-      "TAEYEON - Better Babe",
-      "TAEYEON - LOL",
-      "TAEYEON - Gravity",
-      "TAEYEON - Christmas Without You",
-      "TAEYEON - I'm All Ears",
-      "TAEYEON - Lonely Night",
-      "TAEYEON - Curtain Call",
-      "TAEYEON - I Blame On You",
-      "TAEYEON - Time Lapse",
-      "TAEYEON - Night",
-      "TAEYEON - Fashion",
-      "TAEYEON - Worry Free Love",
-      "TAEYEON - Be Real",
-      "TAEYEON - Galaxy",
-      "TAEYEON - Wildfire",
-      "TAEYEON - To The Moon",
-      "TAEYEON - Cold As Hell",
-      "TAEYEON - Siren",
-      "TAEYEON - Toddler",
-      "챈슬러 (Chancellor) - Angel (Feat. 태연 (TAEYEON))"
+      
     ]),
     On = {
       subscribe: ue(
@@ -8646,170 +8599,7 @@ var app = (function () {
             url: "https://soundcloud.com/l2share128/taeyeon-weekend?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
             answer: "TAEYEON (태연) - Weekend",
           },
-          {
-            url: "https://soundcloud.com/l2shareost11/taeyeon-a-poem-titled-you-hotel-del-luna-ost-part-3?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "태연 (TAEYEON) - 그대라는 시 (A Poem Titled You / All About You) [호텔 델루나 - Hotel Del Luna OST Part 3]"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-worry-free-love?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Worry Free Love"
-          },
-          {
-            url: "https://soundcloud.com/l2share140/key-hate-that-feat-taeyeon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "KEY (키) - Hate that... (Feat. 태연 (TAEYEON))"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-vanilla?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Vanilla"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-horizon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - HORIZON"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-something-new?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Something New"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-wildfire?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Wildfire"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-four-seasons?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Four Seasons"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-love-you-like-crazy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Love You Like Crazy"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-i-found-you?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - I Found You"
-          },
-          {
-            url: "https://soundcloud.com/l2share149/taeyeon-cant-control-myself?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON (태연) - Can't Control Myself"
-          },
-          {
-            url: "https://soundcloud.com/chariya-ruamphon/taeyeon-fine?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "Taeyeon - Fine"
-          },
-          {
-            url: "https://soundcloud.com/l2share103/taeyeon-happy-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "태연 (TAEYEON) - Happy"
-          },
-          {
-            url: "https://soundcloud.com/delunna/taeyeon-all-with-you-moon-lovers-scarlet-heart-ryeo-ost-part-5?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "Taeyeon (태연) - All With You (Moon Lovers Scarlet Heart Ryeo OST Part 5)"
-          },
-          {
-            url: "https://soundcloud.com/alittleloveforyou/circus-taeyeon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "Circus - TAEYEON (태연)"
-          },
-          {
-            url: "https://soundcloud.com/l2share151/taeyeon-some-nights?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON (태연) - 그런 밤 (Some Nights)"
-          },
-          {
-            url: "https://soundcloud.com/gracetee-1/if-taeyeon-snsd-ost-hong-gil?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "If - Taeyeon (SNSD) Ost.Hong gil dong"
-          },
-          {
-            url: "https://soundcloud.com/l2share95/taeyeon-dear-me?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "태연 (TAEYEON) - Dear Me (내게 들려주고 싶은 말)"
-          },
-          {
-            url: "https://soundcloud.com/iew-v-828617851/taeyeon-spark?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON (태연) Spark (불티)"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-signal?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - SIGNAL"
-          },
-          {
-            url: "https://soundcloud.com/l2share95/taeyeon-drawing-our-moments?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "태연 (TAEYEON) - Drawing Our Moments (너를 그리는 시간)"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-voice?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - VOICE"
-          },
-          {
-            url: "https://soundcloud.com/haxtrang/taeyeon-1111-acoustic-version-full-audio?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "Taeyeon 태연 _ 11:11 Acoustic Version"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-be-real?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Be Real"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-gravity?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Gravity"
-          },
-          {
-            url: "https://soundcloud.com/l2share151/taeyeon-invu?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON (태연) - INVU"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-blue?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Blue"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-stay?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Stay"
-          },
-          {
-            url: "https://soundcloud.com/l2share84/chancellor-angel-feat-taeyeon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "챈슬러 (Chancellor) - Angel (Feat. 태연 (TAEYEON))"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-im-the-greatest?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - I'm The Greatest"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-one-day?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - One Day"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-galaxy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Galaxy"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-u-r?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - U R"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-lol?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - LOL"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-gemini?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Gemini"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-stresss?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Stress"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-better-babe?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Better Babe"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-toddler?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Toddler"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-cold-as-helll?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Cold As Hell"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-siren?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - Siren"
-          },
-          {
-            url: "https://soundcloud.com/hurryfrancisco/taeyeon-to-the-moon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-            answer: "TAEYEON - To The Moon"
-          }
+          
         ],
         Pn
       ).subscribe,
@@ -9157,12 +8947,12 @@ var app = (function () {
           Q(Y.$$.fragment),
           (C = x()),
           H && H.c(),
-          (An.title = "Taeyeon Heardle - The Taeyeon song intros game"),
+          (An.title = "TMBG Heardle - Name That They Might Be Giants song!"),
           M(t, "name", "description"),
           M(
             t,
             "content",
-            "Guess the Taeyeon song based on the intro in as few tries as possible"
+            "Guess the They Might Be Giants song from the intro in as few tries as possible."
           ),
           M(n, "rel", "apple-touch-icon"),
           M(n, "sizes", "180x180"),

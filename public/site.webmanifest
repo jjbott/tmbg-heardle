@@ -1,29 +1,29 @@
 {
-  "name": "Taeyeon Heardle - That Taeyeon song intros game",
-  "short_name": "Taeyeon Heardle",
+  "name": "TMBG Heardle - Name That They Might Be Giants song!",
+  "short_name": "TMBG Heardle",
   "icons": [
     {
-      "src": "https://ibb.co/4gVkKGV",
+      "src": "",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://ibb.co/4gVkKGV",
+      "src": "",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "https://ibb.co/4gVkKGV",
+      "src": "",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "https://ibb.co/4gVkKGV",
+      "src": "",
       "sizes": "16x16",
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone"
 }
