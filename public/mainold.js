@@ -597,7 +597,11 @@ var app = (function () {
       c() {
         (t = k("svg")),
           (n = k("path")),
-          M(n, "d" ,"M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"),
+          M(
+            n,
+            "d",
+            "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+          ),
           M(t, "xmlns", "http://www.w3.org/2000/svg"),
           M(t, "width", "24"),
           M(t, "height", "24"),
@@ -1310,7 +1314,10 @@ var app = (function () {
     let n;
     return {
       c() {
-        (n = w("div"))},
+        (n = w("div")),
+          (n.innerHTML = '<span class="loader svelte-57p3aa"></span>'),
+          M(n, "class", "flex justify-center m-3");
+      },
       m(e, t) {
         g(e, n, t);
       },
@@ -2764,7 +2771,8 @@ var app = (function () {
                                 o.length || n.noResults)
                               ) {
                                 var u = new DocumentFragment();
-                                a.forEach(function (e, n) {
+                                // TODO: fix the autocomplete to not show duplicates
+                                a.filter((v,i,s) => { return s.indexOf(v) === i }).forEach(function (e, n) {
                                   var r = l(
                                     s.tag,
                                     t(
@@ -3631,7 +3639,7 @@ var app = (function () {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for songs by the band They Might Be Giants.</p> \n\n<p class="mb-3">Each TMBG Heardle is randomly chosen from TMBG\'s discography (and I will probably add tracks from the Johns\' side projects at some point.</p> \n\n\n\n <p>Have questions/run into bugs? DM me @beomshu on twitter... currently trying to fix the double answer bug. </p>  \n\n\n\n\ <p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. Original Heardle by <a href="https://omakase.studio" title="Studio Omakase">Studio omakase / お任せ</a>. TMBG version made by <a href ="https://twitter.com/ckolderup">casey</a>.</p> '),
+            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://kty-heardle.glitch.me/" title="kty-heardle">Taeyon Heardle</a> but for They Might Be Giants songs.</p> \n\n<p class="mb-3">Each TMBG Heardle is randomly chosen from their discography.</p> \n\n<p class="mb-3">Songs included are songs from TMBG and any of the Johns\' sideprojects. Thanks for playing!</p> \n\n\n\n<p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. TMBG Heardle is made by <a href="https://glitch.com/@ckolderup">@ckolderup</a>/</p>'),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -3724,7 +3732,7 @@ var app = (function () {
     let n, r, s, i, o, a, l, u, c, d;
     return {
       c() {
-          (n = w("div")),
+        (n = w("div")),
           (r = w("div")),
           (s = x()),
           (i = w("div")),
@@ -3819,7 +3827,7 @@ var app = (function () {
       P(async function () {
         (async function () {
           const e = await fetch(
-            "https://tmbg-heardle.glitch.me/supporters.json"
+            "https://kty-heardle.glitch.me/supporters.json"
           );
           return await e.json();
         })().then((e) => {
@@ -3842,13 +3850,12 @@ var app = (function () {
       {
         c() {
           (n = w("p")),
-            (s = w("p")),
             (n.textContent =
-              "Thanks to svt-heardle.glitch.me for the remixable copy of Heardle.app."),
+              "If you enjoyed the game and would like to support the Heardle devs with server costs to keep the original game running, please consider donating!"),
             (r = x()),
             (s = w("p")),
             (s.innerHTML =
-              '<p class="mb-3">If you\'ve enjoyed playing TMBG Heardle and would like to support the Heardle devs with server costs to keep the original game running, then please consider supporting the <a href="https://ko-fi.com/heardle">real Heardle devs</a>.</p>'),
+              '<p class="mb-3">If you\'ve enjoyed playing TMBG Heardle, then please consider supporting the <a href="https://ko-fi.com/heardle">real Heardle devs</a>.</p>'),
             (i = x()),
             (o = w("div")),
             Q(a.$$.fragment),
@@ -3898,16 +3905,16 @@ var app = (function () {
       attemptInterval: 1.5e3,
       attemptIntervalAlt: [1e3, 2e3, 4e3, 7e3, 11e3, 16e3],
       maxAttempts: 6,
-      startDate: "2022-03-31",
+      startDate: "2022-04-01",
     },
     Jt = [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
+      "It ended up really really really sad", // FAILED
+      "Damn Good Times!", // First try
+      "I won't lie-- you're on fire",
+      "I'm impressed",
+      "You made my day, now you have to sleep in it",
+      "Your ass is grass, and I'm a lawnmower",
+      "Telephone call for Mr. Horrible", // Sixth try
     ];
   function Kt(t) {
     let n, r;
@@ -4300,7 +4307,7 @@ var app = (function () {
     let n;
     return {
       c() {
-        n = _("You didn't get today's TMBG Heardle. Better luck tomorrow! 💎");
+        n = _("You didn't get today's TMBG Heardle. Better luck tomorrow!");
       },
       m(e, t) {
         g(e, n, t);
@@ -4457,7 +4464,7 @@ var app = (function () {
                 ? (t += "⬛️")
                 : (t += "🟥")
               : (t += "⬜️");
-          let o = e + "\n\n" + t + "\n\nhttps://tmbg-heardle.glitch.me/";
+          let o = e + "\n\n" + t + "\n\nPlay at https://tmbg-heardle.glitch.me/";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -8582,7 +8589,7 @@ var app = (function () {
     })();
   });
   const Cn = ue([
-    "They Might Be Giants - (She Was A) Hotel Detective",
+"They Might Be Giants - (She Was A) Hotel Detective",
 "They Might Be Giants - 2082",
 "They Might Be Giants - 32 Footsteps",
 "They Might Be Giants - 9 Secret Steps",
@@ -8815,11 +8822,11 @@ var app = (function () {
 "They Might Be Giants - Your Own Worst Enemy",
 "They Might Be Giants - Your Racist Friend",
 "They Might Be Giants - Youth Culture Killed My Dog",
-  ]),
+    ]),
     On = {
       subscribe: ue(
         [
-          { url: "https://soundcloud.com/they-might-be-giants/youre-on-fire-1",
+     { url: "https://soundcloud.com/they-might-be-giants/youre-on-fire-1",
 answer: "They Might Be Giants - You're on Fire", },
 { url: "https://soundcloud.com/they-might-be-giants/lets-get-this-over-with",
 answer: "They Might Be Giants - Let's Get This Over With", },
@@ -9293,7 +9300,8 @@ answer: "They Might Be Giants - We Want a Rock", },
 answer: "They Might Be Giants - Twisting", },
 { url: "https://soundcloud.com/they-might-be-giants/women-men",
 answer: "They Might Be Giants - Women & Men", },
-        
+
+          
         ],
         Pn
       ).subscribe,
@@ -9641,12 +9649,12 @@ answer: "They Might Be Giants - Women & Men", },
           Q(Y.$$.fragment),
           (C = x()),
           H && H.c(),
-          (An.title = "TMBG Heardle"),
+          (An.title = "TMBG Heardle - Name That They Might Be Giants song!"),
           M(t, "name", "description"),
           M(
             t,
             "content",
-            "Guess the They Might Be Giants song from the intro in as few tries as possible"
+            "Guess the They Might Be Giants song from the intro in as few tries as possible."
           ),
           M(n, "rel", "apple-touch-icon"),
           M(n, "sizes", "192x192"),
