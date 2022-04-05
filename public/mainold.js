@@ -2772,7 +2772,7 @@ var app = (function () {
                               ) {
                                 var u = new DocumentFragment();
                                 // TODO: fix the autocomplete to not show duplicates
-                                a.filter((v,i,s) => { return s.indexOf(v) === i }).forEach(function (e, n) {
+                                a.filter((v,i,s) => { console.log(s); return s.indexOf(v) === i }).forEach(function (e, n) {
                                   var r = l(
                                     s.tag,
                                     t(
