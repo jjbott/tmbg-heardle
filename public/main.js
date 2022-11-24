@@ -9555,7 +9555,7 @@ var app = (function () {
   function jn(e, t, n) {
     let r, s, i, o;
     u(e, Cn, (e) => n(26, (r = e))), u(e, On, (e) => n(27, (s = e)));
-    let a = x(Vt.startDate),
+    let a = x(Vt.startDate) % s.length,
       l = {
         url: s[a].url,
         correctAnswer: s[a].answer,
