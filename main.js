@@ -3820,7 +3820,7 @@ var app = (function () {
       P(async function () {
         (async function () {
           const e = await fetch(
-            "https://tmbg-heardle-2.glitch.me/supporters.json"
+            "https://tmbg-heardle.glitch.me/supporters.json"
           );
           return await e.json();
         })().then((e) => {
