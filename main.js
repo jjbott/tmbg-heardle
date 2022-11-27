@@ -2771,7 +2771,8 @@ var app = (function () {
                                     dedupe.push(e);
                                   }
                                 })
-                                dedupe.forEach(function (e, n) {
+                                i.results = a = dedupe;
+                                a.forEach(function (e, n) {
                                   var r = l(
                                     s.tag,
                                     t(
