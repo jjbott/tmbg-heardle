@@ -2764,8 +2764,14 @@ var app = (function () {
                                 o.length || n.noResults)
                               ) {
                                 var u = new DocumentFragment();
-                                // NOTE: this fixes duplicate autocomplete but limits the autocomplete to one item
-                                a.filter((v,i,s) => { console.log(s); return s.findIndex((x) => x.value) === i }).forEach(function (e, n) {
+                                // This dedupes the list. Not sure how dupes get in there...
+                                var dedupe = []
+                                a.forEach(e => {
+                                  if ( dedupe.filter(f => f.value === e.value).length === 0){
+                                    dedupe.push(e);
+                                  }
+                                })
+                                dedupe.forEach(function (e, n) {
                                   var r = l(
                                     s.tag,
                                     t(
