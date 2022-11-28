@@ -3023,8 +3023,9 @@ var app = (function () {
       }),
         (e.exports = n());
     }),
-    kt = _t(2);
-  function _t(e) {
+    bigram = nGram(2);
+  // Appears to be a minified version of https://github.com/words/n-gram/blob/ea29ab8493a837f3ce5983bf583f5433c4a5dd8b/index.js#L9
+  function nGram(e) {
     if (
       "number" != typeof e ||
       Number.isNaN(e) ||
@@ -3042,14 +3043,16 @@ var app = (function () {
       return s;
     };
   }
-  function xt(e, t) {
+  // Appears to be a minified version of https://github.com/words/dice-coefficient/blob/eca6ad69a664633c156f57e587ee504f17708b88/index.js#L19
+  //function diceCoefficient(value, other) {
+  function diceCoefficient(value, other) {
     let n, r, s, i;
-    Array.isArray(e)
-      ? (s = e.map((e) => String(e).toLowerCase()))
-      : ((n = String(e).toLowerCase()), (s = 1 === n.length ? [n] : kt(n))),
-      Array.isArray(t)
-        ? (i = t.map((e) => String(e).toLowerCase()))
-        : ((r = String(t).toLowerCase()), (i = 1 === r.length ? [r] : kt(r)));
+    Array.isArray(value)
+      ? (s = value.map((e) => String(e).toLowerCase()))
+      : ((n = String(value).toLowerCase()), (s = 1 === n.length ? [n] : bigram(n))),
+      Array.isArray(other)
+        ? (i = other.map((e) => String(e).toLowerCase()))
+        : ((r = String(other).toLowerCase()), (i = 1 === r.length ? [r] : bigram(r)));
     let o,
       a,
       l,
@@ -3322,8 +3325,8 @@ var app = (function () {
                 .getElementById("autoComplete")
                 .value.toLowerCase();
               return (e = e.sort((e, n) => {
-                let r = xt(t, e.value.toLowerCase()),
-                  s = xt(t, n.value.toLowerCase());
+                let r = diceCoefficient(t, e.value.toLowerCase()),
+                  s = diceCoefficient(t, n.value.toLowerCase());
                 return r === s ? (e.value > n.value ? -1 : 1) : s > r ? 1 : -1;
               }));
             },
@@ -3371,7 +3374,7 @@ var app = (function () {
       ]
     );
   }
-  _t(3);
+  nGram(3);
   class Yt extends se {
     constructor(e) {
       super(),
