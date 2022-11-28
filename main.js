@@ -2764,14 +2764,6 @@ var app = (function () {
                                 o.length || n.noResults)
                               ) {
                                 var u = new DocumentFragment();
-                                // This dedupes the list. Not sure how dupes get in there...
-                                var dedupe = []
-                                a.forEach(e => {
-                                  if ( dedupe.filter(f => f.value === e.value).length === 0){
-                                    dedupe.push(e);
-                                  }
-                                })
-                                i.results = a = dedupe;
                                 a.forEach(function (e, n) {
                                   var r = l(
                                     s.tag,
@@ -10467,15 +10459,18 @@ var app = (function () {
       p,
       function (e) {
         let t = e.detail.currentSong;
-        n(2, (l.artist = l.correctAnswer.split(" - ")[0]), l),
-          n(2, (l.title = l.correctAnswer.split(" - ")[1]), l),
+        n(2, (l.artist = l.correctAnswer.split(" - ")[1]), l),
+          n(2, (l.title = l.correctAnswer.split(" - ")[0]), l),
           n(2, (l.img = t.artwork_url), l),
           n(2, (l.duration = t.duration), l),
           n(2, (l.genre = t.genre), l),
           n(2, (l.date = t.release_date), l),
+          // Add the correct answer, but only if it doesnt exist already.
+          // Otherwise we get duplicates in the autosuggest box
+          r = r.indexOf(l.correctAnswer) >= 0 ? r : [...r, l.correctAnswer],
           (function (e, t, n) {
             e.set(n);
-          })(Cn, (r = [...r, l.correctAnswer]), r),
+          })(Cn, r, r),
           n(9, (y = r)),
           n(8, (w.playerIsReady = !0), w),
           f.hasFinished || n(8, (w.gameIsActive = !0), w);
