@@ -135,9 +135,10 @@ data.forEach(e => {
     }
 })
 
-
-
 data = data2;
+
+console.log("All tracks")
+console.log(JSON.stringify(data));
 
 function normalize(title) {
     return title.toLowerCase().replace(/[^a-z0-9 ]/g, '')
@@ -169,7 +170,7 @@ data.forEach(e => {
     }
 
     if (existingTitleMatches.length > 0) {
-        console.log(`Throwing away ${e.title} - ${e.album}, ${e.url}`)
+        //console.log(`Throwing away ${e.title} - ${e.album}, ${e.url}`)
         return;
     }
 
@@ -209,8 +210,8 @@ data.forEach(e => {
             data2.push(e)
         }
         else {
-            console.log(`Throwing away ${e.title} - ${e.album}, ${e.url}`)
-            console.log(titleMatches)
+            //console.log(`Throwing away ${e.title} - ${e.album}, ${e.url}`)
+            //console.log(titleMatches)
         }
     }
     else {
@@ -233,7 +234,20 @@ data.forEach(e => {
 
 data = data2;
 
+console.log(JSON.stringify(data));
+
 // Editorial decisions
+
+// Title tweaks
+data.forEach(e => {
+    // Make these match with the non "In Situ" versions, so you dont have to choose between them
+    e.title = e.title.replace(" (In Situ)", "");
+
+    e.title = e.title.replace(" (Live)", "");
+    e.title = e.title.replace(/ \([\w ]*?Live Version\)/g, "");
+})
+// Dropping the `(Alternate Version)` bit
+data.filter(t => t.url === 'https://soundcloud.com/they-might-be-giants/kiss-me-sun-of-god-alternate')[0].title = 'Kiss Me, Son of God';
 
 // Removals
 data = data.filter(t =>
@@ -267,17 +281,6 @@ data = data.filter(t =>
     && t.album != 'They Might Be Giants: Here Come the ABCs'
     
 )
-
-// Title tweaks
-data.forEach(e => {
-    // Make these match with the non "In Situ" versions, so you dont have to choose between them
-    e.title = e.title.replace(" (In Situ)", "");
-
-    e.title = e.title.replace(" (Live)", "");
-    e.title = e.title.replace(/ \([\w ]*?Live Version\)/g, "");
-})
-// Dropping the `(Alternate Version)` bit
-data.filter(t => t.url === 'https://soundcloud.com/they-might-be-giants/kiss-me-sun-of-god-alternate')[0].title = 'Kiss Me, Son of God';
 
 // Not sure about Black Ops vs Black Ops Alt. They're both on studio albums, and pretty different sounding...
 
@@ -324,6 +327,8 @@ function diceCoefficient(value, other) {
     return (2 * intersections) / (left.length + right.length);
 }
 
+
+// Just logging some warnings if titles are "too close" to one another. Used to catch minor differences that we can smooth out
 data.forEach(e => {
     var m = data.filter(t => normalize(t.title) == normalize(e.title) && (t.title != e.title || e.url == t.url))
     if (m.length > 1) {
@@ -339,11 +344,7 @@ data.forEach(e => {
 })
 
 
+console.log("Filtered tracks")
+console.log(JSON.stringify(data));
 
-
-
-
-
-
-
-JSON.stringify(data2.sort((a, b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : (a.album < b.album) ? -1 : (a.album > b.album) ? 1 : 0))
+//JSON.stringify(data2.sort((a, b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : (a.album < b.album) ? -1 : (a.album > b.album) ? 1 : 0))
