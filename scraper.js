@@ -42,7 +42,7 @@ var titleFixes = [
     ['https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine-the-1', 'Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)'],
     ['https://soundcloud.com/they-might-be-giants/why-does-the-sun-really-shine', 'Why Does the Sun Really Shine? (The Sun Is a Miasma of Incandescent Plasma)'],
     // These names are swapped on Soundcloud. Neat.
-    ['https://soundcloud.com/they-might-be-giants/i-hope-that-i-get-old-before-i', 'I Hope That I Get Old Before I Die (Version 1)'],    
+    ['https://soundcloud.com/they-might-be-giants/i-hope-that-i-get-old-before-i', 'I Hope That I Get Old Before I Die (Version 1)'],
     ['https://soundcloud.com/they-might-be-giants/hope-that-i-get-old-before-i', 'I Hope That I Get Old Before I Die'],
     // "Sun"
     ['https://soundcloud.com/they-might-be-giants/kiss-me-sun-of-god-alternate', 'Kiss Me, Son of God (Alternate Version)'],
@@ -251,7 +251,6 @@ data.filter(t => t.url === 'https://soundcloud.com/they-might-be-giants/kiss-me-
 
 // Removals
 data = data.filter(t =>
-
     t.title.indexOf("Single Mix") < 0
     && t.title.indexOf("(Demo") < 0
     && t.title.indexOf("Radio They Might Be Giants #") < 0 // Could call them all "Radio They Might Be Giants" to make it easier I suppose
@@ -260,26 +259,44 @@ data = data.filter(t =>
     && t.url !== 'https://soundcloud.com/they-might-be-giants/bloodmobile' // Dupe
     && t.url !== 'https://soundcloud.com/they-might-be-giants/fake-believe-type-b' // Essentially a dupe
     && t.url !== 'https://soundcloud.com/they-might-be-giants/13-1' // Ugh this one kills me. But it doesnt really have a title
+    && t.url !== 'https://soundcloud.com/they-might-be-giants/ballad-of-davy-crockett-in' // Dupe
+    && t.url !== 'https://soundcloud.com/they-might-be-giants/here-come-the-abcs' // intro
+    && t.url !== 'https://soundcloud.com/they-might-be-giants/here-come-the-123s' // intro
+    && t.url !== 'https://soundcloud.com/they-might-be-giants/careless-santa-1' // Not technically TMBG (but maybe should be included at some point)
 
     // I think these are all probably fine, but going to remove them to start with.
-    && !!t.album // Some decent stuff without an album, but removing them for now
+    && (!!t.album // Some decent stuff without an album, but removing them for now
+        || t.url === 'https://soundcloud.com/they-might-be-giants/other-father-song') // This one stands out as needing to stay in
     && t.album != 'The Communists Have the Music'
-    && t.album != 'Severe Tire Damage'
+    && t.album != 'Severe Tire Damage' // Live album
+    // Maybe some of 'They Got Lost' can be included, but at a glance they seem way too obscure
+    // A few songs are already included from other albums
     && t.album != 'They Got Lost'
-    && t.album != 'At Large'
-    && t.album != 'Album Raises New and Troubling Questions'
-    && t.album != 'Venue Songs'
-    && t.album != 'Then: The Earlier Years'
-    && t.album != 'Holidayland'
-    && t.album != 'Cast Your Pod To The Wind' 
-    // Removing kids albums for now
-    && t.album != 'Why?'
-    && t.album != 'No!'
-    && t.album != 'No! (Deluxe Edition)'
-    && t.album != 'Here Comes Science'
-    && t.album != 'Here Come the 123s'
-    && t.album != 'They Might Be Giants: Here Come the ABCs'
-    
+    && t.album != 'At Large' // Live album
+    && (t.album != 'Album Raises New and Troubling Questions'
+        // Most of the album feels too obsure, but this one is a keeper
+        || t.url === 'https://soundcloud.com/they-might-be-giants/tubthumping-feat-the-onion-av')
+    && t.album != 'Venue Songs' // Live album / Too obscure??
+    && (t.album != 'Then: The Earlier Years' // Mainstream stuff is on other albums. Rest might be too obscure? Needs curating
+        // At a quick glance I think these are fine. I hope... *I* like them anyways
+        || t.url === 'https://soundcloud.com/they-might-be-giants/now-that-i-have-everything'
+        || t.url === 'https://soundcloud.com/they-might-be-giants/weep-day'
+        || t.url === 'https://soundcloud.com/they-might-be-giants/im-gettin-sentimental-over-you'
+        || t.url === 'https://soundcloud.com/they-might-be-giants/become-a-robot'
+    )
+    //&& t.album != 'Holidayland' // Can I limit these to December? Hm.
+    && (t.album !== 'Cast Your Pod to the Wind' // Needs curating. 
+        // Including most popular for now
+        || t.url === 'https://soundcloud.com/they-might-be-giants/we-live-in-a-dump-2'
+        || t.url === 'https://soundcloud.com/they-might-be-giants/brain-problem-situation-1'
+    )
+    // Allowing most kids albums. We'll see how that goes...
+    //&& t.album != 'Why?'
+    //&& t.album != 'No!'
+    && t.album != 'No! (Deluxe Edition)' // extended/live versions
+    //&& t.album != 'Here Comes Science'
+    //&& t.album != 'Here Come the 123s'
+    //&& t.album != 'They Might Be Giants: Here Come the ABCs'
 )
 
 // Not sure about Black Ops vs Black Ops Alt. They're both on studio albums, and pretty different sounding...
@@ -348,3 +365,6 @@ console.log("Filtered tracks")
 console.log(JSON.stringify(data));
 
 //JSON.stringify(data2.sort((a, b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : (a.album < b.album) ? -1 : (a.album > b.album) ? 1 : 0))
+// map to index array:
+// p == potentialSolutions
+newQueue.map(e => e.url).map(e => p.map(e2 => e2.url).indexOf(e)) 
