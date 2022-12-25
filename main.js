@@ -9134,7 +9134,7 @@ var app = (function () {
         gameIsActive: !1,
         musicIsPlaying: !1,
         playerIsReady: !1,
-        isPrime: a >= 7,
+        isPrime: true,
       };
     let k = {
       isActive: !1,
