@@ -4447,7 +4447,7 @@ var app = (function () {
         u,
         c,
         () => {
-          let e = "TMBG Heardle #" + (s.id + 1 + idOffset),
+          let e = "TMBG Heardle #" + (s.id + 1),
             t = "";
           a
             ? r.length < i.maxAttempts / 3
@@ -4984,54 +4984,127 @@ var app = (function () {
       },
     };
   }
-  function Dn(e, t, n) {
-    let { userStats: r } = t,
-      { config: s } = t,
-      { todaysScore: i } = t,
-      { hasFinished: o } = t,
-      { daysSince: a } = t,
-      l = !1,
-      u = 0,
-      c = [],
-      d = [],
-      h = 0,
-      { isPrime: f } = t,
-      { guessRef: m } = t,
-      p = [];
-    for (let e = 0; e < s.maxAttempts + 1; e++) p[e] = 0;
-    let g = 0;
-    if (r.length > 0) {
-      l = !0;
-      for (let e = 0; e < a + 1; e++) d.push(0);
-      for (let e in r)
-        !0 === r[e].hasFinished &&
-          (++u,
-          !0 === r[e].gotCorrect
-            ? ((d[r[e].id] = 1),
-              ++h,
-              ++p[r[e].score - 1],
-              p[r[e].score - 1] > g && (g = p[r[e].score - 1]))
-            : (++p[s.maxAttempts],
-              p[s.maxAttempts] > g && (g = p[s.maxAttempts])));
-      c = d.reduce((e, t) => (t ? e[e.length - 1]++ : e.push(0), e), [0]);
+  function calculateStats(e, t, n) {
+    let { userStats: userStats } = t,
+      { config: config } = t,
+      { todaysScore: todaysScore } = t,
+      { hasFinished: hasFinished } = t,
+      { daysSince: daysSince } = t,
+      maybeIsFirstTime = !1,
+      played = 0,
+      streaks = [],
+      dayResults = [],
+      wonCount = 0,
+      { isPrime: isPrime } = t,
+      { guessRef: guessRef } = t,
+      histogram = [];
+
+    // TODO: Stat fudging can be removed if we fix the user's userstats in local storage.
+    // But, that needs to be bullet proof, otherwise the stats may be irrepairbly damaged.
+    // I'm too ascared to try that right now, so I'll fudge.
+
+    for (let e = 0; e < config.maxAttempts + 1; e++) histogram[e] = 0;
+    let maxHistogram = 0;
+    if (userStats.length > 0) {
+      maybeIsFirstTime = !0;
+
+      let lastId = -1;
+      let wentBackwards = false;
+      for (let e in userStats) {
+        if (true === userStats[e].hasFinished) {
+          ++played;
+
+          let userStatId = userStats[e].id;
+
+          // In Dec 2022, the ids reset to 0. This was fixed in Jan 2023.
+          // When counting streaks, try to detect this to set the `daysWon` flags correctly
+
+          // User stats are in date order, not id order. So if the ids went backwards, we've hit our bug
+          if (lastId > userStatId) {
+            wentBackwards = true;
+          }
+
+          lastId = userStatId;
+
+          if (wentBackwards && userStatId < 30) {
+            userStatId += idOffset;
+          }
+
+          dayResults[userStatId] = userStats[e].gotCorrect ? 1 : 0;
+
+          if (true === userStats[e].gotCorrect) {
+            ++wonCount;
+            ++histogram[userStats[e].score - 1];
+            if (histogram[userStats[e].score - 1] > maxHistogram) {
+              maxHistogram = histogram[userStats[e].score - 1];
+            }
+          } else {
+            ++histogram[config.maxAttempts];
+            if (histogram[config.maxAttempts] > maxHistogram) {
+              maxHistogram = histogram[config.maxAttempts];
+            }
+          }
+        }
+      }
+
+      // In Dec 2022, the ids reset to 0. This was fixed in Jan 2023 after about 26 days.
+      // If you had user stats for these "bad" ids (from the first month the game was live)
+      // it thought you already played and didnt let you play.
+      // For those cases, for the purposes of streak calculation, assume they would have gotten it right.
+      for (let i = 0; i < 26; i++) {
+        if (
+          dayResults[i] !== undefined && // They played on the original "bad id" day
+          i <= daysSince && // The game with the "bad id" is not in the future
+          dayResults[i + idOffset] === undefined // They did not play after the fix
+        ) {
+          dayResults[i + idOffset] = 1;
+        }
+      }
+
+      // Fill in empty items (days they didnt play) with 0, so we can correctly calculate streaks.
+      // Needs to be done after the above
+      for (let i = 0; i < daysSince + 1 + idOffset; i++) {
+        if (dayResults[i] === undefined) {
+          dayResults[i] = 0;
+        }
+      }
+
+      streaks = dayResults.reduce(
+        (e, t) => (t ? e[e.length - 1]++ : e.push(0), e),
+        [0]
+      );
     }
     return (
       (e.$$set = (e) => {
-        "userStats" in e && n(11, (r = e.userStats)),
-          "config" in e && n(0, (s = e.config)),
-          "todaysScore" in e && n(1, (i = e.todaysScore)),
-          "hasFinished" in e && n(2, (o = e.hasFinished)),
-          "daysSince" in e && n(12, (a = e.daysSince)),
-          "isPrime" in e && n(3, (f = e.isPrime)),
-          "guessRef" in e && n(4, (m = e.guessRef));
+        "userStats" in e && n(11, (userStats = e.userStats)),
+          "config" in e && n(0, (config = e.config)),
+          "todaysScore" in e && n(1, (todaysScore = e.todaysScore)),
+          "hasFinished" in e && n(2, (hasFinished = e.hasFinished)),
+          "daysSince" in e && n(12, (daysSince = e.daysSince)),
+          "isPrime" in e && n(3, (isPrime = e.isPrime)),
+          "guessRef" in e && n(4, (guessRef = e.guessRef));
       }),
-      [s, i, o, f, m, l, u, c, h, p, g, r, a]
+      [
+        config,
+        todaysScore,
+        hasFinished,
+        isPrime,
+        guessRef,
+        maybeIsFirstTime,
+        played,
+        streaks,
+        wonCount,
+        histogram,
+        maxHistogram,
+        userStats,
+        daysSince
+      ]
     );
   }
   class Tn extends se {
     constructor(e) {
       super(),
-        re(this, e, Dn, $n, i, {
+        re(this, e, calculateStats, $n, i, {
           userStats: 11,
           config: 0,
           todaysScore: 1,
@@ -9083,13 +9156,13 @@ var app = (function () {
     };
   }
   function jn(e, t, n) {
-    let r, s, i, o;
-    u(e, Cn, (e) => n(26, (r = e))), u(e, On, (e) => n(27, (s = e)));
-    let a = x(Vt.startDate) % s.length,
+    let r, answers, i, o;
+    u(e, Cn, (e) => n(26, (r = e))), u(e, On, (e) => n(27, (answers = e)));
+    let answerIndex = daysSinceStartDate(Vt.startDate) % answers.length,
       l = {
-        url: s[a].url,
-        correctAnswer: s[a].answer,
-        id: a,
+        url: answers[answerIndex].url,
+        correctAnswer: answers[answerIndex].answer,
+        id: daysSinceStartDate(Vt.startDate) + idOffset,
         guessList: [],
         hasFinished: !1,
         hasStarted: !1,
@@ -9106,7 +9179,7 @@ var app = (function () {
         document.addEventListener(
           d,
           function () {
-            document[c] || a === x(Vt.startDate) || location.reload(!0);
+            document[c] || answerIndex === (daysSinceStartDate(Vt.startDate) % answers.length) || location.reload(!0);
           },
           !1
         );
@@ -9122,7 +9195,12 @@ var app = (function () {
     null == localStorage.getItem("userStats")
       ? ((h = []), localStorage.setItem("userStats", JSON.stringify(h)))
       : (h = JSON.parse(localStorage.getItem("userStats"))),
-      (f = h.find((e) => e.id === l.id)),
+      (f = h.find((e) => e.id === l.id)
+      // TODO: Can remove this line in a couple days. 
+      // After the id fix, today's stats may be under the wrong id. 
+      // Use the last stat if it matches the bad id
+      || (h[h.length - 1].id === l.id - idOffset ? h[h.length - 1] : undefined)
+      ),
       void 0 === f &&
         ((f = l),
         h.push(f),
@@ -9148,7 +9226,7 @@ var app = (function () {
         n(10, (k.title = t), k),
         n(10, (k.hasFrame = r), k);
     }
-    function x(e) {
+    function daysSinceStartDate(e) {
       var t = Yn(e, "YYYY-MM-DD");
       return Yn().diff(t, "days");
     }
@@ -9166,7 +9244,7 @@ var app = (function () {
       w,
       y,
       k,
-      a,
+      answerIndex,
       p,
       function (e) {
         let t = e.detail.currentSong;
