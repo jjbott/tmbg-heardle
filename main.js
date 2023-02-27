@@ -9195,12 +9195,7 @@ var app = (function () {
     null == localStorage.getItem("userStats")
       ? ((h = []), localStorage.setItem("userStats", JSON.stringify(h)))
       : (h = JSON.parse(localStorage.getItem("userStats"))),
-      (f = h.find((e) => e.id === l.id)
-      // TODO: Can remove this line in a couple days. 
-      // After the id fix, today's stats may be under the wrong id. 
-      // Use the last stat if it matches the bad id
-      || (h[h.length - 1].id === l.id - idOffset ? h[h.length - 1] : undefined)
-      ),
+      (f = h.find((e) => e.id === l.id)),
       void 0 === f &&
         ((f = l),
         h.push(f),
