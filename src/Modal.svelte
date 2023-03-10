@@ -1,42 +1,56 @@
 <script>
-    import {createEventDispatcher} from 'svelte'
+    import {createEventDispatcher, onDestroy} from 'svelte'
     const dispatch = createEventDispatcher();
-    const onClose = () => dispatch("close");
+    const close = () => dispatch("close");
+
+    let modal;
 
     export let title;
     export let hasFrame;
-    //export let onClick;
+    
+	const handle_keydown = e => {
+		if (e.key === 'Escape') {
+			close();
+			return;
+		}
 
-    let modalDiv;
+		if (e.key === 'Tab') {
+			// trap focus
+			const nodes = modal.querySelectorAll('*');
+			const tabbable = Array.from(nodes).filter(n => n.tabIndex >= 0);
 
-    const onKeyDown = (e) => {
-        if ("Escape" !== e.key) {
-            if ("Tab" === e.key) {
-                const t = a.querySelectorAll("*");
-                n = Array.from(t).filter((e) => e.tabIndex >= 0);
-                let r = n.indexOf(document.activeElement);
-                -1 === r && e.shiftKey && (r = 0),
-                    (r += n.length + (e.shiftKey ? -1 : 1)),
-                    (r %= n.length),
-                    n[r].focus(),
-                    e.preventDefault();
-            }
-        } else onClose();
-    };
+			let index = tabbable.indexOf(document.activeElement);
+			if (index === -1 && e.shiftKey) index = 0;
+
+			index += tabbable.length + (e.shiftKey ? -1 : 1);
+			index %= tabbable.length;
+
+			tabbable[index].focus();
+			e.preventDefault();
+		}
+	};
+
+	const previously_focused = typeof document !== 'undefined' && document.activeElement;
+
+	if (previously_focused) {
+		onDestroy(() => {
+			previously_focused.focus();
+		});
+	}
 </script>
 
-<svelte:window on:keydown={onKeyDown} />
+<svelte:window on:keydown={handle_keydown} />
 
-<div class="modal-background p-3 flex justify-center svelte-1nyqrwd" on:click={onClose} />
+<div class="modal-background p-3 flex justify-center svelte-1nyqrwd" on:click={close} />
 <div class="modal-background p-3 pointer-events-none svelte-1nyqrwd">
     <div
-        bind:this={modalDiv}
+        bind:this={modal}
         class="pointer-events-auto modal max-w-screen-xs w-full mx-auto top-20 relative rounded-sm"
         role="dialog"
         aria-modal="true"
     >
         {#if hasFrame == 0}
-            <button autofocus class="border-none text-custom-mg absolute right-3 top-3" on:click={onClose}>
+            <button autofocus class="border-none text-custom-mg absolute right-3 top-3" on:click={close}>
                 <svg
                     class="w-7 h-7"
                     xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +73,7 @@
                         </h2>
                     </div>
                     <div class="justify-self-end flex">
-                        <button class="border-none text-custom-mg" autofocus on:click={onClose}>
+                        <button class="border-none text-custom-mg" autofocus on:click={close}>
                             <svg
                                 class="w-7 h-7"
                                 xmlns="http://www.w3.org/2000/svg"

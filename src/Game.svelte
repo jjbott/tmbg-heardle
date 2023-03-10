@@ -7,6 +7,7 @@
     import Modal from "./Modal.svelte";
     import InfoModal from "./InfoModal.svelte";
 	import DonateModal from "./DonateModal.svelte";
+	import HelpModal from "./HelpModal.svelte";
     /*
 	let answerTexts, answers, i, o;
    let answerIndex = daysSinceStartDate(Vt.startDate) % answers.length,
@@ -122,7 +123,7 @@
             {:else if modalState.name == "results"}
                 <div>Results</div>
             {:else if modalState.name == "help"}
-                <div>Help</div>
+                <HelpModal on:close={() => modalState.isActive = false}/>
             {/if}
         </Modal>
     {/if}
