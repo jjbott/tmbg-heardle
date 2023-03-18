@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { readable, writable } from "svelte/store";
-    import moment from 'moment'
+    import moment from "moment";
     import Something from "./Something.svelte";
     import Header from "./Header.svelte";
     import Unknown1 from "./Unknown1.svelte";
@@ -10,11 +10,12 @@
     import InfoModal from "./InfoModal.svelte";
     import DonateModal from "./DonateModal.svelte";
     import HelpModal from "./HelpModal.svelte";
+    import StatsModal from "./StatsModal.svelte";
     import ResultMaybe from "./ResultMaybe.svelte";
     import SoundCloudMaybe from "./SoundCloudMaybe.svelte";
     import Yt from "./Yt.svelte";
 
-    import {idOffset,potentialAnswers, answerIndexes} from './Solutions.js'
+    import { idOffset, potentialAnswers, answerIndexes } from "./Solutions.js";
     /*
 	let answerTexts, answers, i, o;
    let answerIndex = daysSinceStartDate(Vt.startDate) % answers.length,
@@ -61,6 +62,7 @@
     //let idOffset = 0; // TODO: This is going to throw off ctx indexes. Probably needs to live elsewhere
 
     // TODO: This does _not_ live here. I think?
+    //
     const config = {
         attemptInterval: 1.5e3,
         attemptIntervalAlt: [1e3, 2e3, 4e3, 7e3, 11e3, 16e3],
@@ -285,7 +287,18 @@
             {:else if modalState.name == "donate"}
                 <DonateModal />
             {:else if modalState.name == "results"}
-                <div>Results</div>
+                <!-- In -->
+                <!-- Tn -->
+                <!-- TODO: `daysSince={answerIndex}` looks like a bug -->
+                <StatsModal
+                    {userStats}
+                    {config}
+                    isPrime={gameState.isPrime}
+                    daysSince={answerIndex}
+                    todaysScore={userGuesses.length}
+                    guessRef={todaysGame.gotCorrect ? userGuesses.length + 1 : 0}
+                    hasFinished={todaysGame.hasFinished}
+                />
             {:else if modalState.name == "help"}
                 <HelpModal on:close={() => (modalState.isActive = false)} />
             {/if}
@@ -298,7 +311,15 @@
         <div class="max-w-screen-sm w-full mx-auto h-full flex flex-col justify-between overflow-auto">
             <Something {userGuesses} maxAttempts={config.maxAttempts} {currentHeardle} {todaysGame} />
 
-            <ResultMaybe {config} {userGuesses} {currentHeardle} hasFinished={todaysGame.hasFinished} gotCorrect={todaysGame.gotCorrect} isPrime={config.isPrime} guessRef={todaysGame.gotCorrect ? userGuesses.length : 0} />
+            <ResultMaybe
+                {config}
+                {userGuesses}
+                {currentHeardle}
+                hasFinished={todaysGame.hasFinished}
+                gotCorrect={todaysGame.gotCorrect}
+                isPrime={config.isPrime}
+                guessRef={todaysGame.gotCorrect ? userGuesses.length : 0}
+            />
             <!-- {answerTexts}{answers}{i} -->
         </div>
     </div>
@@ -326,8 +347,8 @@
             {allOptions}
             currentAttempt={userGuesses.length + 1}
             bind:this={o}
-            bind:guessInput={guessInput}
-        
-        on:guess={e15}/>
+            bind:guessInput
+            on:guess={e15}
+        />
     {/if}
 </main>
