@@ -74,5 +74,6 @@ export default {
 	],
 	watch: {
 		clearScreen: false
-	}
+	},
+	treeshake:true
 };

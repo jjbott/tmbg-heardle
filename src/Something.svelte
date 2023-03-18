@@ -1,16 +1,15 @@
 <script>
-    let something;
+    let guessCount;
 
     export let userGuesses;
     export let maxAttempts;
     export let currentHeardle;
     export let todaysGame;
 
-    $: something = todaysGame.hasFinished && todaysGame.gotCorrect ? userGuesses.length : maxAttempts;
+    $: guessCount = todaysGame.hasFinished && todaysGame.gotCorrect ? userGuesses.length : maxAttempts;
 </script>
 
 <div class="p-3 flex-col items-evenly">
-    {userGuesses}{something}{currentHeardle}{todaysGame}
     {#if todaysGame.hasFinished}
         <div class="p-3 pb-0 flex-col items-evenly">
             <a
@@ -71,17 +70,19 @@
         </div>
     {:else}
         <div class="p-3 flex-col items-evenly">
-            {#each Array(something) as s}
+            {#each Array(guessCount) as s, i}
                 <div
                     class="p-2 mb-2 border border-custom-mg flex items-center last:mb-0"
-                    class:border-custom-line={s == userGuesses.length}
+                    class:border-custom-line={i == userGuesses.length}
                 >
-                    {#if s < userGuesses.length}
-                        <div>
+                    {#if i < userGuesses.length}
+                        <!-- De -->
+                        <!-- <div> -->
                             <!-- TODO: Not right yet -->
-                            {#if userGuesses[s].isCorrect || userGuesses[s].isSkipped}
-                                <div class="mr-2">
-                                    {#if userGuesses[s].isSkipped}
+                            <div class="mr-2">
+                                {#if userGuesses[i].isCorrect || userGuesses[i].isSkipped}
+                                    {#if userGuesses[i].isSkipped}
+                                        <!-- Te -->
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             class="text-custom-mg"
@@ -97,33 +98,35 @@
                                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                                         </svg>
                                     {/if}
-                                </div>
-                                <div class="flex flex-1 justify-between items-center">
-                                    {#if userGuesses[s].isSkipped}
-                                        <div class="text-custom-mg tracking-widest font-semibold">SKIPPED</div>
-                                    {:else}
-                                        <div class="text-white text-sm">{userGuesses[s].answer}</div>
-                                    {/if}
-                                </div>
-                            {:else}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <line x1="18" y1="6" x2="6" y2="18" />
-                                    <line x1="6" y1="6" x2="18" y2="18" />
-                                </svg>
-                            {/if}
-                        </div>
+                                {:else}
+                                    <!-- Ye -->
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <line x1="18" y1="6" x2="6" y2="18" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                {/if}
+                            </div>
+                            <div class="flex flex-1 justify-between items-center">
+                                {#if userGuesses[i].isSkipped}
+                                    <div class="text-custom-mg tracking-widest font-semibold">SKIPPED</div>
+                                {:else}
+                                    <div class="text-white text-sm">{userGuesses[i].answer}</div>
+                                {/if}
+                            </div>
+                        <!-- </div> -->
                     {:else}
-                        <div />
+                        <!-- $e -->
+                        <div class="w-5 h-5" />
                     {/if}
                 </div>
             {/each}
