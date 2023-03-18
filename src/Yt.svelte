@@ -91,7 +91,7 @@
 <div class="max-w-screen-sm w-full mx-auto flex-col">
     <div class="m-3 mt-0">
         <div>
-            <div class="autoComplete_wrapper relative" on:click={() => l.clear()}>
+            <div class="autoComplete_wrapper relative">
                 <svg
                     class="absolute top-4 left-3"
                     xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@
                     autocomplete="off"
                     autocapitalize="off"
                 />
-                <div class="absolute right-3 top-4">
+                <div class="absolute right-3 top-4" on:click={() => l.clear()}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"

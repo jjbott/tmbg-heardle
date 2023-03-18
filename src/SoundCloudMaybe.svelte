@@ -94,7 +94,7 @@
                                 : ((progressBarPercent =
                                       (currentPosition / (currentAttempt * config.attemptInterval)) * 100),
                                   currentPosition > currentAttempt * config.attemptInterval && scPause())
-                            : ((progressBarPercent = (currentPosition / m) * 100), currentPosition > m && scPause());
+                            : ((progressBarPercent = (currentPosition / trackDuration) * 100), currentPosition > trackDuration && scPause());
                 });
         });
     }

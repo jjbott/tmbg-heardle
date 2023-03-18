@@ -50,10 +50,11 @@
                 setTimeout(() => {
                     copiedMessageActive = false;
                 }, 2e3);
-                navigator.clipboard.writeText(o);
+                return navigator.clipboard.writeText(o);
             } else {
-                Promise.reject("There was a problem copying your result to the clipboard");
+                return Promise.reject("There was a problem copying your result to the clipboard");
             }
+
             navigator
                 .share({
                     text: o,
@@ -121,7 +122,8 @@
             </div>
         {/if}
         <div class="flex flex-col justify-center items-center pt-3">
-            <Button primary={true}>
+            <Button primary={true} on:click={onCopyToClipboard}>
+                <!-- dn -->
                 Share
                 <svg
                     class="inline-block ml-2"
