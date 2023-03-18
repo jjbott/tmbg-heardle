@@ -19,6 +19,9 @@
     "svelte": "3.47.0"
   },
   "dependencies": {
+    "@tarekraafat/autocomplete.js": "^10.2.7",
+    "dice-coefficient": "^2.1.1",
+    "moment": "^2.29.4",
     "sirv-cli": "^2.0.0"
   }
 }

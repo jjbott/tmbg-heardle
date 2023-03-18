@@ -80,7 +80,6 @@
                 {#if i <= userGuesses.length - 1}
                     {#if userGuesses[i].isSkipped}
                         <div class="w-4 h-1 m-0.5 bg-custom-mg" />
-                        >
                     {:else if userGuesses[i].isCorrect || userGuesses[i].isSkipped}
                         {#if userGuesses[i].isCorrect}
                             <div class="w-4 h-1 m-0.5 bg-custom-positive" />

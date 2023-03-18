@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { readable, writable } from "svelte/store";
+    import moment from 'moment'
     import Something from "./Something.svelte";
     import Header from "./Header.svelte";
     import Unknown1 from "./Unknown1.svelte";
@@ -12,6 +13,8 @@
     import ResultMaybe from "./ResultMaybe.svelte";
     import SoundCloudMaybe from "./SoundCloudMaybe.svelte";
     import Yt from "./Yt.svelte";
+
+    import {idOffset,potentialAnswers, answerIndexes} from './Solutions.js'
     /*
 	let answerTexts, answers, i, o;
    let answerIndex = daysSinceStartDate(Vt.startDate) % answers.length,
@@ -27,14 +30,14 @@
 */
     //const { document: document, window: window } = globals;
 
-    const potentialAnswers = [
+    /*const potentialAnswers = [
         {
             answer: "(She Was A) Hotel Detective - They Might Be Giants",
             url: "https://soundcloud.com/they-might-be-giants/she-was-a-hotel-detective-2",
         },
     ];
     const answerIndexes = [0];
-
+*/
     const answerTexts = writable(potentialAnswers.map((e) => e.answer).filter((e, i, s) => s.indexOf(e) === i));
 
     const fullAnswerList = readable(
@@ -55,7 +58,7 @@
         i,
         o;
 
-    let idOffset = 0; // TODO: This is going to throw off ctx indexes. Probably needs to live elsewhere
+    //let idOffset = 0; // TODO: This is going to throw off ctx indexes. Probably needs to live elsewhere
 
     // TODO: This does _not_ live here. I think?
     const config = {

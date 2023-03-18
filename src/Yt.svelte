@@ -1,4 +1,6 @@
 <script>
+    import autoComplete from '@tarekraafat/autocomplete.js'
+    import {diceCoefficient} from 'dice-coefficient'
     import { onMount, createEventDispatcher } from "svelte";
     import Button from "./Button.svelte";
 
@@ -85,7 +87,11 @@
         soundcloudWidget.toggle();
     };
 
-    nGram(3);
+    // There is a `nGram(3)` (as `_t(3)`) in the original.
+    // But I think it's from the n-gram library, not our code.
+    // I'm betting it's a minified `export const trigram = nGram(3)` since `trigram` is never used,
+    // but the minifier doesnt know if the nGram function has side effects.
+    //nGram(3);
 </script>
 
 <div class="max-w-screen-sm w-full mx-auto flex-col">
