@@ -1,6 +1,7 @@
 <script>
     import Donate from "./Donate.svelte";
     import Button from "./Button.svelte";
+    import TimeRemaining from "./TimeRemaining.svelte";
 
     export let userGuesses;
     export let currentHeardle;
@@ -68,38 +69,45 @@
 </script>
 
 {#if hasFinished}
-    <div>
-        <p />
-        <div />
-        {#each Jt as jt, i}
-            {#if i <= userGuesses.length - 1}
-                {#if userGuesses[i].isSkipped}
-                    <div class="w-4 h-1 m-0.5 bg-custom-mg" />
-                    >
-                {:else if userGuesses[i].isCorrect || userGuesses[i].isSkipped}
-                    {#if userGuesses[i].isCorrect}
-                        <div class="w-4 h-1 m-0.5 bg-custom-positive" />
+    <div class="text-center px-3">
+        <p class="text-lg text-custom-line">
+            <!-- A -->
+            {Jt[guessRef] + ""}
+        </p>
+        <div class="flex justify-center my-2">
+            {#each Array(config.maxAttempts) as jt, i}
+                {#if i <= userGuesses.length - 1}
+                    {#if userGuesses[i].isSkipped}
+                        <div class="w-4 h-1 m-0.5 bg-custom-mg" />
+                        >
+                    {:else if userGuesses[i].isCorrect || userGuesses[i].isSkipped}
+                        {#if userGuesses[i].isCorrect}
+                            <div class="w-4 h-1 m-0.5 bg-custom-positive" />
+                        {:else}
+                            {undefined}
+                        {/if}
                     {:else}
-                        {undefined}
+                        <div class="w-4 h-1 m-0.5 bg-custom-negative" />
                     {/if}
                 {:else}
-                    <div class="w-4 h-1 m-0.5 bg-custom-negative" />
+                    <div class="w-4 h-1 m-0.5 bg-custom-fg" />
                 {/if}
-            {:else}
-                <div class="w-4 h-1 m-0.5 bg-custom-fg" />
-            {/if}
-        {/each}
-        <p>
+            {/each}
+        </div>
+        <p class="py-1">
             <!-- W -->
             <!-- Maybe? e[3] -->
-            {#if guessRef}
+            {#if 0 == guessRef}
+                <!-- un -->
                 You didn't get today's TMBG Heardle. Better luck tomorrow! 💎
             {:else}
                 <!-- /* Maybe? e[4]*/ -->
                 {#if isPrime}
+                    <!-- ln -->
                     You got today's TMBG Heardle within {config.attemptIntervalAlt[config.length - 1] / 1e3 + ""}
                     second{config.attemptIntervalAlt[config.length - 1] / 1e3 > 1 ? "s" : ""}.
                 {:else}
+                    <!-- an -->
                     You got today's TMBG Heardle within the first {(userGuesses.length * config.attemptInterval) / 1e3 +
                         ""} seconds.
                 {/if}
@@ -112,7 +120,7 @@
                 Copied to clipboard!
             </div>
         {/if}
-        <div>
+        <div class="flex flex-col justify-center items-center pt-3">
             <Button primary={true}>
                 Share
                 <svg
@@ -133,18 +141,36 @@
                     <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
                     <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
                 </svg>
-            </Button>>
+            </Button>
         </div>
     </div>
     <div>
-        <div>
-            <div>Next TMBG song in:</div>
-            <!-- S -->
+        <div class="flex flex-col justify-center items-center mb-6 mx-3">
+            <div class="text-center text-custom-line text-sm">Next TMBG song in:</div>
+            <!-- qt -->
+            <TimeRemaining />
         </div>
-        <div>
-            <div Y>
-                <Donate />
+        <div class="bg-custom-highlight py-3 pb-5 mx-3 rounded-t-md">
+            <div class="flex justify-center items-center mb-3">
+                <span class="text-custom-negative"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke=""
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                        /></svg
+                    ></span
+                >
+                <span class="px-1">TMBG Heardle?</span>
             </div>
+            <Donate />
         </div>
     </div>
 {/if}

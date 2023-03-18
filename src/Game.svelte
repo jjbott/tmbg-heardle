@@ -295,7 +295,7 @@
         <div class="max-w-screen-sm w-full mx-auto h-full flex flex-col justify-between overflow-auto">
             <Something {userGuesses} maxAttempts={config.maxAttempts} {currentHeardle} {todaysGame} />
 
-            <ResultMaybe {config} {userGuesses} />
+            <ResultMaybe {config} {userGuesses} {currentHeardle} hasFinished={todaysGame.hasFinished} gotCorrect={todaysGame.gotCorrect} isPrime={config.isPrime} guessRef={todaysGame.gotCorrect ? userGuesses.length : 0} />
             <!-- {answerTexts}{answers}{i} -->
         </div>
     </div>
