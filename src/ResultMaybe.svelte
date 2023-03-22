@@ -1,4 +1,5 @@
 <script>
+    import { ga } from "@beyonk/svelte-google-analytics";
     import Donate from "./Donate.svelte";
     import Button from "./Button.svelte";
     import TimeRemaining from "./TimeRemaining.svelte";
@@ -41,7 +42,7 @@
             /Firefox/i.test(navigator.userAgent)
         ) {
             if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
-                addEvent("clickShareClipboard", {
+                ga.addEvent("clickShareClipboard", {
                     name: "clickShareClipboard",
                 });
 
@@ -60,7 +61,7 @@
                     text: o,
                 })
                 .then(() => {
-                    addEvent("clickSharePanel", {
+                    ga.addEvent("clickSharePanel", {
                         name: "clickSharePanel",
                     });
                 })

@@ -1,7 +1,7 @@
-import App from './App.svelte';
+import Game from './Game.svelte';
 
-var app = new App({
+var game = new Game({
 	target: document.body
 });
 
-export default app;
+export default game;

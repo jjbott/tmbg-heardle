@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { readable, writable } from "svelte/store";
+    import { GoogleAnalytics, ga } from '@beyonk/svelte-google-analytics'
     import moment from "moment";
     import Something from "./Something.svelte";
     import Header from "./Header.svelte";
@@ -173,10 +174,10 @@
     function e14(e) {
         console.log("onUpdatePlayerState (e14)" + e);
         if (!currentHeardle.hasStarted) {
-            addEvent("startGame#" + currentHeardle.id, {
+            ga.addEvent("startGame#" + currentHeardle.id, {
                 name: "startGame",
             });
-            addEvent("startGame", {
+            ga.addEvent("startGame", {
                 name: "startGame",
             });
             currentHeardle.hasStarted = true;
@@ -191,24 +192,24 @@
         r ||
             t != currentHeardle.correctAnswer ||
             ((s = !0),
-            addEvent("correctGuess", {
+            ga.addEvent("correctGuess", {
                 name: "correctGuess",
             }),
-            addEvent("correctGuess#" + currentHeardle.id, {
+            ga.addEvent("correctGuess#" + currentHeardle.id, {
                 name: "correctGuess",
             })),
             r
-                ? (addEvent("skippedGuess", {
+                ? (ga.addEvent("skippedGuess", {
                       name: "skippedGuess",
                   }),
-                  addEvent("skippedGuess#" + currentHeardle.id, {
+                  ga.addEvent("skippedGuess#" + currentHeardle.id, {
                       name: "skippedGuess",
                   }))
                 : s ||
-                  (addEvent("incorrectGuess", {
+                  (ga.addEvent("incorrectGuess", {
                       name: "incorrectGuess",
                   }),
-                  addEvent("incorrectGuess#" + currentHeardle.id, {
+                  ga.addEvent("incorrectGuess#" + currentHeardle.id, {
                       name: "incorrectGuess",
                   })),
             (userGuesses = userGuesses.concat({
@@ -227,28 +228,28 @@
             localStorage.setItem("userStats", JSON.stringify(userStats)),
                 i.resetAndPlay(),
                 wonGame
-                    ? (addEvent("wonGame", {
+                    ? (ga.addEvent("wonGame", {
                           name: "won",
                       }),
-                      addEvent("wonGame#" + currentHeardle.id, {
+                      ga.addEvent("wonGame#" + currentHeardle.id, {
                           name: "won",
                       }))
-                    : (addEvent("lostGame", {
+                    : (ga.addEvent("lostGame", {
                           name: "lost",
                       }),
-                      addEvent("lostGame#" + currentHeardle.id, {
+                      ga.addEvent("lostGame#" + currentHeardle.id, {
                           name: "lost",
                       })),
-                addEvent("endGame" + currentHeardle.id + "in" + userGuesses.length, {
+                      ga.addEvent("endGame" + currentHeardle.id + "in" + userGuesses.length, {
                     name: "#" + userGuesses.length,
                 }),
-                addEvent("endGame", {
+                ga.addEvent("endGame", {
                     name: "endGame",
                 }),
-                addEvent("endGame#" + currentHeardle.id, {
+                ga.addEvent("endGame#" + currentHeardle.id, {
                     name: "endGame",
                 }),
-                addEvent("gameStats#" + currentHeardle.id, {
+                ga.addEvent("gameStats#" + currentHeardle.id, {
                     name: userGuesses,
                 });
         }
@@ -278,6 +279,8 @@
     <link rel="manifest" href="/site.webmanifest" />
     <title>TMBG Heardle</title>
 </svelte:head>
+
+<GoogleAnalytics properties={["G-L8RFKXWJ0Z"]}/>
 
 <main class="bg-custom-bg text-custom-fg overflow-auto flex flex-col" style:height="{height}px">
     {#if modalState.isActive}

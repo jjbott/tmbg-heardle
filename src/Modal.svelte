@@ -50,6 +50,7 @@
         aria-modal="true"
     >
         {#if hasFrame == 0}
+            <!-- svelte-ignore a11y-autofocus -->
             <button autofocus class="border-none text-custom-mg absolute right-3 top-3" on:click={close}>
                 <svg
                     class="w-7 h-7"
@@ -73,6 +74,7 @@
                         </h2>
                     </div>
                     <div class="justify-self-end flex">
+                        <!-- svelte-ignore a11y-autofocus -->
                         <button class="border-none text-custom-mg" autofocus on:click={close}>
                             <svg
                                 class="w-7 h-7"

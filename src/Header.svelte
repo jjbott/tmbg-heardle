@@ -1,6 +1,8 @@
 <script>
+    import { ga } from "@beyonk/svelte-google-analytics";
+
     import Button from "./Button.svelte";
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher } from "svelte";
 
     const dispatch = createEventDispatcher();
 
@@ -22,9 +24,6 @@
             hasFrame: r,
         });
     }
-
-    // TODO: This should be wired up to google
-    function addEvent() {}
 </script>
 
 <header class="border-b border-custom-line">
@@ -34,7 +33,7 @@
                 <Button
                     on:click={() => {
                         openModal("info", "about");
-                        addEvent("clickInfo", {
+                        ga.addEvent("clickInfo", {
                             name: "clickInfo",
                         });
                     }}
@@ -58,7 +57,7 @@
                 <Button
                     on:click={() => {
                         openModal("donate", "support");
-                        addEvent("clickDonate", {
+                        ga.addEvent("clickDonate", {
                             name: "clickDonate",
                         });
                     }}
@@ -82,12 +81,14 @@
             </div>
             <h1 class="font-serif text-3xl font-bold flex-grow text-center flex-1">TMBG Heardle</h1>
             <div class="flex flex-1 justify-end">
-                <Button on:click={() => {
-                    openModal("results", "stats");
-                      addEvent("clickStats", {
-                        name: "clickStats",
-                      });
-                  }}>
+                <Button
+                    on:click={() => {
+                        openModal("results", "stats");
+                        ga.addEvent("clickStats", {
+                            name: "clickStats",
+                        });
+                    }}
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -104,12 +105,14 @@
                         />
                     </svg>
                 </Button>
-                <Button on:click={() => {
-                    openModal("help", "how to play");
-                      addEvent("clickHelp", {
-                        name: "clickHelp",
-                      });
-                  }}>
+                <Button
+                    on:click={() => {
+                        openModal("help", "how to play");
+                        ga.addEvent("clickHelp", {
+                            name: "clickHelp",
+                        });
+                    }}
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

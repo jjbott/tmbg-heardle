@@ -1,10 +1,14 @@
+<script>
+  import { ga } from '@beyonk/svelte-google-analytics'
+</script>
+
 <div class="text-center flex justify-center items-center flex-col ">
     <a
         class="kofi-button py-2 px-3 rounded-lg items-center flex  svelte-1d3p4dy"
         href="https://ko-fi.com/heardle"
         title="Support the Heardle devs on Ko-Fi"
         on:click={() => {
-            addEvent("clickKofi", {
+            ga.addEvent("clickKofi", {
                 name: "clickKofi",
             });
         }}

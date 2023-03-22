@@ -1,7 +1,9 @@
 <script>
+    import { ga } from "@beyonk/svelte-google-analytics";
     import { onMount, createEventDispatcher } from "svelte";
     import Button from "./Button.svelte";
     import Fe from "./Fe.svelte";
+    import Div from "./Div.svelte";
 
     let /*r*/ musicIsPlaying,
         gameIsActive,
@@ -75,10 +77,10 @@
                 }),
                 y.bind(SC.Widget.Events.PLAY, function () {
                     b ||
-                        (addEvent("startGame", {
+                        (ga.addEvent("startGame", {
                             name: "startGame",
                         }),
-                        addEvent("startGame#" + currentHeardle.id, {
+                        ga.addEvent("startGame#" + currentHeardle.id, {
                             name: "startGame",
                         }),
                         (b = !0)),
@@ -94,12 +96,11 @@
                                 : ((progressBarPercent =
                                       (currentPosition / (currentAttempt * config.attemptInterval)) * 100),
                                   currentPosition > currentAttempt * config.attemptInterval && scPause())
-                            : ((progressBarPercent = (currentPosition / trackDuration) * 100), currentPosition > trackDuration && scPause());
+                            : ((progressBarPercent = (currentPosition / trackDuration) * 100),
+                              currentPosition > trackDuration && scPause());
                 });
         });
     }
-
-    
 
     function e19() {
         (k = !0),
@@ -305,6 +306,34 @@
     {/if}
 {:else}
     <!-- Ve -->
+    <div class="text-sm text-center text-custom-line p-6">
+        {#if S}
+            <!-- Ze -->
+            <p class="mb-3">There was an error loading the player. Please reload and try again.</p>
+            <div class="flex justify-center">
+                <Button on:click={() => window.location.reload()}>
+                    <!-- qe -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38" />
+                    </svg>
+                </Button>
+            </div>
+        {:else}
+            <!-- Ke -->
+            <Div />
+            <p>loading player</p>
+        {/if}
+    </div>
 {/if}
 
 <div class="hidden">
