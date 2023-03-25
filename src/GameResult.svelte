@@ -1,6 +1,5 @@
 <script>
     import { ga } from "@beyonk/svelte-google-analytics";
-    import Donate from "./Donate.svelte";
     import Button from "./Button.svelte";
     import TimeRemaining from "./TimeRemaining.svelte";
 
@@ -151,28 +150,6 @@
             <div class="text-center text-custom-line text-sm">Next TMBG song in:</div>
             <!-- qt -->
             <TimeRemaining />
-        </div>
-        <div class="bg-custom-highlight py-3 pb-5 mx-3 rounded-t-md">
-            <div class="flex justify-center items-center mb-3">
-                <span class="text-custom-negative"
-                    ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        stroke=""
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><path
-                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                        /></svg
-                    ></span
-                >
-                <span class="px-1">TMBG Heardle?</span>
-            </div>
-            <Donate />
         </div>
     </div>
 {/if}
