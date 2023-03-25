@@ -1,6 +1,6 @@
 <script>
     import {onMount} from 'svelte'
-    import Div from "./Div.svelte";
+    import EmptyDiv from "./EmptyDiv.svelte";
 
     let supporters;
 
@@ -30,5 +30,5 @@
         />
     </div>
 {:else}
-    <Div />
+    <EmptyDiv />
 {/if}

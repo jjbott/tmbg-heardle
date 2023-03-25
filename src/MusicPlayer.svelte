@@ -2,8 +2,8 @@
     import { ga } from "@beyonk/svelte-google-analytics";
     import { onMount, createEventDispatcher } from "svelte";
     import Button from "./Button.svelte";
-    import Fe from "./Fe.svelte";
-    import Div from "./Div.svelte";
+    import LoadbarSound from "./LoadbarSound.svelte";
+    import EmptyDiv from "./EmptyDiv.svelte";
 
     let /*r*/ musicIsPlaying,
         gameIsActive,
@@ -236,7 +236,7 @@
                                         <!-- dt -->
                                         <div class="relative z-10">
                                             <!-- Fe -->
-                                            <Fe {musicIsPlaying} />
+                                            <LoadbarSound {musicIsPlaying} />
                                         </div>
                                     {:else}
                                         <!-- ct -->
@@ -330,7 +330,7 @@
             </div>
         {:else}
             <!-- Ke -->
-            <Div />
+            <EmptyDiv />
             <p>loading player</p>
         {/if}
     </div>

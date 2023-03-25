@@ -3,67 +3,28 @@
     import { readable, writable } from "svelte/store";
     import { GoogleAnalytics, ga } from '@beyonk/svelte-google-analytics'
     import moment from "moment";
-    import Something from "./Something.svelte";
+    import Guesses from "./Guesses.svelte";
     import Header from "./Header.svelte";
-    import Unknown1 from "./Unknown1.svelte";
-    import Unknown2 from "./Unknown2.svelte";
     import Modal from "./Modal.svelte";
     import InfoModal from "./InfoModal.svelte";
     import DonateModal from "./DonateModal.svelte";
     import HelpModal from "./HelpModal.svelte";
     import StatsModal from "./StatsModal.svelte";
-    import ResultMaybe from "./ResultMaybe.svelte";
-    import SoundCloudMaybe from "./SoundCloudMaybe.svelte";
-    import Yt from "./Yt.svelte";
+    import GameResult from "./GameResult.svelte";
+    import MusicPlayer from "./MusicPlayer.svelte";
+    import GuessInput from "./GuessInput.svelte";
 
     import { idOffset, potentialAnswers, answerIndexes } from "./Solutions.js";
-    /*
-	let answerTexts, answers, i, o;
-   let answerIndex = daysSinceStartDate(Vt.startDate) % answers.length,
-      l = {
-        url: answers[answerIndex].url,
-        correctAnswer: answers[answerIndex].answer,
-        id: daysSinceStartDate(Vt.startDate) + idOffset,
-        guessList: [],
-        hasFinished: !1,
-        hasStarted: !1,
-      };
-    var c, d;
-*/
-    //const { document: document, window: window } = globals;
 
-    /*const potentialAnswers = [
-        {
-            answer: "(She Was A) Hotel Detective - They Might Be Giants",
-            url: "https://soundcloud.com/they-might-be-giants/she-was-a-hotel-detective-2",
-        },
-    ];
-    const answerIndexes = [0];
-*/
     const answerTexts = writable(potentialAnswers.map((e) => e.answer).filter((e, i, s) => s.indexOf(e) === i));
 
     const fullAnswerList = readable(
         answerIndexes.map((e) => potentialAnswers[e]),
         () => {}
     );
-    //$:answers = fullAnswerList;
 
-    //const answers = readable(answerIndexes.map(e=>potentialAnswers[e]), () => {});
+    let i, o;
 
-    let /*answerTexts = ["test"],
-        answers = [
-            {
-                answer: "(She Was A) Hotel Detective - They Might Be Giants",
-                url: "https://soundcloud.com/they-might-be-giants/she-was-a-hotel-detective-2",
-            },
-        ],*/
-        i,
-        o;
-
-    //let idOffset = 0; // TODO: This is going to throw off ctx indexes. Probably needs to live elsewhere
-
-    // TODO: This does _not_ live here. I think?
-    //
     const config = {
         attemptInterval: 1.5e3,
         attemptIntervalAlt: [1e3, 2e3, 4e3, 7e3, 11e3, 16e3],
@@ -293,6 +254,8 @@
                 <!-- In -->
                 <!-- Tn -->
                 <!-- TODO: `daysSince={answerIndex}` looks like a bug -->
+                <!-- Yep. It'll be wrong if we ever allow the solutions to loop back to index 0.
+                That'll take a while, but it may happen if I forget about this project 😬 -->
                 <StatsModal
                     {userStats}
                     {config}
@@ -312,9 +275,9 @@
     </div>
     <div class="w-full flex flex-col flex-grow relative">
         <div class="max-w-screen-sm w-full mx-auto h-full flex flex-col justify-between overflow-auto">
-            <Something {userGuesses} maxAttempts={config.maxAttempts} {currentHeardle} {todaysGame} />
+            <Guesses {userGuesses} maxAttempts={config.maxAttempts} {currentHeardle} {todaysGame} />
 
-            <ResultMaybe
+            <GameResult
                 {config}
                 {userGuesses}
                 {currentHeardle}
@@ -328,7 +291,7 @@
     </div>
 
     <!-- Y -->
-    <SoundCloudMaybe
+    <MusicPlayer
         {config}
         {gameState}
         {currentHeardle}
@@ -344,7 +307,7 @@
         <!-- Gn -->
 
         <!-- guessInput is probably wrong. Doesnt make sense -->
-        <Yt
+        <GuessInput
             isPrime={gameState.isPrime}
             {config}
             {allOptions}
