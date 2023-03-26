@@ -1,6 +1,6 @@
 <div class="text">
     <p class="mb-3">
-        A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a> and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for songs by the band They Might Be Giants.
+        A clone of <a href="https://www.spotify.com/heardle/" title="Heardle">Heardle</a> and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for songs by the band They Might Be Giants.
     </p> 
 
     <p class="mb-3">Each TMBG Heardle is randomly chosen from TMBG's discography (and I will probably add tracks from the Johns' side projects at some point.)</p> 
