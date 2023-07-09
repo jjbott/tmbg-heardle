@@ -4,9 +4,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "zzzbuild": "rollup -c",
-        "zzzstart": "rollup -c -w",
-        "zzzserve": "sirv . --no-clear"
+        "build": "rollup -c",
+        "start": "rollup -c -w",
+        "serve": "sirv . --no-clear"
     },
     "devDependencies": {
         "@beyonk/svelte-google-analytics": "^2.6.4",
