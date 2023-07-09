@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv . --no-clear"
+    "start": "rollup -c -w",
+    "serve": "sirv . --no-clear"
   },
   "devDependencies": {
     "@beyonk/svelte-google-analytics": "^2.6.4",
@@ -24,5 +24,8 @@
     "dice-coefficient": "^2.1.1",
     "moment": "^2.29.4",
     "sirv-cli": "^2.0.0"
+  },
+  "glitch": {
+    "projectType": "generated_static"
   }
 }
