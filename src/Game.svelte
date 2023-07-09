@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { readable, writable } from "svelte/store";
-    import { GoogleAnalytics, ga } from '@beyonk/svelte-google-analytics'
+    import { GoogleAnalytics, ga } from "@beyonk/svelte-google-analytics";
     import moment from "moment";
     import Guesses from "./Guesses.svelte";
     import Header from "./Header.svelte";
@@ -201,7 +201,7 @@
                       ga.addEvent("lostGame#" + currentHeardle.id, {
                           name: "lost",
                       })),
-                      ga.addEvent("endGame" + currentHeardle.id + "in" + userGuesses.length, {
+                ga.addEvent("endGame" + currentHeardle.id + "in" + userGuesses.length, {
                     name: "#" + userGuesses.length,
                 }),
                 ga.addEvent("endGame", {
@@ -233,15 +233,72 @@
 <svelte:window bind:innerHeight={height} />
 
 <svelte:head>
-    <meta name="description" content="Guess the They Might Be Giants song from the intro in as few tries as possible" />
-    <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <title>TMBG Heardle</title>
+    <meta
+        name="description"
+        content="Guess the They Might Be Giants song from the intro in as few tries as possible."
+    />
+    <meta itemprop="name" content="TMBG Heardle - Name That They Might Be Giants song!" />
+    <meta
+        itemprop="description"
+        content="Guess the They Might Be Giants song from the intro in as few tries as possible."
+    />
+    <meta
+        itemprop="image"
+        content="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png"
+    />
+    <meta property="og:url" content="https://tmbg-heardle.glitch.me/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="TMBG Heardle - Name That They Might Be Giants song!" />
+    <meta
+        property="og:description"
+        content="Guess the They Might Be Giants song from the intro in as few tries as possible."
+    />
+    <meta
+        property="og:image"
+        content="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TMBG Heardle - Name That They Might Be Giants song!" />
+    <meta
+        name="twitter:description"
+        content="Guess the They Might Be Giants song from the intro in as few tries as possible."
+    />
+    <meta
+        name="twitter:image"
+        content="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png"
+    />
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-512.png?v=1648764420534"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-32.png?v=1648764422716"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-16.png?v=1648764426356"
+    />
+    <link
+        rel="apple-touch-icon"
+        sizes="192x192"
+        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png?v=1648764424567"
+    />
+    <link
+        rel="shortcut icon"
+        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png?v=1648764424567"
+    />
+    <link rel="manifest" href="site.webmanifest" />
 </svelte:head>
 
-<GoogleAnalytics properties={["G-L8RFKXWJ0Z"]}/>
+<GoogleAnalytics properties={["G-L8RFKXWJ0Z"]} />
 
 <main class="bg-custom-bg text-custom-fg overflow-auto flex flex-col" style:height="{height}px">
     {#if modalState.isActive}
