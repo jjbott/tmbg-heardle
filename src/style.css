@@ -980,15 +980,15 @@ button.svelte-1r54uzk {
         transform: rotate(360deg)
     }
 }
-.kofi-button.svelte-1d3p4dy.svelte-1d3p4dy {
+.tmbgshop-button.svelte-1d3p4dy.svelte-1d3p4dy {
     background-color: rgb(41, 171, 224) !important
 }
 a.svelte-1d3p4dy.svelte-1d3p4dy {
     text-decoration: none
 }
-.kofitext.svelte-1d3p4dy img.kofiimg.svelte-1d3p4dy {
-    height: 20px !important;
-    width: 28px !important;
+.tmbgshoptext.svelte-1d3p4dy img.tmbgshopimg.svelte-1d3p4dy {
+    height: 32px !important;
+    width: 32px !important;
     display: initial;
     -webkit-animation: svelte-1d3p4dy-kofi-wiggle 1.5s infinite;
     animation: svelte-1d3p4dy-kofi-wiggle 1.5s infinite
