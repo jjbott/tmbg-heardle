@@ -1,5 +1,6 @@
 <script>
     import TmbgShop from "./TmbgShopButton.svelte";
+    import Version from "./Version.svelte";
 </script>
 
 <div class="text">
@@ -32,4 +33,5 @@
         <a href="https://twitter.com/ckolderup">casey</a>
     </p>
     <p class="text-xs mb-3 text-custom-line">Not affiliated with They Might Be Giants</p>
+    <p class="text-xxs mb-3 text-custom-line" style="text-align:right;color:#666"><Version/></p>
 </div>
