@@ -24,16 +24,16 @@
             ? userGuesses.length < config.maxAttempts / 3
                 ? (t += "🔊")
                 : userGuesses.length < (config.maxAttempts / 3) * 2
-                ? (t += "🔉")
-                : userGuesses.length <= config.maxAttempts && (t += "🔈")
+                  ? (t += "🔉")
+                  : userGuesses.length <= config.maxAttempts && (t += "🔈")
             : (t += "🔇");
         for (let e = 0; e < config.maxAttempts; e++)
             userGuesses.length > e
                 ? 1 == userGuesses[e].isCorrect
                     ? (t += "🟩")
                     : 1 == userGuesses[e].isSkipped
-                    ? (t += "⬛️")
-                    : (t += "🟥")
+                      ? (t += "⬛️")
+                      : (t += "🟥")
                 : (t += "⬜️");
         let o = e + "\n\n" + t + "\n\nhttps://tmbg-heardle.glitch.me/";
         if (
@@ -101,17 +101,14 @@
             {#if 0 == guessRef}
                 <!-- un -->
                 You didn't get today's TMBG Heardle. Better luck tomorrow! 💎
+            {:else if isPrime}<!-- /* Maybe? e[4]*/ -->
+                <!-- ln -->
+                You got today's TMBG Heardle within {config.attemptIntervalAlt[userGuesses.length - 1] / 1e3 + ""}
+                second{config.attemptIntervalAlt[userGuesses.length - 1] / 1e3 > 1 ? "s" : ""}.
             {:else}
-                <!-- /* Maybe? e[4]*/ -->
-                {#if isPrime}
-                    <!-- ln -->
-                    You got today's TMBG Heardle within {config.attemptIntervalAlt[config.length - 1] / 1e3 + ""}
-                    second{config.attemptIntervalAlt[config.length - 1] / 1e3 > 1 ? "s" : ""}.
-                {:else}
-                    <!-- an -->
-                    You got today's TMBG Heardle within the first {(userGuesses.length * config.attemptInterval) / 1e3 +
-                        ""} seconds.
-                {/if}
+                <!-- an -->
+                You got today's TMBG Heardle within the first {(userGuesses.length * config.attemptInterval) / 1e3 + ""}
+                seconds.
             {/if}
         </p>
         <!-- R && R.c() -->
