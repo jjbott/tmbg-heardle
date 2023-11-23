@@ -340,7 +340,7 @@
                 {currentHeardle}
                 hasFinished={todaysGame.hasFinished}
                 gotCorrect={todaysGame.gotCorrect}
-                isPrime={config.isPrime}
+                isPrime={gameState.isPrime}
                 guessRef={todaysGame.gotCorrect ? userGuesses.length : 0}
             />
             <!-- {answerTexts}{answers}{i} -->
