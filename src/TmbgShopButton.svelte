@@ -10,7 +10,7 @@
         target="_blank"
         on:click={() => {
             ga.addEvent("clickTmbgShop", {
-                name: "clickTmbgShop",
+                name: "clickTmbgShop"
             });
         }}
     >

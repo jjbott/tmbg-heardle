@@ -29,7 +29,7 @@
         attemptInterval: 1.5e3,
         attemptIntervalAlt: [1e3, 2e3, 4e3, 7e3, 11e3, 16e3],
         maxAttempts: 6,
-        startDate: "2022-12-22",
+        startDate: "2022-12-22"
     };
 
     let answerIndex = daysSinceStartDate(config.startDate) % $fullAnswerList.length;
@@ -39,15 +39,15 @@
         id: daysSinceStartDate(config.startDate) + idOffset,
         guessList: [],
         hasFinished: !1,
-        hasStarted: !1,
+        hasStarted: !1
     };
 
     var c, d;
     undefined !== document.hidden
         ? ((c = "hidden"), (d = "visibilitychange"))
         : undefined !== document.msHidden
-        ? ((c = "msHidden"), (d = "msvisibilitychange"))
-        : undefined !== document.webkitHidden && ((c = "webkitHidden"), (d = "webkitvisibilitychange")),
+          ? ((c = "msHidden"), (d = "msvisibilitychange"))
+          : undefined !== document.webkitHidden && ((c = "webkitHidden"), (d = "webkitvisibilitychange")),
         undefined === document.addEventListener ||
             undefined === c ||
             document.addEventListener(
@@ -92,14 +92,14 @@
         gameIsActive: false,
         musicIsPlaying: false,
         playerIsReady: false,
-        isPrime: true,
+        isPrime: true
     };
 
     let modalState = {
         isActive: false,
         hasFrame: true,
         name: "",
-        title: "",
+        title: ""
     };
 
     function openModal(name, title, hasFrame) {
@@ -137,9 +137,11 @@
         if (!currentHeardle.hasStarted) {
             ga.addEvent("startGame#" + currentHeardle.id, {
                 name: "startGame",
+                gameId: currentHeardle.id
             });
             ga.addEvent("startGame", {
                 name: "startGame",
+                gameId: currentHeardle.id
             });
             currentHeardle.hasStarted = true;
         }
@@ -155,28 +157,34 @@
             ((s = !0),
             ga.addEvent("correctGuess", {
                 name: "correctGuess",
+                gameId: currentHeardle.id
             }),
             ga.addEvent("correctGuess#" + currentHeardle.id, {
                 name: "correctGuess",
+                gameId: currentHeardle.id
             })),
             r
                 ? (ga.addEvent("skippedGuess", {
                       name: "skippedGuess",
+                      gameId: currentHeardle.id
                   }),
                   ga.addEvent("skippedGuess#" + currentHeardle.id, {
                       name: "skippedGuess",
+                      gameId: currentHeardle.id
                   }))
                 : s ||
                   (ga.addEvent("incorrectGuess", {
                       name: "incorrectGuess",
+                      gameId: currentHeardle.id
                   }),
                   ga.addEvent("incorrectGuess#" + currentHeardle.id, {
                       name: "incorrectGuess",
+                      gameId: currentHeardle.id
                   })),
             (userGuesses = userGuesses.concat({
                 answer: e.detail.guess,
                 isCorrect: s,
-                isSkipped: r,
+                isSkipped: r
             })),
             (todaysGame.guessList = userGuesses);
         localStorage.setItem("userStats", JSON.stringify(userStats));
@@ -191,27 +199,35 @@
                 wonGame
                     ? (ga.addEvent("wonGame", {
                           name: "won",
+                          gameId: currentHeardle.id
                       }),
                       ga.addEvent("wonGame#" + currentHeardle.id, {
                           name: "won",
+                          gameId: currentHeardle.id
                       }))
                     : (ga.addEvent("lostGame", {
                           name: "lost",
+                          gameId: currentHeardle.id
                       }),
                       ga.addEvent("lostGame#" + currentHeardle.id, {
                           name: "lost",
+                          gameId: currentHeardle.id
                       })),
                 ga.addEvent("endGame" + currentHeardle.id + "in" + userGuesses.length, {
                     name: "#" + userGuesses.length,
+                    gameId: currentHeardle.id
                 }),
                 ga.addEvent("endGame", {
                     name: "endGame",
+                    gameId: currentHeardle.id
                 }),
                 ga.addEvent("endGame#" + currentHeardle.id, {
                     name: "endGame",
+                    gameId: currentHeardle.id
                 }),
                 ga.addEvent("gameStats#" + currentHeardle.id, {
                     name: userGuesses,
+                    gameId: currentHeardle.id
                 });
         }
     }

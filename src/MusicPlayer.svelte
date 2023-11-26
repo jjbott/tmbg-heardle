@@ -59,7 +59,7 @@
     function onMusicIsPlayingChange(e) {
         console.log("musicIsPlaying: " + e);
         dispatch("updatePlayerState", {
-            musicIsPlaying: e,
+            musicIsPlaying: e
         });
     }
 
@@ -69,7 +69,7 @@
             y.getCurrentSound(function (e) {
                 "BLOCK" === e.policy && (songIsBlocked = !0),
                     dispatch("updateSong", {
-                        currentSong: e,
+                        currentSong: e
                     });
             }),
                 y.bind(SC.Widget.Events.PAUSE, function () {
@@ -79,9 +79,11 @@
                     b ||
                         (ga.addEvent("startGame", {
                             name: "startGame",
+                            gameId: currentHeardle.id
                         }),
                         ga.addEvent("startGame#" + currentHeardle.id, {
                             name: "startGame",
+                            gameId: currentHeardle.id
                         }),
                         (b = !0)),
                         onMusicIsPlayingChange(!0),
@@ -166,7 +168,7 @@
         {/if}
         <div class="border-t border-custom-line">
             <div class="max-w-screen-sm w-full mx-auto px-3 flex-col">
-                <div class="h-3 w-full relative overflow-hidden ">
+                <div class="h-3 w-full relative overflow-hidden">
                     <div
                         class="h-full absolute bg-custom-mg overflow-hidden"
                         style:width={(gameIsActive ? l : "100") + "%"}
@@ -217,7 +219,7 @@
         </div>
         <div class="border-t border-custom-line">
             <div class="max-w-screen-sm w-full mx-auto flex-col">
-                <div class="px-3 ">
+                <div class="px-3">
                     <div class="flex justify-between items-center">
                         <div class="flex items-center">
                             <div>
@@ -290,7 +292,7 @@
                         >
                     </div>
                     <div>
-                        <p class="text-sm ">
+                        <p class="text-sm">
                             Oh no! Seems like today's track is unavailable on SoundCloud in your location
                         </p>
                         {#if gameState.gameIsActive}

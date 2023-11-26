@@ -44,6 +44,7 @@
             if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
                 ga.addEvent("clickShareClipboard", {
                     name: "clickShareClipboard",
+                    gameId: currentHeardle.id,
                 });
 
                 copiedMessageActive = true;
