@@ -56,18 +56,18 @@
             } else {
                 return Promise.reject("There was a problem copying your result to the clipboard");
             }
-
-            navigator
-                .share({
-                    text: o,
-                })
-                .then(() => {
-                    ga.addEvent("clickSharePanel", {
-                        name: "clickSharePanel",
-                    });
-                })
-                .catch(console.error);
         }
+
+        navigator
+            .share({
+                text: o,
+            })
+            .then(() => {
+                ga.addEvent("clickSharePanel", {
+                    name: "clickSharePanel",
+                });
+            })
+            .catch(console.error);
     }
 </script>
 
