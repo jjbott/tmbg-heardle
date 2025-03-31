@@ -3,3 +3,6 @@
 /build/
 Thumbs.db
 *.orig
+/solutionGenerator/cache/waveforms
+*/node_modules/
+/solutionGenerator/answerLists/
