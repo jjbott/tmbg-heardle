@@ -632,7 +632,7 @@ let date = new Date(Date.parse(startDate));
 let id = idOffset;
 for (let i = 0; i < answerIndexes.length; ++i) {
     answers.push({
-        id: ++id,
+        id: id++,
         date: date.toISOString(),
         title: potentialAnswers[answerIndexes[i]].answer,
         url: potentialAnswers[answerIndexes[i]].url,
@@ -671,14 +671,22 @@ while (answers[answers.length - 1].date < generateThrough) {
         } else {
             //console.log(potentialAnswer.url + " is bad")
 
-            // If we've had too many failures, bail early.
+            // If we've had too many failures, bail!
+            // Probably something like "we used all of the xmas songs, so now we dont have one for xmas".
+            // Could solve it with some backtracking or something, but easier to just start over.
             if (n > 10000) {
-                console.log("Giving up early!");
-                break;
+                throw new Error("Got stuck generating new answers! Try again");
             }
 
             ++n;
         }
+    }
+}
+
+// Check that all ids are a correct sequence, because I messed it up.
+for(let i = 1; i < answers.length; ++i) {
+    if ( answers[i].id != answers[i-1].id + 1){
+        throw new Error(`Problem with id ${answers[i].id}!`)
     }
 }
 
