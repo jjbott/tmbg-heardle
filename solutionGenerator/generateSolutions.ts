@@ -684,9 +684,9 @@ while (answers[answers.length - 1].date < generateThrough) {
 }
 
 // Check that all ids are a correct sequence, because I messed it up.
-for(let i = 1; i < answers.length; ++i) {
-    if ( answers[i].id != answers[i-1].id + 1){
-        throw new Error(`Problem with id ${answers[i].id}!`)
+for (let i = 1; i < answers.length; ++i) {
+    if (answers[i].id != answers[i - 1].id + 1) {
+        throw new Error(`Problem with id ${answers[i].id}!`);
     }
 }
 
@@ -699,7 +699,7 @@ fs.writeFileSync(`./answerLists/${today.toISOString().split("T")[0]}.json`, JSON
 const newPotentialAnswers = songs
     .filter((s) => !s.exclusionReason)
     .map((s) => ({
-        answer: s.title + " - They Might Be Giants",
+        answer: s.title,
         url: s.url
     }));
 
@@ -730,7 +730,19 @@ if (newAnswerIndexes.find((a) => a < 0)) {
 
 const solutionsPath = "../src/Solutions.js";
 fs.writeFileSync(solutionsPath, `const idOffset = ${idOffset};\n`);
-fs.appendFileSync(solutionsPath, `const potentialAnswers = ${JSON.stringify(newSortedPotentialAnswers)};\n`);
+fs.appendFileSync(
+    solutionsPath,
+    `const potentialAnswers = ${JSON.stringify(
+        newSortedPotentialAnswers.map((a) => ({
+            ...a,
+            url: a.url.replace("https://soundcloud.com/they-might-be-giants/", "")
+        }))
+    )}`
+);
+fs.appendFileSync(
+    solutionsPath,
+    ".map(a => ({answer: a.answer + ' - They Might Be Giants', url: 'https://soundcloud.com/they-might-be-giants/' + a.url }));\n\n"
+);
 fs.appendFileSync(solutionsPath, `const answerIndexes = ${JSON.stringify(newAnswerIndexes)};\n`);
 fs.appendFileSync(
     solutionsPath,
