@@ -147,10 +147,11 @@
         }
         gameState.musicIsPlaying = e.detail.musicIsPlaying;
     }
-    function e15(e) {
+    function onGuess(e) {
         let t = e.detail.guess,
             r = e.detail.isSkipped,
             s = !1;
+        
         var wonGame;
         r ||
             t != currentHeardle.correctAnswer ||
@@ -391,7 +392,7 @@
             currentAttempt={userGuesses.length + 1}
             bind:this={o}
             bind:guessInput
-            on:guess={e15}
+            on:guess={onGuess}
         />
     {/if}
 </main>

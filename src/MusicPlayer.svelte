@@ -20,7 +20,11 @@
     $: l = gameState.isPrime
         ? (attemptIntervalAlt[currentAttempt2 - 1] / attemptIntervalAlt.slice(-1)[0]) * 100
         : (currentAttempt / config.maxAttempts) * 100;
-    $: currentAttemptIntervalAlt = attemptIntervalAlt[currentAttempt2 - 1];
+    $: { currentAttemptIntervalAlt = attemptIntervalAlt[currentAttempt2 - 1];
+        // Prevent flash of a bad progress bar that occurs when the 
+        // user guesses/skips while the music is playing.
+        calculateProgressBarPercent();
+    }
     const dispatch = createEventDispatcher();
 
     export let currentAttempt; // d
@@ -31,29 +35,29 @@
 
     let songIsBlocked = false;
 
-    var y;
-    let progressBarPercent = 0,
+    let soundcloudWidget,
+        progressBarPercent = 0,
         currentPosition = 0,
-        k = !1,
-        _ = !1,
-        x = !1,
-        b = !1,
-        S = !1;
+        scriptLoaded = false,
+        mounted = false,
+        hasStartedGame = false,
+        startGameEventSent = false,
+        playerLoadFailed = false;
 
     export const togglePlayState = () => {
-        y.toggle();
+        soundcloudWidget.toggle();
     };
 
     export const scPlay = () => {
-        y.seekTo(0), y.play();
+        soundcloudWidget.seekTo(0), soundcloudWidget.play();
     };
 
     export const scPause = () => {
-        y.seekTo(0), y.pause();
+        soundcloudWidget.seekTo(0), soundcloudWidget.pause();
     };
 
     export const resetAndPlay = () => {
-        y.seekTo(0), y.play();
+        soundcloudWidget.seekTo(0), soundcloudWidget.play();
     };
 
     function onMusicIsPlayingChange(e) {
@@ -64,53 +68,68 @@
     }
 
     let scWidgetDiv;
-    function T() {
-        (y = SC.Widget("soundcloud" + currentHeardle.id)).bind(SC.Widget.Events.READY, function () {
-            y.getCurrentSound(function (e) {
-                "BLOCK" === e.policy && (songIsBlocked = !0),
-                    dispatch("updateSong", {
-                        currentSong: e
-                    });
-            }),
-                y.bind(SC.Widget.Events.PAUSE, function () {
-                    onMusicIsPlayingChange(!1);
-                }),
-                y.bind(SC.Widget.Events.PLAY, function () {
-                    b ||
-                        (ga.addEvent("startGame", {
-                            name: "startGame",
-                            gameId: currentHeardle.id
-                        }),
-                        ga.addEvent("startGame#" + currentHeardle.id, {
-                            name: "startGame",
-                            gameId: currentHeardle.id
-                        }),
-                        (b = !0)),
-                        onMusicIsPlayingChange(!0),
-                        (x = !0);
-                }),
-                y.bind(SC.Widget.Events.PLAY_PROGRESS, function (e) {
-                    (currentPosition = e.currentPosition),
-                        1 == gameIsActive
-                            ? gameState.isPrime
-                                ? ((progressBarPercent = (currentPosition / currentAttemptIntervalAlt) * 100),
-                                  currentPosition > currentAttemptIntervalAlt && scPause())
-                                : ((progressBarPercent =
-                                      (currentPosition / (currentAttempt * config.attemptInterval)) * 100),
-                                  currentPosition > currentAttempt * config.attemptInterval && scPause())
-                            : ((progressBarPercent = (currentPosition / trackDuration) * 100),
-                              currentPosition > trackDuration && scPause());
+    function setupWidget() {
+        soundcloudWidget = SC.Widget("soundcloud" + currentHeardle.id);
+        soundcloudWidget.bind(SC.Widget.Events.READY, function () {
+            soundcloudWidget.getCurrentSound(function (e) {
+                if ("BLOCK" === e.policy) {
+                    songIsBlocked = true;
+                }
+                dispatch("updateSong", {
+                    currentSong: e
                 });
+            });
+        });
+        soundcloudWidget.bind(SC.Widget.Events.PAUSE, function () {
+            onMusicIsPlayingChange(false);
+        });
+        soundcloudWidget.bind(SC.Widget.Events.PLAY, function () {
+            if (!startGameEventSent) {
+                ga.addEvent("startGame", {
+                    name: "startGame",
+                    gameId: currentHeardle.id
+                });
+                ga.addEvent("startGame#" + currentHeardle.id, {
+                    name: "startGame",
+                    gameId: currentHeardle.id
+                });
+                startGameEventSent = true;
+            }
+
+            onMusicIsPlayingChange(true);
+            hasStartedGame = true;
+        });
+        soundcloudWidget.bind(SC.Widget.Events.PLAY_PROGRESS, function (e) {
+            currentPosition = e.currentPosition;
+
+            calculateProgressBarPercent();
+
+            if (gameIsActive == 1) {
+                if (gameState.isPrime) {
+                    if (currentPosition > currentAttemptIntervalAlt) {
+                        scPause();
+                    }
+                } else {
+                    if (currentPosition > currentAttempt * config.attemptInterval) {
+                        scPause();
+                    }
+                }
+            } else {
+                if (currentPosition > trackDuration) {
+                    scPause();
+                }
+            }
         });
     }
 
-    function e19() {
-        (k = !0),
-            _ &&
-                (setTimeout(() => {
-                    S = !0;
-                }, 6e3),
-                T());
+    function onScriptLoad() {
+        scriptLoaded = true;
+        if (mounted) {
+            setTimeout(() => {
+                playerLoadFailed = true;
+            }, 6000);
+            setupWidget();
+        }
     }
 
     onMount(() => {
@@ -121,12 +140,13 @@
         e.height = 0;
         e.src = "https://w.soundcloud.com/player/?url=" + currentHeardle.url + "&cache=" + currentHeardle.id;
         scWidgetDiv.appendChild(e);
-        _ = !0;
-        k &&
-            (setTimeout(() => {
-                S = !0;
-            }, 6e3),
-            T());
+        mounted = true;
+        if (scriptLoaded) {
+            setTimeout(() => {
+                playerLoadFailed = true;
+            }, 6000);
+            setupWidget();
+        }
     });
 
     function formatMs(e) {
@@ -134,12 +154,25 @@
             n = ((e % 6e4) / 1e3).toFixed(0);
         return t + ":" + (n < 10 ? "0" : "") + n;
     }
+
+    function calculateProgressBarPercent() {
+        if (gameIsActive == 1) {
+            if (gameState.isPrime) {
+                progressBarPercent = (currentPosition / currentAttemptIntervalAlt) * 100;
+                console.log(
+                    `currentPosition: ${currentPosition}, currentAttemptIntervalAlt: ${currentAttemptIntervalAlt}, progressBarPercent: ${progressBarPercent}`
+                );
+            } else {
+                progressBarPercent = (currentPosition / (currentAttempt * config.attemptInterval)) * 100;
+            }
+        } else {
+            progressBarPercent = (currentPosition / trackDuration) * 100;
+        }
+    }
 </script>
 
-<svelte:window on:load={e19} />
-
 <svelte:head>
-    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js" on:load={onScriptLoad}></script>
 </svelte:head>
 
 {#if playerIsReady}
@@ -148,7 +181,7 @@
         <!-- Qe -->
 
         <!-- if !e[12] x && 1 == e[0] d -->
-        {#if !x && 1 == currentAttempt}
+        {#if !hasStartedGame && 1 == currentAttempt}
             <!-- tt -->
             <div class="text-center p-3 flex flex-col items-center text-sm text-custom-line">
                 <p>Turn up the volume and tap to start the track!</p>
@@ -309,7 +342,7 @@
 {:else}
     <!-- Ve -->
     <div class="text-sm text-center text-custom-line p-6">
-        {#if S}
+        {#if playerLoadFailed}
             <!-- Ze -->
             <p class="mb-3">There was an error loading the player. Please reload and try again.</p>
             <div class="flex justify-center">
