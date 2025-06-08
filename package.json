@@ -6,7 +6,7 @@
     "scripts": {
         "build": "rollup -c",
         "start": "rollup -c -w",
-        "serve": "sirv . --no-clear"
+        "serve": "sirv build --no-clear -c"
     },
     "devDependencies": {
         "@beyonk/svelte-google-analytics": "^2.6.4",
@@ -30,6 +30,6 @@
         "projectType": "generated_static"
     },
     "engines": {
-        "node": "16.x"
+        "node": "22.x"
     }
 }
