@@ -1,107 +1,125 @@
 <script>
+    import MigrateButton from "./MigrateButton.svelte";
     import { idOffset } from "./Solutions.js";
 
-    export let userStats;
+    //export let userStats;
+    let userStats = JSON.parse(localStorage.getItem("userStats") || []);
+
+    let statsMigrated = localStorage.getItem("migrated") === "true";
+    let statMigrationComplete;
+    $: statMigrationComplete = false;
+
     export let config;
     export let todaysScore;
     export let hasFinished;
     export let daysSince;
 
-    let maybeIsFirstTime = !1,
+    let hasStats = !1,
         played = 0,
         streaks = [],
         dayResults = [],
-        wonCount = 0;
+        wonCount = 0,
+        histogram = [],
+        maxHistogram = 0;
 
     export let isPrime;
     export let guessRef;
 
-    let histogram = [];
+    const calcStats = () => {
+        for (let e = 0; e < config.maxAttempts + 1; e++) histogram[e] = 0;
+        if (userStats.some((s) => s.hasFinished)) {
+            hasStats = true;
 
-    for (let e = 0; e < config.maxAttempts + 1; e++) histogram[e] = 0;
-    let maxHistogram = 0;
-    if (userStats.length > 0) {
-        maybeIsFirstTime = !0;
+            let lastId = -1;
+            let wentBackwards = false;
+            for (let e in userStats) {
+                if (true === userStats[e].hasFinished) {
+                    ++played;
 
-        let lastId = -1;
-        let wentBackwards = false;
-        for (let e in userStats) {
-            if (true === userStats[e].hasFinished) {
-                ++played;
+                    let userStatId = userStats[e].id;
 
-                let userStatId = userStats[e].id;
+                    // In Dec 2022, the ids reset to 0. This was fixed in Jan 2023.
+                    // When counting streaks, try to detect this to set the `daysWon` flags correctly
 
-                // In Dec 2022, the ids reset to 0. This was fixed in Jan 2023.
-                // When counting streaks, try to detect this to set the `daysWon` flags correctly
-
-                // User stats are in date order, not id order. So if the ids went backwards, we've hit our bug
-                if (lastId > userStatId) {
-                    wentBackwards = true;
-                }
-
-                lastId = userStatId;
-
-                if (wentBackwards && userStatId < 30) {
-                    userStatId += idOffset;
-                }
-
-                dayResults[userStatId] = userStats[e].gotCorrect ? 1 : 0;
-
-                if (true === userStats[e].gotCorrect) {
-                    ++wonCount;
-                    ++histogram[userStats[e].score - 1];
-                    if (histogram[userStats[e].score - 1] > maxHistogram) {
-                        maxHistogram = histogram[userStats[e].score - 1];
+                    // User stats are in date order, not id order. So if the ids went backwards, we've hit our bug
+                    if (lastId > userStatId) {
+                        wentBackwards = true;
                     }
-                } else {
-                    ++histogram[config.maxAttempts];
-                    if (histogram[config.maxAttempts] > maxHistogram) {
-                        maxHistogram = histogram[config.maxAttempts];
+
+                    lastId = userStatId;
+
+                    if (wentBackwards && userStatId < 30) {
+                        userStatId += idOffset;
+                    }
+
+                    dayResults[userStatId] = userStats[e].gotCorrect ? 1 : 0;
+
+                    if (true === userStats[e].gotCorrect) {
+                        ++wonCount;
+                        ++histogram[userStats[e].score - 1];
+                        if (histogram[userStats[e].score - 1] > maxHistogram) {
+                            maxHistogram = histogram[userStats[e].score - 1];
+                        }
+                    } else {
+                        ++histogram[config.maxAttempts];
+                        if (histogram[config.maxAttempts] > maxHistogram) {
+                            maxHistogram = histogram[config.maxAttempts];
+                        }
                     }
                 }
             }
-        }
 
-        // In Dec 2022, the ids reset to 0. This was fixed in Jan 2023 after about 26 days.
-        // If you had user stats for these "bad" ids (from the first month the game was live)
-        // it thought you already played and didnt let you play.
-        // For those cases, for the purposes of streak calculation, assume they would have gotten it right.
-        for (let i = 0; i < 26; i++) {
-            if (
-                dayResults[i] !== undefined && // They played on the original "bad id" day
-                i <= daysSince && // The game with the "bad id" is not in the future
-                dayResults[i + idOffset] === undefined // They did not play after the fix
-            ) {
-                dayResults[i + idOffset] = 1;
+            // In Dec 2022, the ids reset to 0. This was fixed in Jan 2023 after about 26 days.
+            // If you had user stats for these "bad" ids (from the first month the game was live)
+            // it thought you already played and didnt let you play.
+            // For those cases, for the purposes of streak calculation, assume they would have gotten it right.
+            for (let i = 0; i < 26; i++) {
+                if (
+                    dayResults[i] !== undefined && // They played on the original "bad id" day
+                    i <= daysSince && // The game with the "bad id" is not in the future
+                    dayResults[i + idOffset] === undefined // They did not play after the fix
+                ) {
+                    dayResults[i + idOffset] = 1;
+                }
             }
-        }
 
-        // Fill in empty items (days they didnt play) with 0, so we can correctly calculate streaks.
-        // Needs to be done after the above
-        for (let i = 0; i < daysSince + 1 + idOffset; i++) {
-            if (dayResults[i] === undefined) {
-                dayResults[i] = 0;
+            // Fill in empty items (days they didnt play) with 0, so we can correctly calculate streaks.
+            // Needs to be done after the above
+            for (let i = 0; i < daysSince + 1 + idOffset; i++) {
+                if (dayResults[i] === undefined) {
+                    dayResults[i] = 0;
+                }
             }
-        }
 
-        streaks = dayResults.reduce((e, t) => (t ? e[e.length - 1]++ : e.push(0), e), [0]);
-    }
+            streaks = dayResults.reduce((e, t) => (t ? e[e.length - 1]++ : e.push(0), e), [0]);
+        }
+    };
+
+    const migrationComplete = () => {
+        userStats = JSON.parse(localStorage.getItem("userStats") || []);
+        calcStats();
+        localStorage["migrated"] = true;
+        statMigrationComplete = true;
+        //onClose();
+    };
+
+    calcStats();
 </script>
 
-{#if maybeIsFirstTime}
+{#if hasStats}
     <!-- _n -->
     <div class="flex justify-between py-3">
         {#each histogram as h, i}
             <!-- Mn -->
             <!-- t -->
-            <div class="flex flex-col items-stretch ">
+            <div class="flex flex-col items-stretch">
                 <!-- n -->
                 <div class="h-32 relative w-9 flex justify-center items-end">
                     <!-- r -->
                     <div class="absolute bg-custom-mg w-6" style:height={(h / maxHistogram) * 100 + "%"}>
                         <!-- s -->
                         <div
-                            class="h-full absolute text-center w-full py-1 text-xs "
+                            class="h-full absolute text-center w-full py-1 text-xs"
                             class:bg-custom-positive={i == todaysScore - 1 && 0 != guessRef && hasFinished}
                             class:bg-custom-negative={i == todaysScore && 0 == guessRef && hasFinished}
                         >
@@ -133,10 +151,11 @@
                     {:else if isPrime}
                         <!-- bn -->
                         <span
-                        class:font-semibold={i == todaysScore - 1 && hasFinished}
-                        class:text-custom-positive={i == todaysScore - 1 && 0 != guessRef && hasFinished}
-                        class:text-custom-negative={i == todaysScore - 1 && 0 == guessRef && hasFinished}
-                        >{i + 1 + ""}°</span>
+                            class:font-semibold={i == todaysScore - 1 && hasFinished}
+                            class:text-custom-positive={i == todaysScore - 1 && 0 != guessRef && hasFinished}
+                            class:text-custom-negative={i == todaysScore - 1 && 0 == guessRef && hasFinished}
+                            >{i + 1 + ""}°</span
+                        >
                         <span class="text-custom-positive"></span>
                     {:else}
                         <!-- xn -->
@@ -155,7 +174,7 @@
                 {played}
             </div>
             <!-- l -->
-            <div class="text-custom-line text-sm ">Played</div>
+            <div class="text-custom-line text-sm">Played</div>
         </div>
         <!-- c -->
         <div class="flex-1">
@@ -165,7 +184,7 @@
                 {wonCount}
             </div>
             <!-- m -->
-            <div class="text-custom-line text-sm ">Won</div>
+            <div class="text-custom-line text-sm">Won</div>
         </div>
         <!-- b -->
         <div class="flex-1">
@@ -204,4 +223,20 @@
 {:else}
     <!-- kn -->
     <div class="text-center py-3 text-custom-line font-semibold">Play daily to see your stats</div>
+{/if}
+{#if !statsMigrated}
+    <div class="bg-custom-bg border border-custom-mg p-1">
+        {#if !statMigrationComplete}
+            <div class="justify-center text-center py-3 text-custom-line font-semibold">
+                Missing stats? They may be on the old site!
+            </div>
+            <div class="justify-center flex items-center py-3 text-custom-line font-semibold">
+                <MigrateButton on:migrationComplete={migrationComplete}>Migrate Your Stats</MigrateButton>
+            </div>
+        {:else}
+            <div class="justify-center text-center py-3 text-custom-line font-semibold">
+                Your stats have been migrated!
+            </div>
+        {/if}
+    </div>
 {/if}

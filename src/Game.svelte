@@ -335,7 +335,6 @@
                 <!-- Yep. It'll be wrong if we ever allow the solutions to loop back to index 0.
                 That'll take a while, but it may happen if I forget about this project 😬 -->
                 <StatsModal
-                    {userStats}
                     {config}
                     isPrime={gameState.isPrime}
                     daysSince={answerIndex}

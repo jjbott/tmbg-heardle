@@ -22,9 +22,6 @@
     const dispatch = createEventDispatcher();
 
     function onButtonClick(e) {
-
-        document.getElementById("statTransfer").contentWindow.postMessage("migrate", "*")
-
         if (e === "skipped") {
             dispatch("guess", {
                 guess: guess,

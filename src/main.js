@@ -1,4 +1,5 @@
 import Game from "./Game.svelte";
+import App from "./App.svelte";
 
 let game = null;
 
@@ -7,7 +8,7 @@ const startGame = (message) => {
         if (message) {
             console.error(message);
         }
-        game = new Game({
+        game = new App({
             target: document.body
         });
     }
@@ -16,7 +17,8 @@ const startGame = (message) => {
 localStorage.removeItem("userStats");
 localStorage.removeItem("firstTime");
 localStorage.removeItem("migrated");
-
+startGame();
+/*
 if (localStorage.getItem("migrated") === "true") {
     startGame();
 } else {
@@ -36,12 +38,13 @@ if (localStorage.getItem("migrated") === "true") {
                     //iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
                     document.body.appendChild(iframe);
 
-                    /*
+                    
                     window.addEventListener(
                         "message",
                         (event) => {
                             if (event.data.statTransfer && typeof event.data.statTransfer === "object") {
                                 const { userStats, firstTime } = event.data.statTransfer;
+                                console.log(event.data.statTransfer);
                                 if (userStats) {
                                     localStorage.setItem("userStats", event.data.statTransfer.userStats);
                                 }
@@ -49,7 +52,8 @@ if (localStorage.getItem("migrated") === "true") {
                                     localStorage.setItem("firstTime", event.data.statTransfer.firstTime);
                                 }
                                 localStorage.setItem("migrated", "true");
-                                startGame("Game started after stat migration!");
+                                //startGame("Game started after stat migration!");
+                                event.source.postMessage("thanks bro", "*");
                             }
                         },
                         false
@@ -62,7 +66,7 @@ if (localStorage.getItem("migrated") === "true") {
                     setTimeout(() => {
                         startGame("Timeout waiting for iframe. Starting without stats transfer");
                     }, 30000);
-                    */
+                    
                     startGame("Stat transfer iframe loaded.");
                 }
             })
@@ -73,5 +77,5 @@ if (localStorage.getItem("migrated") === "true") {
         startGame("Error during game initialization. Starting without stats transfer.");
     }
 }
-
+*/
 //export default game;
