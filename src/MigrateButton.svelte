@@ -6,7 +6,7 @@
 
      function migrateStats() {
         const popup = window.open(
-            "https://nasal-bittersweet-smell.glitch.me/public/statTransfer.html",
+            "https://tmbg-heardle.glitch.me/statTransfer.html",
             "_blank",
             "width=600,height=400"
         );
@@ -17,7 +17,7 @@
 
         // Listen for messages from the popup
         window.addEventListener("message", (event) => {
-            if (event.origin !== "https://nasal-bittersweet-smell.glitch.me") {
+            if (event.origin !== "https://tmbg-heardle.glitch.me") {
                 console.error("Untrusted origin:", event.origin);
                 return;
             }
