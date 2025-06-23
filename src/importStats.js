@@ -20,8 +20,8 @@ const mergeStats = (a, b) => {
     return {
         url: a.url,
         correctAnswer: a.correctAnswer,
-        id: a.url,
-        guessList: [...bestStats.guessList],
+        id: a.id,
+        guessList: [...(bestStats.guessList || [])],
         hasFinished: bestStats.hasFinished,
         hasStarted: bestStats.hasStarted,
         artist: a.artist || b.artist,
