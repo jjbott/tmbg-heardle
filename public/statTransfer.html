@@ -1,0 +1,39 @@
+<html>
+    <head> </head>
+    <body>
+        <script>
+            const referrer = new URL(document.referrer);
+
+            window.addEventListener(
+                "message",
+                (event) => {
+                    if (event.data === "thanks bro"){
+                        window.close();
+                    }
+                },
+                false
+            );
+          
+            if (
+                referrer.hostname !== "localhost" &&
+                referrer.hostname !== "tmbg-heardle.pages.dev" &&
+                !referrer.hostname.endsWith(".tmbg-heardle.pages.dev")
+            ) {
+                console.error("Invalid referrer: ", referrer.hostname);
+            } else {
+                const userStats = localStorage.getItem("userStats");
+                const firstTime = localStorage.getItem("firstTime");
+
+                window.opener.postMessage(
+                    {
+                        statTransfer: {
+                            userStats,
+                            firstTime
+                        }
+                    },
+                    referrer.origin
+                );
+            }
+        </script>
+    </body>
+</html>
