@@ -164,7 +164,8 @@
                             height="16"
                             viewBox="0 0 24 24"
                             fill="none"
-                            stroke="currentColor"
+                            stroke={6 == todaysScore && 0 == guessRef && hasFinished ? "#FF0000" : "currentColor" }
+                            
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -177,7 +178,7 @@
                         <span
                             class:font-semibold={i == todaysScore - 1 && hasFinished}
                             class:text-custom-positive={i == todaysScore - 1 && 0 != guessRef && hasFinished}
-                            class:text-custom-negative={i == todaysScore - 1 && 0 == guessRef && hasFinished}
+                            class:text-custom-negative={i == todaysScore && 0 == guessRef && hasFinished}
                             >{i + 1 + ""}°</span
                         >
                         <span class="text-custom-positive"></span>
