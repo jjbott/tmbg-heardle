@@ -110,7 +110,7 @@
         ga.addEvent("statsMigratedFromStats", {
             name: "statsMigratedFromStats",
         });
-        localStorage["migrated"] = true;
+        localStorage["migrated"] = "true";
         statMigrationComplete = true;
         refreshStats();
     };

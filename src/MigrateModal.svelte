@@ -18,7 +18,7 @@
     const onClose = getContext("onClose");
 
     const migrationComplete = () => {
-        localStorage["migrated"] = true;
+        localStorage["migrated"] = "true";
         statMigrationComplete = true;
         ga.addEvent("statsMigratedFromModal", {
             name: "statsMigratedFromModal"

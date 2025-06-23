@@ -6,7 +6,7 @@
 
     let showMigrationModal = false;
 
-    if (localStorage.getItem("dontShowMigrationModal") !== "true") {
+    if (localStorage.getItem("migrated") !== "true" && localStorage.getItem("dontShowMigrationModal") !== "true") {
         showMigrationModal = true;
     }
 
