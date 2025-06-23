@@ -1,6 +1,6 @@
 <script>
-    import autoComplete from '@tarekraafat/autocomplete.js'
-    import {diceCoefficient} from 'dice-coefficient'
+    import autoComplete from "@tarekraafat/autocomplete.js";
+    import { diceCoefficient } from "dice-coefficient";
     import { onMount, createEventDispatcher } from "svelte";
     import Button from "./Button.svelte";
 
@@ -17,24 +17,28 @@
         clear() {
             document.getElementById("autoComplete").value = "";
             guess = "";
-        },
+        }
     };
     const dispatch = createEventDispatcher();
 
-    function c(e) {
-        "skipped" == e
-            ? (dispatch("guess", {
-                  guess: guess,
-                  isSkipped: !0,
-              }),
-              (guess = ""))
-            : undefined !== guess && "" !== guess.trim()
-            ? (dispatch("guess", {
-                  guess: guess,
-                  isSkipped: !1,
-              }),
-              (guess = ""))
-            : l.focus();
+    function onButtonClick(e) {
+        if (e === "skipped") {
+            dispatch("guess", {
+                guess: guess,
+                isSkipped: true
+            });
+
+            guess = "";
+        } else if (guess !== undefined && guess.trim() !== "") {
+            dispatch("guess", {
+                guess: guess,
+                isSkipped: false
+            });
+
+            guess = "";
+        } else {
+            l.focus();
+        }
     }
     onMount(() => {
         !(function () {
@@ -43,7 +47,7 @@
                 threshold: 1,
                 wrapper: !1,
                 resultsList: {
-                    maxResults: 6,
+                    maxResults: 6
                 },
                 diacritics: !0,
                 noresults: !0,
@@ -59,28 +63,27 @@
                                 s = diceCoefficient(t, n.value.toLowerCase());
                             return r === s ? (e.value > n.value ? -1 : 1) : s > r ? 1 : -1;
                         }));
-                    },
+                    }
                 },
                 resultItem: {
-                    highlight: !0,
+                    highlight: !0
                 },
                 events: {
                     focus: {
-                        focus: (e) => {},
+                        focus: (e) => {}
                     },
                     input: {
                         selection: (t) => {
                             const s = t.detail.selection.value;
                             e.input.value = s;
                             guess = s;
-                        },
-                    },
-                },
+                        }
+                    }
+                }
             });
         })();
     });
 
-    
     export const guessInput = () => l;
 
     export const togglePlayState = () => {
@@ -141,7 +144,7 @@
             </div>
             <div class="flex justify-between pt-3">
                 <!-- v -->
-                <Button secondary={true} on:click={() => c("skipped")}>
+                <Button secondary={true} on:click={() => onButtonClick("skipped")}>
                     <!-- Mt -->
                     {#if isPrime}
                         <!-- St -->
@@ -156,7 +159,7 @@
                 </Button>
 
                 <!-- b -->
-                <Button primary={true} on:click={c}>
+                <Button primary={true} on:click={onButtonClick}>
                     <!-- $t -->
                     Submit
                 </Button>

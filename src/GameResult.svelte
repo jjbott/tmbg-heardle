@@ -44,7 +44,7 @@
             if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
                 ga.addEvent("clickShareClipboard", {
                     name: "clickShareClipboard",
-                    gameId: currentHeardle.id,
+                    gameId: currentHeardle.id
                 });
 
                 copiedMessageActive = true;
@@ -60,11 +60,12 @@
 
         navigator
             .share({
-                text: o,
+                text: o
             })
             .then(() => {
                 ga.addEvent("clickSharePanel", {
                     name: "clickSharePanel",
+                    gameId: currentHeardle.id
                 });
             })
             .catch(console.error);

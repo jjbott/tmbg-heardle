@@ -71,19 +71,22 @@
         onResize();
     });
 
-    if (null == localStorage.getItem("userStats")) {
-        userStats = [];
-        localStorage.setItem("userStats", JSON.stringify(userStats));
-    } else {
-        userStats = JSON.parse(localStorage.getItem("userStats"));
-    }
+    const setup = () => {
+        if (null == localStorage.getItem("userStats")) {
+            userStats = [];
+            localStorage.setItem("userStats", JSON.stringify(userStats));
+        } else {
+            userStats = JSON.parse(localStorage.getItem("userStats"));
+        }
 
-    todaysGame = userStats.find((e) => e.id === currentHeardle.id);
-    if (undefined === todaysGame) {
-        todaysGame = currentHeardle;
-        userStats.push(todaysGame);
-        localStorage.setItem("userStats", JSON.stringify(userStats));
-    }
+        todaysGame = userStats.find((e) => e.id === currentHeardle.id);
+        if (undefined === todaysGame) {
+            todaysGame = currentHeardle;
+            userStats.push(todaysGame);
+            localStorage.setItem("userStats", JSON.stringify(userStats));
+        }
+    };
+    setup();
     let guessInput;
     let allOptions;
     let userGuesses = todaysGame.guessList;
@@ -147,10 +150,11 @@
         }
         gameState.musicIsPlaying = e.detail.musicIsPlaying;
     }
-    function e15(e) {
+    function onGuess(e) {
         let t = e.detail.guess,
             r = e.detail.isSkipped,
             s = !1;
+        
         var wonGame;
         r ||
             t != currentHeardle.correctAnswer ||
@@ -226,13 +230,13 @@
                     gameId: currentHeardle.id
                 }),
                 ga.addEvent("gameStats#" + currentHeardle.id, {
-                    name: userGuesses.map(guess => guess.isSkipped ? "<skipped>" : guess.answer).join(","),
+                    name: userGuesses.map((guess) => (guess.isSkipped ? "<skipped>" : guess.answer)).join(","),
                     gameId: currentHeardle.id
                 });
-                ga.addEvent("gameStats", {
-                    name: userGuesses.map(guess => guess.isSkipped ? "<skipped>" : guess.answer).join(","),
-                    gameId: currentHeardle.id
-                });
+            ga.addEvent("gameStats", {
+                name: userGuesses.map((guess) => (guess.isSkipped ? "<skipped>" : guess.answer)).join(","),
+                gameId: currentHeardle.id
+            });
         }
     }
 
@@ -244,6 +248,12 @@
         var t = moment(e, "YYYY-MM-DD");
         return moment().diff(t, "days");
     }
+
+    const onModalClose = () => {
+        modalState.isActive = false;
+        // reset the game, in case they did a migrate/import
+        setup();
+    };
 
     if (localStorage.getItem("firstTime") == null) {
         openModal("help", "how to play"), localStorage.setItem("firstTime", "false");
@@ -322,7 +332,7 @@
 
 <main class="bg-custom-bg text-custom-fg overflow-auto flex flex-col" style:height="{height}px">
     {#if modalState.isActive}
-        <Modal hasFrame={modalState.hasFrame} title={modalState.title} on:close={() => (modalState.isActive = false)}>
+        <Modal hasFrame={modalState.hasFrame} title={modalState.title} on:close={onModalClose}>
             {#if modalState.name == "info"}
                 <InfoModal />
             {:else if modalState.name == "donate"}
@@ -332,9 +342,10 @@
                 <!-- Tn -->
                 <!-- TODO: `daysSince={answerIndex}` looks like a bug -->
                 <!-- Yep. It'll be wrong if we ever allow the solutions to loop back to index 0.
-                That'll take a while, but it may happen if I forget about this project 😬 -->
+                That'll take a while, but it may happen if I forget about this project 😬 
+                I think we really want to use today's game id so streak calc runs through all stats up to and including today.
+                -->
                 <StatsModal
-                    {userStats}
                     {config}
                     isPrime={gameState.isPrime}
                     daysSince={answerIndex}
@@ -391,7 +402,7 @@
             currentAttempt={userGuesses.length + 1}
             bind:this={o}
             bind:guessInput
-            on:guess={e15}
+            on:guess={onGuess}
         />
     {/if}
 </main>
