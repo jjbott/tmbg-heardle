@@ -230,13 +230,13 @@
                     gameId: currentHeardle.id
                 }),
                 ga.addEvent("gameStats#" + currentHeardle.id, {
-                    name: userGuesses.map(guess => guess.isSkipped ? "<skipped>" : guess.answer).join(","),
+                    name: userGuesses.map((guess) => (guess.isSkipped ? "<skipped>" : guess.answer)).join(","),
                     gameId: currentHeardle.id
                 });
-                ga.addEvent("gameStats", {
-                    name: userGuesses.map(guess => guess.isSkipped ? "<skipped>" : guess.answer).join(","),
-                    gameId: currentHeardle.id
-                });
+            ga.addEvent("gameStats", {
+                name: userGuesses.map((guess) => (guess.isSkipped ? "<skipped>" : guess.answer)).join(","),
+                gameId: currentHeardle.id
+            });
         }
     }
 

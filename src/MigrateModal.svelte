@@ -2,7 +2,7 @@
     import { createEventDispatcher, getContext } from "svelte";
     import Button from "./Button.svelte";
     import MigrateButton from "./MigrateButton.svelte";
-    //const dispatch = createEventDispatcher();
+    import { ga } from "@beyonk/svelte-google-analytics";
 
     let statMigrationComplete;
     $: statMigrationComplete = false;
@@ -17,25 +17,20 @@
 
     const onClose = getContext("onClose");
 
-    /*const close = () => {
-        dispatch("close");
-    };*/
-
-    const migrate = () => {
-        alert("You did it");
-    };
-
     const migrationComplete = () => {
         localStorage["migrated"] = true;
         statMigrationComplete = true;
+        ga.addEvent("statsMigratedFromModal", {
+            name: "statsMigratedFromModal"
+        });
     };
 
     const onPopupBlocked = () => {
+        ga.addEvent("statsMigrationPopupBlocked", {
+            name: "statsMigrationPopupBlocked"
+        });
         popupBlocked = true;
     };
-    
-
-    //console.log(onClose.toString())
 </script>
 
 <div>
@@ -44,13 +39,14 @@
             If you have stats from the old site, we can try to migrate them!
         </div>
         {#if popupBlocked}
-        <div class="justify-center flex items-center text-custom-negative py-2 mt-2">
-            Popup blocked! Please allow popups for this site to migrate your stats.
-        </div>
+            <div class="justify-center flex items-center text-custom-negative py-2 mt-2">
+                Popup blocked! Please allow popups for this site to migrate your stats.
+            </div>
         {/if}
         <div class="justify-center flex items-center py-2 mt-2">
-            <MigrateButton on:migrationComplete={migrationComplete} on:popupBlocked={onPopupBlocked}>Migrate My Stats!</MigrateButton>
-            <!--<Button primary={true} on:click={migrate}>Migrate My Stats!</Button>-->
+            <MigrateButton on:migrationComplete={migrationComplete} on:popupBlocked={onPopupBlocked}
+                >Migrate My Stats!</MigrateButton
+            >
         </div>
         <div class="justify-center flex items-center py-2 mt-2">
             <Button secondary={true} on:click={onClose}>Skip</Button>

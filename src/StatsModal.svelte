@@ -3,6 +3,7 @@
     import ImportFromFile from "./ImportFromFile.svelte";
     import MigrateButton from "./MigrateButton.svelte";
     import { idOffset } from "./Solutions.js";
+    import { ga } from "@beyonk/svelte-google-analytics";
 
     let userStats = [];
 
@@ -106,8 +107,18 @@
     };
 
     const migrationComplete = () => {
+        ga.addEvent("statsMigratedFromStats", {
+            name: "statsMigratedFromStats",
+        });
         localStorage["migrated"] = true;
         statMigrationComplete = true;
+        refreshStats();
+    };
+
+    const importComplete = () => {
+        ga.addEvent("importedFromStats", {
+            name: "importedFromStats",
+        });
         refreshStats();
     };
 
@@ -254,6 +265,6 @@
         <ExportToFile />
     </div>
     <div class="justify-center flex items-center">
-        <ImportFromFile on:importComplete={refreshStats} />
+        <ImportFromFile on:importComplete={importComplete} />
     </div>
 </div>

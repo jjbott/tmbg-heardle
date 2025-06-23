@@ -1,6 +1,7 @@
 <script>
     import { onMount, onDestroy } from "svelte";
     import Button from "./Button.svelte";
+    import { ga } from "@beyonk/svelte-google-analytics";
 
     let userData = JSON.stringify(localStorage);
     let objectUrl = "";
@@ -21,6 +22,9 @@
     class="px-2 py-2 uppercase tracking-widest border-none flex items-center font-semibold text-sm svelte-1r54uzk bg-custom-positive"
     href={objectUrl}
     download={filename}
+    on:click={ga.addEvent("exportClicked", {
+        name: "exportClicked"
+    })}
     >Export Stats<span
         ><svg
             xmlns="http://www.w3.org/2000/svg"

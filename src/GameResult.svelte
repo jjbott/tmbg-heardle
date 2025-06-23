@@ -60,11 +60,12 @@
 
         navigator
             .share({
-                text: o,
+                text: o
             })
             .then(() => {
                 ga.addEvent("clickSharePanel", {
                     name: "clickSharePanel",
+                    gameId: currentHeardle.id
                 });
             })
             .catch(console.error);

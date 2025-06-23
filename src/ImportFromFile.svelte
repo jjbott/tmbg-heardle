@@ -1,9 +1,8 @@
 <script>
     import { createEventDispatcher } from "svelte";
-    import Button from "./Button.svelte";
     import { importStats } from "./importStats";
+    import { ga } from "@beyonk/svelte-google-analytics";
 
-    
     const dispatch = createEventDispatcher();
 
     const handleFileUpload = (event) => {
@@ -16,12 +15,21 @@
                     const parsedContent = JSON.parse(fileContent);
                     if (parsedContent && typeof parsedContent === "object" && parsedContent.userStats) {
                         importStats(JSON.parse(parsedContent.userStats || "[]"));
+                        ga.addEvent("importedStats", {
+                            name: "importedStats"
+                        });
                         dispatch("importComplete");
                     } else {
+                        ga.addEvent("badStatImport", {
+                            name: "badStatImport"
+                        });
                         alert("Invalid stats file");
                         return;
                     }
                 } catch (error) {
+                    ga.addEvent("badStatImport", {
+                        name: "badStatImport"
+                    });
                     alert("Invalid stats file");
                     return;
                 }
@@ -34,8 +42,11 @@
 
 <input id="fileInput" type="file" accept=".json" on:change={handleFileUpload} style="display:none" />
 <label
-    for="fileInput" 
+    for="fileInput"
     class="px-2 py-2 uppercase tracking-widest border-none flex items-center font-semibold text-sm svelte-1r54uzk bg-custom-positive"
+    on:click={ga.addEvent("importClicked", {
+        name: "importClicked"
+    })}
     >Import Stats<span
         ><svg
             xmlns="http://www.w3.org/2000/svg"
