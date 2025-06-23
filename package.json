@@ -6,6 +6,7 @@
     "scripts": {
         "build": "rollup -c",
         "start": "rollup -c -w",
+        "start:slow": "npm run build && npm run serve",
         "serve": "sirv build --no-clear -c"
     },
     "devDependencies": {
@@ -14,6 +15,7 @@
         "@rollup/plugin-node-resolve": "^15.0.0",
         "@rollup/plugin-terser": "^0.4.0",
         "prettier": "^3.5.3",
+        "prettier-plugin-svelte": "^3.4.0",
         "rollup": "^3.15.0",
         "rollup-plugin-copy": "^3.4.0",
         "rollup-plugin-css-only": "^4.3.0",
