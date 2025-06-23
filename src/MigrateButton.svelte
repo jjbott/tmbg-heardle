@@ -1,6 +1,7 @@
 <script>
     import { createEventDispatcher } from "svelte";
     import Button from "./Button.svelte";
+    import { importStats } from "./importStats";
 
     const dispatch = createEventDispatcher();
 
@@ -23,12 +24,15 @@
             }
 
             const { userStats, firstTime } = event.data.statTransfer || {};
-            if (userStats) {
-                localStorage.setItem("userStats", userStats);
+            const statsToImport = JSON.parse(userStats || []);
+            if (statsToImport) {
+                importStats(statsToImport)
+                //localStorage.setItem("userStats", userStats);
             }
-            if (firstTime) {
-                localStorage.setItem("firstTime", firstTime);
-            }
+            //if (firstTime) {
+                //const firstTime = localStorage.getItem("firstTime") === "true";
+                //localStorage.setItem("firstTime", firstTime);
+            //}
 
             event.source.postMessage("thanks bro", event.origin);
 

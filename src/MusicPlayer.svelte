@@ -159,9 +159,6 @@
         if (gameIsActive == 1) {
             if (gameState.isPrime) {
                 progressBarPercent = (currentPosition / currentAttemptIntervalAlt) * 100;
-                console.log(
-                    `currentPosition: ${currentPosition}, currentAttemptIntervalAlt: ${currentAttemptIntervalAlt}, progressBarPercent: ${progressBarPercent}`
-                );
             } else {
                 progressBarPercent = (currentPosition / (currentAttempt * config.attemptInterval)) * 100;
             }

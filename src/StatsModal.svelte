@@ -1,9 +1,10 @@
 <script>
+    import ExportToFile from "./ExportToFile.svelte";
+    import ImportFromFile from "./ImportFromFile.svelte";
     import MigrateButton from "./MigrateButton.svelte";
     import { idOffset } from "./Solutions.js";
 
-    //export let userStats;
-    let userStats = JSON.parse(localStorage.getItem("userStats") || []);
+    let userStats = [];
 
     let statsMigrated = localStorage.getItem("migrated") === "true";
     let statMigrationComplete;
@@ -96,14 +97,17 @@
     };
 
     const migrationComplete = () => {
-        userStats = JSON.parse(localStorage.getItem("userStats") || []);
-        calcStats();
         localStorage["migrated"] = true;
         statMigrationComplete = true;
-        //onClose();
+        refreshStats();
     };
 
-    calcStats();
+    const refreshStats = () => {
+        userStats = JSON.parse(localStorage.getItem("userStats") || "[]");
+        calcStats();
+    };
+
+    refreshStats();
 </script>
 
 {#if hasStats}
@@ -224,19 +228,23 @@
     <!-- kn -->
     <div class="text-center py-3 text-custom-line font-semibold">Play daily to see your stats</div>
 {/if}
-{#if !statsMigrated}
-    <div class="bg-custom-bg border border-custom-mg p-1">
+
+<div class="py-2 text">
+    {#if !statsMigrated}
         {#if !statMigrationComplete}
-            <div class="justify-center text-center py-3 text-custom-line font-semibold">
-                Missing stats? They may be on the old site!
-            </div>
-            <div class="justify-center flex items-center py-3 text-custom-line font-semibold">
-                <MigrateButton on:migrationComplete={migrationComplete}>Migrate Your Stats</MigrateButton>
+            <div class="justify-center flex items-center mb-2">
+                <MigrateButton on:migrationComplete={migrationComplete}>Migrate Your Stats From the Old Site</MigrateButton>
             </div>
         {:else}
-            <div class="justify-center text-center py-3 text-custom-line font-semibold">
+            <div class="justify-center text-center">
                 Your stats have been migrated!
             </div>
         {/if}
-    </div>
 {/if}
+    <div class="justify-center flex items-center mb-2">
+        <ExportToFile />
+    </div>
+    <div class="justify-center flex items-center">
+        <ImportFromFile on:importComplete={refreshStats} />
+    </div>
+</div>
