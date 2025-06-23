@@ -72,7 +72,7 @@ const fixStats = (stats) => {
 };
 
 export const importStats = (importedStats) => {
-    const currentStats = fixStats(JSON.parse(localStorage.getItem("userStats") || '[]'));
+    const currentStats = fixStats(JSON.parse(localStorage.getItem("userStats") || "[]"));
     importedStats = fixStats(importedStats);
 
     const statsById = new Map(currentStats.map((stat) => [stat.id, stat]));
@@ -87,4 +87,5 @@ export const importStats = (importedStats) => {
 
     const mergedStats = Array.from(statsById.values()).sort((a, b) => a.id - b.id);
     localStorage.setItem("userStats", JSON.stringify(mergedStats));
+    localStorage.setItem("firstTime", "false");
 };
