@@ -15,7 +15,7 @@
     export let hasFinished;
     export let daysSince;
 
-    let hasStats = !1,
+    let hasStats = false,
         played = 0,
         streaks = [],
         dayResults = [],
@@ -27,6 +27,15 @@
     export let guessRef;
 
     const calcStats = () => {
+
+        hasStats = false;
+        played = 0;
+        streaks = [];
+        dayResults = [];
+        wonCount = 0;
+        histogram = [];
+        maxHistogram = 0;
+
         for (let e = 0; e < config.maxAttempts + 1; e++) histogram[e] = 0;
         if (userStats.some((s) => s.hasFinished)) {
             hasStats = true;
