@@ -1,5 +1,6 @@
 <script>
     import { idOffset } from "./Solutions.js";
+    import ExportToFile from "./ExportToFile.svelte";
 
     export let userStats;
     export let config;
@@ -205,3 +206,9 @@
     <!-- kn -->
     <div class="text-center py-3 text-custom-line font-semibold">Play daily to see your stats</div>
 {/if}
+<div class="py-2 text">
+    <div class="justify-center flex items-center mb-2">
+        <ExportToFile />
+    </div>
+</div>
+

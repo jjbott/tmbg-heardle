@@ -5,8 +5,9 @@
     "type": "module",
     "scripts": {
         "build": "rollup -c",
-        "start": "rollup -c -w",
-        "serve": "sirv . --no-clear"
+        "start": "rollup -c -w",        
+        "start:slow": "npm run build && npm run serve",
+        "serve": "sirv build --no-clear"
     },
     "devDependencies": {
         "@beyonk/svelte-google-analytics": "^2.6.4",
