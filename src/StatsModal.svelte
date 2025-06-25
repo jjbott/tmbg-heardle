@@ -266,9 +266,10 @@
                     >Migrate Your Stats From the Old Site</MigrateButton
                 >
             </div>
-        {:else}
-            <div class="justify-center text-center">Your stats have been migrated!</div>
         {/if}
+    {/if}
+    {#if statMigrationComplete}
+        <div class="justify-center text-center text-custom-positive">Your stats have been migrated!</div>
     {/if}
     <div class="justify-center text-center text-xs">
         <p>Need to manually export stats from the old site?</p>
