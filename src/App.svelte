@@ -6,7 +6,7 @@
 
     let showMigrationModal = false;
 
-    if (localStorage.getItem("migrated") !== "true" && localStorage.getItem("dontShowMigrationModal") !== "true") {
+    if (localStorage.getItem("firstTimeNewSite") !== "true" && localStorage.getItem("dontShowMigrationModal") !== "true") {
         showMigrationModal = true;
     }
 
@@ -22,7 +22,7 @@
 
 {#if showMigrationModal}
     <main class="bg-custom-bg text-custom-fg">
-        <Modal hasFrame={true} title="Migrate Your Stats" on:close={dismissModal} isDismissable={false}>
+        <Modal hasFrame={true} title="Welcome TMBG Heardle's New Home!" on:close={dismissModal} isDismissable={false}>
             <MigrateModal />
         </Modal>
     </main>
