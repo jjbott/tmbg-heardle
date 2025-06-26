@@ -328,7 +328,7 @@
     <link rel="manifest" href="site.webmanifest" />
 </svelte:head>
 
-<GoogleAnalytics properties={["G-L8RFKXWJ0Z"]} />
+<GoogleAnalytics properties={["G-68L3F77FNG"]} />
 
 <main class="bg-custom-bg text-custom-fg overflow-auto flex flex-col" style:height="{height}px">
     {#if modalState.isActive}
