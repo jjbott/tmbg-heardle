@@ -7,7 +7,6 @@
 
     let userStats = [];
 
-    let statsMigrated = localStorage.getItem("migrated") === "true";
     let statMigrationComplete;
     $: statMigrationComplete = false;
 
@@ -23,12 +22,13 @@
         wonCount = 0,
         histogram = [],
         maxHistogram = 0;
+    let hasOldStats;
+    $: hasOldStats = false;
 
     export let isPrime;
     export let guessRef;
 
     const calcStats = () => {
-
         hasStats = false;
         played = 0;
         streaks = [];
@@ -108,7 +108,7 @@
 
     const migrationComplete = () => {
         ga.addEvent("statsMigratedFromStats", {
-            name: "statsMigratedFromStats",
+            name: "statsMigratedFromStats"
         });
         localStorage["migrated"] = "true";
         statMigrationComplete = true;
@@ -117,13 +117,15 @@
 
     const importComplete = () => {
         ga.addEvent("importedFromStats", {
-            name: "importedFromStats",
+            name: "importedFromStats"
         });
         refreshStats();
     };
 
     const refreshStats = () => {
         userStats = JSON.parse(localStorage.getItem("userStats") || "[]");
+
+        hasOldStats = userStats.some((us) => us.id <= 1181 /* 2025/06/24 */);
         calcStats();
     };
 
@@ -164,8 +166,7 @@
                             height="16"
                             viewBox="0 0 24 24"
                             fill="none"
-                            stroke={6 == todaysScore && 0 == guessRef && hasFinished ? "#FF0000" : "currentColor" }
-                            
+                            stroke={6 == todaysScore && 0 == guessRef && hasFinished ? "#FF0000" : "currentColor"}
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -251,21 +252,51 @@
 {/if}
 
 <div class="py-2 text">
-    {#if !statsMigrated}
-        {#if !statMigrationComplete}
-            <div class="justify-center flex items-center mb-2">
-                <MigrateButton on:migrationComplete={migrationComplete}>Migrate Your Stats From the Old Site</MigrateButton>
-            </div>
-        {:else}
-            <div class="justify-center text-center">
-                Your stats have been migrated!
-            </div>
-        {/if}
-{/if}
     <div class="justify-center flex items-center mb-2">
         <ExportToFile />
+        <div class="ml-2"><ImportFromFile on:importComplete={importComplete} /></div>
     </div>
-    <div class="justify-center flex items-center">
-        <ImportFromFile on:importComplete={importComplete} />
+    {#if !hasOldStats}
+        <div class="justify-center flex text-center text-custom-negative mb-2 text-xs">
+            Remember to export/migrate your stats from the old site before July 8th!
+        </div>
+        {#if !statMigrationComplete}
+            <div class="justify-center flex items-center mb-2">
+                <MigrateButton on:migrationComplete={migrationComplete}
+                    >Migrate Your Stats From the Old Site</MigrateButton
+                >
+            </div>
+        {/if}
+    {/if}
+    {#if statMigrationComplete}
+        <div class="justify-center text-center text-custom-positive">Your stats have been migrated!</div>
+    {/if}
+    <div class="justify-center text-center text-xs">
+        <p>Need to manually export stats from the old site?</p>
+        <p>
+            <a
+                style="color:#1d7e05"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://tmbg-heardle.glitch.me/export.html"
+                >Click here <svg
+                    style="display:initial"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#1d7e05"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><g fill="none" fill-rule="evenodd"
+                        ><path
+                            d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h5M15 3h6v6M10 14L20.2 3.8"
+                        /></g
+                    ></svg
+                ></a
+            > and click the "Export Stats" button.
+        </p>
     </div>
 </div>

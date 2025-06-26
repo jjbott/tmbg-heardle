@@ -79,7 +79,7 @@
         {:else}
             <div class="bg-custom-bg border border-custom-mg p-6">
                 <div class="flex items-center justify-center mb-6">
-                    <div class="flex-1 pl-7">
+                    <div class="flex-1" class:pl-7={isDismissable}>
                         <h2 class="text-sm text-center uppercase text-custom-line font-semibold tracking-widest">
                             {title}
                         </h2>

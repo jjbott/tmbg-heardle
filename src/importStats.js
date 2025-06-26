@@ -62,7 +62,7 @@ const fixStats = (stats) => {
         }
 
         if (statsById.has(stat.id)) {
-            throw new Error("Unexpected duplcicate id: " + stat.id);
+            throw new Error("Unexpected duplicate id: " + stat.id);
         }
 
         statsById[stat.id] = stat;
