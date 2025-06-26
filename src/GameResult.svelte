@@ -35,7 +35,7 @@
                       ? (t += "⬛️")
                       : (t += "🟥")
                 : (t += "⬜️");
-        let o = e + "\n\n" + t + "\n\nhttps://tmbg-heardle.glitch.me/";
+        let o = e + "\n\n" + t + "\n\nhttps://tmbg-heardle.pages.dev/";
         if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||

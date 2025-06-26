@@ -275,9 +275,9 @@
     />
     <meta
         itemprop="image"
-        content="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png"
+        content="https://tmbg-heardle.pages.dev/tmbg-heardle-192.png"
     />
-    <meta property="og:url" content="https://tmbg-heardle.glitch.me/" />
+    <meta property="og:url" content="https://tmbg-heardle.pages.dev/" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="TMBG Heardle - Name That They Might Be Giants song!" />
     <meta
@@ -286,7 +286,7 @@
     />
     <meta
         property="og:image"
-        content="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png"
+        content="https://tmbg-heardle.pages.dev/tmbg-heardle-192.png"
     />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="TMBG Heardle - Name That They Might Be Giants song!" />
@@ -296,34 +296,34 @@
     />
     <meta
         name="twitter:image"
-        content="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png"
+        content="https://tmbg-heardle.pages.dev/tmbg-heardle-192.png"
     />
 
     <link
         rel="icon"
         type="image/png"
-        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-512.png?v=1648764420534"
+        href="https://tmbg-heardle.pages.dev/tmbg-heardle-512.png"
     />
     <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-32.png?v=1648764422716"
+        href="https://tmbg-heardle.pages.dev/tmbg-heardle-32.png"
     />
     <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-16.png?v=1648764426356"
+        href="https://tmbg-heardle.pages.dev/tmbg-heardle-16.png"
     />
     <link
         rel="apple-touch-icon"
         sizes="192x192"
-        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png?v=1648764424567"
+        href="https://tmbg-heardle.pages.dev/tmbg-heardle-192.png"
     />
     <link
         rel="shortcut icon"
-        href="https://cdn.glitch.global/d2ca1732-ae1f-4c4e-93fa-404161416d71/tmbg-heardle-192.png?v=1648764424567"
+        href="https://tmbg-heardle.pages.dev/tmbg-heardle-192.png"
     />
     <link rel="manifest" href="site.webmanifest" />
 </svelte:head>
