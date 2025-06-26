@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from "svelte";
     import ExportToFile from "./ExportToFile.svelte";
     import ImportFromFile from "./ImportFromFile.svelte";
     import MigrateButton from "./MigrateButton.svelte";
@@ -129,7 +130,7 @@
         calcStats();
     };
 
-    refreshStats();
+    onMount(() => refreshStats());
 </script>
 
 {#if hasStats}
