@@ -28,9 +28,6 @@
         "moment": "^2.29.4",
         "sirv-cli": "^2.0.0"
     },
-    "glitch": {
-        "projectType": "generated_static"
-    },
     "engines": {
         "node": "22.x"
     }
