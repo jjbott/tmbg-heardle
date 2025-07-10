@@ -27,9 +27,9 @@
         <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,
 
         <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by
-        <a href="https://glitch.com/">Glitch</a>. Original Heardle by
+        <a href="https://pages.cloudflare.com/">Cloudflare</a>. Original Heardle by
         <a href="https://omakase.studio" title="Studio Omakase">Studio omakase / お任せ</a>. TMBG version is currently
-        maintained by <a href="https://twitter.com/ZorMonkey">Joe</a>. Original was created by
+        maintained by <a href="https://bsky.app/profile/joe-bott.bsky.social">Joe</a>. Original was created by
         <a href="https://twitter.com/ckolderup">casey</a>
     </p>
     <p class="text-xs mb-3 text-custom-line">Not affiliated with They Might Be Giants</p>
