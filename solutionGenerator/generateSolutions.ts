@@ -7,6 +7,7 @@ import { Answer } from "./types/Answer.js";
 import { saveAnswers } from "./saveAnswers.js";
 import { kidAlbums } from "./kidAlbums.js";
 
+const generateStarting = "2026-01-10";
 const generateThrough = "2030-12-31";
 
 // `potentialAnswers` in Solutions.js will have ` - They Might Be Giants` appended to the answers.
@@ -640,7 +641,7 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
 const answers: Answer[] = [];
 let date = new Date(Date.parse(startDate));
 let id = idOffset;
-for (let i = 0; i < answerIndexes.length; ++i) {
+for (let i = 0; i < answerIndexes.length && date.toISOString() < generateStarting; ++i) {
     answers.push({
         id: id++,
         date: date.toISOString(),
@@ -678,6 +679,10 @@ while (answers[answers.length - 1].date < generateThrough) {
 
             // remove the song from future candidates
             availableSongs.splice(i, 1);
+
+            if (date.toISOString() >= generateThrough) {
+                break;
+            }
         } else {
             //console.log(potentialAnswer.url + " is bad")
 
