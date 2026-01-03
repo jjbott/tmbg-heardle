@@ -87,7 +87,7 @@ var titleFixes = [
     ["https://soundcloud.com/they-might-be-giants/spiralling-shape", "Spiraling Shape"],
 
     // Misspelling
-    //["https://soundcloud.com/they-might-be-giants/cloissone", "Cloisonné"],
+    ["https://soundcloud.com/they-might-be-giants/cloissone", "Cloisonné"],
 
     // Artist in title
     ["https://soundcloud.com/they-might-be-giants/infinity-they-might-be-giants", "Infinity"],
