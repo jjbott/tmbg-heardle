@@ -548,7 +548,23 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
     // Some secrets in here that I used to obscure by not committing the code,
     // but then I almost lost it. So, well, shhhh.
 
-    if (date.toISOString() == new Date(Date.UTC(2022, 11, 26)).toISOString()) {
+    const feastOfLights = [
+        "2022-12-26",
+        // I guess I forgot this for a few years, whoops
+        "2026-12-12",
+        // Conflicts with NY
+        //'2028-01-01',
+        "2028-12-20",
+        "2029-12-09",
+        "2030-12-28",
+        "2031-12-17",
+        "2033-01-04",
+        "2033-12-26",
+        "2034-12-15",
+        "2036-01-02"
+    ];
+
+    if (feastOfLights.includes(date.toISOString().split("T")[0])) {
         return answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-1";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-1") {
         return false;
