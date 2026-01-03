@@ -32,7 +32,7 @@ try {
 
 fs.writeFileSync("./cache/rawSongData.json", JSON.stringify(songs, null, 4));
 
-function sleep(ms) {
+function sleep(ms: number) {
     return new Promise((resolve) => {
         setTimeout(resolve, ms);
     });

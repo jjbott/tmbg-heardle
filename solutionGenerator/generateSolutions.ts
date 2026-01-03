@@ -3,6 +3,8 @@ import { diceCoefficient } from "dice-coefficient";
 import prettier from "prettier";
 
 import { startDate, idOffset, potentialAnswers as potentialAnswersRaw, answerIndexes } from "../src/Solutions.js";
+import { Answer } from "./types/Answer.js";
+import { kidAlbums } from "./kidAlbums.js";
 
 const generateThrough = "2030-12-31";
 
@@ -285,7 +287,7 @@ let byTitle = Object.groupBy(
     (s) => s.title
 );
 Object.keys(byTitle)
-    .filter((title) => byTitle[title].length > 1)
+    .filter((title) => byTitle[title]!.length > 1)
     .forEach((title) => {
         /*if (s.album == "Severe Tire Damage" || s.album == "At Large") {
         // Letting these live versions create "duplicates". Their titles match the studio versions.
@@ -302,7 +304,7 @@ Object.keys(byTitle)
             t.album != "At Large"
     );
 */
-        const matchingSongs = byTitle[title];
+        const matchingSongs = byTitle[title]!;
 
         if (
             title == "Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)" &&
@@ -336,7 +338,7 @@ Object.keys(byTitle)
             matchingSongs.find((s) => s.album === "Miscellaneous T") &&
             matchingSongs.find((s) => s.album === "Then: The Earlier Years")
         ) {
-            matchingSongs.find((s) => s.album === "Then: The Earlier Years").exclusionReason =
+            matchingSongs.find((s) => s.album === "Then: The Earlier Years")!.exclusionReason =
                 'Used the version from "Miscellaneous T"';
 
             return;
@@ -347,7 +349,7 @@ Object.keys(byTitle)
             matchingSongs.find((s) => s.album === "Working Undercover for the Man") &&
             matchingSongs.find((s) => s.album === "They Got Lost")
         ) {
-            matchingSongs.find((s) => s.album === "They Got Lost").exclusionReason =
+            matchingSongs.find((s) => s.album === "They Got Lost")!.exclusionReason =
                 'Used the version from "Working Undercover for the Man"';
 
             return;
@@ -360,7 +362,7 @@ Object.keys(byTitle)
             matchingSongs.find((s) => s.originalTitle.includes(" (In Situ)")) &&
             matchingSongs.find((s) => !s.originalTitle.includes(" (In Situ)"))
         ) {
-            matchingSongs.find((s) => s.originalTitle.includes(" (In Situ)")).exclusionReason =
+            matchingSongs.find((s) => s.originalTitle.includes(" (In Situ)"))!.exclusionReason =
                 'Used the non-"in situ" version with matching title';
 
             return;
@@ -387,10 +389,10 @@ byTitle = Object.groupBy(
     (s) => s.title
 );
 Object.keys(byTitle)
-    .filter((title) => byTitle[title].length > 1)
+    .filter((title) => byTitle[title]!.length > 1)
     .forEach((title) => {
         console.warn("Missed tracks with matching titles:");
-        byTitle[title].forEach((s) => {
+        byTitle[title]!.forEach((s) => {
             console.warn(`    ${s.album} : ${s.title}`);
         });
     });
@@ -495,7 +497,6 @@ songs
 songs
     .filter((s) => !s.exclusionReason)
     .forEach((s) => {
-        const answer = `${s.title} - They Might Be Giants`;
         const matches = (potentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
         if (matches.length === 0) {
             console.log(`New: "${s.title}" from "${s.album}"`);
@@ -532,15 +533,6 @@ songs
 
 // We've fully processed everything, save off the data including exclusion reasons
 fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs, null, 4));
-
-const kidAlbums = [
-    "No!",
-    "No! (Deluxe Edition)",
-    "Here Comes Science",
-    "Here Come the 123s",
-    "They Might Be Giants: Here Come the ABCs",
-    "Why?"
-];
 
 function check(answer: Answer, date: Date, queue: Answer[]) {
     // This is absolutely the worst way to assign songs to days. But, here we are.
@@ -641,14 +633,6 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
     }
 
     return true;
-}
-
-interface Answer {
-    id: number;
-    date: string;
-    title: string;
-    album: string;
-    url: string;
 }
 
 // regenerate existing answer list
