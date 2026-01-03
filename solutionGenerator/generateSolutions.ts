@@ -10,6 +10,15 @@ import { kidAlbums } from "./kidAlbums.js";
 const generateStarting = "2026-01-10";
 const generateThrough = "2030-12-31";
 
+// At least 6 months before we can see the same answer again
+const minDaysBetweenSameAnswer = 180;
+
+// At least 10 days before we can see the same album again
+const minDaysBetweenSameAlbum = 10; 
+
+const minDaysBetweenAnyKidsAlbum = 10;
+const minDaysBetweenSameKidsAlbum = 30;
+
 // `potentialAnswers` in Solutions.js will have ` - They Might Be Giants` appended to the answers.
 // Strip those so they match the actual titles
 const potentialAnswers = potentialAnswersRaw.map((a) => ({
@@ -523,7 +532,7 @@ songs
 
 (potentialAnswers as Array<{ answer: string; url: string }>).forEach((s) => {
     if (songs.filter((a) => !a.exclusionReason && a.url === s.url).length === 0) {
-        console.log(`Missing: ${s.answer}, ${s.url}, `);
+        console.log(`Song missing from old potential answers: ${s.answer}, ${s.url}, `);
         const song = songs.find((a) => a.url === s.url);
         if (song) {
             console.log(`    ${song.originalTitle}`);
@@ -588,22 +597,20 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
         return false;
     }
 
-    // At least 6 months before we can see the same answer again
-    var minAnswerDays = 180;
-
-    // At least 10 days before we can see the same album again
-    var minAlbumDays = 10;
-
     // Go easy on the kid albums
     if (kidAlbums.indexOf(answer.album ?? "") >= 0) {
-        minAlbumDays = 30;
-
-        // Kid album at most once every 10 days
-        let minKidAlbumDays = 10;
+        // Enforce minimum spacing between any kids album
         if (
             queue
-                .slice(Math.max(queue.length - minKidAlbumDays, 0))
-                .filter((a) => kidAlbums.indexOf(a.album ?? "") >= 0).length > 0
+                .slice(Math.max(queue.length - minDaysBetweenAnyKidsAlbum, 0))
+                .some((a) => kidAlbums.indexOf(a.album ?? "") >= 0)
+        ) {
+            return false;
+        }
+
+        // Enforce minimum spacing between this specific kids album
+        if (
+            queue.slice(Math.max(queue.length - minDaysBetweenSameKidsAlbum, 0)).some((a) => a.album === answer.album)
         ) {
             return false;
         }
@@ -614,11 +621,11 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
         answer.url === "https://soundcloud.com/they-might-be-giants/santa-claus-1" ||
         answer.url === "https://soundcloud.com/they-might-be-giants/o-tannenbaum-1";
 
-    if (queue.slice(Math.max(queue.length - minAnswerDays, 0)).filter((a) => a.url === answer.url).length > 0) {
+    if (queue.slice(Math.max(queue.length - minDaysBetweenSameAnswer, 0)).some((a) => a.url === answer.url)) {
         return false;
     }
 
-    if (queue.slice(Math.max(queue.length - minAlbumDays, 0)).filter((a) => a.album === answer.album).length > 0) {
+    if (queue.slice(Math.max(queue.length - minDaysBetweenSameAlbum, 0)).some((a) => a.album === answer.album)) {
         return false;
     }
 
