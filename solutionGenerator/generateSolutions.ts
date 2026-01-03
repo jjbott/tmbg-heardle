@@ -4,6 +4,7 @@ import prettier from "prettier";
 
 import { startDate, idOffset, potentialAnswers as potentialAnswersRaw, answerIndexes } from "../src/Solutions.js";
 import { Answer } from "./types/Answer.js";
+import { saveAnswers } from "./saveAnswers.js";
 import { kidAlbums } from "./kidAlbums.js";
 
 const generateThrough = "2030-12-31";
@@ -699,11 +700,7 @@ for (let i = 1; i < answers.length; ++i) {
     }
 }
 
-// Save off the full answer key, to validate future changes against.
-// These won't be pushed. Don't need to make cheating that easy.
-// So save with a datestamp to make comparison easier.
-const today = new Date();
-fs.writeFileSync(`./answerLists/${today.toISOString().split("T")[0]}.json`, JSON.stringify(answers, null, 4));
+saveAnswers(answers);
 
 const newPotentialAnswers = songs
     .filter((s) => !s.exclusionReason)
