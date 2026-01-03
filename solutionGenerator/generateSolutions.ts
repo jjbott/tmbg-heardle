@@ -1,27 +1,38 @@
 import * as fs from "fs";
-import { bigram } from "n-gram";
 import { diceCoefficient } from "dice-coefficient";
 import prettier from "prettier";
+import CRC32 from "crc-32";
 
-import { startDate, idOffset, potentialAnswers, answerIndexes } from "../src/Solutions.js";
+import { startDate, idOffset, potentialAnswers as potentialAnswersRaw, answerIndexes } from "../src/Solutions.js";
+import { Answer } from "./types/Answer.js";
+import { saveAnswers } from "./saveAnswers.js";
+import { kidAlbums } from "./kidAlbums.js";
+import { ProcessedSong, Song } from "./types/Song.js";
 
+const generateStarting = "2026-01-10";
 const generateThrough = "2030-12-31";
 
-interface Song {
-    url: string;
-    originalTitle: string;
-    title: string;
-    album: string;
-    artist: string;
-    duration: number;
-    exclusionReason: string;
-}
+// At least 6 months before we can see the same answer again
+const minDaysBetweenSameAnswer = 180;
+
+// At least 10 days before we can see the same album again
+const minDaysBetweenSameAlbum = 10;
+
+const minDaysBetweenAnyKidsAlbum = 15;
+const minDaysBetweenSameKidsAlbum = 30;
+
+// `potentialAnswers` in Solutions.js will have ` - They Might Be Giants` appended to the answers.
+// Strip those so they match the actual titles
+const oldPotentialAnswers = potentialAnswersRaw.map((a) => ({
+    ...a,
+    answer: a.answer.replace(" - They Might Be Giants", "")
+}));
 
 function normalize(title: string) {
     return title.toLowerCase().replace(/[^a-z0-9 ]/g, "");
 }
 
-let songs = JSON.parse(fs.readFileSync("./cache/songData.json").toString()) as Song[];
+let songs = JSON.parse(fs.readFileSync("./cache/songData.json").toString()) as ProcessedSong[];
 
 songs.forEach((s) => {
     // We'll be mucking with titles later.
@@ -87,7 +98,7 @@ var titleFixes = [
     ["https://soundcloud.com/they-might-be-giants/spiralling-shape", "Spiraling Shape"],
 
     // Misspelling
-    //["https://soundcloud.com/they-might-be-giants/cloissone", "Cloisonné"],
+    ["https://soundcloud.com/they-might-be-giants/cloissone", "Cloisonné"],
 
     // Artist in title
     ["https://soundcloud.com/they-might-be-giants/infinity-they-might-be-giants", "Infinity"],
@@ -103,7 +114,9 @@ var titleFixes = [
 
     // Capitalization fixes, to make them consistent with matching tracks
     // Casing style is all over the place. 🤷‍♂️
-    // In general I'm picking whatever style the most matches have, or what the main album release has.
+    // In general I'm picking whatever style the most matches have,
+    // or what the main album release has,
+    // or what the last change on SoundCloud was.
     ["https://soundcloud.com/they-might-be-giants/xtc-vs-adam-ant", "XTC vs. Adam Ant"],
     ["https://soundcloud.com/they-might-be-giants/the-darlings-of-lumberland-1", "The Darlings of Lumberland"],
     ["https://soundcloud.com/they-might-be-giants/we-live-in-a-dump-3", "We Live in a Dump"],
@@ -114,7 +127,27 @@ var titleFixes = [
     ["https://soundcloud.com/they-might-be-giants/lets-get-this-over-with-1", "Let's Get This Over With"],
     ["https://soundcloud.com/they-might-be-giants/mccaffertys-bib-1", "McCafferty's Bib"],
     ["https://soundcloud.com/they-might-be-giants/lady-is-a-tramp-1", "Lady is a Tramp"],
-    ["https://soundcloud.com/they-might-be-giants/everything-right-is-wrong-1", "Everything Right is Wrong Again"]
+    ["https://soundcloud.com/they-might-be-giants/everything-right-is-wrong-1", "Everything Right is Wrong Again"],
+    ["https://soundcloud.com/they-might-be-giants/shes-an-angel", "She's An Angel"],
+    ["https://soundcloud.com/they-might-be-giants/shes-an-angel-1", "She's An Angel"],
+    ["https://soundcloud.com/they-might-be-giants/push-back-the-hands", "Push Back The Hands"],
+    ["https://soundcloud.com/they-might-be-giants/an-insult-to-the-fact-checkers", "An Insult To The Fact Checkers"],
+    ["https://soundcloud.com/they-might-be-giants/by-the-time-you-get-this-note", "By The Time You Get This"],
+    ["https://soundcloud.com/they-might-be-giants/boat-of-car", "Boat Of Car"],
+    ["https://soundcloud.com/they-might-be-giants/snowball-in-hell", "Snowball In Hell"],
+    ["https://soundcloud.com/they-might-be-giants/put-your-hand-inside-the", "Put Your Hand Inside The Puppet Head"],
+    ["https://soundcloud.com/they-might-be-giants/kiss-me-son-of-god", "Kiss Me, Son Of God"],
+    ["https://soundcloud.com/they-might-be-giants/kiss-me-son-of-god-alternate", "Kiss Me, Son Of God"],
+    ["https://soundcloud.com/they-might-be-giants/kiss-me-sun-of-god-alternate", "Kiss Me, Son Of God"],
+    ["https://soundcloud.com/they-might-be-giants/ive-got-a-match", "I've Got A Match"],
+    ["https://soundcloud.com/they-might-be-giants/alienations-for-the-rich", "Alienation's For The Rich"],
+    ["https://soundcloud.com/they-might-be-giants/shoehorn-with-teeth", "Shoehorn With Teeth"],
+    ["https://soundcloud.com/they-might-be-giants/stand-on-your-own-head", "Stand On Your Own Head"],
+    ["https://soundcloud.com/they-might-be-giants/piece-of-dirt", "Piece Of Dirt"],
+    ["https://soundcloud.com/they-might-be-giants/theyll-need-a-crane", "They'll Need A Crane"],
+
+    // "Light Comes" should be "Lights Come"
+    ["https://soundcloud.com/they-might-be-giants/when-the-light-comes-on", "When the Lights Come On"]
 ];
 
 titleFixes.forEach((tf) => {
@@ -276,7 +309,7 @@ let byTitle = Object.groupBy(
     (s) => s.title
 );
 Object.keys(byTitle)
-    .filter((title) => byTitle[title].length > 1)
+    .filter((title) => byTitle[title]!.length > 1)
     .forEach((title) => {
         /*if (s.album == "Severe Tire Damage" || s.album == "At Large") {
         // Letting these live versions create "duplicates". Their titles match the studio versions.
@@ -293,7 +326,7 @@ Object.keys(byTitle)
             t.album != "At Large"
     );
 */
-        const matchingSongs = byTitle[title];
+        const matchingSongs = byTitle[title]!;
 
         if (
             title == "Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)" &&
@@ -327,7 +360,7 @@ Object.keys(byTitle)
             matchingSongs.find((s) => s.album === "Miscellaneous T") &&
             matchingSongs.find((s) => s.album === "Then: The Earlier Years")
         ) {
-            matchingSongs.find((s) => s.album === "Then: The Earlier Years").exclusionReason =
+            matchingSongs.find((s) => s.album === "Then: The Earlier Years")!.exclusionReason =
                 'Used the version from "Miscellaneous T"';
 
             return;
@@ -338,7 +371,7 @@ Object.keys(byTitle)
             matchingSongs.find((s) => s.album === "Working Undercover for the Man") &&
             matchingSongs.find((s) => s.album === "They Got Lost")
         ) {
-            matchingSongs.find((s) => s.album === "They Got Lost").exclusionReason =
+            matchingSongs.find((s) => s.album === "They Got Lost")!.exclusionReason =
                 'Used the version from "Working Undercover for the Man"';
 
             return;
@@ -351,7 +384,7 @@ Object.keys(byTitle)
             matchingSongs.find((s) => s.originalTitle.includes(" (In Situ)")) &&
             matchingSongs.find((s) => !s.originalTitle.includes(" (In Situ)"))
         ) {
-            matchingSongs.find((s) => s.originalTitle.includes(" (In Situ)")).exclusionReason =
+            matchingSongs.find((s) => s.originalTitle.includes(" (In Situ)"))!.exclusionReason =
                 'Used the non-"in situ" version with matching title';
 
             return;
@@ -378,10 +411,10 @@ byTitle = Object.groupBy(
     (s) => s.title
 );
 Object.keys(byTitle)
-    .filter((title) => byTitle[title].length > 1)
+    .filter((title) => byTitle[title]!.length > 1)
     .forEach((title) => {
         console.warn("Missed tracks with matching titles:");
-        byTitle[title].forEach((s) => {
+        byTitle[title]!.forEach((s) => {
             console.warn(`    ${s.album} : ${s.title}`);
         });
     });
@@ -410,6 +443,9 @@ songs
         // Like, I enjoy "Savoy Truffle", but according to Spotify that's very obsure...
         // Whatever, I'm keeping it. :)
 
+
+        // "Album Raises New and Troubling Questions" was removed from Soundcloud.
+        // Keeping this code for now though...
         if (
             s.album === "Album Raises New and Troubling Questions" &&
             // Most of the album feels too obsure, but this one is a keeper
@@ -418,6 +454,8 @@ songs
             s.exclusionReason = '"Album Raises New and Troubling Questions" feels too obscure';
         }
 
+        // "Cast Your Pod to the Wind" was removed from Soundcloud.
+        // Keeping this code for now though..."
         if (
             s.album === "Cast Your Pod to the Wind" &&
             // Including most popular for now
@@ -426,6 +464,12 @@ songs
         ) {
             s.exclusionReason = '"Cast Your Pod to the Wind" feels too obscure';
         }
+
+        // When the above two albums were removed from SoundCloud,
+        // they moved 3 songs to a new album, "Idlewild: A Compilation".
+        // Coincidentally, 2 are ones we're keeping above: "We Live in a Dump" and "Brain Problem Situation".
+        // The 3rd is "Electronic Istanbul (Not Constantinople)", which used to be excluded.
+        // But, ehhhhhhhh, I'll keep it.
 
         if (s.album === "Venue Songs") {
             s.exclusionReason = '"Venue Songs" feels too obscure';
@@ -481,13 +525,16 @@ songs
         if (s.url === "https://soundcloud.com/they-might-be-giants/fake-believe-type-b") {
             s.exclusionReason = "Essentially a duplicate of the main Fake-Believe";
         }
+
+        if (s.url === "https://soundcloud.com/they-might-be-giants/tmbgs-john-f-guest-djs-on-indie-1032-co-public-radios-sunday-rewind") {
+            s.exclusionReason = "Radio interview, not a song";
+        }
     });
 
 songs
     .filter((s) => !s.exclusionReason)
     .forEach((s) => {
-        const answer = `${s.title} - They Might Be Giants`;
-        const matches = (potentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
+        const matches = (oldPotentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
         if (matches.length === 0) {
             console.log(`New: "${s.title}" from "${s.album}"`);
         }
@@ -499,8 +546,8 @@ songs
 songs
     .filter((s) => !s.exclusionReason)
     .forEach((s) => {
-        const answer = `${s.title} - They Might Be Giants`;
-        const matches = (potentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
+        const answer = s.title;
+        const matches = (oldPotentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
 
         if (matches.length === 1 && answer != matches[0].answer) {
             console.log("Answer mismatch:");
@@ -509,29 +556,40 @@ songs
         }
     });
 
-(potentialAnswers as Array<{ answer: string; url: string }>).forEach((s) => {
-    if (songs.filter((a) => !a.exclusionReason && a.url === s.url).length === 0) {
-        console.log(`Missing: ${s.answer}, ${s.url}, `);
-        const song = songs.find((a) => a.url === s.url);
-        if (song) {
-            console.log(`    ${song.originalTitle}`);
-            console.log(`    ${song.album}`);
-            console.log(`    ${song.exclusionReason ?? "Missing from SoundCloud"}`);
-        }
+(oldPotentialAnswers as Array<{ answer: string; url: string }>).forEach((s) => {
+    const song = songs.find((a) => a.url === s.url);
+    if (!song) {
+        console.log(`Old potential answer no longer in SoundCloud: ${s.answer}, ${s.url}. Patching!`);
+
+        // Add the missing song to the new song list
+        // so we still have data to tie to old occurrences.
+        
+        // For example, game id 1327, `2025-11-17`, `Tubthumping`.
+        // That will no longer work since the song is gone.
+        // But we need something for `2025-11-17` in the solution array.
+        // So, adding the track with what we know, so it can still point to something.
+
+        songs.push({
+            // Fake an ID that is greater than the rest will be
+            id: Math.pow(2, 40) + CRC32.str(s.url),
+            url: s.url,
+            originalTitle: s.answer,
+            title: s.answer,
+            album: "",
+            duration: 0,
+            artist: "They Might Be Giants",
+            exclusionReason: "Missing from SoundCloud"
+        });
+    } else if (song.exclusionReason) {
+        console.log(`Old potential answer excluded from new song data: ${s.answer}, ${s.url}, `);
+        console.log(`    ${song.originalTitle}`);
+        console.log(`    ${song.album}`);
+        console.log(`    ${song.exclusionReason ?? "Missing from SoundCloud"}`);
     }
 });
 
 // We've fully processed everything, save off the data including exclusion reasons
-fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs, null, 4));
-
-const kidAlbums = [
-    "No!",
-    "No! (Deluxe Edition)",
-    "Here Comes Science",
-    "Here Come the 123s",
-    "They Might Be Giants: Here Come the ABCs",
-    "Why?"
-];
+fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs.sort((a, b) => a.id - b.id), null, 4));
 
 function check(answer: Answer, date: Date, queue: Answer[]) {
     // This is absolutely the worst way to assign songs to days. But, here we are.
@@ -539,7 +597,23 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
     // Some secrets in here that I used to obscure by not committing the code,
     // but then I almost lost it. So, well, shhhh.
 
-    if (date.toISOString() == new Date(Date.UTC(2022, 11, 26)).toISOString()) {
+    const feastOfLights = [
+        "2022-12-26",
+        // I guess I forgot this for a few years, whoops
+        "2026-12-12",
+        // Conflicts with NY
+        //'2028-01-01',
+        "2028-12-20",
+        "2029-12-09",
+        "2030-12-28",
+        "2031-12-17",
+        "2033-01-04",
+        "2033-12-26",
+        "2034-12-15",
+        "2036-01-02"
+    ];
+
+    if (feastOfLights.includes(date.toISOString().split("T")[0])) {
         return answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-1";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-1") {
         return false;
@@ -569,22 +643,20 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
         return false;
     }
 
-    // At least 6 months before we can see the same answer again
-    var minAnswerDays = 180;
-
-    // At least 10 days before we can see the same album again
-    var minAlbumDays = 10;
-
     // Go easy on the kid albums
     if (kidAlbums.indexOf(answer.album ?? "") >= 0) {
-        minAlbumDays = 30;
-
-        // Kid album at most once every 10 days
-        let minKidAlbumDays = 10;
+        // Enforce minimum spacing between any kids album
         if (
             queue
-                .slice(Math.max(queue.length - minKidAlbumDays, 0))
-                .filter((a) => kidAlbums.indexOf(a.album ?? "") >= 0).length > 0
+                .slice(Math.max(queue.length - minDaysBetweenAnyKidsAlbum, 0))
+                .some((a) => kidAlbums.indexOf(a.album ?? "") >= 0)
+        ) {
+            return false;
+        }
+
+        // Enforce minimum spacing between this specific kids album
+        if (
+            queue.slice(Math.max(queue.length - minDaysBetweenSameKidsAlbum, 0)).some((a) => a.album === answer.album)
         ) {
             return false;
         }
@@ -595,11 +667,11 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
         answer.url === "https://soundcloud.com/they-might-be-giants/santa-claus-1" ||
         answer.url === "https://soundcloud.com/they-might-be-giants/o-tannenbaum-1";
 
-    if (queue.slice(Math.max(queue.length - minAnswerDays, 0)).filter((a) => a.url === answer.url).length > 0) {
+    if (queue.slice(Math.max(queue.length - minDaysBetweenSameAnswer, 0)).some((a) => a.url === answer.url)) {
         return false;
     }
 
-    if (queue.slice(Math.max(queue.length - minAlbumDays, 0)).filter((a) => a.album === answer.album).length > 0) {
+    if (queue.slice(Math.max(queue.length - minDaysBetweenSameAlbum, 0)).some((a) => a.album === answer.album)) {
         return false;
     }
 
@@ -618,25 +690,17 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
     return true;
 }
 
-interface Answer {
-    id: number;
-    date: string;
-    title: string;
-    album: string;
-    url: string;
-}
-
 // regenerate existing answer list
 const answers: Answer[] = [];
 let date = new Date(Date.parse(startDate));
 let id = idOffset;
-for (let i = 0; i < answerIndexes.length; ++i) {
+for (let i = 0; i < answerIndexes.length && date.toISOString() < generateStarting; ++i) {
     answers.push({
         id: id++,
         date: date.toISOString(),
-        title: potentialAnswers[answerIndexes[i]].answer,
-        url: potentialAnswers[answerIndexes[i]].url,
-        album: songs.find((s) => s.url === potentialAnswers[answerIndexes[i]].url)!.album
+        title: oldPotentialAnswers[answerIndexes[i]].answer,
+        url: oldPotentialAnswers[answerIndexes[i]].url,
+        album: songs.find((s) => s.url === oldPotentialAnswers[answerIndexes[i]].url)!.album
     });
 
     date = new Date(date.setUTCDate(date.getUTCDate() + 1));
@@ -668,13 +732,17 @@ while (answers[answers.length - 1].date < generateThrough) {
 
             // remove the song from future candidates
             availableSongs.splice(i, 1);
+
+            if (date.toISOString() >= generateThrough) {
+                break;
+            }
         } else {
             //console.log(potentialAnswer.url + " is bad")
 
             // If we've had too many failures, bail!
-            // Probably something like "we used all of the xmas songs, so now we dont have one for xmas".
-            // Could solve it with some backtracking or something, but easier to just start over.
-            if (n > 10000) {
+            // Probably because the "special day" code is awful and relies on random chance to pick the correct song.
+            // If we fail, just restart the app and try again. We could solve it, but, eh, maybe someday.
+            if (n > 100000) {
                 throw new Error("Got stuck generating new answers! Try again");
             }
 
@@ -690,11 +758,7 @@ for (let i = 1; i < answers.length; ++i) {
     }
 }
 
-// Save off the full answer key, to validate future changes against.
-// These won't be pushed. Don't need to make cheating that easy.
-// So save with a datestamp to make comparison easier.
-const today = new Date();
-fs.writeFileSync(`./answerLists/${today.toISOString().split("T")[0]}.json`, JSON.stringify(answers, null, 4));
+saveAnswers(answers);
 
 const newPotentialAnswers = songs
     .filter((s) => !s.exclusionReason)
@@ -709,7 +773,7 @@ const newPotentialAnswers = songs
 // that I'll probably never actually add.
 // Thats also why I'm not trimming the list of `answerIndexes` yet, to keep historical data.
 answerIndexes.forEach((index) => {
-    const potentialAnswer = potentialAnswers[index];
+    const potentialAnswer = oldPotentialAnswers[index];
     if (!newPotentialAnswers.find((a) => a.url === potentialAnswer.url)) {
         newPotentialAnswers.push(potentialAnswer);
     }

@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import * as fs from "fs";
+import { RawSong, Song } from "./types/Song.js";
 
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
@@ -24,7 +25,10 @@ await browser.close();
 const songsResponse = await fetch(
     `https://api-v2.soundcloud.com/users/30199562/tracks?representation=&client_id=${clientId}&limit=10000&offset=0&linked_partitioning=1&app_version=1716534432&app_locale=en`
 );
-const songs = await songsResponse.json();
+const songs = (await songsResponse.json()) as {
+    collection: RawSong[];
+};
+songs.collection = songs.collection.sort((a: RawSong, b: RawSong) => a.id - b.id) as RawSong[];
 
 try {
     fs.mkdirSync("./cache/");
@@ -32,13 +36,16 @@ try {
 
 fs.writeFileSync("./cache/rawSongData.json", JSON.stringify(songs, null, 4));
 
-function sleep(ms) {
+function sleep(ms: number) {
     return new Promise((resolve) => {
         setTimeout(resolve, ms);
     });
 }
 
-for(const s of songs.collection) {
+// The intent is to someday use the waveform data to adjust songs that start very quiet.
+// Ex: Istanbul is very hard to guess from the first second becuase it's basically silent.
+// Not sure how I'd change the game to handle those yet though, so these are ultimately unused.
+for (const s of songs.collection) {
     const id: number = s.id;
     if (!fs.existsSync(`./cache/waveforms/${id}.json`)) {
         const waveformUrl = s.waveform_url;
@@ -48,25 +55,23 @@ for(const s of songs.collection) {
         fs.writeFileSync(`./cache/waveforms/${id}.json`, waveformData);
         await sleep(500);
     }
-};
+}
 
-const cleanedUp = songs.collection
-    .map((s) => ({
-        id: s.id,
-        // Looks like `duration` is the duration available for me to listen to as a free user.
-        // `full_duration` appears to be the full song duration
-        // duration: s.duration,
-        duration: s.full_duration,
-        url: s.permalink_url,
-        title: s.title,
-        album: s.publisher_metadata?.album_title ?? "",
-        artist: s.publisher_metadata?.artist
-    }))
-    .toSorted((a, b) => {
-        const sorts = [a.album.localeCompare(b.album), a.title.localeCompare(b.title), a.url.localeCompare(b.url)];
-        return sorts.find((s) => s !== 0) ?? 0;
-    });
+const songData = songs.collection.map(
+    (s) =>
+        ({
+            id: s.id,
+            // Looks like `duration` is the duration available for me to listen to as a free user.
+            // `full_duration` appears to be the full song duration
+            // duration: s.duration,
+            duration: s.full_duration,
+            url: s.permalink_url,
+            title: s.title,
+            album: s.publisher_metadata?.album_title ?? "",
+            artist: s.publisher_metadata?.artist
+        }) as Song
+);
 
-fs.writeFileSync("./cache/songData.json", JSON.stringify(cleanedUp, null, 4));
+fs.writeFileSync("./cache/songData.json", JSON.stringify(songData, null, 4));
 
 const g = 56;
