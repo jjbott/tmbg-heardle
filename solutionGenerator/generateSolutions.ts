@@ -6,6 +6,7 @@ import { startDate, idOffset, potentialAnswers as potentialAnswersRaw, answerInd
 import { Answer } from "./types/Answer.js";
 import { saveAnswers } from "./saveAnswers.js";
 import { kidAlbums } from "./kidAlbums.js";
+import { ProcessedSong, Song } from "./types/Song.js";
 
 const generateStarting = "2026-01-10";
 const generateThrough = "2030-12-31";
@@ -26,21 +27,11 @@ const potentialAnswers = potentialAnswersRaw.map((a) => ({
     answer: a.answer.replace(" - They Might Be Giants", "")
 }));
 
-interface Song {
-    url: string;
-    originalTitle: string;
-    title: string;
-    album: string;
-    artist: string;
-    duration: number;
-    exclusionReason: string;
-}
-
 function normalize(title: string) {
     return title.toLowerCase().replace(/[^a-z0-9 ]/g, "");
 }
 
-let songs = JSON.parse(fs.readFileSync("./cache/songData.json").toString()) as Song[];
+let songs = JSON.parse(fs.readFileSync("./cache/songData.json").toString()) as ProcessedSong[];
 
 songs.forEach((s) => {
     // We'll be mucking with titles later.
