@@ -16,7 +16,7 @@ const minDaysBetweenSameAnswer = 180;
 // At least 10 days before we can see the same album again
 const minDaysBetweenSameAlbum = 10; 
 
-const minDaysBetweenAnyKidsAlbum = 10;
+const minDaysBetweenAnyKidsAlbum = 15;
 const minDaysBetweenSameKidsAlbum = 30;
 
 // `potentialAnswers` in Solutions.js will have ` - They Might Be Giants` appended to the answers.
