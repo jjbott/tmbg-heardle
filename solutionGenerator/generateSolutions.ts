@@ -1,11 +1,17 @@
 import * as fs from "fs";
-import { bigram } from "n-gram";
 import { diceCoefficient } from "dice-coefficient";
 import prettier from "prettier";
 
-import { startDate, idOffset, potentialAnswers, answerIndexes } from "../src/Solutions.js";
+import { startDate, idOffset, potentialAnswers as potentialAnswersRaw, answerIndexes } from "../src/Solutions.js";
 
 const generateThrough = "2030-12-31";
+
+// `potentialAnswers` in Solutions.js will have ` - They Might Be Giants` appended to the answers.
+// Strip those so they match the actual titles
+const potentialAnswers = potentialAnswersRaw.map((a) => ({
+    ...a,
+    answer: a.answer.replace(" - They Might Be Giants", "")
+}));
 
 interface Song {
     url: string;
