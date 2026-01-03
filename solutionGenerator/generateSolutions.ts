@@ -114,7 +114,10 @@ var titleFixes = [
     ["https://soundcloud.com/they-might-be-giants/lets-get-this-over-with-1", "Let's Get This Over With"],
     ["https://soundcloud.com/they-might-be-giants/mccaffertys-bib-1", "McCafferty's Bib"],
     ["https://soundcloud.com/they-might-be-giants/lady-is-a-tramp-1", "Lady is a Tramp"],
-    ["https://soundcloud.com/they-might-be-giants/everything-right-is-wrong-1", "Everything Right is Wrong Again"]
+    ["https://soundcloud.com/they-might-be-giants/everything-right-is-wrong-1", "Everything Right is Wrong Again"],
+
+    // "Light Comes" should be "Lights Come"
+    ["https://soundcloud.com/they-might-be-giants/when-the-light-comes-on", "When the Lights Come On"]
 ];
 
 titleFixes.forEach((tf) => {
