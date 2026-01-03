@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import { diceCoefficient } from "dice-coefficient";
 import prettier from "prettier";
+import CRC32 from "crc-32";
 
 import { startDate, idOffset, potentialAnswers as potentialAnswersRaw, answerIndexes } from "../src/Solutions.js";
 import { Answer } from "./types/Answer.js";
@@ -15,14 +16,14 @@ const generateThrough = "2030-12-31";
 const minDaysBetweenSameAnswer = 180;
 
 // At least 10 days before we can see the same album again
-const minDaysBetweenSameAlbum = 10; 
+const minDaysBetweenSameAlbum = 10;
 
 const minDaysBetweenAnyKidsAlbum = 15;
 const minDaysBetweenSameKidsAlbum = 30;
 
 // `potentialAnswers` in Solutions.js will have ` - They Might Be Giants` appended to the answers.
 // Strip those so they match the actual titles
-const potentialAnswers = potentialAnswersRaw.map((a) => ({
+const oldPotentialAnswers = potentialAnswersRaw.map((a) => ({
     ...a,
     answer: a.answer.replace(" - They Might Be Giants", "")
 }));
@@ -533,7 +534,7 @@ songs
 songs
     .filter((s) => !s.exclusionReason)
     .forEach((s) => {
-        const matches = (potentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
+        const matches = (oldPotentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
         if (matches.length === 0) {
             console.log(`New: "${s.title}" from "${s.album}"`);
         }
@@ -545,8 +546,8 @@ songs
 songs
     .filter((s) => !s.exclusionReason)
     .forEach((s) => {
-        const answer = `${s.title} - They Might Be Giants`;
-        const matches = (potentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
+        const answer = s.title;
+        const matches = (oldPotentialAnswers as Array<{ answer: string; url: string }>).filter((a) => a.url === s.url);
 
         if (matches.length === 1 && answer != matches[0].answer) {
             console.log("Answer mismatch:");
@@ -555,20 +556,40 @@ songs
         }
     });
 
-(potentialAnswers as Array<{ answer: string; url: string }>).forEach((s) => {
-    if (songs.filter((a) => !a.exclusionReason && a.url === s.url).length === 0) {
-        console.log(`Song missing from old potential answers: ${s.answer}, ${s.url}, `);
-        const song = songs.find((a) => a.url === s.url);
-        if (song) {
-            console.log(`    ${song.originalTitle}`);
-            console.log(`    ${song.album}`);
-            console.log(`    ${song.exclusionReason ?? "Missing from SoundCloud"}`);
-        }
+(oldPotentialAnswers as Array<{ answer: string; url: string }>).forEach((s) => {
+    const song = songs.find((a) => a.url === s.url);
+    if (!song) {
+        console.log(`Old potential answer no longer in SoundCloud: ${s.answer}, ${s.url}. Patching!`);
+
+        // Add the missing song to the new song list
+        // so we still have data to tie to old occurrences.
+        
+        // For example, game id 1327, `2025-11-17`, `Tubthumping`.
+        // That will no longer work since the song is gone.
+        // But we need something for `2025-11-17` in the solution array.
+        // So, adding the track with what we know, so it can still point to something.
+
+        songs.push({
+            // Fake an ID that is greater than the rest will be
+            id: Math.pow(2, 40) + CRC32.str(s.url),
+            url: s.url,
+            originalTitle: s.answer,
+            title: s.answer,
+            album: "",
+            duration: 0,
+            artist: "They Might Be Giants",
+            exclusionReason: "Missing from SoundCloud"
+        });
+    } else if (song.exclusionReason) {
+        console.log(`Old potential answer excluded from new song data: ${s.answer}, ${s.url}, `);
+        console.log(`    ${song.originalTitle}`);
+        console.log(`    ${song.album}`);
+        console.log(`    ${song.exclusionReason ?? "Missing from SoundCloud"}`);
     }
 });
 
 // We've fully processed everything, save off the data including exclusion reasons
-fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs, null, 4));
+fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs.sort((a, b) => a.id - b.id), null, 4));
 
 function check(answer: Answer, date: Date, queue: Answer[]) {
     // This is absolutely the worst way to assign songs to days. But, here we are.
@@ -677,9 +698,9 @@ for (let i = 0; i < answerIndexes.length && date.toISOString() < generateStartin
     answers.push({
         id: id++,
         date: date.toISOString(),
-        title: potentialAnswers[answerIndexes[i]].answer,
-        url: potentialAnswers[answerIndexes[i]].url,
-        album: songs.find((s) => s.url === potentialAnswers[answerIndexes[i]].url)!.album
+        title: oldPotentialAnswers[answerIndexes[i]].answer,
+        url: oldPotentialAnswers[answerIndexes[i]].url,
+        album: songs.find((s) => s.url === oldPotentialAnswers[answerIndexes[i]].url)!.album
     });
 
     date = new Date(date.setUTCDate(date.getUTCDate() + 1));
@@ -719,9 +740,9 @@ while (answers[answers.length - 1].date < generateThrough) {
             //console.log(potentialAnswer.url + " is bad")
 
             // If we've had too many failures, bail!
-            // Probably something like "we used all of the xmas songs, so now we dont have one for xmas".
-            // Could solve it with some backtracking or something, but easier to just start over.
-            if (n > 10000) {
+            // Probably because the "special day" code is awful and relies on random chance to pick the correct song.
+            // If we fail, just restart the app and try again. We could solve it, but, eh, maybe someday.
+            if (n > 100000) {
                 throw new Error("Got stuck generating new answers! Try again");
             }
 
@@ -752,7 +773,7 @@ const newPotentialAnswers = songs
 // that I'll probably never actually add.
 // Thats also why I'm not trimming the list of `answerIndexes` yet, to keep historical data.
 answerIndexes.forEach((index) => {
-    const potentialAnswer = potentialAnswers[index];
+    const potentialAnswer = oldPotentialAnswers[index];
     if (!newPotentialAnswers.find((a) => a.url === potentialAnswer.url)) {
         newPotentialAnswers.push(potentialAnswer);
     }

@@ -18,6 +18,7 @@
   },
   "type": "module",
   "dependencies": {
+    "crc-32": "^1.2.2",
     "dice-coefficient": "^2.1.1",
     "n-gram": "^2.0.2",
     "ngram": "^0.0.3"
