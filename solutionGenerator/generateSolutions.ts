@@ -113,7 +113,9 @@ var titleFixes = [
 
     // Capitalization fixes, to make them consistent with matching tracks
     // Casing style is all over the place. 🤷‍♂️
-    // In general I'm picking whatever style the most matches have, or what the main album release has.
+    // In general I'm picking whatever style the most matches have,
+    // or what the main album release has,
+    // or what the last change on SoundCloud was.
     ["https://soundcloud.com/they-might-be-giants/xtc-vs-adam-ant", "XTC vs. Adam Ant"],
     ["https://soundcloud.com/they-might-be-giants/the-darlings-of-lumberland-1", "The Darlings of Lumberland"],
     ["https://soundcloud.com/they-might-be-giants/we-live-in-a-dump-3", "We Live in a Dump"],
@@ -125,6 +127,23 @@ var titleFixes = [
     ["https://soundcloud.com/they-might-be-giants/mccaffertys-bib-1", "McCafferty's Bib"],
     ["https://soundcloud.com/they-might-be-giants/lady-is-a-tramp-1", "Lady is a Tramp"],
     ["https://soundcloud.com/they-might-be-giants/everything-right-is-wrong-1", "Everything Right is Wrong Again"],
+    ["https://soundcloud.com/they-might-be-giants/shes-an-angel", "She's An Angel"],
+    ["https://soundcloud.com/they-might-be-giants/shes-an-angel-1", "She's An Angel"],
+    ["https://soundcloud.com/they-might-be-giants/push-back-the-hands", "Push Back The Hands"],
+    ["https://soundcloud.com/they-might-be-giants/an-insult-to-the-fact-checkers", "An Insult To The Fact Checkers"],
+    ["https://soundcloud.com/they-might-be-giants/by-the-time-you-get-this-note", "By The Time You Get This"],
+    ["https://soundcloud.com/they-might-be-giants/boat-of-car", "Boat Of Car"],
+    ["https://soundcloud.com/they-might-be-giants/snowball-in-hell", "Snowball In Hell"],
+    ["https://soundcloud.com/they-might-be-giants/put-your-hand-inside-the", "Put Your Hand Inside The Puppet Head"],
+    ["https://soundcloud.com/they-might-be-giants/kiss-me-son-of-god", "Kiss Me, Son Of God"],
+    ["https://soundcloud.com/they-might-be-giants/kiss-me-son-of-god-alternate", "Kiss Me, Son Of God"],
+    ["https://soundcloud.com/they-might-be-giants/kiss-me-sun-of-god-alternate", "Kiss Me, Son Of God"],
+    ["https://soundcloud.com/they-might-be-giants/ive-got-a-match", "I've Got A Match"],
+    ["https://soundcloud.com/they-might-be-giants/alienations-for-the-rich", "Alienation's For The Rich"],
+    ["https://soundcloud.com/they-might-be-giants/shoehorn-with-teeth", "Shoehorn With Teeth"],
+    ["https://soundcloud.com/they-might-be-giants/stand-on-your-own-head", "Stand On Your Own Head"],
+    ["https://soundcloud.com/they-might-be-giants/piece-of-dirt", "Piece Of Dirt"],
+    ["https://soundcloud.com/they-might-be-giants/theyll-need-a-crane", "They'll Need A Crane"],
 
     // "Light Comes" should be "Lights Come"
     ["https://soundcloud.com/they-might-be-giants/when-the-light-comes-on", "When the Lights Come On"]
@@ -423,6 +442,9 @@ songs
         // Like, I enjoy "Savoy Truffle", but according to Spotify that's very obsure...
         // Whatever, I'm keeping it. :)
 
+
+        // "Album Raises New and Troubling Questions" was removed from Soundcloud.
+        // Keeping this code for now though...
         if (
             s.album === "Album Raises New and Troubling Questions" &&
             // Most of the album feels too obsure, but this one is a keeper
@@ -431,6 +453,8 @@ songs
             s.exclusionReason = '"Album Raises New and Troubling Questions" feels too obscure';
         }
 
+        // "Cast Your Pod to the Wind" was removed from Soundcloud.
+        // Keeping this code for now though..."
         if (
             s.album === "Cast Your Pod to the Wind" &&
             // Including most popular for now
@@ -439,6 +463,12 @@ songs
         ) {
             s.exclusionReason = '"Cast Your Pod to the Wind" feels too obscure';
         }
+
+        // When the above two albums were removed from SoundCloud,
+        // they moved 3 songs to a new album, "Idlewild: A Compilation".
+        // Coincidentally, 2 are ones we're keeping above: "We Live in a Dump" and "Brain Problem Situation".
+        // The 3rd is "Electronic Istanbul (Not Constantinople)", which used to be excluded.
+        // But, ehhhhhhhh, I'll keep it.
 
         if (s.album === "Venue Songs") {
             s.exclusionReason = '"Venue Songs" feels too obscure';
@@ -493,6 +523,10 @@ songs
 
         if (s.url === "https://soundcloud.com/they-might-be-giants/fake-believe-type-b") {
             s.exclusionReason = "Essentially a duplicate of the main Fake-Believe";
+        }
+
+        if (s.url === "https://soundcloud.com/they-might-be-giants/tmbgs-john-f-guest-djs-on-indie-1032-co-public-radios-sunday-rewind") {
+            s.exclusionReason = "Radio interview, not a song";
         }
     });
 
