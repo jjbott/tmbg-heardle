@@ -5288,5 +5288,37 @@
         "title": "TMBG's John F. guest DJs on Indie 102.3 CO Public Radio's Sunday Rewind",
         "album": "",
         "artist": "They Might Be Giants"
+    },
+    {
+        "id": 2232937049,
+        "duration": 151040,
+        "url": "https://soundcloud.com/they-might-be-giants/peggy-guggenheim",
+        "title": "Peggy Guggenheim",
+        "album": "Eyeball",
+        "artist": "They Might Be Giants"
+    },
+    {
+        "id": 2232937418,
+        "duration": 134034,
+        "url": "https://soundcloud.com/they-might-be-giants/eyeball",
+        "title": "Eyeball",
+        "album": "Eyeball",
+        "artist": "They Might Be Giants"
+    },
+    {
+        "id": 2232938834,
+        "duration": 134034,
+        "url": "https://soundcloud.com/they-might-be-giants/eyeball-elegant-too-remix",
+        "title": "Eyeball (Elegant Too remix)",
+        "album": "Eyeball",
+        "artist": "They Might Be Giants"
+    },
+    {
+        "id": 2232942854,
+        "duration": 92029,
+        "url": "https://soundcloud.com/they-might-be-giants/the-glamour-of-rock",
+        "title": "The Glamour of Rock",
+        "album": "Eyeball",
+        "artist": "They Might Be Giants"
     }
 ]
