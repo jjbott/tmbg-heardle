@@ -258,10 +258,10 @@
     },
     {
         "id": 256251749,
-        "duration": 121025,
+        "duration": 121339,
         "url": "https://soundcloud.com/they-might-be-giants/theres-a-great-big-beautiful",
         "title": "There's a Great Big Beautiful Tomorrow",
-        "album": "Meet The Robinsons (Triff Die Robinsons) Original Soundtrack (German Version)",
+        "album": "Meet The Robinsons Original Soundtrack",
         "artist": "They Might Be Giants",
         "originalTitle": "There's a Great Big Beautiful Tomorrow",
         "exclusionReason": "Possibly in german? Soundcloud wont let me listen. But, it's pretty obscure either way"
@@ -6196,6 +6196,65 @@
         "artist": "They Might Be Giants",
         "originalTitle": "TMBG's John F. guest DJs on Indie 102.3 CO Public Radio's Sunday Rewind",
         "exclusionReason": "Radio interview, not a song"
+    },
+    {
+        "id": 2232937049,
+        "duration": 151040,
+        "url": "https://soundcloud.com/they-might-be-giants/peggy-guggenheim",
+        "title": "Peggy Guggenheim",
+        "album": "Eyeball",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Peggy Guggenheim",
+        "exclusionReason": "EP tracks, will be on main album on release."
+    },
+    {
+        "id": 2232937418,
+        "duration": 134034,
+        "url": "https://soundcloud.com/they-might-be-giants/eyeball",
+        "title": "Eyeball",
+        "album": "Eyeball",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Eyeball",
+        "exclusionReason": "EP tracks, will be on main album on release."
+    },
+    {
+        "id": 2232938834,
+        "duration": 134034,
+        "url": "https://soundcloud.com/they-might-be-giants/eyeball-elegant-too-remix",
+        "title": "Eyeball",
+        "album": "Eyeball",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Eyeball (Elegant Too remix)",
+        "exclusionReason": "EP tracks, will be on main album on release."
+    },
+    {
+        "id": 2232942854,
+        "duration": 92029,
+        "url": "https://soundcloud.com/they-might-be-giants/the-glamour-of-rock",
+        "title": "The Glamour of Rock",
+        "album": "Eyeball",
+        "artist": "They Might Be Giants",
+        "originalTitle": "The Glamour of Rock",
+        "exclusionReason": "EP tracks, will be on main album on release."
+    },
+    {
+        "id": 2255950721,
+        "duration": 189048,
+        "url": "https://soundcloud.com/they-might-be-giants/wu-tang",
+        "title": "Wu-Tang",
+        "album": "Wu-Tang",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Wu-Tang"
+    },
+    {
+        "id": 2269912580,
+        "duration": 121051,
+        "url": "https://soundcloud.com/they-might-be-giants/outside-brain",
+        "title": "Outside Brain",
+        "album": "Outside Brain",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Outside Brain",
+        "exclusionReason": "EP tracks, will be on main album on release."
     },
     {
         "id": 1098164427953,
