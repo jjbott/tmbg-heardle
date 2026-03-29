@@ -8,8 +8,11 @@ import { Answer } from "./types/Answer.js";
 import { saveAnswers } from "./saveAnswers.js";
 import { kidAlbums } from "./kidAlbums.js";
 import { ProcessedSong, Song } from "./types/Song.js";
+import { findDuplicateTitles } from "./findDuplicateTitles.js";
+import { findNearDuplicateTitles } from "./findNearDuplicateTitles.js";
+import { fixTitle, fixTitles } from "./fixTitles.js";
 
-const generateStarting = "2026-01-10";
+const generateStarting = "2026-04-01";
 const generateThrough = "2030-12-31";
 
 // At least 6 months before we can see the same answer again
@@ -28,182 +31,22 @@ const oldPotentialAnswers = potentialAnswersRaw.map((a) => ({
     answer: a.answer.replace(" - They Might Be Giants", "")
 }));
 
-function normalize(title: string) {
+export function normalize(title: string) {
     return title.toLowerCase().replace(/[^a-z0-9 ]/g, "");
 }
 
-let songs = JSON.parse(fs.readFileSync("./cache/songData.json").toString()) as ProcessedSong[];
+export let songs = JSON.parse(fs.readFileSync("./cache/songData.json").toString()) as ProcessedSong[];
 
 songs.forEach((s) => {
     // We'll be mucking with titles later.
     // Store off the original so we can still easily differentiate when needed.
     s.originalTitle = s.title;
 });
+    
+fixTitles(songs);
 
-// Remove all "annotations"
-songs.forEach((s) => {
-    if (
-        s.url === "https://soundcloud.com/they-might-be-giants/200-sbemails-for-homestar" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/electronic-istanbul-not" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/istanbul-not-constantinople" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/why-does-the-sun-really" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/istanbul-not-constantinople-2" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/seven-days-of-the-week-i-never" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/the-ballad-of-davy-crockett-in" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/why-does-the-sun-really-shine" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/the-worlds-address-joshua-1" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/black-ops-alt" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/istanbul-not-constantinople-1" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine-the-sun" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/the-worlds-address-joshua" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine-the-1" ||
-        s.url === "https://soundcloud.com/they-might-be-giants/fake-believe-type-b"
-    ) {
-        return;
-    }
-
-    const match = /^(.*)( \(.*\))$/.exec(s.title);
-    if (match && (match?.length ?? 0) > 0) {
-        console.log(`Removing ${match[2]} from ${match[0]}`);
-        s.title = match[1];
-    }
-});
-
-// Override titles that should match but don't, or are just wrong
-
-var titleFixes = [
-    // Missing '(The Sun Is a Mass of Incandescent Gas)'
-    [
-        "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine",
-        "Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)"
-    ],
-    /*[
-        "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine-the-1",
-        "Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)"
-    ],*/
-
-    // Missing '(The Sun Is a Miasma of Incandescent Plasma)'
-    [
-        "https://soundcloud.com/they-might-be-giants/why-does-the-sun-really-shine",
-        "Why Does the Sun Really Shine? (The Sun Is a Miasma of Incandescent Plasma)"
-    ],
-    // These names are swapped on Soundcloud. Neat.
-    [
-        "https://soundcloud.com/they-might-be-giants/i-hope-that-i-get-old-before-i",
-        "I Hope That I Get Old Before I Die (Version 1)"
-    ],
-    ["https://soundcloud.com/they-might-be-giants/hope-that-i-get-old-before-i", "I Hope That I Get Old Before I Die"],
-    // "Spiralling"
-    ["https://soundcloud.com/they-might-be-giants/spiralling-shape", "Spiraling Shape"],
-
-    // Misspelling
-    ["https://soundcloud.com/they-might-be-giants/cloissone", "Cloisonné"],
-
-    // Artist in title
-    ["https://soundcloud.com/they-might-be-giants/infinity-they-might-be-giants", "Infinity"],
-
-    // Punctuation differences
-    ["https://soundcloud.com/they-might-be-giants/am-i-awake", "Am I Awake?"],
-
-    // Missing `The`, different `in` capitalization, extra `(Album Version)`
-    [
-        "https://soundcloud.com/they-might-be-giants/ballad-of-davy-crockett-in",
-        "The Ballad of Davy Crockett (in Outer Space)"
-    ],
-
-    // Capitalization fixes, to make them consistent with matching tracks
-    // Casing style is all over the place. 🤷‍♂️
-    // In general I'm picking whatever style the most matches have,
-    // or what the main album release has,
-    // or what the last change on SoundCloud was.
-    ["https://soundcloud.com/they-might-be-giants/xtc-vs-adam-ant", "XTC vs. Adam Ant"],
-    ["https://soundcloud.com/they-might-be-giants/the-darlings-of-lumberland-1", "The Darlings of Lumberland"],
-    ["https://soundcloud.com/they-might-be-giants/we-live-in-a-dump-3", "We Live in a Dump"],
-    ["https://soundcloud.com/they-might-be-giants/she-was-a-hotel-detective", "(She Was A) Hotel Detective"],
-    ["https://soundcloud.com/they-might-be-giants/09-all-the-lazy-boyfriends", "All The Lazy Boyfriends"],
-    ["https://soundcloud.com/they-might-be-giants/feast-of-lights", "Feast of Lights"],
-    ["https://soundcloud.com/they-might-be-giants/by-the-time-you-get-this-note", "By the Time You Get This"],
-    ["https://soundcloud.com/they-might-be-giants/lets-get-this-over-with-1", "Let's Get This Over With"],
-    ["https://soundcloud.com/they-might-be-giants/mccaffertys-bib-1", "McCafferty's Bib"],
-    ["https://soundcloud.com/they-might-be-giants/lady-is-a-tramp-1", "Lady is a Tramp"],
-    ["https://soundcloud.com/they-might-be-giants/everything-right-is-wrong-1", "Everything Right is Wrong Again"],
-    ["https://soundcloud.com/they-might-be-giants/shes-an-angel", "She's An Angel"],
-    ["https://soundcloud.com/they-might-be-giants/shes-an-angel-1", "She's An Angel"],
-    ["https://soundcloud.com/they-might-be-giants/push-back-the-hands", "Push Back The Hands"],
-    ["https://soundcloud.com/they-might-be-giants/an-insult-to-the-fact-checkers", "An Insult To The Fact Checkers"],
-    ["https://soundcloud.com/they-might-be-giants/by-the-time-you-get-this-note", "By The Time You Get This"],
-    ["https://soundcloud.com/they-might-be-giants/boat-of-car", "Boat Of Car"],
-    ["https://soundcloud.com/they-might-be-giants/snowball-in-hell", "Snowball In Hell"],
-    ["https://soundcloud.com/they-might-be-giants/put-your-hand-inside-the", "Put Your Hand Inside The Puppet Head"],
-    ["https://soundcloud.com/they-might-be-giants/kiss-me-son-of-god", "Kiss Me, Son Of God"],
-    ["https://soundcloud.com/they-might-be-giants/kiss-me-son-of-god-alternate", "Kiss Me, Son Of God"],
-    ["https://soundcloud.com/they-might-be-giants/kiss-me-sun-of-god-alternate", "Kiss Me, Son Of God"],
-    ["https://soundcloud.com/they-might-be-giants/ive-got-a-match", "I've Got A Match"],
-    ["https://soundcloud.com/they-might-be-giants/alienations-for-the-rich", "Alienation's For The Rich"],
-    ["https://soundcloud.com/they-might-be-giants/shoehorn-with-teeth", "Shoehorn With Teeth"],
-    ["https://soundcloud.com/they-might-be-giants/stand-on-your-own-head", "Stand On Your Own Head"],
-    ["https://soundcloud.com/they-might-be-giants/piece-of-dirt", "Piece Of Dirt"],
-    ["https://soundcloud.com/they-might-be-giants/theyll-need-a-crane", "They'll Need A Crane"],
-
-    // "Light Comes" should be "Lights Come"
-    ["https://soundcloud.com/they-might-be-giants/when-the-light-comes-on", "When the Lights Come On"]
-];
-
-titleFixes.forEach((tf) => {
-    songs
-        .filter((s) => s.url === tf[0])
-        .forEach((s) => {
-            if (s.title === tf[1]) {
-                console.log(`Title fix no-op: ${s.title},  ${s.url}`);
-                return;
-            }
-            s.title = tf[1];
-        });
-});
-
-// Find songs with titles that are "too close"
-// Usually indicates a casing mismatch that I missed
-// Important because:
-// * We use the title to detect duplicate tracks. Minor incorrect differences breaks that
-// * We dont want titles with minor differences in the game's answer list. They'd usually be duplicates with casing issues.
-songs.forEach((s) => {
-    let m = songs.filter((t) => t.title !== s.title && normalize(t.title) === normalize(s.title));
-    if (m.length >= 1) {
-        console.log("Normalized Match");
-        console.log(`    this: '${s.title}', ${s.url}`);
-        m.forEach((match) => {
-            console.log(`    match:'${match.title}', ${match.url}`);
-        });
-        // These are bad, don't ignore these.
-        // Getting here means we'd definitely have duplicates in the answer list
-        throw new Error(`Normalized Match on '${s.title}', ${s.url}`);
-    }
-
-    // These are just warnings.
-    // Anything it finds could be a spelling problem or something.
-    // Ex: `Cloissoné` should be `Cloisonné`, hence the fix above.
-
-    // I usually test with a limit of 0.7, but that currently only shows cases that are fine.
-
-    // May need to get edit distance in here as another warning
-    // Cases where we're 1 letter off produce different dice coefficients.
-    // Ex:
-    // * The mispelled `Cloissoné` vs `Cloisonné` is 0.875
-    // * `Radio They Might Be Giants #1` vs `Radio They Might Be Giants #2` is 0.964
-    // Makes choosing a `limit` tricky
-    const limit = 0.875;
-    m = songs.filter((t) => t.title != s.title && diceCoefficient(t.title, s.title) >= limit);
-    if (m.length >= 1) {
-        console.log("Dice Coefficient Match");
-        console.log(`    this: '${s.title}', ${s.url}`);
-        m.forEach((match) => {
-            console.log(
-                `    match: (${diceCoefficient(match.title, s.title).toFixed(3)}) '${match.title}', ${match.url}`
-            );
-        });
-    }
-});
+findDuplicateTitles(songs);
+findNearDuplicateTitles(songs);
 
 // Filtering out all tracks without an album that are also listed in an album
 let filteredData: any[] = [];
@@ -775,9 +618,19 @@ const newPotentialAnswers = songs
 answerIndexes.forEach((index) => {
     const potentialAnswer = oldPotentialAnswers[index];
     if (!newPotentialAnswers.find((a) => a.url === potentialAnswer.url)) {
+        
+        // We may have old answers that we've changes the title of since.
+        // Fix those up so we dont accidentally end up with duplicate titles in the answer list.
+        // TODO: If we enable viewing old games,
+        // this may cause problems if their stored answer doesnt match anymore
+        potentialAnswer.answer = fixTitle(potentialAnswer.answer, potentialAnswer.url);
+
         newPotentialAnswers.push(potentialAnswer);
+
     }
 });
+
+findDuplicateTitles(newPotentialAnswers.map((a) => ({ title: a.answer, url: a.url })));
 
 const newSortedPotentialAnswers = newPotentialAnswers.toSorted((a, b) => {
     const answerCompare = a.answer.localeCompare(b.answer);
