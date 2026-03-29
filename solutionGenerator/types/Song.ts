@@ -1,4 +1,4 @@
-export interface RawSong {    
+export interface RawSong {
     id: number;
     title: string;
     waveform_url: string;
@@ -8,6 +8,10 @@ export interface RawSong {
         album_title?: string;
         artist?: string;
     };
+    track_authorization: string | null;
+    likes_count: number;
+    playback_count: number;
+    user: { followers_count: number };
 }
 
 export interface Song {

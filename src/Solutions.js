@@ -16,7 +16,7 @@ const potentialAnswers = [
     { answer: "Alphabet Lost and Found", url: "alphabet-lost-and-found" },
     { answer: "Alphabet of Nations", url: "alphabet-of-nations" },
     { answer: "Am I Awake?", url: "am-i-awake-2" },
-    { answer: "An Insult To The Fact Checkers", url: "an-insult-to-the-fact-checkers" },
+    { answer: "An Insult to the Fact Checkers", url: "an-insult-to-the-fact-checkers" },
     { answer: "An Insult To The Fact Checkers", url: "an-insult-to-the-fact" },
     { answer: "Ana Ng", url: "ana-ng-3" },
     { answer: "And Mom And Kid", url: "and-mom-and-kid-1" },

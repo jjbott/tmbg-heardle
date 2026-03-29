@@ -1,34 +1,24 @@
 import puppeteer from "puppeteer";
 import * as fs from "fs";
 import { RawSong, Song } from "./types/Song.js";
+import { fetchSongsFromSoundcloud } from "./fetchSongsFromSoundcloud.js";
+import { fetchSongsFromFile } from "./fetchSongsFromFile.js";
 
-const browser = await puppeteer.launch();
-const page = await browser.newPage();
+const songs: { collection: RawSong[] } = await fetchSongsFromFile();
 
-let clientId = "";
-
-page.on("request", (request) => {
-    //console.log(request.url());
-    const url = new URL(request.url());
-    const params = new URLSearchParams(url.search);
-    if (clientId === "" && params.has("client_id")) {
-        clientId = params.get("client_id")!;
-        console.log(`found client_id ${clientId}`);
-    }
-});
-
-// To go a page just to get a client id
-await page.goto("https://soundcloud.com/they-might-be-giants");
-
-await browser.close();
-
-const songsResponse = await fetch(
-    `https://api-v2.soundcloud.com/users/30199562/tracks?representation=&client_id=${clientId}&limit=10000&offset=0&linked_partitioning=1&app_version=1716534432&app_locale=en`
-);
-const songs = (await songsResponse.json()) as {
-    collection: RawSong[];
-};
 songs.collection = songs.collection.sort((a: RawSong, b: RawSong) => a.id - b.id) as RawSong[];
+
+// clean up the raw song data a _touch_
+songs.collection.forEach((s) => {
+    // These appear to be JWTs that change every time.
+    // No need to save them off
+    s.track_authorization = null;
+
+    // These counts will chnage every time, making the diff noisier
+    s.likes_count = 0;
+    s.playback_count = 0;
+    s.user.followers_count = 0;
+});
 
 try {
     fs.mkdirSync("./cache/");
@@ -43,7 +33,7 @@ function sleep(ms: number) {
 }
 
 // The intent is to someday use the waveform data to adjust songs that start very quiet.
-// Ex: Istanbul is very hard to guess from the first second becuase it's basically silent.
+// Ex: Istanbul is very hard to guess from the first second because it's basically silent.
 // Not sure how I'd change the game to handle those yet though, so these are ultimately unused.
 for (const s of songs.collection) {
     const id: number = s.id;
