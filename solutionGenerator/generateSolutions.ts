@@ -11,8 +11,9 @@ import { ProcessedSong, Song } from "./types/Song.js";
 import { findDuplicateTitles } from "./findDuplicateTitles.js";
 import { findNearDuplicateTitles } from "./findNearDuplicateTitles.js";
 import { fixTitle, fixTitles } from "./fixTitles.js";
+import moment from "moment";
 
-const generateStarting = "2026-04-01";
+const generateStarting = "2026-04-14";
 const generateThrough = "2030-12-31";
 
 // At least 6 months before we can see the same answer again
@@ -94,6 +95,14 @@ songs.forEach((s) => {
     // Many could be fine, but limiting to studio versions for now.
     if (s.album == "Severe Tire Damage" || s.album == "At Large" || s.album == "Beast of Horns (Sampler)") {
         s.exclusionReason = "Live Track";
+        return;
+    }
+
+    // Manually skip `Eyeball` EP and `Outside Brain` for now
+    // TODO: I'm assuming these tracks will be pushed to Soundcloud as part of the main `The World Is To Dig` album,
+    // in which case we'd include them. Check after it is released.
+    if (s.album == "Eyeball" || s.album == "Outside Brain") {
+        s.exclusionReason = "EP tracks, will be on main album on release.";
         return;
     }
 
@@ -435,6 +444,9 @@ songs
 fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs.sort((a, b) => a.id - b.id), null, 4));
 
 function check(answer: Answer, date: Date, queue: Answer[]) {
+    const dateString = moment.utc(date).format("YYYY-MM-DD");
+    const dayString = moment.utc(date).format("MM-DD");
+
     // This is absolutely the worst way to assign songs to days. But, here we are.
 
     // Some secrets in here that I used to obscure by not committing the code,
@@ -456,34 +468,38 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
         "2036-01-02"
     ];
 
-    if (feastOfLights.includes(date.toISOString().split("T")[0])) {
+    if (feastOfLights.includes(dateString)) {
         return answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-1";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-1") {
         return false;
     }
 
-    if (date.getUTCMonth() === 0 && date.getUTCDate() === 1) {
+    if (dayString === '01-01') {
         return answer.url === "https://soundcloud.com/they-might-be-giants/careful-what-you-pack-2";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/careful-what-you-pack-2") {
         return false;
     }
 
-    if (date.getUTCMonth() === 9 && date.getUTCDate() === 8) {
+    if (dayString === '10-08') {
         return answer.url === "https://soundcloud.com/they-might-be-giants/other-father-song";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/other-father-song") {
         return false;
     }
 
-    if (date.getUTCMonth() === 3 && date.getUTCDate() === 26) {
+    if (dayString === '04-26') {
         return answer.url === "https://soundcloud.com/they-might-be-giants/its-not-my-birthday-1";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/its-not-my-birthday-1") {
         return false;
     }
 
-    if (date.getUTCMonth() === 7 && date.getUTCDate() === 1) {
+    if (dayString === '08-01') {
         return answer.url === "https://soundcloud.com/they-might-be-giants/stuff-is-way-1";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/stuff-is-way-1") {
         return false;
+    }
+
+    if (dateString === '2026-04-14') {
+        return answer.url === "https://soundcloud.com/they-might-be-giants/wu-tang";
     }
 
     // Go easy on the kid albums
