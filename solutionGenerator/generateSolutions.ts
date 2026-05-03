@@ -12,8 +12,9 @@ import { findDuplicateTitles } from "./findDuplicateTitles.js";
 import { findNearDuplicateTitles } from "./findNearDuplicateTitles.js";
 import { fixTitle, fixTitles } from "./fixTitles.js";
 import moment from "moment";
+import { fixAlbums } from "./fixAlbums.js";
 
-const generateStarting = "2026-04-14";
+const generateStarting = "2026-05-14";
 const generateThrough = "2030-12-31";
 
 // At least 6 months before we can see the same answer again
@@ -45,6 +46,7 @@ songs.forEach((s) => {
 });
     
 fixTitles(songs);
+fixAlbums(songs);
 
 findDuplicateTitles(songs);
 findNearDuplicateTitles(songs);
@@ -98,11 +100,9 @@ songs.forEach((s) => {
         return;
     }
 
-    // Manually skip `Eyeball` EP and `Outside Brain` for now
-    // TODO: I'm assuming these tracks will be pushed to Soundcloud as part of the main `The World Is To Dig` album,
-    // in which case we'd include them. Check after it is released.
-    if (s.album == "Eyeball" || s.album == "Outside Brain") {
-        s.exclusionReason = "EP tracks, will be on main album on release.";
+    // Manually skip `Eyeball` EP 
+    if (s.album == "Eyeball" ) {
+        s.exclusionReason = "EP tracks, skipping for now";
         return;
     }
 
@@ -128,6 +128,7 @@ songs.forEach((s) => {
         "Mink Car",
         "No!",
         "The Spine",
+        "The World Is to Dig",
         "They Might Be Giants: Here Come the ABCs",
         "They Might Be Giants"
     ];
