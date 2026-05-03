@@ -14,7 +14,7 @@
     import MusicPlayer from "./MusicPlayer.svelte";
     import GuessInput from "./GuessInput.svelte";
 
-    import { idOffset, potentialAnswers, answerIndexes } from "./Solutions.js";
+    import { startDate, idOffset, potentialAnswers, answerIndexes } from "./Solutions.js";
 
     const answerTexts = writable(potentialAnswers.map((e) => e.answer).filter((e, i, s) => s.indexOf(e) === i));
 
@@ -29,7 +29,7 @@
         attemptInterval: 1.5e3,
         attemptIntervalAlt: [1e3, 2e3, 4e3, 7e3, 11e3, 16e3],
         maxAttempts: 6,
-        startDate: "2022-12-22"
+        startDate: startDate
     };
 
     let answerIndex = daysSinceStartDate(config.startDate) % $fullAnswerList.length;
