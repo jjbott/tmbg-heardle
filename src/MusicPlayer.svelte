@@ -135,8 +135,8 @@
     onMount(() => {
         const e = document.createElement("iframe");
         e.name = currentHeardle.id;
-        e.id = "soundcloud" + currentHeardle.id;
-        e.allow = "autoplay";
+        e.id = "soundcloud" + currentHeardle.id;        
+        e.allow = "autoplay; encrypted-media";
         e.height = 0;
         e.src = "https://w.soundcloud.com/player/?url=" + currentHeardle.url + "&cache=" + currentHeardle.id;
         scWidgetDiv.appendChild(e);
