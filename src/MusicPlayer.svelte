@@ -25,6 +25,7 @@
         // user guesses/skips while the music is playing.
         calculateProgressBarPercent();
     }
+    $: logs = [];
     const dispatch = createEventDispatcher();
 
     export let currentAttempt; // d
@@ -123,29 +124,45 @@
     }
 
     function onScriptLoad() {
-        scriptLoaded = true;
-        if (mounted) {
-            setTimeout(() => {
-                playerLoadFailed = true;
-            }, 6000);
-            setupWidget();
+        try {
+            scriptLoaded = true;
+            logs = [...logs, "mounted: " + mounted];
+            if (mounted) {
+                setTimeout(() => {
+                    playerLoadFailed = true;
+                }, 6000);
+                setupWidget();
+            }
+        }
+        catch(e)
+        {
+            logs = [...logs, "Error in onScriptLoad: " + e.toString()];
+            logs = [...logs, e.stack];
+            playerLoadFailed = true;
         }
     }
 
     onMount(() => {
-        const e = document.createElement("iframe");
-        e.name = currentHeardle.id;
-        e.id = "soundcloud" + currentHeardle.id;        
-        e.allow = "autoplay; encrypted-media";
-        e.height = 0;
-        e.src = "https://w.soundcloud.com/player/?url=" + currentHeardle.url + "&cache=" + currentHeardle.id;
-        scWidgetDiv.appendChild(e);
-        mounted = true;
-        if (scriptLoaded) {
-            setTimeout(() => {
-                playerLoadFailed = true;
-            }, 6000);
-            setupWidget();
+        try {
+            const e = document.createElement("iframe");
+            e.name = currentHeardle.id;
+            e.id = "soundcloud" + currentHeardle.id;        
+            e.allow = "autoplay; encrypted-media";
+            e.height = 0;
+            e.src = "https://w.soundcloud.com/player/?url=" + currentHeardle.url + "&cache=" + currentHeardle.id;
+            scWidgetDiv.appendChild(e);
+            mounted = true;
+            logs = [...logs, "scriptLoaded: " + scriptLoaded];
+            if (scriptLoaded) {
+                setTimeout(() => {
+                    playerLoadFailed = true;
+                }, 6000);
+                setupWidget();
+            }
+        } catch (e) {
+            logs = [...logs, "Error in onMount: " + e.toString()];
+            logs = [...logs, e.stack];
+            playerLoadFailed = true;
         }
     });
 
@@ -342,6 +359,14 @@
         {#if playerLoadFailed}
             <!-- Ze -->
             <p class="mb-3">There was an error loading the player. Please reload and try again.</p>
+            <div>
+                {#each logs as log}
+                    {#each log.split("\n") as log}
+                    <p class="text-xs text-custom-line">{log}</p>
+                    {/each}
+                {/each}
+            </div>
+            
             <div class="flex justify-center">
                 <Button on:click={() => window.location.reload()}>
                     <!-- qe -->
