@@ -32,14 +32,47 @@
         startDate: startDate
     };
 
-    let answerIndex = daysSinceStartDate(config.startDate) % $fullAnswerList.length;
+    const params = new URL(document.location.toString()).searchParams;
+    const dateParam = moment(params.get("date"), "YYYY-MM-DD", true);
+    const today = moment().startOf("day");
+
+    // Get today's id, even if we don't use it.
+    // It will be used to refresh the page if it is opened tomorrow
+    const todaysId = getGameIdFromDate(today);
+
+    let gameDate = dateParam && dateParam.isValid() ? dateParam : today;
+    if ( gameDate.isAfter(today) ) {
+        // They're trying to play future games. Naughty.
+        console.log("date is in the future. resetting to today's game");
+        gameDate = today;
+    }
+
+    let id = getGameIdFromDate(gameDate);
+    if (id < idOffset) {
+        console.log(`id ${id} too low. resetting to today's game`);
+        // Too far in the past. Reset to today.
+        gameDate = today;
+        id = getGameIdFromDate(gameDate);
+    }
+
+    if ( gameDate.diff(today, "days") === 0 ) {
+        // We're playing todays game. Ensure we dont have a date param in the URL
+        const url = new URL(window.location.href);
+        url.searchParams.delete('date');
+        window.history.replaceState(null, '', url);
+    }
+
+    console.log("gameDate: " + gameDate.format("YYYY-MM-DD") + ", id: " + id);
+
+    let answerIndex = (id - idOffset) % $fullAnswerList.length;
     let currentHeardle = {
         url: $fullAnswerList[answerIndex].url,
         correctAnswer: $fullAnswerList[answerIndex].answer,
-        id: daysSinceStartDate(config.startDate) + idOffset,
+        id,
         guessList: [],
         hasFinished: !1,
-        hasStarted: !1
+        hasStarted: !1,
+        isArchiveGame: today != gameDate,
     };
 
     var c, d;
@@ -53,9 +86,15 @@
             document.addEventListener(
                 d,
                 function () {
-                    document[c] ||
-                        answerIndex === daysSinceStartDate(config.startDate) % $fullAnswerList.length ||
-                        location.reload(!0);
+                    if (!document[c]) {
+                        if ( todaysId < getGameIdFromDate(moment().startOf("day")) ) {
+                            // At least 1 day has passed since they first opened the page.
+                            // Auto-reload to get today's game
+                            removeDateQueryParam();
+                            location.reload(true);
+
+                        }
+                    }
                 },
                 !1
             );
@@ -244,9 +283,16 @@
         openModal(e.detail.name, e.detail.title, e.detail.hasFrame);
     }
 
-    function daysSinceStartDate(e) {
-        var t = moment(e, "YYYY-MM-DD");
-        return moment().diff(t, "days");
+    function getGameIdFromDate(gameDate) {
+        const startDate = moment(config.startDate, "YYYY-MM-DD");
+        const dayDiff = gameDate.diff(startDate, "days");
+        return dayDiff + idOffset
+    }
+
+    function removeDateQueryParam() {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('date');
+        window.history.replaceState(null, '', url);
     }
 
     const onModalClose = () => {

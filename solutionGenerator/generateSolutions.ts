@@ -371,7 +371,12 @@ songs
             s.exclusionReason = 'The rarites on "Then: The Earlier Years" feel too obscure';
         }
 
-        if (s.url === "https://soundcloud.com/they-might-be-giants/careless-santa-1") {
+        if (s.url === "https://soundcloud.com/they-might-be-giants/careless-santa-1" ||
+            s.url === "https://soundcloud.com/they-might-be-giants/careless-santa-3" ||
+            // try to catch future iterations
+            s.title === "Careless Santa"
+
+        ) {
             s.exclusionReason = "This is technically Mono Puff, not TMBG";
         }
 
@@ -612,9 +617,7 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
         "https://soundcloud.com/they-might-be-giants/santa-claus-1",
         "https://soundcloud.com/they-might-be-giants/santa-claus-3",
         "https://soundcloud.com/they-might-be-giants/o-tannenbaum-1",
-        "https://soundcloud.com/they-might-be-giants/o-tannenbaum-3",
-        // new additions for 2026+
-        "https://soundcloud.com/they-might-be-giants/careless-santa-3"
+        "https://soundcloud.com/they-might-be-giants/o-tannenbaum-3"
     ];
 
     var isXmasSong = xmasSongs.includes(answer.url);
