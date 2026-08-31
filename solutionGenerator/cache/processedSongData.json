@@ -51,7 +51,7 @@
         "title": "Celebration",
         "album": "",
         "originalTitle": "Celebration",
-        "exclusionReason": "Matching track on main release 'Join Us'"
+        "exclusionReason": "Has no album, but found matching track on \"Join Us\" with url https://soundcloud.com/they-might-be-giants/celebration-1"
     },
     {
         "id": 123424196,
@@ -60,7 +60,7 @@
         "title": "Santa's Beard",
         "album": "",
         "originalTitle": "Santa's Beard",
-        "exclusionReason": "Matching track on main release 'Lincoln'"
+        "exclusionReason": "Has no album, but found matching track on \"At Large\" with url https://soundcloud.com/they-might-be-giants/santas-beard-1"
     },
     {
         "id": 123424310,
@@ -69,7 +69,7 @@
         "title": "Santa Claus",
         "album": "",
         "originalTitle": "Santa Claus",
-        "exclusionReason": "Has no album, but found matching track on \"Holidayland\" with url https://soundcloud.com/they-might-be-giants/santa-claus-1"
+        "exclusionReason": "Has no album, but found matching track on \"Holidayland\" with url https://soundcloud.com/they-might-be-giants/santa-claus-3"
     },
     {
         "id": 123424463,
@@ -78,7 +78,7 @@
         "title": "Feast of Lights",
         "album": "",
         "originalTitle": "Feast Of Lights",
-        "exclusionReason": "Has no album, but found matching track on \"Holidayland\" with url https://soundcloud.com/they-might-be-giants/feast-of-lights-1"
+        "exclusionReason": "Has no album, but found matching track on \"Holidayland\" with url https://soundcloud.com/they-might-be-giants/feast-of-lights-3"
     },
     {
         "id": 123424551,
@@ -87,7 +87,7 @@
         "title": "Careless Santa",
         "album": "",
         "originalTitle": "Careless Santa",
-        "exclusionReason": "Has no album, but found matching track on \"Holidayland\" with url https://soundcloud.com/they-might-be-giants/careless-santa-1"
+        "exclusionReason": "Has no album, but found matching track on \"Holidayland\" with url https://soundcloud.com/they-might-be-giants/careless-santa-3"
     },
     {
         "id": 123424812,
@@ -96,7 +96,7 @@
         "title": "O Tannenbaum",
         "album": "",
         "originalTitle": "O Tannenbaum",
-        "exclusionReason": "Has no album, but found matching track on \"Holidayland\" with url https://soundcloud.com/they-might-be-giants/o-tannenbaum-1"
+        "exclusionReason": "Has no album, but found matching track on \"Holidayland\" with url https://soundcloud.com/they-might-be-giants/o-tannenbaum-3"
     },
     {
         "id": 123425031,
@@ -105,7 +105,7 @@
         "title": "Drink!",
         "album": "",
         "originalTitle": "Drink!",
-        "exclusionReason": "Matching track on main release 'Mink Car'"
+        "exclusionReason": "Has no album, but found matching track on \"Mink Car\" with url https://soundcloud.com/they-might-be-giants/drink-3"
     },
     {
         "id": 133090977,
@@ -124,7 +124,7 @@
         "album": "",
         "artist": "They Might Be Giants",
         "originalTitle": "All the Lazy Boyfriends",
-        "exclusionReason": "Matching track on main release 'Glean'"
+        "exclusionReason": "Has no album, but found matching track on \"Glean\" with url https://soundcloud.com/they-might-be-giants/all-the-lazy-boyfriends"
     },
     {
         "id": 193357674,
@@ -133,7 +133,7 @@
         "title": "Answer",
         "album": "",
         "originalTitle": "Answer",
-        "exclusionReason": "Matching track on main release 'Glean'"
+        "exclusionReason": "Has no album, but found matching track on \"Glean\" with url https://soundcloud.com/they-might-be-giants/answer"
     },
     {
         "id": 256251684,
@@ -258,10 +258,10 @@
     },
     {
         "id": 256251749,
-        "duration": 121339,
+        "duration": 120413,
         "url": "https://soundcloud.com/they-might-be-giants/theres-a-great-big-beautiful",
         "title": "There's a Great Big Beautiful Tomorrow",
-        "album": "Meet The Robinsons Original Soundtrack",
+        "album": "Meet the Robinsons",
         "artist": "They Might Be Giants",
         "originalTitle": "There's a Great Big Beautiful Tomorrow",
         "exclusionReason": "Possibly in german? Soundcloud wont let me listen. But, it's pretty obscure either way"
@@ -834,7 +834,7 @@
     },
     {
         "id": 280054714,
-        "duration": 119589,
+        "duration": 119560,
         "url": "https://soundcloud.com/they-might-be-giants/aaa",
         "title": "Aaa",
         "album": "Glean",
@@ -843,7 +843,7 @@
     },
     {
         "id": 280054794,
-        "duration": 178887,
+        "duration": 178853,
         "url": "https://soundcloud.com/they-might-be-giants/let-me-tell-you-about-my",
         "title": "Let Me Tell You About My Operation",
         "album": "Glean",
@@ -852,7 +852,7 @@
     },
     {
         "id": 280054921,
-        "duration": 190720,
+        "duration": 190680,
         "url": "https://soundcloud.com/they-might-be-giants/music-jail-pt-1-2",
         "title": "Music Jail, Pt. 1 & 2",
         "album": "Glean",
@@ -861,30 +861,30 @@
     },
     {
         "id": 280055107,
-        "duration": 169718,
+        "duration": 169666,
         "url": "https://soundcloud.com/they-might-be-giants/im-a-coward",
-        "title": "I'm A Coward",
+        "title": "I'm a Coward",
         "album": "Glean",
         "artist": "They Might Be Giants",
-        "originalTitle": "I'm A Coward"
+        "originalTitle": "I'm a Coward"
     },
     {
         "id": 280055572,
-        "duration": 164650,
+        "duration": 164600,
         "url": "https://soundcloud.com/they-might-be-giants/all-the-lazy-boyfriends",
         "title": "All The Lazy Boyfriends",
         "album": "Glean",
         "artist": "They Might Be Giants",
-        "originalTitle": "All The Lazy Boyfriends"
+        "originalTitle": "All the Lazy Boyfriends"
     },
     {
         "id": 280055860,
-        "duration": 155690,
+        "duration": 155640,
         "url": "https://soundcloud.com/they-might-be-giants/end-of-the-rope",
-        "title": "End Of The Rope",
+        "title": "End of the Rope",
         "album": "Glean",
         "artist": "They Might Be Giants",
-        "originalTitle": "End Of The Rope"
+        "originalTitle": "End of the Rope"
     },
     {
         "id": 280056029,
@@ -1015,7 +1015,7 @@
     },
     {
         "id": 280058154,
-        "duration": 9796,
+        "duration": 9760,
         "url": "https://soundcloud.com/they-might-be-giants/radio-they-might-be-giants-1",
         "title": "Radio They Might Be Giants #1",
         "album": "Working Undercover for the Man",
@@ -1052,7 +1052,7 @@
     },
     {
         "id": 280058327,
-        "duration": 138841,
+        "duration": 138800,
         "url": "https://soundcloud.com/they-might-be-giants/working-undercover-for-the-man",
         "title": "Working Undercover for the Man",
         "album": "Working Undercover for the Man",
@@ -1071,7 +1071,7 @@
     },
     {
         "id": 280058375,
-        "duration": 136960,
+        "duration": 136933,
         "url": "https://soundcloud.com/they-might-be-giants/on-the-drag",
         "title": "On the Drag",
         "album": "Working Undercover for the Man",
@@ -1080,7 +1080,7 @@
     },
     {
         "id": 280058481,
-        "duration": 99187,
+        "duration": 99160,
         "url": "https://soundcloud.com/they-might-be-giants/rest-awhile",
         "title": "Rest Awhile",
         "album": "Working Undercover for the Man",
@@ -1089,7 +1089,7 @@
     },
     {
         "id": 280058533,
-        "duration": 16980,
+        "duration": 16933,
         "url": "https://soundcloud.com/they-might-be-giants/radio-they-might-be-giants-2",
         "title": "Radio They Might Be Giants #2",
         "album": "Working Undercover for the Man",
@@ -1107,15 +1107,6 @@
         "originalTitle": "It's Kickin' In"
     },
     {
-        "id": 280058554,
-        "duration": 63817,
-        "url": "https://soundcloud.com/they-might-be-giants/robot-parade-adult-version",
-        "title": "Robot Parade",
-        "album": "Working Undercover for the Man",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Robot Parade (Adult Version)"
-    },
-    {
         "id": 280058656,
         "duration": 134322,
         "url": "https://soundcloud.com/they-might-be-giants/bastard-wants-to-hit-me",
@@ -1126,7 +1117,7 @@
     },
     {
         "id": 280058754,
-        "duration": 12382,
+        "duration": 12333,
         "url": "https://soundcloud.com/they-might-be-giants/radio-they-might-be-giants-3",
         "title": "Radio They Might Be Giants #3",
         "album": "Working Undercover for the Man",
@@ -1136,7 +1127,7 @@
     },
     {
         "id": 280058827,
-        "duration": 169117,
+        "duration": 169066,
         "url": "https://soundcloud.com/they-might-be-giants/i-am-a-human-head",
         "title": "I Am a Human Head",
         "album": "Working Undercover for the Man",
@@ -1190,7 +1181,7 @@
     },
     {
         "id": 280059293,
-        "duration": 97358,
+        "duration": 97307,
         "url": "https://soundcloud.com/they-might-be-giants/empty-bottle-collector",
         "title": "Empty Bottle Collector",
         "album": "Working Undercover for the Man",
@@ -1263,7 +1254,7 @@
     },
     {
         "id": 280060037,
-        "duration": 202841,
+        "duration": 202813,
         "url": "https://soundcloud.com/they-might-be-giants/unpronounceable",
         "title": "Unpronounceable",
         "album": "Glean",
@@ -1281,7 +1272,7 @@
     },
     {
         "id": 280060147,
-        "duration": 175909,
+        "duration": 175866,
         "url": "https://soundcloud.com/they-might-be-giants/how-can-i-sing-like-a-girl",
         "title": "How Can I Sing Like a Girl?",
         "album": "At Large",
@@ -1291,16 +1282,16 @@
     },
     {
         "id": 280060186,
-        "duration": 183458,
+        "duration": 183426,
         "url": "https://soundcloud.com/they-might-be-giants/good-to-be-alive",
-        "title": "Good To Be Alive",
+        "title": "Good to Be Alive",
         "album": "Glean",
         "artist": "They Might Be Giants",
-        "originalTitle": "Good To Be Alive"
+        "originalTitle": "Good to Be Alive"
     },
     {
         "id": 280060266,
-        "duration": 378070,
+        "duration": 378040,
         "url": "https://soundcloud.com/they-might-be-giants/istanbul-not-constantinople",
         "title": "Istanbul (Not Constantinople)",
         "album": "At Large",
@@ -1310,7 +1301,7 @@
     },
     {
         "id": 280060300,
-        "duration": 140904,
+        "duration": 140866,
         "url": "https://soundcloud.com/they-might-be-giants/cant-keep-johnny-down-1",
         "title": "Can't Keep Johnny Down",
         "album": "At Large",
@@ -1320,7 +1311,7 @@
     },
     {
         "id": 280060328,
-        "duration": 113737,
+        "duration": 113693,
         "url": "https://soundcloud.com/they-might-be-giants/santas-beard-1",
         "title": "Santa's Beard",
         "album": "At Large",
@@ -1330,7 +1321,7 @@
     },
     {
         "id": 280060369,
-        "duration": 353358,
+        "duration": 353307,
         "url": "https://soundcloud.com/they-might-be-giants/apes-vs-people",
         "title": "Apes vs. People",
         "album": "At Large",
@@ -1340,7 +1331,7 @@
     },
     {
         "id": 280060453,
-        "duration": 250201,
+        "duration": 250173,
         "url": "https://soundcloud.com/they-might-be-giants/ana-ng",
         "title": "Ana Ng",
         "album": "At Large",
@@ -1350,7 +1341,7 @@
     },
     {
         "id": 280060492,
-        "duration": 244140,
+        "duration": 244093,
         "url": "https://soundcloud.com/they-might-be-giants/cloissonne",
         "title": "Cloisonné",
         "album": "At Large",
@@ -1360,7 +1351,7 @@
     },
     {
         "id": 280060495,
-        "duration": 91350,
+        "duration": 91306,
         "url": "https://soundcloud.com/they-might-be-giants/judy-is-your-viet-nam",
         "title": "Judy Is Your Viet Nam",
         "album": "At Large",
@@ -1380,7 +1371,7 @@
     },
     {
         "id": 280060533,
-        "duration": 119693,
+        "duration": 119666,
         "url": "https://soundcloud.com/they-might-be-giants/why-does-the-sun-really",
         "title": "Why Does the Sun Really Shine? (The Sun Is a Miasma of Incandescent Plasma)",
         "album": "At Large",
@@ -1390,16 +1381,16 @@
     },
     {
         "id": 280060714,
-        "duration": 121940,
+        "duration": 121893,
         "url": "https://soundcloud.com/they-might-be-giants/madam-i-challenge-you-to-a-1",
-        "title": "Madam, I Challenge You To A Duel",
+        "title": "Madam, I Challenge You to a Duel",
         "album": "Glean",
         "artist": "They Might Be Giants",
-        "originalTitle": "Madam, I Challenge You To A Duel"
+        "originalTitle": "Madam, I Challenge You to a Duel"
     },
     {
         "id": 280060730,
-        "duration": 180428,
+        "duration": 180400,
         "url": "https://soundcloud.com/they-might-be-giants/the-mesopotamians-1",
         "title": "The Mesopotamians",
         "album": "At Large",
@@ -1429,7 +1420,7 @@
     },
     {
         "id": 280060887,
-        "duration": 196206,
+        "duration": 196160,
         "url": "https://soundcloud.com/they-might-be-giants/withered-hope",
         "title": "Withered Hope",
         "album": "At Large",
@@ -1439,7 +1430,7 @@
     },
     {
         "id": 280060982,
-        "duration": 148558,
+        "duration": 148507,
         "url": "https://soundcloud.com/they-might-be-giants/when-will-you-die",
         "title": "When Will You Die?",
         "album": "At Large",
@@ -1458,7 +1449,7 @@
     },
     {
         "id": 280061416,
-        "duration": 176927,
+        "duration": 176880,
         "url": "https://soundcloud.com/they-might-be-giants/experimental-film-1",
         "title": "Experimental Film",
         "album": "The Spine",
@@ -1467,7 +1458,7 @@
     },
     {
         "id": 280061451,
-        "duration": 184555,
+        "duration": 184520,
         "url": "https://soundcloud.com/they-might-be-giants/am-i-awake-2",
         "title": "Am I Awake?",
         "album": "Indestructible Object",
@@ -1476,7 +1467,7 @@
     },
     {
         "id": 280061635,
-        "duration": 175517,
+        "duration": 175484,
         "url": "https://soundcloud.com/they-might-be-giants/brain-problem-situation-1",
         "title": "Brain Problem Situation",
         "album": "Idlewild: A Compilation",
@@ -1503,7 +1494,7 @@
     },
     {
         "id": 280062162,
-        "duration": 162220,
+        "duration": 162186,
         "url": "https://soundcloud.com/they-might-be-giants/careful-what-you-pack-1",
         "title": "Careful What You Pack",
         "album": "At Large",
@@ -1513,7 +1504,7 @@
     },
     {
         "id": 280062772,
-        "duration": 158824,
+        "duration": 158786,
         "url": "https://soundcloud.com/they-might-be-giants/damn-good-times-1",
         "title": "Damn Good Times",
         "album": "The Spine",
@@ -1522,7 +1513,7 @@
     },
     {
         "id": 280062803,
-        "duration": 205035,
+        "duration": 205000,
         "url": "https://soundcloud.com/they-might-be-giants/certain-people-i-could-name",
         "title": "Certain People I Could Name",
         "album": "Long Tall Weekend",
@@ -1531,7 +1522,7 @@
     },
     {
         "id": 280062930,
-        "duration": 100441,
+        "duration": 100400,
         "url": "https://soundcloud.com/they-might-be-giants/we-live-in-a-dump-1",
         "title": "We Live in a Dump",
         "album": "At Large",
@@ -1541,7 +1532,7 @@
     },
     {
         "id": 280064409,
-        "duration": 99422,
+        "duration": 99382,
         "url": "https://soundcloud.com/they-might-be-giants/we-live-in-a-dump-2",
         "title": "We Live in a Dump",
         "album": "Idlewild: A Compilation",
@@ -1549,97 +1540,8 @@
         "originalTitle": "We Live in a Dump"
     },
     {
-        "id": 280067854,
-        "duration": 200202,
-        "url": "https://soundcloud.com/they-might-be-giants/shes-an-angel",
-        "title": "She's An Angel",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "She's an Angel",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280067943,
-        "duration": 187376,
-        "url": "https://soundcloud.com/they-might-be-giants/istanbul-not-constantinople-1",
-        "title": "Istanbul (Not Constantinople)",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Istanbul (Not Constantinople)",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280068002,
-        "duration": 171207,
-        "url": "https://soundcloud.com/they-might-be-giants/till-my-head-falls-off",
-        "title": "Till My Head Falls Off",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Till My Head Falls Off",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280068020,
-        "duration": 181577,
-        "url": "https://soundcloud.com/they-might-be-giants/doctor-worm",
-        "title": "Doctor Worm",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Doctor Worm"
-    },
-    {
-        "id": 280068133,
-        "duration": 192000,
-        "url": "https://soundcloud.com/they-might-be-giants/birdhouse-in-your-soul",
-        "title": "Birdhouse in Your Soul",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Birdhouse in Your Soul",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280068138,
-        "duration": 180323,
-        "url": "https://soundcloud.com/they-might-be-giants/ana-ng-1",
-        "title": "Ana Ng",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Ana Ng",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280068214,
-        "duration": 222433,
-        "url": "https://soundcloud.com/they-might-be-giants/they-got-lost-1",
-        "title": "They Got Lost",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "They Got Lost",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280068368,
-        "duration": 136934,
-        "url": "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine-the-sun",
-        "title": "Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280068603,
-        "duration": 129097,
-        "url": "https://soundcloud.com/they-might-be-giants/particle-man",
-        "title": "Particle Man",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Particle Man",
-        "exclusionReason": "Live Track"
-    },
-    {
         "id": 280068776,
-        "duration": 107833,
+        "duration": 107786,
         "url": "https://soundcloud.com/they-might-be-giants/glean",
         "title": "Glean",
         "album": "Glean",
@@ -1647,43 +1549,13 @@
         "originalTitle": "Glean"
     },
     {
-        "id": 280068843,
-        "duration": 219533,
-        "url": "https://soundcloud.com/they-might-be-giants/xtc-vs-adam-ant",
-        "title": "XTC vs. Adam Ant",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Xtc vs. Adam Ant",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280068968,
-        "duration": 136098,
-        "url": "https://soundcloud.com/they-might-be-giants/shes-actual-size",
-        "title": "She's Actual Size",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "She's Actual Size",
-        "exclusionReason": "Live Track"
-    },
-    {
-        "id": 280069071,
-        "duration": 95765,
-        "url": "https://soundcloud.com/they-might-be-giants/first-kiss",
-        "title": "First Kiss",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "First Kiss",
-        "exclusionReason": "Live Track"
-    },
-    {
         "id": 280069248,
-        "duration": 112248,
+        "duration": 112200,
         "url": "https://soundcloud.com/they-might-be-giants/hate-the-villanelle",
-        "title": "Hate The Villanelle",
+        "title": "Hate the Villanelle",
         "album": "Glean",
         "artist": "They Might Be Giants",
-        "originalTitle": "Hate The Villanelle"
+        "originalTitle": "Hate the Villanelle"
     },
     {
         "id": 280069270,
@@ -1695,16 +1567,6 @@
         "originalTitle": "Judy Is Your Viet Nam"
     },
     {
-        "id": 280069359,
-        "duration": 90540,
-        "url": "https://soundcloud.com/they-might-be-giants/meet-james-ensor",
-        "title": "Meet James Ensor",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Meet James Ensor",
-        "exclusionReason": "Live Track"
-    },
-    {
         "id": 280069389,
         "duration": 159216,
         "url": "https://soundcloud.com/they-might-be-giants/spoiler-alert",
@@ -1712,15 +1574,6 @@
         "album": "Join Us",
         "artist": "They Might Be Giants",
         "originalTitle": "Spoiler Alert"
-    },
-    {
-        "id": 280069455,
-        "duration": 111961,
-        "url": "https://soundcloud.com/they-might-be-giants/daylight",
-        "title": "Daylight",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Daylight"
     },
     {
         "id": 280069456,
@@ -1732,31 +1585,13 @@
         "originalTitle": "Dog Walker"
     },
     {
-        "id": 280069495,
-        "duration": 161907,
-        "url": "https://soundcloud.com/they-might-be-giants/say-nice-things-about-detroit",
-        "title": "Say Nice Things About Detroit",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Say Nice Things About Detroit"
-    },
-    {
         "id": 280069508,
-        "duration": 177528,
+        "duration": 177480,
         "url": "https://soundcloud.com/they-might-be-giants/stone-cold-coup-detat-1",
         "title": "Stone Cold Coup D'etat",
         "album": "Nanobots",
         "artist": "They Might Be Giants",
         "originalTitle": "Stone Cold Coup D'etat"
-    },
-    {
-        "id": 280069515,
-        "duration": 176300,
-        "url": "https://soundcloud.com/they-might-be-giants/ecnalubma",
-        "title": "ECNALUBMA",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "ECNALUBMA"
     },
     {
         "id": 280069516,
@@ -1769,7 +1604,7 @@
     },
     {
         "id": 280069549,
-        "duration": 90488,
+        "duration": 90453,
         "url": "https://soundcloud.com/they-might-be-giants/insect-hospital-1",
         "title": "Insect Hospital",
         "album": "Nanobots",
@@ -1778,7 +1613,7 @@
     },
     {
         "id": 280069553,
-        "duration": 52584,
+        "duration": 52546,
         "url": "https://soundcloud.com/they-might-be-giants/great-1",
         "title": "Great",
         "album": "Nanobots",
@@ -1787,7 +1622,7 @@
     },
     {
         "id": 280069555,
-        "duration": 191912,
+        "duration": 191826,
         "url": "https://soundcloud.com/they-might-be-giants/black-ops-1",
         "title": "Black Ops",
         "album": "Nanobots",
@@ -1796,7 +1631,7 @@
     },
     {
         "id": 280069574,
-        "duration": 165695,
+        "duration": 165666,
         "url": "https://soundcloud.com/they-might-be-giants/nanobots-2",
         "title": "Nanobots",
         "album": "Nanobots",
@@ -1814,7 +1649,7 @@
     },
     {
         "id": 280069585,
-        "duration": 154776,
+        "duration": 154746,
         "url": "https://soundcloud.com/they-might-be-giants/too-tall-girl-1",
         "title": "Too Tall Girl",
         "album": "Nanobots",
@@ -1832,7 +1667,7 @@
     },
     {
         "id": 280069604,
-        "duration": 15621,
+        "duration": 15573,
         "url": "https://soundcloud.com/they-might-be-giants/decision-makers-1",
         "title": "Decision Makers",
         "album": "Nanobots",
@@ -1841,17 +1676,8 @@
         "exclusionReason": "Too short"
     },
     {
-        "id": 280069606,
-        "duration": 208953,
-        "url": "https://soundcloud.com/they-might-be-giants/trouble-awful-devil-evil-1",
-        "title": "Trouble Awful Devil Evil",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Trouble Awful Devil Evil"
-    },
-    {
         "id": 280069629,
-        "duration": 116193,
+        "duration": 116160,
         "url": "https://soundcloud.com/they-might-be-giants/9-secret-steps-1",
         "title": "9 Secret Steps",
         "album": "Nanobots",
@@ -1859,32 +1685,13 @@
         "originalTitle": "9 Secret Steps"
     },
     {
-        "id": 280069641,
-        "duration": 191582,
-        "url": "https://soundcloud.com/they-might-be-giants/shape-shifter",
-        "title": "Shape Shifter",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Shape Shifter"
-    },
-    {
         "id": 280069642,
-        "duration": 170386,
+        "duration": 170293,
         "url": "https://soundcloud.com/they-might-be-giants/lost-my-mind-2",
         "title": "Lost My Mind",
         "album": "Nanobots",
         "artist": "They Might Be Giants",
         "originalTitle": "Lost My Mind"
-    },
-    {
-        "id": 280069646,
-        "duration": 186070,
-        "url": "https://soundcloud.com/they-might-be-giants/s-e-x-x-y",
-        "title": "S-E-X-X-Y",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "S-E-X-X-Y",
-        "exclusionReason": "Live Track"
     },
     {
         "id": 280069649,
@@ -1897,7 +1704,7 @@
     },
     {
         "id": 280069654,
-        "duration": 124970,
+        "duration": 124920,
         "url": "https://soundcloud.com/they-might-be-giants/tesla-2",
         "title": "Tesla",
         "album": "Nanobots",
@@ -1905,27 +1712,8 @@
         "originalTitle": "Tesla"
     },
     {
-        "id": 280069667,
-        "duration": 122880,
-        "url": "https://soundcloud.com/they-might-be-giants/sold-my-mind-to-the-kremlin",
-        "title": "Sold My Mind to the Kremlin",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Sold My Mind to the Kremlin"
-    },
-    {
-        "id": 280069703,
-        "duration": 52820,
-        "url": "https://soundcloud.com/they-might-be-giants/spider",
-        "title": "Spider",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Spider",
-        "exclusionReason": "Live Track"
-    },
-    {
         "id": 280069750,
-        "duration": 9326,
+        "duration": 9280,
         "url": "https://soundcloud.com/they-might-be-giants/there-1",
         "title": "There",
         "album": "Nanobots",
@@ -1935,7 +1723,7 @@
     },
     {
         "id": 280069800,
-        "duration": 97411,
+        "duration": 97373,
         "url": "https://soundcloud.com/they-might-be-giants/stuff-is-way-1",
         "title": "Stuff Is Way",
         "album": "Nanobots",
@@ -1943,26 +1731,8 @@
         "originalTitle": "Stuff Is Way"
     },
     {
-        "id": 280069811,
-        "duration": 196180,
-        "url": "https://soundcloud.com/they-might-be-giants/bills-bills-bills",
-        "title": "Bills, Bills, Bills",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Bills, Bills, Bills"
-    },
-    {
-        "id": 280069841,
-        "duration": 180689,
-        "url": "https://soundcloud.com/they-might-be-giants/i-love-you-for-psychological",
-        "title": "I Love You for Psychological Reasons",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I Love You for Psychological Reasons"
-    },
-    {
         "id": 280069859,
-        "duration": 15543,
+        "duration": 15506,
         "url": "https://soundcloud.com/they-might-be-giants/destroy-the-past-1",
         "title": "Destroy the Past",
         "album": "Nanobots",
@@ -1980,15 +1750,6 @@
         "originalTitle": "You Probably Get That a Lot"
     },
     {
-        "id": 280069870,
-        "duration": 151040,
-        "url": "https://soundcloud.com/they-might-be-giants/black-ops-alt",
-        "title": "Black Ops Alt",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Black Ops Alt"
-    },
-    {
         "id": 280069896,
         "duration": 150648,
         "url": "https://soundcloud.com/they-might-be-giants/let-your-hair-hang-down",
@@ -1999,23 +1760,13 @@
     },
     {
         "id": 280069906,
-        "duration": 11938,
+        "duration": 11893,
         "url": "https://soundcloud.com/they-might-be-giants/tick-1",
         "title": "Tick",
         "album": "Nanobots",
         "artist": "They Might Be Giants",
         "originalTitle": "Tick",
         "exclusionReason": "Too short"
-    },
-    {
-        "id": 280069945,
-        "duration": 181447,
-        "url": "https://soundcloud.com/they-might-be-giants/about-me",
-        "title": "About Me",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "About Me",
-        "exclusionReason": "Live Track"
     },
     {
         "id": 280069979,
@@ -2027,15 +1778,6 @@
         "originalTitle": "Canajoharie"
     },
     {
-        "id": 280070010,
-        "duration": 89287,
-        "url": "https://soundcloud.com/they-might-be-giants/what-did-i-do-to-you",
-        "title": "What Did I Do to You?",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "What Did I Do to You?"
-    },
-    {
         "id": 280070049,
         "duration": 173688,
         "url": "https://soundcloud.com/they-might-be-giants/never-knew-love",
@@ -2045,17 +1787,8 @@
         "originalTitle": "Never Knew Love"
     },
     {
-        "id": 280070053,
-        "duration": 153626,
-        "url": "https://soundcloud.com/they-might-be-giants/apophenia",
-        "title": "Apophenia",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Apophenia"
-    },
-    {
         "id": 280070057,
-        "duration": 176248,
+        "duration": 176213,
         "url": "https://soundcloud.com/they-might-be-giants/circular-karate-chop-1",
         "title": "Circular Karate Chop",
         "album": "Nanobots",
@@ -2064,30 +1797,12 @@
     },
     {
         "id": 280070081,
-        "duration": 17267,
+        "duration": 17226,
         "url": "https://soundcloud.com/they-might-be-giants/nouns-1",
         "title": "Nouns",
         "album": "Nanobots",
         "artist": "They Might Be Giants",
         "originalTitle": "Nouns"
-    },
-    {
-        "id": 280070113,
-        "duration": 91089,
-        "url": "https://soundcloud.com/they-might-be-giants/i-wasnt-listening",
-        "title": "I Wasn't Listening",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I Wasn't Listening"
-    },
-    {
-        "id": 280070193,
-        "duration": 192784,
-        "url": "https://soundcloud.com/they-might-be-giants/it-said-something",
-        "title": "It Said Something",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "It Said Something"
     },
     {
         "id": 280070221,
@@ -2100,21 +1815,12 @@
     },
     {
         "id": 280070245,
-        "duration": 175595,
+        "duration": 175546,
         "url": "https://soundcloud.com/they-might-be-giants/replicant-1",
         "title": "Replicant",
         "album": "Nanobots",
         "artist": "They Might Be Giants",
         "originalTitle": "Replicant"
-    },
-    {
-        "id": 280070361,
-        "duration": 39784,
-        "url": "https://soundcloud.com/they-might-be-giants/severe-tire-damage-theme",
-        "title": "Severe Tire Damage Theme",
-        "album": "Severe Tire Damage",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Severe Tire Damage Theme"
     },
     {
         "id": 280070365,
@@ -2127,7 +1833,7 @@
     },
     {
         "id": 280070375,
-        "duration": 186766,
+        "duration": 186693,
         "url": "https://soundcloud.com/they-might-be-giants/call-you-mom-2",
         "title": "Call You Mom",
         "album": "Nanobots",
@@ -2135,17 +1841,8 @@
         "originalTitle": "Call You Mom"
     },
     {
-        "id": 280070527,
-        "duration": 149133,
-        "url": "https://soundcloud.com/they-might-be-giants/i-am-alone",
-        "title": "I Am Alone",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I Am Alone"
-    },
-    {
         "id": 280070537,
-        "duration": 140696,
+        "duration": 140666,
         "url": "https://soundcloud.com/they-might-be-giants/cant-keep-johnny-down-2",
         "title": "Can't Keep Johnny Down",
         "album": "Join Us",
@@ -2154,7 +1851,7 @@
     },
     {
         "id": 280070611,
-        "duration": 31556,
+        "duration": 31520,
         "url": "https://soundcloud.com/they-might-be-giants/didnt-kill-me-1",
         "title": "Didn't Kill Me",
         "album": "Nanobots",
@@ -2163,7 +1860,7 @@
     },
     {
         "id": 280070629,
-        "duration": 152895,
+        "duration": 152866,
         "url": "https://soundcloud.com/they-might-be-giants/icky-1",
         "title": "Icky",
         "album": "Nanobots",
@@ -2171,26 +1868,8 @@
         "originalTitle": "Icky"
     },
     {
-        "id": 280070855,
-        "duration": 101642,
-        "url": "https://soundcloud.com/they-might-be-giants/got-getting-up-so-down",
-        "title": "Got Getting Up So Down",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Got Getting Up So Down"
-    },
-    {
-        "id": 280070857,
-        "duration": 101329,
-        "url": "https://soundcloud.com/they-might-be-giants/omnicorn-1",
-        "title": "Omnicorn",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Omnicorn"
-    },
-    {
         "id": 280070863,
-        "duration": 201509,
+        "duration": 201480,
         "url": "https://soundcloud.com/they-might-be-giants/the-darlings-of-lumberland-2",
         "title": "The Darlings of Lumberland",
         "album": "Nanobots",
@@ -2198,89 +1877,8 @@
         "originalTitle": "The Darlings of Lumberland"
     },
     {
-        "id": 280070890,
-        "duration": 157649,
-        "url": "https://soundcloud.com/they-might-be-giants/elephants-feat-danny",
-        "title": "Elephants",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Elephants"
-    },
-    {
-        "id": 280070979,
-        "duration": 125884,
-        "url": "https://soundcloud.com/they-might-be-giants/i-am-invisible-1",
-        "title": "I Am Invisible",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I Am Invisible"
-    },
-    {
-        "id": 280070999,
-        "duration": 145189,
-        "url": "https://soundcloud.com/they-might-be-giants/then-the-kids-took-over-1",
-        "title": "Then The Kids Took Over",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Then The Kids Took Over"
-    },
-    {
-        "id": 280071034,
-        "duration": 145685,
-        "url": "https://soundcloud.com/they-might-be-giants/i-made-a-mess-1",
-        "title": "I Made A Mess",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I Made A Mess"
-    },
-    {
-        "id": 280071070,
-        "duration": 135811,
-        "url": "https://soundcloud.com/they-might-be-giants/long-white-beard-feat-robin",
-        "title": "Long White Beard",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Long White Beard"
-    },
-    {
-        "id": 280071140,
-        "duration": 126720,
-        "url": "https://soundcloud.com/they-might-be-giants/impossibly-new",
-        "title": "Impossibly New",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Impossibly New"
-    },
-    {
-        "id": 280071154,
-        "duration": 126537,
-        "url": "https://soundcloud.com/they-might-be-giants/moles-hounds-bears-bees-and",
-        "title": "Moles, Hounds, Bears, Bees and Hares",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Moles, Hounds, Bears, Bees and Hares"
-    },
-    {
-        "id": 280071190,
-        "duration": 167941,
-        "url": "https://soundcloud.com/they-might-be-giants/ill-be-haunting-you",
-        "title": "I'll Be Haunting You",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I'll Be Haunting You"
-    },
-    {
-        "id": 280071197,
-        "duration": 130273,
-        "url": "https://soundcloud.com/they-might-be-giants/so-crazy-for-books-1",
-        "title": "So Crazy For Books",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "So Crazy For Books"
-    },
-    {
         "id": 280071220,
-        "duration": 6322,
+        "duration": 6293,
         "url": "https://soundcloud.com/they-might-be-giants/hive-mind-1",
         "title": "Hive Mind",
         "album": "Nanobots",
@@ -2290,7 +1888,7 @@
     },
     {
         "id": 280071246,
-        "duration": 175412,
+        "duration": 175373,
         "url": "https://soundcloud.com/they-might-be-giants/the-lady-and-the-tiger-1",
         "title": "The Lady and the Tiger",
         "album": "Join Us",
@@ -2298,71 +1896,8 @@
         "originalTitle": "The Lady and the Tiger"
     },
     {
-        "id": 280071293,
-        "duration": 136202,
-        "url": "https://soundcloud.com/they-might-be-giants/oh-you-did-feat-robin",
-        "title": "Oh You Did",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Oh You Did"
-    },
-    {
-        "id": 280071313,
-        "duration": 137979,
-        "url": "https://soundcloud.com/they-might-be-giants/hello-mrs-wheelyke-1",
-        "title": "Hello Mrs. Wheelyke",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Hello Mrs. Wheelyke"
-    },
-    {
-        "id": 280071324,
-        "duration": 156186,
-        "url": "https://soundcloud.com/they-might-be-giants/out-of-a-tree-1",
-        "title": "Out Of A Tree",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Out Of A Tree"
-    },
-    {
-        "id": 280071343,
-        "duration": 112614,
-        "url": "https://soundcloud.com/they-might-be-giants/i-havent-seen-you-in-forever-1",
-        "title": "I Haven't Seen You In Forever",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I Haven't Seen You In Forever"
-    },
-    {
-        "id": 280071412,
-        "duration": 117708,
-        "url": "https://soundcloud.com/they-might-be-giants/definition-of-good-1",
-        "title": "Definition Of Good",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Definition Of Good"
-    },
-    {
-        "id": 280071420,
-        "duration": 82860,
-        "url": "https://soundcloud.com/they-might-be-giants/and-mom-and-kid-1",
-        "title": "And Mom And Kid",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "And Mom And Kid"
-    },
-    {
-        "id": 280071463,
-        "duration": 130351,
-        "url": "https://soundcloud.com/they-might-be-giants/to-a-forest",
-        "title": "To a Forest",
-        "album": "Phone Power",
-        "artist": "They Might Be Giants",
-        "originalTitle": "To a Forest"
-    },
-    {
         "id": 280071541,
-        "duration": 42841,
+        "duration": 42813,
         "url": "https://soundcloud.com/they-might-be-giants/sleep-1",
         "title": "Sleep",
         "album": "Nanobots",
@@ -2370,26 +1905,17 @@
         "originalTitle": "Sleep"
     },
     {
-        "id": 280071628,
-        "duration": 134818,
-        "url": "https://soundcloud.com/they-might-be-giants/or-so-i-have-read-1",
-        "title": "Or So I Have Read",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Or So I Have Read"
-    },
-    {
         "id": 280071702,
-        "duration": 117238,
+        "duration": 117186,
         "url": "https://soundcloud.com/they-might-be-giants/i-can-help-the-next-in-line",
-        "title": "I Can Help The Next In Line",
+        "title": "I Can Help the Next in Line",
         "album": "Glean",
         "artist": "They Might Be Giants",
-        "originalTitle": "I Can Help The Next In Line"
+        "originalTitle": "I Can Help the Next in Line"
     },
     {
         "id": 280071714,
-        "duration": 161750,
+        "duration": 161706,
         "url": "https://soundcloud.com/they-might-be-giants/youre-on-fire-3",
         "title": "You're on Fire",
         "album": "Nanobots",
@@ -2397,17 +1923,8 @@
         "originalTitle": "You're on Fire"
     },
     {
-        "id": 280071783,
-        "duration": 68258,
-        "url": "https://soundcloud.com/they-might-be-giants/i-just-want-to-dance-1",
-        "title": "I Just Want To Dance",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I Just Want To Dance"
-    },
-    {
         "id": 280072305,
-        "duration": 160836,
+        "duration": 160786,
         "url": "https://soundcloud.com/they-might-be-giants/sometimes-a-lonely-way-1",
         "title": "Sometimes a Lonely Way",
         "album": "Nanobots",
@@ -2424,26 +1941,8 @@
         "originalTitle": "You Don't Like Me"
     },
     {
-        "id": 280073578,
-        "duration": 130194,
-        "url": "https://soundcloud.com/they-might-be-giants/thinking-machine-1",
-        "title": "Thinking Machine",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Thinking Machine"
-    },
-    {
-        "id": 280073639,
-        "duration": 127791,
-        "url": "https://soundcloud.com/they-might-be-giants/walking-my-cat-named-dog-1",
-        "title": "Walking My Cat Named Dog",
-        "album": "Why?",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Walking My Cat Named Dog"
-    },
-    {
         "id": 280074065,
-        "duration": 152398,
+        "duration": 152347,
         "url": "https://soundcloud.com/they-might-be-giants/underwater-woman",
         "title": "Underwater Woman",
         "album": "Glean",
@@ -2452,7 +1951,7 @@
     },
     {
         "id": 280074701,
-        "duration": 203180,
+        "duration": 203133,
         "url": "https://soundcloud.com/they-might-be-giants/answer",
         "title": "Answer",
         "album": "Glean",
@@ -2461,7 +1960,7 @@
     },
     {
         "id": 280074827,
-        "duration": 169718,
+        "duration": 169680,
         "url": "https://soundcloud.com/they-might-be-giants/erase-1",
         "title": "Erase",
         "album": "Glean",
@@ -2630,7 +2129,7 @@
     },
     {
         "id": 346331754,
-        "duration": 176953,
+        "duration": 176920,
         "url": "https://soundcloud.com/they-might-be-giants/lake-monsters-1",
         "title": "Lake Monsters",
         "album": "I Like Fun",
@@ -2639,7 +2138,7 @@
     },
     {
         "id": 346331761,
-        "duration": 108173,
+        "duration": 108146,
         "url": "https://soundcloud.com/they-might-be-giants/the-greatest-1",
         "title": "The Greatest",
         "album": "I Like Fun",
@@ -2648,7 +2147,7 @@
     },
     {
         "id": 346331806,
-        "duration": 149447,
+        "duration": 149400,
         "url": "https://soundcloud.com/they-might-be-giants/the-bright-side-1",
         "title": "The Bright Side",
         "album": "I Like Fun",
@@ -2657,7 +2156,7 @@
     },
     {
         "id": 346331814,
-        "duration": 163500,
+        "duration": 163466,
         "url": "https://soundcloud.com/they-might-be-giants/mrs-bluebeard-1",
         "title": "Mrs. Bluebeard",
         "album": "I Like Fun",
@@ -2666,16 +2165,16 @@
     },
     {
         "id": 346331831,
-        "duration": 137509,
+        "duration": 137466,
         "url": "https://soundcloud.com/they-might-be-giants/by-the-time-you-get-this",
         "title": "By The Time You Get This",
         "album": "I Like Fun",
         "artist": "They Might Be Giants",
-        "originalTitle": "By The Time You Get This"
+        "originalTitle": "By the Time You Get This"
     },
     {
         "id": 346331838,
-        "duration": 187899,
+        "duration": 187853,
         "url": "https://soundcloud.com/they-might-be-giants/lets-get-this-over-with-1",
         "title": "Let's Get This Over With",
         "album": "I Like Fun",
@@ -2684,7 +2183,7 @@
     },
     {
         "id": 346331854,
-        "duration": 181002,
+        "duration": 180960,
         "url": "https://soundcloud.com/they-might-be-giants/i-like-fun-1",
         "title": "I Like Fun",
         "album": "I Like Fun",
@@ -2693,16 +2192,16 @@
     },
     {
         "id": 346331862,
-        "duration": 181029,
+        "duration": 181000,
         "url": "https://soundcloud.com/they-might-be-giants/push-back-the-hands-1",
         "title": "Push Back The Hands",
         "album": "I Like Fun",
         "artist": "They Might Be Giants",
-        "originalTitle": "Push Back The Hands"
+        "originalTitle": "Push Back the Hands"
     },
     {
         "id": 346331868,
-        "duration": 155115,
+        "duration": 155080,
         "url": "https://soundcloud.com/they-might-be-giants/mccaffertys-bib-1",
         "title": "McCafferty's Bib",
         "album": "I Like Fun",
@@ -2711,7 +2210,7 @@
     },
     {
         "id": 346331906,
-        "duration": 149342,
+        "duration": 149293,
         "url": "https://soundcloud.com/they-might-be-giants/all-time-what-1",
         "title": "All Time What",
         "album": "I Like Fun",
@@ -2720,16 +2219,16 @@
     },
     {
         "id": 346331936,
-        "duration": 154149,
+        "duration": 154106,
         "url": "https://soundcloud.com/they-might-be-giants/an-insult-to-the-fact",
         "title": "An Insult To The Fact Checkers",
         "album": "I Like Fun",
         "artist": "They Might Be Giants",
-        "originalTitle": "An Insult To The Fact Checkers"
+        "originalTitle": "An Insult to the Fact Checkers"
     },
     {
         "id": 346331937,
-        "duration": 156709,
+        "duration": 156680,
         "url": "https://soundcloud.com/they-might-be-giants/this-microphone-1",
         "title": "This Microphone",
         "album": "I Like Fun",
@@ -2738,7 +2237,7 @@
     },
     {
         "id": 346331953,
-        "duration": 156082,
+        "duration": 156040,
         "url": "https://soundcloud.com/they-might-be-giants/i-left-my-body-1",
         "title": "I Left My Body",
         "album": "I Like Fun",
@@ -2747,16 +2246,16 @@
     },
     {
         "id": 346331967,
-        "duration": 197120,
+        "duration": 197080,
         "url": "https://soundcloud.com/they-might-be-giants/when-the-light-comes-on",
         "title": "When the Lights Come On",
         "album": "I Like Fun",
         "artist": "They Might Be Giants",
-        "originalTitle": "When The Light Comes On"
+        "originalTitle": "When the Lights Come On"
     },
     {
         "id": 346331995,
-        "duration": 204957,
+        "duration": 204906,
         "url": "https://soundcloud.com/they-might-be-giants/last-wave-1",
         "title": "Last Wave",
         "album": "I Like Fun",
@@ -2794,7 +2293,7 @@
     },
     {
         "id": 763127983,
-        "duration": 102060,
+        "duration": 102026,
         "url": "https://soundcloud.com/they-might-be-giants/los-angeles",
         "title": "Los Angeles",
         "album": "Venue Songs",
@@ -2804,7 +2303,7 @@
     },
     {
         "id": 763127986,
-        "duration": 118831,
+        "duration": 118786,
         "url": "https://soundcloud.com/they-might-be-giants/vancouver-in-situ",
         "title": "Vancouver",
         "album": "Venue Songs",
@@ -2814,7 +2313,7 @@
     },
     {
         "id": 763127992,
-        "duration": 61989,
+        "duration": 61946,
         "url": "https://soundcloud.com/they-might-be-giants/farmingdale-in-situ",
         "title": "Farmingdale",
         "album": "Venue Songs",
@@ -2824,7 +2323,7 @@
     },
     {
         "id": 763127995,
-        "duration": 103602,
+        "duration": 103573,
         "url": "https://soundcloud.com/they-might-be-giants/vancouver",
         "title": "Vancouver",
         "album": "Venue Songs",
@@ -2834,7 +2333,7 @@
     },
     {
         "id": 763128001,
-        "duration": 58958,
+        "duration": 58920,
         "url": "https://soundcloud.com/they-might-be-giants/san-francisco-in-situ",
         "title": "San Francisco",
         "album": "Venue Songs",
@@ -2843,17 +2342,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128004,
-        "duration": 198322,
-        "url": "https://soundcloud.com/they-might-be-giants/finished-with-lies-1",
-        "title": "Finished with Lies",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Finished with Lies"
-    },
-    {
         "id": 763128007,
-        "duration": 122044,
+        "duration": 122013,
         "url": "https://soundcloud.com/they-might-be-giants/atlanta-in-situ",
         "title": "Atlanta",
         "album": "Venue Songs",
@@ -2863,7 +2353,7 @@
     },
     {
         "id": 763128010,
-        "duration": 88947,
+        "duration": 88920,
         "url": "https://soundcloud.com/they-might-be-giants/brooklyn-in-situ",
         "title": "Brooklyn",
         "album": "Venue Songs",
@@ -2873,7 +2363,7 @@
     },
     {
         "id": 763128013,
-        "duration": 42449,
+        "duration": 42400,
         "url": "https://soundcloud.com/they-might-be-giants/dallas-in-situ",
         "title": "Dallas",
         "album": "Venue Songs",
@@ -2883,7 +2373,7 @@
     },
     {
         "id": 763128016,
-        "duration": 62746,
+        "duration": 62706,
         "url": "https://soundcloud.com/they-might-be-giants/anaheim-in-situ",
         "title": "Anaheim",
         "album": "Venue Songs",
@@ -2893,7 +2383,7 @@
     },
     {
         "id": 763128022,
-        "duration": 120895,
+        "duration": 120853,
         "url": "https://soundcloud.com/they-might-be-giants/santa-cruz-in-situ",
         "title": "Santa Cruz",
         "album": "Venue Songs",
@@ -2902,17 +2392,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128025,
-        "duration": 189388,
-        "url": "https://soundcloud.com/they-might-be-giants/bangs-1",
-        "title": "Bangs",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Bangs"
-    },
-    {
         "id": 763128028,
-        "duration": 79360,
+        "duration": 79333,
         "url": "https://soundcloud.com/they-might-be-giants/albany-in-situ",
         "title": "Albany",
         "album": "Venue Songs",
@@ -2922,7 +2403,7 @@
     },
     {
         "id": 763128031,
-        "duration": 59585,
+        "duration": 59534,
         "url": "https://soundcloud.com/they-might-be-giants/asbury-park-in-situ",
         "title": "Asbury Park",
         "album": "Venue Songs",
@@ -2932,7 +2413,7 @@
     },
     {
         "id": 763128037,
-        "duration": 117734,
+        "duration": 117693,
         "url": "https://soundcloud.com/they-might-be-giants/leeds-in-situ",
         "title": "Leeds",
         "album": "Venue Songs",
@@ -2941,27 +2422,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128040,
-        "duration": 239464,
-        "url": "https://soundcloud.com/they-might-be-giants/man-its-so-loud-in-here-1",
-        "title": "Man, It's So Loud in Here",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Man, It's So Loud in Here"
-    },
-    {
-        "id": 763128043,
-        "duration": 137744,
-        "url": "https://soundcloud.com/they-might-be-giants/renew-my-subscription",
-        "title": "Renew My Subscription",
-        "album": "Venue Songs",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Renew My Subscription",
-        "exclusionReason": "Matching track on main release 'The Spine'"
-    },
-    {
         "id": 763128046,
-        "duration": 64287,
+        "duration": 64239,
         "url": "https://soundcloud.com/they-might-be-giants/anaheim",
         "title": "Anaheim",
         "album": "Venue Songs",
@@ -2971,7 +2433,7 @@
     },
     {
         "id": 763128055,
-        "duration": 49476,
+        "duration": 49426,
         "url": "https://soundcloud.com/they-might-be-giants/minneapolis-in-situ",
         "title": "Minneapolis",
         "album": "Venue Songs",
@@ -2981,7 +2443,7 @@
     },
     {
         "id": 763128058,
-        "duration": 91141,
+        "duration": 91106,
         "url": "https://soundcloud.com/they-might-be-giants/philadelphia-in-situ",
         "title": "Philadelphia",
         "album": "Venue Songs",
@@ -2991,7 +2453,7 @@
     },
     {
         "id": 763128067,
-        "duration": 99788,
+        "duration": 99760,
         "url": "https://soundcloud.com/they-might-be-giants/new-haven-in-situ",
         "title": "New Haven",
         "album": "Venue Songs",
@@ -3001,7 +2463,7 @@
     },
     {
         "id": 763128070,
-        "duration": 42318,
+        "duration": 42280,
         "url": "https://soundcloud.com/they-might-be-giants/dallas",
         "title": "Dallas",
         "album": "Venue Songs",
@@ -3011,7 +2473,7 @@
     },
     {
         "id": 763128073,
-        "duration": 65959,
+        "duration": 65920,
         "url": "https://soundcloud.com/they-might-be-giants/glasgow",
         "title": "Glasgow",
         "album": "Venue Songs",
@@ -3021,7 +2483,7 @@
     },
     {
         "id": 763128076,
-        "duration": 162769,
+        "duration": 162733,
         "url": "https://soundcloud.com/they-might-be-giants/austin-in-situ",
         "title": "Austin",
         "album": "Venue Songs",
@@ -3031,7 +2493,7 @@
     },
     {
         "id": 763128079,
-        "duration": 81032,
+        "duration": 80986,
         "url": "https://soundcloud.com/they-might-be-giants/pittsburgh",
         "title": "Pittsburgh",
         "album": "Venue Songs",
@@ -3041,22 +2503,13 @@
     },
     {
         "id": 763128085,
-        "duration": 142237,
+        "duration": 142186,
         "url": "https://soundcloud.com/they-might-be-giants/bloodmobile",
         "title": "Bloodmobile",
         "album": "Venue Songs",
         "artist": "They Might Be Giants",
         "originalTitle": "Bloodmobile",
         "exclusionReason": "\"Venue Songs\" feels too obscure"
-    },
-    {
-        "id": 763128088,
-        "duration": 129149,
-        "url": "https://soundcloud.com/they-might-be-giants/mink-car-1",
-        "title": "Mink Car",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Mink Car"
     },
     {
         "id": 763128091,
@@ -3069,7 +2522,7 @@
     },
     {
         "id": 763128094,
-        "duration": 91847,
+        "duration": 91800,
         "url": "https://soundcloud.com/they-might-be-giants/houston-in-situ",
         "title": "Houston",
         "album": "Venue Songs",
@@ -3079,7 +2532,7 @@
     },
     {
         "id": 763128097,
-        "duration": 125884,
+        "duration": 125840,
         "url": "https://soundcloud.com/they-might-be-giants/new-orleans-in-situ",
         "title": "New Orleans",
         "album": "Venue Songs",
@@ -3089,7 +2542,7 @@
     },
     {
         "id": 763128100,
-        "duration": 110080,
+        "duration": 110053,
         "url": "https://soundcloud.com/they-might-be-giants/charlottesville",
         "title": "Charlottesville",
         "album": "Venue Songs",
@@ -3098,17 +2551,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128106,
-        "duration": 118126,
-        "url": "https://soundcloud.com/they-might-be-giants/older-2",
-        "title": "Older",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Older"
-    },
-    {
         "id": 763128109,
-        "duration": 80379,
+        "duration": 80333,
         "url": "https://soundcloud.com/they-might-be-giants/pittsburgh-in-situ",
         "title": "Pittsburgh",
         "album": "Venue Songs",
@@ -3118,7 +2562,7 @@
     },
     {
         "id": 763128112,
-        "duration": 63922,
+        "duration": 63893,
         "url": "https://soundcloud.com/they-might-be-giants/charleston-in-situ",
         "title": "Charleston",
         "album": "Venue Songs",
@@ -3128,7 +2572,7 @@
     },
     {
         "id": 763128115,
-        "duration": 70269,
+        "duration": 70226,
         "url": "https://soundcloud.com/they-might-be-giants/memphis-in-situ",
         "title": "Memphis",
         "album": "Venue Songs",
@@ -3138,7 +2582,7 @@
     },
     {
         "id": 763128118,
-        "duration": 59298,
+        "duration": 59253,
         "url": "https://soundcloud.com/they-might-be-giants/taste-the-fame",
         "title": "Taste The Fame",
         "album": "Venue Songs",
@@ -3148,7 +2592,7 @@
     },
     {
         "id": 763128130,
-        "duration": 98482,
+        "duration": 98440,
         "url": "https://soundcloud.com/they-might-be-giants/tippecanoe-and-tyler-too",
         "title": "Tippecanoe And Tyler Too",
         "album": "Venue Songs",
@@ -3157,35 +2601,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128133,
-        "duration": 109270,
-        "url": "https://soundcloud.com/they-might-be-giants/drink-2",
-        "title": "Drink!",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Drink!"
-    },
-    {
-        "id": 763128136,
-        "duration": 157414,
-        "url": "https://soundcloud.com/they-might-be-giants/she-thinks-shes-edith-head-2",
-        "title": "She Thinks She's Edith Head",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "She Thinks She's Edith Head"
-    },
-    {
-        "id": 763128142,
-        "duration": 132049,
-        "url": "https://soundcloud.com/they-might-be-giants/wicked-little-critta-1",
-        "title": "Wicked Little Critta",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Wicked Little Critta"
-    },
-    {
         "id": 763128145,
-        "duration": 71654,
+        "duration": 71626,
         "url": "https://soundcloud.com/they-might-be-giants/omaha-in-situ",
         "title": "Omaha",
         "album": "Venue Songs",
@@ -3195,7 +2612,7 @@
     },
     {
         "id": 763128148,
-        "duration": 86988,
+        "duration": 86960,
         "url": "https://soundcloud.com/they-might-be-giants/albany",
         "title": "Albany",
         "album": "Venue Songs",
@@ -3205,7 +2622,7 @@
     },
     {
         "id": 763128151,
-        "duration": 100180,
+        "duration": 100146,
         "url": "https://soundcloud.com/they-might-be-giants/los-angeles-in-situ",
         "title": "Los Angeles",
         "album": "Venue Songs",
@@ -3215,7 +2632,7 @@
     },
     {
         "id": 763128154,
-        "duration": 113345,
+        "duration": 113306,
         "url": "https://soundcloud.com/they-might-be-giants/charlottesville-in-situ",
         "title": "Charlottesville",
         "album": "Venue Songs",
@@ -3225,7 +2642,7 @@
     },
     {
         "id": 763128163,
-        "duration": 50051,
+        "duration": 50000,
         "url": "https://soundcloud.com/they-might-be-giants/asbury-park",
         "title": "Asbury Park",
         "album": "Venue Songs",
@@ -3235,7 +2652,7 @@
     },
     {
         "id": 763128166,
-        "duration": 89260,
+        "duration": 89226,
         "url": "https://soundcloud.com/they-might-be-giants/asheville",
         "title": "Asheville",
         "album": "Venue Songs",
@@ -3244,26 +2661,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128172,
-        "duration": 158067,
-        "url": "https://soundcloud.com/they-might-be-giants/cyclops-rock-1",
-        "title": "Cyclops Rock",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Cyclops Rock"
-    },
-    {
-        "id": 763128175,
-        "duration": 152111,
-        "url": "https://soundcloud.com/they-might-be-giants/ive-got-a-fang-1",
-        "title": "I've Got a Fang",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "I've Got a Fang"
-    },
-    {
         "id": 763128178,
-        "duration": 76173,
+        "duration": 76146,
         "url": "https://soundcloud.com/they-might-be-giants/london-in-situ",
         "title": "London",
         "album": "Venue Songs",
@@ -3272,26 +2671,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128181,
-        "duration": 186436,
-        "url": "https://soundcloud.com/they-might-be-giants/another-first-kiss-1",
-        "title": "Another First Kiss",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Another First Kiss"
-    },
-    {
-        "id": 763128184,
-        "duration": 138867,
-        "url": "https://soundcloud.com/they-might-be-giants/working-undercover-for-the-1",
-        "title": "Working Undercover for the Man",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Working Undercover for the Man"
-    },
-    {
         "id": 763128187,
-        "duration": 72751,
+        "duration": 72720,
         "url": "https://soundcloud.com/they-might-be-giants/st-louis-in-situ",
         "title": "St Louis",
         "album": "Venue Songs",
@@ -3300,26 +2681,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128193,
-        "duration": 160183,
-        "url": "https://soundcloud.com/they-might-be-giants/yeh-yeh-1",
-        "title": "Yeh Yeh",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Yeh Yeh"
-    },
-    {
-        "id": 763128199,
-        "duration": 133538,
-        "url": "https://soundcloud.com/they-might-be-giants/hovering-sombrero-1",
-        "title": "Hovering Sombrero",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Hovering Sombrero"
-    },
-    {
         "id": 763128202,
-        "duration": 125022,
+        "duration": 124986,
         "url": "https://soundcloud.com/they-might-be-giants/love-is-eternity",
         "title": "Love Is Eternity",
         "album": "Venue Songs",
@@ -3329,7 +2692,7 @@
     },
     {
         "id": 763128205,
-        "duration": 75546,
+        "duration": 75520,
         "url": "https://soundcloud.com/they-might-be-giants/brooklyn",
         "title": "Brooklyn",
         "album": "Venue Songs",
@@ -3339,7 +2702,7 @@
     },
     {
         "id": 763128208,
-        "duration": 94668,
+        "duration": 94640,
         "url": "https://soundcloud.com/they-might-be-giants/colombia-in-situ",
         "title": "Colombia",
         "album": "Venue Songs",
@@ -3349,7 +2712,7 @@
     },
     {
         "id": 763128211,
-        "duration": 163004,
+        "duration": 162973,
         "url": "https://soundcloud.com/they-might-be-giants/towson-in-situ",
         "title": "Towson",
         "album": "Venue Songs",
@@ -3358,17 +2721,8 @@
         "exclusionReason": "\"Venue Songs\" feels too obscure"
     },
     {
-        "id": 763128214,
-        "duration": 177816,
-        "url": "https://soundcloud.com/they-might-be-giants/my-man-1",
-        "title": "My Man",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "My Man"
-    },
-    {
         "id": 763128217,
-        "duration": 67500,
+        "duration": 67466,
         "url": "https://soundcloud.com/they-might-be-giants/glasgow-in-situ",
         "title": "Glasgow",
         "album": "Venue Songs",
@@ -3387,7 +2741,7 @@
     },
     {
         "id": 763128235,
-        "duration": 99840,
+        "duration": 99813,
         "url": "https://soundcloud.com/they-might-be-giants/raleigh-in-situ",
         "title": "Raleigh",
         "album": "Venue Songs",
@@ -3397,7 +2751,7 @@
     },
     {
         "id": 763128238,
-        "duration": 113633,
+        "duration": 113600,
         "url": "https://soundcloud.com/they-might-be-giants/tucson-in-situ",
         "title": "Tucson",
         "album": "Venue Songs",
@@ -3425,7 +2779,7 @@
     },
     {
         "id": 920767831,
-        "duration": 140487,
+        "duration": 140446,
         "url": "https://soundcloud.com/they-might-be-giants/who-are-the-electors",
         "title": "Who Are the Electors?",
         "album": "Who Are the Electors?",
@@ -4151,34 +3505,37 @@
     },
     {
         "id": 999735097,
-        "duration": 194978,
+        "duration": 194933,
         "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday",
         "title": "I Lost Thursday",
         "album": "I Lost Thursday",
         "artist": "They Might Be Giants",
-        "originalTitle": "I Lost Thursday"
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Matching track on main release 'BOOK'"
     },
     {
         "id": 1043519797,
-        "duration": 202344,
+        "duration": 202293,
         "url": "https://soundcloud.com/they-might-be-giants/i-broke-my-own-rule",
         "title": "I Broke My Own Rule",
         "album": "I Broke My Own Rule",
         "artist": "They Might Be Giants",
-        "originalTitle": "I Broke My Own Rule"
+        "originalTitle": "I Broke My Own Rule",
+        "exclusionReason": "Matching track on main release 'BOOK'"
     },
     {
         "id": 1086316741,
-        "duration": 192418,
+        "duration": 192373,
         "url": "https://soundcloud.com/they-might-be-giants/i-cant-remember-the-dream",
         "title": "I Can't Remember the Dream",
         "album": "I Can't Remember the Dream",
         "artist": "They Might Be Giants",
-        "originalTitle": "I Can't Remember the Dream"
+        "originalTitle": "I Can't Remember the Dream",
+        "exclusionReason": "Matching track on main release 'BOOK'"
     },
     {
         "id": 1091522629,
-        "duration": 183484,
+        "duration": 183453,
         "url": "https://soundcloud.com/they-might-be-giants/new-york-city",
         "title": "New York City",
         "album": "Factory Showroom",
@@ -4250,15 +3607,6 @@
         "originalTitle": "AKA Driver"
     },
     {
-        "id": 1091522659,
-        "duration": 160183,
-        "url": "https://soundcloud.com/they-might-be-giants/cloissone",
-        "title": "Cloisonné",
-        "album": "Cloissoné",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Cloissoné"
-    },
-    {
         "id": 1091522665,
         "duration": 116846,
         "url": "https://soundcloud.com/they-might-be-giants/twisting",
@@ -4323,7 +3671,7 @@
     },
     {
         "id": 1091522749,
-        "duration": 115540,
+        "duration": 115506,
         "url": "https://soundcloud.com/they-might-be-giants/i-can-hear-you",
         "title": "I Can Hear You",
         "album": "Factory Showroom",
@@ -4386,7 +3734,7 @@
     },
     {
         "id": 1091522809,
-        "duration": 184712,
+        "duration": 184666,
         "url": "https://soundcloud.com/they-might-be-giants/james-k-polk",
         "title": "James K. Polk",
         "album": "Factory Showroom",
@@ -4422,7 +3770,7 @@
     },
     {
         "id": 1091522839,
-        "duration": 230426,
+        "duration": 230400,
         "url": "https://soundcloud.com/they-might-be-giants/metal-detector",
         "title": "Metal Detector",
         "album": "Factory Showroom",
@@ -4476,7 +3824,7 @@
     },
     {
         "id": 1091522893,
-        "duration": 212193,
+        "duration": 212160,
         "url": "https://soundcloud.com/they-might-be-giants/the-bells-are-ringing",
         "title": "The Bells Are Ringing",
         "album": "Factory Showroom",
@@ -4485,7 +3833,7 @@
     },
     {
         "id": 1091522914,
-        "duration": 264882,
+        "duration": 264853,
         "url": "https://soundcloud.com/they-might-be-giants/spiraling-shape",
         "title": "Spiraling Shape",
         "album": "Factory Showroom",
@@ -4556,15 +3904,6 @@
         "originalTitle": "Someone Keeps Moving My Chair"
     },
     {
-        "id": 1091522995,
-        "duration": 113528,
-        "url": "https://soundcloud.com/they-might-be-giants/old-pine-box",
-        "title": "Old Pine Box",
-        "album": "Old Pine Box",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Old Pine Box"
-    },
-    {
         "id": 1091522998,
         "duration": 46106,
         "url": "https://soundcloud.com/they-might-be-giants/minimum-wage",
@@ -4593,7 +3932,7 @@
     },
     {
         "id": 1091523031,
-        "duration": 105796,
+        "duration": 105760,
         "url": "https://soundcloud.com/they-might-be-giants/your-own-worst-enemy",
         "title": "Your Own Worst Enemy",
         "album": "Factory Showroom",
@@ -4638,7 +3977,7 @@
     },
     {
         "id": 1091523073,
-        "duration": 121469,
+        "duration": 121440,
         "url": "https://soundcloud.com/they-might-be-giants/exquisite-dead-guy",
         "title": "Exquisite Dead Guy",
         "album": "Factory Showroom",
@@ -4683,7 +4022,7 @@
     },
     {
         "id": 1091523121,
-        "duration": 173714,
+        "duration": 173666,
         "url": "https://soundcloud.com/they-might-be-giants/till-my-head-falls-off-1",
         "title": "Till My Head Falls Off",
         "album": "Factory Showroom",
@@ -4692,7 +4031,7 @@
     },
     {
         "id": 1091523133,
-        "duration": 230922,
+        "duration": 230880,
         "url": "https://soundcloud.com/they-might-be-giants/s-e-x-x-y-1",
         "title": "S-E-X-X-Y",
         "album": "Factory Showroom",
@@ -4719,16 +4058,16 @@
     },
     {
         "id": 1091523148,
-        "duration": 268278,
+        "duration": 268240,
         "url": "https://soundcloud.com/they-might-be-giants/how-can-i-sing-like-a-girl-1",
         "title": "How Can I Sing Like a Girl?",
         "album": "Factory Showroom",
         "artist": "They Might Be Giants",
-        "originalTitle": "How Can I Sing Like a Girl?"
+        "originalTitle": "How Can I Sing like a Girl?"
     },
     {
         "id": 1091523151,
-        "duration": 242077,
+        "duration": 242026,
         "url": "https://soundcloud.com/they-might-be-giants/pet-name",
         "title": "Pet Name",
         "album": "Factory Showroom",
@@ -4873,7 +4212,7 @@
     },
     {
         "id": 1091523292,
-        "duration": 217051,
+        "duration": 217000,
         "url": "https://soundcloud.com/they-might-be-giants/xtc-vs-adam-ant-1",
         "title": "XTC vs. Adam Ant",
         "album": "Factory Showroom",
@@ -4882,7 +4221,7 @@
     },
     {
         "id": 1091531248,
-        "duration": 112091,
+        "duration": 112040,
         "url": "https://soundcloud.com/they-might-be-giants/mr-me-1",
         "title": "Mr. Me",
         "album": "Lincoln",
@@ -4919,7 +4258,7 @@
     },
     {
         "id": 1091531266,
-        "duration": 144144,
+        "duration": 144093,
         "url": "https://soundcloud.com/they-might-be-giants/the-worlds-address-1",
         "title": "The World's Address",
         "album": "Lincoln",
@@ -4938,16 +4277,16 @@
     },
     {
         "id": 1091531281,
-        "duration": 76278,
+        "duration": 76226,
         "url": "https://soundcloud.com/they-might-be-giants/stand-on-your-head",
         "title": "Stand On Your Own Head",
         "album": "Lincoln",
         "artist": "They Might Be Giants",
-        "originalTitle": "Stand On Your Own Head"
+        "originalTitle": "Stand on Your Own Head"
     },
     {
         "id": 1091531287,
-        "duration": 118727,
+        "duration": 118693,
         "url": "https://soundcloud.com/they-might-be-giants/clap-your-hands-bonus-live",
         "title": "Clap Your Hands",
         "album": "No! (Deluxe Edition)",
@@ -4957,7 +4296,7 @@
     },
     {
         "id": 1091531293,
-        "duration": 98456,
+        "duration": 98426,
         "url": "https://soundcloud.com/they-might-be-giants/words-are-like-demo",
         "title": "Words Are Like",
         "album": "They Got Lost",
@@ -4967,7 +4306,7 @@
     },
     {
         "id": 1091531296,
-        "duration": 171468,
+        "duration": 171426,
         "url": "https://soundcloud.com/they-might-be-giants/youth-culture-killed-my-dog-1",
         "title": "Youth Culture Killed My Dog",
         "album": "They Might Be Giants",
@@ -4994,7 +4333,7 @@
     },
     {
         "id": 1091531317,
-        "duration": 156082,
+        "duration": 156040,
         "url": "https://soundcloud.com/they-might-be-giants/dont-lets-start-2",
         "title": "Don't Let's Start",
         "album": "They Might Be Giants",
@@ -5003,7 +4342,7 @@
     },
     {
         "id": 1091531326,
-        "duration": 158276,
+        "duration": 158226,
         "url": "https://soundcloud.com/they-might-be-giants/absolutely-bills-mood-1",
         "title": "Absolutely Bill's Mood",
         "album": "They Might Be Giants",
@@ -5012,7 +4351,7 @@
     },
     {
         "id": 1091531335,
-        "duration": 137796,
+        "duration": 137746,
         "url": "https://soundcloud.com/they-might-be-giants/four-of-two",
         "title": "Four of Two",
         "album": "No!",
@@ -5021,16 +4360,16 @@
     },
     {
         "id": 1091531338,
-        "duration": 75755,
+        "duration": 75706,
         "url": "https://soundcloud.com/they-might-be-giants/boat-of-car-1",
         "title": "Boat Of Car",
         "album": "They Might Be Giants",
         "artist": "They Might Be Giants",
-        "originalTitle": "Boat Of Car"
+        "originalTitle": "Boat of Car"
     },
     {
         "id": 1091531341,
-        "duration": 175282,
+        "duration": 175240,
         "url": "https://soundcloud.com/they-might-be-giants/violin-bonus-live-version",
         "title": "Violin",
         "album": "No! (Deluxe Edition)",
@@ -5040,7 +4379,7 @@
     },
     {
         "id": 1091531347,
-        "duration": 146651,
+        "duration": 146613,
         "url": "https://soundcloud.com/they-might-be-giants/violin",
         "title": "Violin",
         "album": "No!",
@@ -5048,17 +4387,8 @@
         "originalTitle": "Violin"
     },
     {
-        "id": 1091531350,
-        "duration": 156029,
-        "url": "https://soundcloud.com/they-might-be-giants/feast-of-lights-1",
-        "title": "Feast of Lights",
-        "album": "Holidayland",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Feast of Lights"
-    },
-    {
         "id": 1091531353,
-        "duration": 70296,
+        "duration": 70266,
         "url": "https://soundcloud.com/they-might-be-giants/cage-aquarium-1",
         "title": "Cage & Aquarium",
         "album": "Lincoln",
@@ -5067,7 +4397,7 @@
     },
     {
         "id": 1091531356,
-        "duration": 177502,
+        "duration": 177453,
         "url": "https://soundcloud.com/they-might-be-giants/the-mesopotamians-2",
         "title": "The Mesopotamians",
         "album": "The Else",
@@ -5076,7 +4406,7 @@
     },
     {
         "id": 1091531359,
-        "duration": 126328,
+        "duration": 126293,
         "url": "https://soundcloud.com/they-might-be-giants/lie-still-little-bottle-1",
         "title": "Lie Still, Little Bottle",
         "album": "Lincoln",
@@ -5085,7 +4415,7 @@
     },
     {
         "id": 1091531365,
-        "duration": 160522,
+        "duration": 160480,
         "url": "https://soundcloud.com/they-might-be-giants/sleepwalkers",
         "title": "Sleepwalkers",
         "album": "No!",
@@ -5094,7 +4424,7 @@
     },
     {
         "id": 1091531368,
-        "duration": 159687,
+        "duration": 159653,
         "url": "https://soundcloud.com/they-might-be-giants/im-impressed-1",
         "title": "I'm Impressed",
         "album": "The Else",
@@ -5103,7 +4433,7 @@
     },
     {
         "id": 1091531371,
-        "duration": 171416,
+        "duration": 171378,
         "url": "https://soundcloud.com/they-might-be-giants/electronic-istanbul-not",
         "title": "Electronic Istanbul (Not Constantinople)",
         "album": "Idlewild: A Compilation",
@@ -5112,12 +4442,12 @@
     },
     {
         "id": 1091531374,
-        "duration": 133094,
+        "duration": 133066,
         "url": "https://soundcloud.com/they-might-be-giants/put-your-hand-inside-the-1",
         "title": "Put Your Hand Inside The Puppet Head",
         "album": "They Might Be Giants",
         "artist": "They Might Be Giants",
-        "originalTitle": "Put Your Hand Inside The Puppet Head"
+        "originalTitle": "Put Your Hand Inside the Puppet Head"
     },
     {
         "id": 1091531380,
@@ -5130,7 +4460,7 @@
     },
     {
         "id": 1091531386,
-        "duration": 87745,
+        "duration": 87694,
         "url": "https://soundcloud.com/they-might-be-giants/number-three-1",
         "title": "Number Three",
         "album": "They Might Be Giants",
@@ -5139,16 +4469,16 @@
     },
     {
         "id": 1091531392,
-        "duration": 151876,
+        "duration": 151840,
         "url": "https://soundcloud.com/they-might-be-giants/snowball-in-hell-1",
         "title": "Snowball In Hell",
         "album": "Lincoln",
         "artist": "They Might Be Giants",
-        "originalTitle": "Snowball In Hell"
+        "originalTitle": "Snowball in Hell"
     },
     {
         "id": 1091531398,
-        "duration": 70113,
+        "duration": 70080,
         "url": "https://soundcloud.com/they-might-be-giants/wake-up-call",
         "title": "Wake up Call",
         "album": "No!",
@@ -5177,7 +4507,7 @@
     },
     {
         "id": 1091531416,
-        "duration": 89940,
+        "duration": 89906,
         "url": "https://soundcloud.com/they-might-be-giants/no",
         "title": "No!",
         "album": "No!",
@@ -5186,7 +4516,7 @@
     },
     {
         "id": 1091531419,
-        "duration": 118831,
+        "duration": 118800,
         "url": "https://soundcloud.com/they-might-be-giants/i-hope-that-i-get-old-before-1",
         "title": "I Hope That I Get Old Before I Die",
         "album": "They Might Be Giants",
@@ -5213,7 +4543,7 @@
     },
     {
         "id": 1091531431,
-        "duration": 122567,
+        "duration": 122520,
         "url": "https://soundcloud.com/they-might-be-giants/the-edison-museum-1",
         "title": "The Edison Museum",
         "album": "No!",
@@ -5241,7 +4571,7 @@
     },
     {
         "id": 1091531443,
-        "duration": 201195,
+        "duration": 201160,
         "url": "https://soundcloud.com/they-might-be-giants/hide-away-folk-family-1",
         "title": "Hide Away Folk Family",
         "album": "They Might Be Giants",
@@ -5260,7 +4590,7 @@
     },
     {
         "id": 1091531449,
-        "duration": 91272,
+        "duration": 91226,
         "url": "https://soundcloud.com/they-might-be-giants/rabid-child-1",
         "title": "Rabid Child",
         "album": "They Might Be Giants",
@@ -5278,7 +4608,7 @@
     },
     {
         "id": 1091531464,
-        "duration": 82469,
+        "duration": 82440,
         "url": "https://soundcloud.com/they-might-be-giants/robot-parade",
         "title": "Robot Parade",
         "album": "No!",
@@ -5355,7 +4685,7 @@
     },
     {
         "id": 1091531503,
-        "duration": 161019,
+        "duration": 160986,
         "url": "https://soundcloud.com/they-might-be-giants/where-do-they-make-balloons",
         "title": "Where Do They Make Balloons?",
         "album": "No!",
@@ -5364,25 +4694,16 @@
     },
     {
         "id": 1091531509,
-        "duration": 73117,
+        "duration": 73066,
         "url": "https://soundcloud.com/they-might-be-giants/shoehorn-with-teeth-1",
         "title": "Shoehorn With Teeth",
         "album": "Lincoln",
         "artist": "They Might Be Giants",
-        "originalTitle": "Shoehorn With Teeth"
-    },
-    {
-        "id": 1091531512,
-        "duration": 128026,
-        "url": "https://soundcloud.com/they-might-be-giants/o-tannenbaum-1",
-        "title": "O Tannenbaum",
-        "album": "Holidayland",
-        "artist": "They Might Be Giants",
-        "originalTitle": "O Tannenbaum"
+        "originalTitle": "Shoehorn with Teeth"
     },
     {
         "id": 1091531515,
-        "duration": 130821,
+        "duration": 130773,
         "url": "https://soundcloud.com/they-might-be-giants/she-was-a-hotel-detective-2",
         "title": "(She Was A) Hotel Detective",
         "album": "They Might Be Giants",
@@ -5390,18 +4711,8 @@
         "originalTitle": "(She Was A) Hotel Detective"
     },
     {
-        "id": 1091531521,
-        "duration": 113842,
-        "url": "https://soundcloud.com/they-might-be-giants/santas-beard-3",
-        "title": "Santa's Beard",
-        "album": "Holidayland",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Santa's Beard",
-        "exclusionReason": "Matching track on main release 'Lincoln'"
-    },
-    {
         "id": 1091531527,
-        "duration": 81136,
+        "duration": 81106,
         "url": "https://soundcloud.com/they-might-be-giants/chess-piece-face-1",
         "title": "Chess Piece Face",
         "album": "They Might Be Giants",
@@ -5410,7 +4721,7 @@
     },
     {
         "id": 1091531530,
-        "duration": 25704,
+        "duration": 25666,
         "url": "https://soundcloud.com/they-might-be-giants/toddler-hiway-1",
         "title": "Toddler Hiway",
         "album": "They Might Be Giants",
@@ -5419,16 +4730,16 @@
     },
     {
         "id": 1091531539,
-        "duration": 145894,
+        "duration": 145866,
         "url": "https://soundcloud.com/they-might-be-giants/alienations-for-the-rich-1",
         "title": "Alienation's For The Rich",
         "album": "They Might Be Giants",
         "artist": "They Might Be Giants",
-        "originalTitle": "Alienation's For The Rich"
+        "originalTitle": "Alienation's for the Rich"
     },
     {
         "id": 1091531542,
-        "duration": 173296,
+        "duration": 173253,
         "url": "https://soundcloud.com/they-might-be-giants/robot-parade-bonus-live",
         "title": "Robot Parade",
         "album": "No! (Deluxe Edition)",
@@ -5438,7 +4749,7 @@
     },
     {
         "id": 1091531545,
-        "duration": 82364,
+        "duration": 82333,
         "url": "https://soundcloud.com/they-might-be-giants/clap-your-hands-2",
         "title": "Clap Your Hands",
         "album": "No!",
@@ -5494,16 +4805,16 @@
     },
     {
         "id": 1091531584,
-        "duration": 153496,
+        "duration": 153466,
         "url": "https://soundcloud.com/they-might-be-giants/theyll-need-a-crane-1",
         "title": "They'll Need A Crane",
         "album": "Lincoln",
         "artist": "They Might Be Giants",
-        "originalTitle": "They'll Need A Crane"
+        "originalTitle": "They'll Need a Crane"
     },
     {
         "id": 1091531590,
-        "duration": 188578,
+        "duration": 188533,
         "url": "https://soundcloud.com/they-might-be-giants/john-lee-supertaster-bonus",
         "title": "John Lee Supertaster",
         "album": "No! (Deluxe Edition)",
@@ -5513,7 +4824,7 @@
     },
     {
         "id": 1091531596,
-        "duration": 120451,
+        "duration": 120400,
         "url": "https://soundcloud.com/they-might-be-giants/nothings-gonna-change-my-1",
         "title": "Nothing's Gonna Change My Clothes",
         "album": "They Might Be Giants",
@@ -5522,16 +4833,16 @@
     },
     {
         "id": 1091531605,
-        "duration": 112718,
+        "duration": 112667,
         "url": "https://soundcloud.com/they-might-be-giants/kiss-me-son-of-god-1",
         "title": "Kiss Me, Son Of God",
         "album": "Lincoln",
         "artist": "They Might Be Giants",
-        "originalTitle": "Kiss Me, Son Of God"
+        "originalTitle": "Kiss Me, Son of God"
     },
     {
         "id": 1091531608,
-        "duration": 160209,
+        "duration": 160173,
         "url": "https://soundcloud.com/they-might-be-giants/careful-what-you-pack-2",
         "title": "Careful What You Pack",
         "album": "The Else",
@@ -5540,7 +4851,7 @@
     },
     {
         "id": 1091531611,
-        "duration": 115435,
+        "duration": 115400,
         "url": "https://soundcloud.com/they-might-be-giants/santas-beard-4",
         "title": "Santa's Beard",
         "album": "Lincoln",
@@ -5549,7 +4860,7 @@
     },
     {
         "id": 1091531614,
-        "duration": 90044,
+        "duration": 90013,
         "url": "https://soundcloud.com/they-might-be-giants/stalk-of-wheat-bonus-live",
         "title": "Stalk of Wheat",
         "album": "No! (Deluxe Edition)",
@@ -5568,7 +4879,7 @@
     },
     {
         "id": 1091531623,
-        "duration": 87327,
+        "duration": 87293,
         "url": "https://soundcloud.com/they-might-be-giants/the-day-1",
         "title": "The Day",
         "album": "They Might Be Giants",
@@ -5586,9 +4897,9 @@
     },
     {
         "id": 1091531629,
-        "duration": 208222,
+        "duration": 208173,
         "url": "https://soundcloud.com/they-might-be-giants/lazyhead-and-sleepbones",
-        "title": "Lazyhead and Sleepbones",
+        "title": "Lazyhead and Sleepybones",
         "album": "No!",
         "artist": "They Might Be Giants (For Kids)",
         "originalTitle": "Lazyhead and Sleepbones"
@@ -5603,15 +4914,6 @@
         "originalTitle": "For Science"
     },
     {
-        "id": 1091531635,
-        "duration": 175334,
-        "url": "https://soundcloud.com/they-might-be-giants/santa-claus-1",
-        "title": "Santa Claus",
-        "album": "Holidayland",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Santa Claus"
-    },
-    {
         "id": 1091531638,
         "duration": 137169,
         "url": "https://soundcloud.com/they-might-be-giants/upside-down-frown",
@@ -5622,7 +4924,7 @@
     },
     {
         "id": 1091531653,
-        "duration": 186201,
+        "duration": 186173,
         "url": "https://soundcloud.com/they-might-be-giants/where-your-eyes-dont-go-1",
         "title": "Where Your Eyes Don't Go",
         "album": "Lincoln",
@@ -5631,7 +4933,7 @@
     },
     {
         "id": 1091531659,
-        "duration": 140696,
+        "duration": 140666,
         "url": "https://soundcloud.com/they-might-be-giants/rhythm-section-want-ad-1",
         "title": "Rhythm Section Want Ad",
         "album": "They Might Be Giants",
@@ -5659,7 +4961,7 @@
     },
     {
         "id": 1091531671,
-        "duration": 96287,
+        "duration": 96240,
         "url": "https://soundcloud.com/they-might-be-giants/32-footsteps-1",
         "title": "32 Footsteps",
         "album": "They Might Be Giants",
@@ -5696,23 +4998,13 @@
         "exclusionReason": "Matching track on main release 'Long Tall Weekend'"
     },
     {
-        "id": 1091531695,
-        "duration": 137012,
-        "url": "https://soundcloud.com/they-might-be-giants/careless-santa-1",
-        "title": "Careless Santa",
-        "album": "Holidayland",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Careless Santa",
-        "exclusionReason": "This is technically Mono Puff, not TMBG"
-    },
-    {
         "id": 1091531698,
-        "duration": 157518,
+        "duration": 157467,
         "url": "https://soundcloud.com/they-might-be-giants/shes-an-angel-2",
         "title": "She's An Angel",
         "album": "They Might Be Giants",
         "artist": "They Might Be Giants",
-        "originalTitle": "She's An Angel"
+        "originalTitle": "She's an Angel"
     },
     {
         "id": 1091531704,
@@ -5725,7 +5017,7 @@
     },
     {
         "id": 1091531713,
-        "duration": 160444,
+        "duration": 160400,
         "url": "https://soundcloud.com/they-might-be-giants/purple-toupee-1",
         "title": "Purple Toupee",
         "album": "Lincoln",
@@ -5734,16 +5026,16 @@
     },
     {
         "id": 1091531716,
-        "duration": 120738,
+        "duration": 120693,
         "url": "https://soundcloud.com/they-might-be-giants/piece-of-dirt-1",
         "title": "Piece Of Dirt",
         "album": "Lincoln",
         "artist": "They Might Be Giants",
-        "originalTitle": "Piece Of Dirt"
+        "originalTitle": "Piece of Dirt"
     },
     {
         "id": 1091531719,
-        "duration": 113763,
+        "duration": 113733,
         "url": "https://soundcloud.com/they-might-be-giants/youll-miss-me-1",
         "title": "You'll Miss Me",
         "album": "Lincoln",
@@ -5752,7 +5044,7 @@
     },
     {
         "id": 1091531722,
-        "duration": 141009,
+        "duration": 140973,
         "url": "https://soundcloud.com/they-might-be-giants/cowtown-1",
         "title": "Cowtown",
         "album": "Lincoln",
@@ -5761,16 +5053,16 @@
     },
     {
         "id": 1091531725,
-        "duration": 156891,
+        "duration": 156840,
         "url": "https://soundcloud.com/they-might-be-giants/ive-got-a-match-1",
         "title": "I've Got A Match",
         "album": "Lincoln",
         "artist": "They Might Be Giants",
-        "originalTitle": "I've Got A Match"
+        "originalTitle": "I've Got a Match"
     },
     {
         "id": 1091531728,
-        "duration": 34508,
+        "duration": 34480,
         "url": "https://soundcloud.com/they-might-be-giants/i-am-a-grocery-bag",
         "title": "I Am a Grocery Bag",
         "album": "No!",
@@ -5779,13 +5071,13 @@
     },
     {
         "id": 1091531731,
-        "duration": 177711,
+        "duration": 177680,
         "url": "https://soundcloud.com/they-might-be-giants/doctor-worm-bonus-live-version",
         "title": "Doctor Worm",
         "album": "No! (Deluxe Edition)",
         "artist": "They Might Be Giants (For Kids)",
         "originalTitle": "Doctor Worm (Bonus Live Version)",
-        "exclusionReason": "Replaced with https://soundcloud.com/they-might-be-giants/doctor-worm"
+        "exclusionReason": "Replaced with https://soundcloud.com/they-might-be-giants/doctor-worm-6"
     },
     {
         "id": 1091531734,
@@ -5799,7 +5091,7 @@
     },
     {
         "id": 1091531737,
-        "duration": 140434,
+        "duration": 140394,
         "url": "https://soundcloud.com/they-might-be-giants/alphabet-of-nations-bonus",
         "title": "Alphabet of Nations",
         "album": "No! (Deluxe Edition)",
@@ -5849,7 +5141,7 @@
     },
     {
         "id": 1091531758,
-        "duration": 64104,
+        "duration": 64053,
         "url": "https://soundcloud.com/they-might-be-giants/i-am-not-your-broom",
         "title": "I Am Not Your Broom",
         "album": "No!",
@@ -5858,7 +5150,7 @@
     },
     {
         "id": 1091531767,
-        "duration": 203050,
+        "duration": 203000,
         "url": "https://soundcloud.com/they-might-be-giants/ana-ng-3",
         "title": "Ana Ng",
         "album": "Lincoln",
@@ -5867,7 +5159,7 @@
     },
     {
         "id": 1091531770,
-        "duration": 150518,
+        "duration": 150480,
         "url": "https://soundcloud.com/they-might-be-giants/the-house-at-the-top-of-the",
         "title": "The House at the Top of the Tree",
         "album": "No!",
@@ -5876,7 +5168,7 @@
     },
     {
         "id": 1091531779,
-        "duration": 75389,
+        "duration": 75346,
         "url": "https://soundcloud.com/they-might-be-giants/in-the-middle-in-the-middle-in",
         "title": "In the Middle, In the Middle, In the Middle",
         "album": "No!",
@@ -5894,7 +5186,7 @@
     },
     {
         "id": 1091531788,
-        "duration": 120529,
+        "duration": 120493,
         "url": "https://soundcloud.com/they-might-be-giants/john-lee-supertaster",
         "title": "John Lee Supertaster",
         "album": "No!",
@@ -5950,7 +5242,7 @@
     },
     {
         "id": 1091531818,
-        "duration": 139964,
+        "duration": 139933,
         "url": "https://soundcloud.com/they-might-be-giants/everything-right-is-wrong-1",
         "title": "Everything Right is Wrong Again",
         "album": "They Might Be Giants",
@@ -5959,7 +5251,7 @@
     },
     {
         "id": 1091531821,
-        "duration": 162168,
+        "duration": 162133,
         "url": "https://soundcloud.com/they-might-be-giants/pencil-rain-1",
         "title": "Pencil Rain",
         "album": "Lincoln",
@@ -5968,7 +5260,7 @@
     },
     {
         "id": 1091531827,
-        "duration": 192131,
+        "duration": 192093,
         "url": "https://soundcloud.com/they-might-be-giants/bed-bed-bed",
         "title": "Bed Bed Bed",
         "album": "No!",
@@ -5976,17 +5268,28 @@
         "originalTitle": "Bed Bed Bed"
     },
     {
+        "id": 1091531845,
+        "duration": 130013,
+        "url": "https://soundcloud.com/they-might-be-giants/fibber-island",
+        "title": "Fibber Island",
+        "album": "The Rounder Records Story",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Fibber Island",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
         "id": 1109068825,
-        "duration": 178913,
+        "duration": 178880,
         "url": "https://soundcloud.com/they-might-be-giants/part-of-you-wants-to-believe",
         "title": "Part of You Wants to Believe Me",
         "album": "Part of You Wants to Believe Me",
         "artist": "They Might Be Giants",
-        "originalTitle": "Part of You Wants to Believe Me"
+        "originalTitle": "Part of You Wants to Believe Me",
+        "exclusionReason": "Matching track on main release 'BOOK'"
     },
     {
         "id": 1109068852,
-        "duration": 171494,
+        "duration": 171466,
         "url": "https://soundcloud.com/they-might-be-giants/moonbeam-rays",
         "title": "Moonbeam Rays",
         "album": "BOOK",
@@ -5995,7 +5298,7 @@
     },
     {
         "id": 1109069497,
-        "duration": 145162,
+        "duration": 145133,
         "url": "https://soundcloud.com/they-might-be-giants/synopsis-for-latecomers",
         "title": "Synopsis for Latecomers",
         "album": "BOOK",
@@ -6004,7 +5307,7 @@
     },
     {
         "id": 1109071780,
-        "duration": 161750,
+        "duration": 161720,
         "url": "https://soundcloud.com/they-might-be-giants/drown-the-clown",
         "title": "Drown the Clown",
         "album": "BOOK",
@@ -6013,7 +5316,7 @@
     },
     {
         "id": 1109072179,
-        "duration": 184451,
+        "duration": 184413,
         "url": "https://soundcloud.com/they-might-be-giants/brontosaurus",
         "title": "Brontosaurus",
         "album": "BOOK",
@@ -6022,16 +5325,17 @@
     },
     {
         "id": 1109072635,
-        "duration": 131866,
+        "duration": 131840,
         "url": "https://soundcloud.com/they-might-be-giants/super-cool",
         "title": "Super Cool",
         "album": "Super Cool",
         "artist": "They Might Be Giants",
-        "originalTitle": "Super Cool"
+        "originalTitle": "Super Cool",
+        "exclusionReason": "Matching track on main release 'BOOK'"
     },
     {
         "id": 1109072722,
-        "duration": 172095,
+        "duration": 172066,
         "url": "https://soundcloud.com/they-might-be-giants/quit-the-circus",
         "title": "Quit the Circus",
         "album": "BOOK",
@@ -6040,7 +5344,7 @@
     },
     {
         "id": 1109072836,
-        "duration": 200281,
+        "duration": 200253,
         "url": "https://soundcloud.com/they-might-be-giants/wait-actually-yeah-no",
         "title": "Wait Actually Yeah No",
         "album": "BOOK",
@@ -6049,7 +5353,7 @@
     },
     {
         "id": 1109073154,
-        "duration": 135367,
+        "duration": 135320,
         "url": "https://soundcloud.com/they-might-be-giants/darling-the-dose",
         "title": "Darling, The Dose",
         "album": "BOOK",
@@ -6058,7 +5362,7 @@
     },
     {
         "id": 1109073334,
-        "duration": 145319,
+        "duration": 145280,
         "url": "https://soundcloud.com/they-might-be-giants/lord-snowden",
         "title": "Lord Snowdon",
         "album": "BOOK",
@@ -6067,7 +5371,7 @@
     },
     {
         "id": 1109073553,
-        "duration": 133564,
+        "duration": 133533,
         "url": "https://soundcloud.com/they-might-be-giants/if-day-for-winnipeg",
         "title": "If Day for Winnipeg",
         "album": "BOOK",
@@ -6076,39 +5380,12 @@
     },
     {
         "id": 1109077399,
-        "duration": 180010,
+        "duration": 179960,
         "url": "https://soundcloud.com/they-might-be-giants/less-than-one",
         "title": "Less Than One",
         "album": "BOOK",
         "artist": "They Might Be Giants",
         "originalTitle": "Less Than One"
-    },
-    {
-        "id": 1215914062,
-        "duration": 49058,
-        "url": "https://soundcloud.com/they-might-be-giants/macgyver",
-        "title": "MacGyver",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "MacGyver"
-    },
-    {
-        "id": 1215914239,
-        "duration": 177946,
-        "url": "https://soundcloud.com/they-might-be-giants/your-moms-alright",
-        "title": "Your Mom's Alright",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Your Mom's Alright"
-    },
-    {
-        "id": 1215916456,
-        "duration": 177711,
-        "url": "https://soundcloud.com/they-might-be-giants/boss-of-me",
-        "title": "Boss of Me",
-        "album": "Mink Car",
-        "artist": "They Might Be Giants",
-        "originalTitle": "Boss of Me"
     },
     {
         "id": 1507271491,
@@ -6140,7 +5417,7 @@
     },
     {
         "id": 1784531550,
-        "duration": 192967,
+        "duration": 192928,
         "url": "https://soundcloud.com/they-might-be-giants/lazy",
         "title": "Lazy",
         "album": "Lazy",
@@ -6149,7 +5426,7 @@
     },
     {
         "id": 1923931982,
-        "duration": 158955,
+        "duration": 158906,
         "url": "https://soundcloud.com/they-might-be-giants/ill-sink-manhattan-2",
         "title": "I'll Sink Manhattan",
         "album": "Beast of Horns (Sampler)",
@@ -6159,7 +5436,7 @@
     },
     {
         "id": 1923933263,
-        "duration": 229433,
+        "duration": 229386,
         "url": "https://soundcloud.com/they-might-be-giants/the-darlings-of-lumberland-4",
         "title": "The Darlings of Lumberland",
         "album": "Beast of Horns (Sampler)",
@@ -6169,7 +5446,7 @@
     },
     {
         "id": 1923934439,
-        "duration": 180167,
+        "duration": 180133,
         "url": "https://soundcloud.com/they-might-be-giants/when-will-you-die-2",
         "title": "When Will You Die?",
         "album": "Beast of Horns (Sampler)",
@@ -6179,7 +5456,7 @@
     },
     {
         "id": 1923938777,
-        "duration": 185182,
+        "duration": 185133,
         "url": "https://soundcloud.com/they-might-be-giants/doctor-worm-1",
         "title": "Doctor Worm",
         "album": "Beast of Horns (Sampler)",
@@ -6239,12 +5516,13 @@
     },
     {
         "id": 2255950721,
-        "duration": 189048,
+        "duration": 189000,
         "url": "https://soundcloud.com/they-might-be-giants/wu-tang",
         "title": "Wu-Tang",
-        "album": "The World Is to Dig",
+        "album": "Wu-Tang",
         "artist": "They Might Be Giants",
-        "originalTitle": "Wu-Tang"
+        "originalTitle": "Wu-Tang",
+        "exclusionReason": "Matching track on main release 'The World Is to Dig'"
     },
     {
         "id": 2269896833,
@@ -6398,6 +5676,1736 @@
         "album": "The World Is to Dig",
         "artist": "They Might Be Giants",
         "originalTitle": "Get Down"
+    },
+    {
+        "id": 2355375695,
+        "duration": 183389,
+        "url": "https://soundcloud.com/they-might-be-giants/get-down-michael-wilbur-remix",
+        "title": "Get Down",
+        "album": "Get Down",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Get Down (Michael Wilbur remix)",
+        "exclusionReason": "Matching track on main release 'The World Is to Dig'"
+    },
+    {
+        "id": 2362877267,
+        "duration": 130706,
+        "url": "https://soundcloud.com/they-might-be-giants/fibber-island-2",
+        "title": "Fibber Island",
+        "album": "No!",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Fibber Island"
+    },
+    {
+        "id": 2362877285,
+        "duration": 130706,
+        "url": "https://soundcloud.com/they-might-be-giants/fibber-island-3",
+        "title": "Fibber Island",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Fibber Island",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2369278667,
+        "duration": 101598,
+        "url": "https://soundcloud.com/they-might-be-giants/got-getting-up-so-down-2",
+        "title": "Got Getting Up So Down",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Got Getting Up So Down"
+    },
+    {
+        "id": 2369278685,
+        "duration": 177773,
+        "url": "https://soundcloud.com/they-might-be-giants/my-man-2",
+        "title": "My Man",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "My Man"
+    },
+    {
+        "id": 2369278703,
+        "duration": 239426,
+        "url": "https://soundcloud.com/they-might-be-giants/man-its-so-loud-in-here-2",
+        "title": "Man, It's So Loud in Here",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Man, It's So Loud in Here"
+    },
+    {
+        "id": 2369278733,
+        "duration": 150995,
+        "url": "https://soundcloud.com/they-might-be-giants/black-ops-alt-2",
+        "title": "Black Ops Alt",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Black Ops Alt"
+    },
+    {
+        "id": 2369278739,
+        "duration": 177906,
+        "url": "https://soundcloud.com/they-might-be-giants/your-moms-alright-1",
+        "title": "Your Mom's Alright",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Your Mom's Alright"
+    },
+    {
+        "id": 2369278742,
+        "duration": 138826,
+        "url": "https://soundcloud.com/they-might-be-giants/working-undercover-for-the-2",
+        "title": "Working Undercover for the Man",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Working Undercover for the Man"
+    },
+    {
+        "id": 2369278748,
+        "duration": 192747,
+        "url": "https://soundcloud.com/they-might-be-giants/it-said-something-2",
+        "title": "It Said Something",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "It Said Something"
+    },
+    {
+        "id": 2369278757,
+        "duration": 177773,
+        "url": "https://soundcloud.com/they-might-be-giants/my-man-3",
+        "title": "My Man",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "My Man",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369278760,
+        "duration": 208906,
+        "url": "https://soundcloud.com/they-might-be-giants/trouble-awful-devil-evil-3",
+        "title": "Trouble Awful Devil Evil",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Trouble Awful Devil Evil"
+    },
+    {
+        "id": 2369278772,
+        "duration": 189360,
+        "url": "https://soundcloud.com/they-might-be-giants/bangs-2",
+        "title": "Bangs",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Bangs"
+    },
+    {
+        "id": 2369278775,
+        "duration": 198293,
+        "url": "https://soundcloud.com/they-might-be-giants/finished-with-lies-2",
+        "title": "Finished with Lies",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Finished with Lies"
+    },
+    {
+        "id": 2369278778,
+        "duration": 239426,
+        "url": "https://soundcloud.com/they-might-be-giants/man-its-so-loud-in-here-3",
+        "title": "Man, It's So Loud in Here",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Man, It's So Loud in Here",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369278784,
+        "duration": 200253,
+        "url": "https://soundcloud.com/they-might-be-giants/wait-actually-yeah-no-2",
+        "title": "Wait Actually Yeah No",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Wait Actually Yeah No",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369278787,
+        "duration": 177906,
+        "url": "https://soundcloud.com/they-might-be-giants/your-moms-alright-2",
+        "title": "Your Mom's Alright",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Your Mom's Alright",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369278790,
+        "duration": 149091,
+        "url": "https://soundcloud.com/they-might-be-giants/i-am-alone-2",
+        "title": "I Am Alone",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Am Alone"
+    },
+    {
+        "id": 2369278799,
+        "duration": 138826,
+        "url": "https://soundcloud.com/they-might-be-giants/working-undercover-for-the-3",
+        "title": "Working Undercover for the Man",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Working Undercover for the Man",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369278844,
+        "duration": 198293,
+        "url": "https://soundcloud.com/they-might-be-giants/finished-with-lies-3",
+        "title": "Finished with Lies",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Finished with Lies",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369278862,
+        "duration": 189360,
+        "url": "https://soundcloud.com/they-might-be-giants/bangs-3",
+        "title": "Bangs",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Bangs",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297141,
+        "duration": 118093,
+        "url": "https://soundcloud.com/they-might-be-giants/older-3",
+        "title": "Older",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Older"
+    },
+    {
+        "id": 2369297177,
+        "duration": 133506,
+        "url": "https://soundcloud.com/they-might-be-giants/hovering-sombrero-2",
+        "title": "Hovering Sombrero",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Hovering Sombrero"
+    },
+    {
+        "id": 2369297183,
+        "duration": 158040,
+        "url": "https://soundcloud.com/they-might-be-giants/cyclops-rock-2",
+        "title": "Cyclops Rock",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Cyclops Rock"
+    },
+    {
+        "id": 2369297186,
+        "duration": 192373,
+        "url": "https://soundcloud.com/they-might-be-giants/i-cant-remember-the-dream-2",
+        "title": "I Can't Remember the Dream",
+        "album": "I Can't Remember the Dream",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Can't Remember the Dream",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2369297192,
+        "duration": 161720,
+        "url": "https://soundcloud.com/they-might-be-giants/drown-the-clown-2",
+        "title": "Drown the Clown",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Drown the Clown",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297213,
+        "duration": 118093,
+        "url": "https://soundcloud.com/they-might-be-giants/older-4",
+        "title": "Older",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Older",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297216,
+        "duration": 160133,
+        "url": "https://soundcloud.com/they-might-be-giants/yeh-yeh-2",
+        "title": "Yeh Yeh",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Yeh Yeh"
+    },
+    {
+        "id": 2369297225,
+        "duration": 179960,
+        "url": "https://soundcloud.com/they-might-be-giants/less-than-one-2",
+        "title": "Less Than One",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Less Than One",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297231,
+        "duration": 126673,
+        "url": "https://soundcloud.com/they-might-be-giants/impossibly-new-2",
+        "title": "Impossibly New",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Impossibly New"
+    },
+    {
+        "id": 2369297246,
+        "duration": 189000,
+        "url": "https://soundcloud.com/they-might-be-giants/wu-tang-3",
+        "title": "Wu-Tang",
+        "album": "Wu-Tang",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Wu-Tang",
+        "exclusionReason": "Matching track on main release 'The World Is to Dig'"
+    },
+    {
+        "id": 2369297255,
+        "duration": 158040,
+        "url": "https://soundcloud.com/they-might-be-giants/cyclops-rock-3",
+        "title": "Cyclops Rock",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Cyclops Rock",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297258,
+        "duration": 192373,
+        "url": "https://soundcloud.com/they-might-be-giants/i-cant-remember-the-dream-3",
+        "title": "I Can't Remember the Dream",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Can't Remember the Dream",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297261,
+        "duration": 133506,
+        "url": "https://soundcloud.com/they-might-be-giants/hovering-sombrero-3",
+        "title": "Hovering Sombrero",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Hovering Sombrero",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297288,
+        "duration": 160133,
+        "url": "https://soundcloud.com/they-might-be-giants/yeh-yeh-3",
+        "title": "Yeh Yeh",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Yeh Yeh",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297306,
+        "duration": 161868,
+        "url": "https://soundcloud.com/they-might-be-giants/say-nice-things-about-2",
+        "title": "Say Nice Things About Detroit",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Say Nice Things About Detroit"
+    },
+    {
+        "id": 2369297312,
+        "duration": 205000,
+        "url": "https://soundcloud.com/they-might-be-giants/certain-people-i-could-name-4",
+        "title": "Certain People I Could Name",
+        "album": "Long Tall Weekend (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Certain People I Could Name",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297315,
+        "duration": 202293,
+        "url": "https://soundcloud.com/they-might-be-giants/i-broke-my-own-rule-2",
+        "title": "I Broke My Own Rule",
+        "album": "I Broke My Own Rule",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Broke My Own Rule",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2369297324,
+        "duration": 189000,
+        "url": "https://soundcloud.com/they-might-be-giants/wu-tang-4",
+        "title": "Wu-Tang",
+        "album": "The World Is to Dig",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Wu-Tang"
+    },
+    {
+        "id": 2369297327,
+        "duration": 185133,
+        "url": "https://soundcloud.com/they-might-be-giants/doctor-worm-4",
+        "title": "Doctor Worm",
+        "album": "Beast of Horns (Sampler)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Doctor Worm",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2369297330,
+        "duration": 130303,
+        "url": "https://soundcloud.com/they-might-be-giants/to-a-forest-2",
+        "title": "To a Forest",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "To a Forest"
+    },
+    {
+        "id": 2369297333,
+        "duration": 192373,
+        "url": "https://soundcloud.com/they-might-be-giants/i-cant-remember-the-dream-4",
+        "title": "I Can't Remember the Dream",
+        "album": "Super Cool",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Can't Remember the Dream",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2369297339,
+        "duration": 167903,
+        "url": "https://soundcloud.com/they-might-be-giants/ill-be-haunting-you-2",
+        "title": "I'll Be Haunting You",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I'll Be Haunting You"
+    },
+    {
+        "id": 2369297342,
+        "duration": 111924,
+        "url": "https://soundcloud.com/they-might-be-giants/daylight-2",
+        "title": "Daylight",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Daylight"
+    },
+    {
+        "id": 2369297366,
+        "duration": 203880,
+        "url": "https://soundcloud.com/they-might-be-giants/certain-people-i-could-name-5",
+        "title": "Certain People I Could Name",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Certain People I Could Name",
+        "exclusionReason": "Matching track on main release 'Long Tall Weekend'"
+    },
+    {
+        "id": 2369297369,
+        "duration": 202293,
+        "url": "https://soundcloud.com/they-might-be-giants/i-broke-my-own-rule-3",
+        "title": "I Broke My Own Rule",
+        "album": "I Can't Remember the Dream",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Broke My Own Rule",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2369297372,
+        "duration": 192373,
+        "url": "https://soundcloud.com/they-might-be-giants/i-cant-remember-the-dream-5",
+        "title": "I Can't Remember the Dream",
+        "album": "Part of You Wants to Believe Me",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Can't Remember the Dream",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2369297375,
+        "duration": 96143,
+        "url": "https://soundcloud.com/they-might-be-giants/words-are-like-demo-3",
+        "title": "Words Are Like",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Words Are Like (Demo)",
+        "exclusionReason": "Used the version thats not from \"Idlewild: A Compilation\""
+    },
+    {
+        "id": 2369297426,
+        "duration": 161367,
+        "url": "https://soundcloud.com/they-might-be-giants/youre-on-fire-6",
+        "title": "You're on Fire",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "You're on Fire",
+        "exclusionReason": "Matching track on main release 'Nanobots'"
+    },
+    {
+        "id": 2369297429,
+        "duration": 202293,
+        "url": "https://soundcloud.com/they-might-be-giants/i-broke-my-own-rule-4",
+        "title": "I Broke My Own Rule",
+        "album": "BOOK",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Broke My Own Rule"
+    },
+    {
+        "id": 2369297432,
+        "duration": 189000,
+        "url": "https://soundcloud.com/they-might-be-giants/wu-tang-5",
+        "title": "Wu-Tang",
+        "album": "The World Is to Dig (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Wu-Tang",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297435,
+        "duration": 160050,
+        "url": "https://soundcloud.com/they-might-be-giants/careful-what-you-pack-4",
+        "title": "Careful What You Pack",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Careful What You Pack",
+        "exclusionReason": "Matching track on main release 'The Else'"
+    },
+    {
+        "id": 2369297489,
+        "duration": 202293,
+        "url": "https://soundcloud.com/they-might-be-giants/i-broke-my-own-rule-5",
+        "title": "I Broke My Own Rule",
+        "album": "Super Cool",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Broke My Own Rule",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2369297492,
+        "duration": 192373,
+        "url": "https://soundcloud.com/they-might-be-giants/i-cant-remember-the-dream-6",
+        "title": "I Can't Remember the Dream",
+        "album": "BOOK",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Can't Remember the Dream"
+    },
+    {
+        "id": 2369297537,
+        "duration": 202293,
+        "url": "https://soundcloud.com/they-might-be-giants/i-broke-my-own-rule-6",
+        "title": "I Broke My Own Rule",
+        "album": "Part of You Wants to Believe Me",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Broke My Own Rule",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2369297660,
+        "duration": 202293,
+        "url": "https://soundcloud.com/they-might-be-giants/i-broke-my-own-rule-7",
+        "title": "I Broke My Own Rule",
+        "album": "I Can't Remember the Dream",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Broke My Own Rule",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2369297705,
+        "duration": 202293,
+        "url": "https://soundcloud.com/they-might-be-giants/i-broke-my-own-rule-8",
+        "title": "I Broke My Own Rule",
+        "album": "Book (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Broke My Own Rule",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2369297912,
+        "duration": 117673,
+        "url": "https://soundcloud.com/they-might-be-giants/definition-of-good",
+        "title": "Definition of Good",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Definition of Good"
+    },
+    {
+        "id": 2369297924,
+        "duration": 112584,
+        "url": "https://soundcloud.com/they-might-be-giants/i-havent-seen-you-in-forever",
+        "title": "I Haven't Seen You in Forever",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "I Haven't Seen You in Forever"
+    },
+    {
+        "id": 2369297939,
+        "duration": 130165,
+        "url": "https://soundcloud.com/they-might-be-giants/thinking-machine",
+        "title": "Thinking Machine",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Thinking Machine"
+    },
+    {
+        "id": 2369297945,
+        "duration": 135764,
+        "url": "https://soundcloud.com/they-might-be-giants/long-white-beard-feat-robin-1",
+        "title": "Long White Beard",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Long White Beard (feat. Robin Goldwasser)"
+    },
+    {
+        "id": 2369297948,
+        "duration": 145146,
+        "url": "https://soundcloud.com/they-might-be-giants/then-the-kids-took-over",
+        "title": "Then the Kids Took Over",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Then the Kids Took Over"
+    },
+    {
+        "id": 2369297951,
+        "duration": 145645,
+        "url": "https://soundcloud.com/they-might-be-giants/i-made-a-mess",
+        "title": "I Made a Mess",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "I Made a Mess"
+    },
+    {
+        "id": 2369297957,
+        "duration": 111040,
+        "url": "https://soundcloud.com/they-might-be-giants/old-pine-box-2",
+        "title": "Old Pine Box",
+        "album": "Join Us",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Old Pine Box"
+    },
+    {
+        "id": 2369297981,
+        "duration": 136973,
+        "url": "https://soundcloud.com/they-might-be-giants/careless-santa-3",
+        "title": "Careless Santa",
+        "album": "Holidayland",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Careless Santa"
+    },
+    {
+        "id": 2369297984,
+        "duration": 128000,
+        "url": "https://soundcloud.com/they-might-be-giants/o-tannenbaum-3",
+        "title": "O Tannenbaum",
+        "album": "Holidayland",
+        "artist": "They Might Be Giants",
+        "originalTitle": "O Tannenbaum"
+    },
+    {
+        "id": 2369298017,
+        "duration": 158240,
+        "url": "https://soundcloud.com/they-might-be-giants/cloisonne-2",
+        "title": "Cloisonné",
+        "album": "Join Us",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Cloisonné"
+    },
+    {
+        "id": 2369298023,
+        "duration": 82333,
+        "url": "https://soundcloud.com/they-might-be-giants/clap-your-hands-4",
+        "title": "Clap Your Hands",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Clap Your Hands",
+        "exclusionReason": "Matching track on main release 'They Might Be Giants: Here Come the ABCs'"
+    },
+    {
+        "id": 2369298044,
+        "duration": 157737,
+        "url": "https://soundcloud.com/they-might-be-giants/cloisonne-3",
+        "title": "Cloisonné",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Cloisonné",
+        "exclusionReason": "Matching track on main release 'Join Us'"
+    },
+    {
+        "id": 2369298047,
+        "duration": 82419,
+        "url": "https://soundcloud.com/they-might-be-giants/clap-your-hands-5",
+        "title": "Clap Your Hands",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Clap Your Hands",
+        "exclusionReason": "Matching track on main release 'They Might Be Giants: Here Come the ABCs'"
+    },
+    {
+        "id": 2369298896,
+        "duration": 222400,
+        "url": "https://soundcloud.com/they-might-be-giants/they-got-lost-4",
+        "title": "They Got Lost",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "They Got Lost",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2369298914,
+        "duration": 200160,
+        "url": "https://soundcloud.com/they-might-be-giants/shes-an-angel-4",
+        "title": "She's An Angel",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "She's an Angel",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2369843216,
+        "duration": 89906,
+        "url": "https://soundcloud.com/they-might-be-giants/no-2",
+        "title": "No!",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "No!",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2369843219,
+        "duration": 120493,
+        "url": "https://soundcloud.com/they-might-be-giants/john-lee-supertaster-2",
+        "title": "John Lee Supertaster",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "John Lee Supertaster",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2369843237,
+        "duration": 34480,
+        "url": "https://soundcloud.com/they-might-be-giants/i-am-a-grocery-bag-2",
+        "title": "I Am a Grocery Bag",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "I Am a Grocery Bag",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2369843240,
+        "duration": 150480,
+        "url": "https://soundcloud.com/they-might-be-giants/the-house-at-the-top-of-the-2",
+        "title": "The House at the Top of the Tree",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "The House at the Top of the Tree",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2369843276,
+        "duration": 160986,
+        "url": "https://soundcloud.com/they-might-be-giants/where-do-they-make-balloons-2",
+        "title": "Where Do They Make Balloons?",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Where Do They Make Balloons?",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2370476063,
+        "duration": 129106,
+        "url": "https://soundcloud.com/they-might-be-giants/mink-car-2",
+        "title": "Mink Car",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Mink Car"
+    },
+    {
+        "id": 2370476066,
+        "duration": 129106,
+        "url": "https://soundcloud.com/they-might-be-giants/mink-car-3",
+        "title": "Mink Car",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Mink Car",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476126,
+        "duration": 131840,
+        "url": "https://soundcloud.com/they-might-be-giants/super-cool-2",
+        "title": "Super Cool",
+        "album": "BOOK",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Super Cool"
+    },
+    {
+        "id": 2370476129,
+        "duration": 178880,
+        "url": "https://soundcloud.com/they-might-be-giants/part-of-you-wants-to-believe-2",
+        "title": "Part of You Wants to Believe Me",
+        "album": "BOOK",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Part of You Wants to Believe Me"
+    },
+    {
+        "id": 2370476132,
+        "duration": 171466,
+        "url": "https://soundcloud.com/they-might-be-giants/moonbeam-rays-2",
+        "title": "Moonbeam Rays",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Moonbeam Rays",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476138,
+        "duration": 89238,
+        "url": "https://soundcloud.com/they-might-be-giants/what-did-i-do-to-you-2",
+        "title": "What Did I Do to You?",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "What Did I Do to You?"
+    },
+    {
+        "id": 2370476144,
+        "duration": 139521,
+        "url": "https://soundcloud.com/they-might-be-giants/cant-keep-johnny-down-4",
+        "title": "Can't Keep Johnny Down",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Can't Keep Johnny Down",
+        "exclusionReason": "Matching track on main release 'Join Us'"
+    },
+    {
+        "id": 2370476150,
+        "duration": 178880,
+        "url": "https://soundcloud.com/they-might-be-giants/part-of-you-wants-to-believe-3",
+        "title": "Part of You Wants to Believe Me",
+        "album": "Book (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Part of You Wants to Believe Me",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476153,
+        "duration": 131840,
+        "url": "https://soundcloud.com/they-might-be-giants/super-cool-3",
+        "title": "Super Cool",
+        "album": "Part of You Wants to Believe Me",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Super Cool",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2370476177,
+        "duration": 131840,
+        "url": "https://soundcloud.com/they-might-be-giants/super-cool-4",
+        "title": "Super Cool",
+        "album": "Book (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Super Cool",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476198,
+        "duration": 157373,
+        "url": "https://soundcloud.com/they-might-be-giants/she-thinks-shes-edith-head-3",
+        "title": "She Thinks She's Edith Head",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "She Thinks She's Edith Head"
+    },
+    {
+        "id": 2370476207,
+        "duration": 153583,
+        "url": "https://soundcloud.com/they-might-be-giants/apophenia-2",
+        "title": "Apophenia",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Apophenia"
+    },
+    {
+        "id": 2370476210,
+        "duration": 157373,
+        "url": "https://soundcloud.com/they-might-be-giants/she-thinks-shes-edith-head-4",
+        "title": "She Thinks She's Edith Head",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "She Thinks She's Edith Head",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476219,
+        "duration": 158786,
+        "url": "https://soundcloud.com/they-might-be-giants/damn-good-times-4",
+        "title": "Damn Good Times",
+        "album": "The Spine (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Damn Good Times",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476222,
+        "duration": 176880,
+        "url": "https://soundcloud.com/they-might-be-giants/experimental-film-4",
+        "title": "Experimental Film",
+        "album": "The Spine (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Experimental Film",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476231,
+        "duration": 175644,
+        "url": "https://soundcloud.com/they-might-be-giants/experimental-film-5",
+        "title": "Experimental Film",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Experimental Film",
+        "exclusionReason": "Matching track on main release 'The Spine'"
+    },
+    {
+        "id": 2370476240,
+        "duration": 158848,
+        "url": "https://soundcloud.com/they-might-be-giants/damn-good-times-5",
+        "title": "Damn Good Times",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Damn Good Times",
+        "exclusionReason": "Matching track on main release 'The Spine'"
+    },
+    {
+        "id": 2370476243,
+        "duration": 152066,
+        "url": "https://soundcloud.com/they-might-be-giants/ive-got-a-fang-2",
+        "title": "I've Got a Fang",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I've Got a Fang"
+    },
+    {
+        "id": 2370476249,
+        "duration": 109226,
+        "url": "https://soundcloud.com/they-might-be-giants/drink-3",
+        "title": "Drink!",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Drink!"
+    },
+    {
+        "id": 2370476252,
+        "duration": 135320,
+        "url": "https://soundcloud.com/they-might-be-giants/darling-the-dose-2",
+        "title": "Darling, The Dose",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Darling, The Dose",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476255,
+        "duration": 152066,
+        "url": "https://soundcloud.com/they-might-be-giants/ive-got-a-fang-3",
+        "title": "I've Got a Fang",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I've Got a Fang",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476258,
+        "duration": 109226,
+        "url": "https://soundcloud.com/they-might-be-giants/drink-4",
+        "title": "Drink!",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Drink!",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476273,
+        "duration": 158974,
+        "url": "https://soundcloud.com/they-might-be-giants/im-impressed-3",
+        "title": "I'm Impressed",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I'm Impressed",
+        "exclusionReason": "Matching track on main release 'The Else'"
+    },
+    {
+        "id": 2370476297,
+        "duration": 184413,
+        "url": "https://soundcloud.com/they-might-be-giants/brontosaurus-3",
+        "title": "Brontosaurus",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Brontosaurus",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370476303,
+        "duration": 196143,
+        "url": "https://soundcloud.com/they-might-be-giants/bills-bills-bills-2",
+        "title": "Bills, Bills, Bills",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Bills, Bills, Bills"
+    },
+    {
+        "id": 2370476306,
+        "duration": 124847,
+        "url": "https://soundcloud.com/they-might-be-giants/tesla-5",
+        "title": "Tesla",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Tesla",
+        "exclusionReason": "Matching track on main release 'Nanobots'"
+    },
+    {
+        "id": 2370476336,
+        "duration": 145280,
+        "url": "https://soundcloud.com/they-might-be-giants/lord-snowdon-1",
+        "title": "Lord Snowdon",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Lord Snowdon",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2370477707,
+        "duration": 101294,
+        "url": "https://soundcloud.com/they-might-be-giants/omnicorn",
+        "title": "Omnicorn",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Omnicorn"
+    },
+    {
+        "id": 2370477710,
+        "duration": 130234,
+        "url": "https://soundcloud.com/they-might-be-giants/so-crazy-for-books",
+        "title": "So Crazy for Books",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "So Crazy for Books"
+    },
+    {
+        "id": 2370477713,
+        "duration": 136155,
+        "url": "https://soundcloud.com/they-might-be-giants/oh-you-did-feat-robin-1",
+        "title": "Oh You Did",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Oh You Did (feat. Robin Goldwasser)"
+    },
+    {
+        "id": 2370477749,
+        "duration": 125848,
+        "url": "https://soundcloud.com/they-might-be-giants/i-am-invisible",
+        "title": "I Am Invisible",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "I Am Invisible"
+    },
+    {
+        "id": 2370477752,
+        "duration": 82810,
+        "url": "https://soundcloud.com/they-might-be-giants/and-mom-and-kid",
+        "title": "And Mom and Kid",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "And Mom and Kid"
+    },
+    {
+        "id": 2370477755,
+        "duration": 156157,
+        "url": "https://soundcloud.com/they-might-be-giants/out-of-a-tree",
+        "title": "Out of a Tree",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Out of a Tree"
+    },
+    {
+        "id": 2370477770,
+        "duration": 156000,
+        "url": "https://soundcloud.com/they-might-be-giants/feast-of-lights-3",
+        "title": "Feast of Lights",
+        "album": "Holidayland",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Feast of Lights"
+    },
+    {
+        "id": 2370480275,
+        "duration": 52773,
+        "url": "https://soundcloud.com/they-might-be-giants/spider-3",
+        "title": "Spider",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Spider",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2370480281,
+        "duration": 171160,
+        "url": "https://soundcloud.com/they-might-be-giants/till-my-head-falls-off-3",
+        "title": "Till My Head Falls Off",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Till My Head Falls Off",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2370480284,
+        "duration": 180293,
+        "url": "https://soundcloud.com/they-might-be-giants/ana-ng-5",
+        "title": "Ana Ng",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Ana Ng",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2370480302,
+        "duration": 90506,
+        "url": "https://soundcloud.com/they-might-be-giants/meet-james-ensor-3",
+        "title": "Meet James Ensor",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Meet James Ensor",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2370480314,
+        "duration": 95733,
+        "url": "https://soundcloud.com/they-might-be-giants/first-kiss-2",
+        "title": "First Kiss",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "First Kiss",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2370480317,
+        "duration": 187333,
+        "url": "https://soundcloud.com/they-might-be-giants/istanbul-not-constantinople-4",
+        "title": "Istanbul",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Istanbul (Not Constantinople)",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2370681857,
+        "duration": 64053,
+        "url": "https://soundcloud.com/they-might-be-giants/i-am-not-your-broom-2",
+        "title": "I Am Not Your Broom",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "I Am Not Your Broom",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2370681860,
+        "duration": 160480,
+        "url": "https://soundcloud.com/they-might-be-giants/sleepwalkers-2",
+        "title": "Sleepwalkers",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Sleepwalkers",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2370681863,
+        "duration": 208173,
+        "url": "https://soundcloud.com/they-might-be-giants/lazyhead-and-sleepybones-1",
+        "title": "Lazyhead and Sleepybones",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Lazyhead and Sleepybones",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2370681896,
+        "duration": 82440,
+        "url": "https://soundcloud.com/they-might-be-giants/robot-parade-2",
+        "title": "Robot Parade",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Robot Parade",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2370681899,
+        "duration": 70080,
+        "url": "https://soundcloud.com/they-might-be-giants/wake-up-call-2",
+        "title": "Wake up Call",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Wake up Call",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2370681902,
+        "duration": 122520,
+        "url": "https://soundcloud.com/they-might-be-giants/the-edison-museum-3",
+        "title": "The Edison Museum",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "The Edison Museum",
+        "exclusionReason": "Matching track on main release 'Long Tall Weekend'"
+    },
+    {
+        "id": 2370681914,
+        "duration": 146613,
+        "url": "https://soundcloud.com/they-might-be-giants/violin-2",
+        "title": "Violin",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Violin",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2370681917,
+        "duration": 192093,
+        "url": "https://soundcloud.com/they-might-be-giants/bed-bed-bed-2",
+        "title": "Bed Bed Bed",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Bed Bed Bed",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2371288904,
+        "duration": 229386,
+        "url": "https://soundcloud.com/they-might-be-giants/the-darlings-of-lumberland-8",
+        "title": "The Darlings of Lumberland",
+        "album": "Beast of Horns (Sampler)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "The Darlings of Lumberland",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371288907,
+        "duration": 132000,
+        "url": "https://soundcloud.com/they-might-be-giants/wicked-little-critta-2",
+        "title": "Wicked Little Critta",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Wicked Little Critta"
+    },
+    {
+        "id": 2371288910,
+        "duration": 172066,
+        "url": "https://soundcloud.com/they-might-be-giants/quit-the-circus-2",
+        "title": "Quit the Circus",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Quit the Circus",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371288919,
+        "duration": 132000,
+        "url": "https://soundcloud.com/they-might-be-giants/wicked-little-critta-3",
+        "title": "Wicked Little Critta",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Wicked Little Critta",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371288946,
+        "duration": 180133,
+        "url": "https://soundcloud.com/they-might-be-giants/when-will-you-die-5",
+        "title": "When Will You Die?",
+        "album": "Beast of Horns (Sampler)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "When Will You Die?",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371288952,
+        "duration": 133533,
+        "url": "https://soundcloud.com/they-might-be-giants/if-day-for-winnipeg-2",
+        "title": "If Day for Winnipeg",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "If Day for Winnipeg",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371288961,
+        "duration": 175683,
+        "url": "https://soundcloud.com/they-might-be-giants/the-mesopotamians-4",
+        "title": "The Mesopotamians",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "The Mesopotamians",
+        "exclusionReason": "Matching track on main release 'The Else'"
+    },
+    {
+        "id": 2371289021,
+        "duration": 140446,
+        "url": "https://soundcloud.com/they-might-be-giants/who-are-the-electors-2",
+        "title": "Who Are the Electors?",
+        "album": "Who Are the Electors? (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Who Are the Electors?",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371289024,
+        "duration": 186400,
+        "url": "https://soundcloud.com/they-might-be-giants/another-first-kiss-2",
+        "title": "Another First Kiss",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Another First Kiss"
+    },
+    {
+        "id": 2371289027,
+        "duration": 49026,
+        "url": "https://soundcloud.com/they-might-be-giants/macgyver-1",
+        "title": "MacGyver",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "MacGyver"
+    },
+    {
+        "id": 2371289030,
+        "duration": 49026,
+        "url": "https://soundcloud.com/they-might-be-giants/macgyver-2",
+        "title": "MacGyver",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "MacGyver",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371289033,
+        "duration": 176251,
+        "url": "https://soundcloud.com/they-might-be-giants/ecnalubma-2",
+        "title": "ECNALUBMA",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "ECNALUBMA"
+    },
+    {
+        "id": 2371289036,
+        "duration": 186400,
+        "url": "https://soundcloud.com/they-might-be-giants/another-first-kiss-3",
+        "title": "Another First Kiss",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Another First Kiss",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371289072,
+        "duration": 177666,
+        "url": "https://soundcloud.com/they-might-be-giants/boss-of-me-1",
+        "title": "Boss of Me",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Boss of Me"
+    },
+    {
+        "id": 2371289075,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-2",
+        "title": "I Lost Thursday",
+        "album": "I Lost Thursday",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2371289078,
+        "duration": 192928,
+        "url": "https://soundcloud.com/they-might-be-giants/lazy-2",
+        "title": "Lazy",
+        "album": "Lazy (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Lazy",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371289084,
+        "duration": 91049,
+        "url": "https://soundcloud.com/they-might-be-giants/i-wasnt-listening-2",
+        "title": "I Wasn't Listening",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Wasn't Listening"
+    },
+    {
+        "id": 2371289087,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-3",
+        "title": "I Lost Thursday",
+        "album": "I Broke My Own Rule",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2371289090,
+        "duration": 180655,
+        "url": "https://soundcloud.com/they-might-be-giants/i-love-you-for-psychological-2",
+        "title": "I Love You for Psychological Reasons",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Love You for Psychological Reasons"
+    },
+    {
+        "id": 2371289093,
+        "duration": 177666,
+        "url": "https://soundcloud.com/they-might-be-giants/boss-of-me-2",
+        "title": "Boss of Me",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Boss of Me",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371289099,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-4",
+        "title": "I Lost Thursday",
+        "album": "I Can't Remember the Dream",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2371289111,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-5",
+        "title": "I Lost Thursday",
+        "album": "Book (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371289123,
+        "duration": 65533,
+        "url": "https://soundcloud.com/they-might-be-giants/robot-parade-adult-version-2",
+        "title": "Robot Parade",
+        "album": "Mink Car",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Robot Parade (Adult Version)"
+    },
+    {
+        "id": 2371289126,
+        "duration": 145133,
+        "url": "https://soundcloud.com/they-might-be-giants/synopsis-for-latecomers-2",
+        "title": "Synopsis for Latecomers",
+        "album": "BOOK (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Synopsis for Latecomers",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371289132,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-6",
+        "title": "I Lost Thursday",
+        "album": "Super Cool",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2371289141,
+        "duration": 65533,
+        "url": "https://soundcloud.com/they-might-be-giants/robot-parade-adult-version-3",
+        "title": "Robot Parade",
+        "album": "Mink Car (Duplicate)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Robot Parade (Adult Version)",
+        "exclusionReason": "Album is a duplicate"
+    },
+    {
+        "id": 2371289147,
+        "duration": 122828,
+        "url": "https://soundcloud.com/they-might-be-giants/sold-my-mind-to-the-kremlin-2",
+        "title": "Sold My Mind to the Kremlin",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Sold My Mind to the Kremlin"
+    },
+    {
+        "id": 2371289150,
+        "duration": 191532,
+        "url": "https://soundcloud.com/they-might-be-giants/shape-shifter-2",
+        "title": "Shape Shifter",
+        "album": "Phone Power",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Shape Shifter"
+    },
+    {
+        "id": 2371289156,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-7",
+        "title": "I Lost Thursday",
+        "album": "Part of You Wants to Believe Me",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2371289159,
+        "duration": 63773,
+        "url": "https://soundcloud.com/they-might-be-giants/robot-parade-adult-version-4",
+        "title": "Robot Parade",
+        "album": "Working Undercover for the Man",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Robot Parade (Adult Version)",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2371289165,
+        "duration": 174874,
+        "url": "https://soundcloud.com/they-might-be-giants/the-lady-and-the-tiger-3",
+        "title": "The Lady and the Tiger",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "The Lady and the Tiger",
+        "exclusionReason": "Matching track on main release 'Join Us'"
+    },
+    {
+        "id": 2371289177,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-8",
+        "title": "I Lost Thursday",
+        "album": "I Broke My Own Rule",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2371289186,
+        "duration": 158906,
+        "url": "https://soundcloud.com/they-might-be-giants/ill-sink-manhattan-5",
+        "title": "I'll Sink Manhattan",
+        "album": "Beast of Horns (Sampler)",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I'll Sink Manhattan",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371289195,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-9",
+        "title": "I Lost Thursday",
+        "album": "I Can't Remember the Dream",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday",
+        "exclusionReason": "Matching track on main release 'BOOK'"
+    },
+    {
+        "id": 2371289207,
+        "duration": 194933,
+        "url": "https://soundcloud.com/they-might-be-giants/i-lost-thursday-204363153",
+        "title": "I Lost Thursday",
+        "album": "BOOK",
+        "artist": "They Might Be Giants",
+        "originalTitle": "I Lost Thursday"
+    },
+    {
+        "id": 2371290263,
+        "duration": 68221,
+        "url": "https://soundcloud.com/they-might-be-giants/i-just-want-to-dance",
+        "title": "I Just Want to Dance",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "I Just Want to Dance"
+    },
+    {
+        "id": 2371290269,
+        "duration": 134784,
+        "url": "https://soundcloud.com/they-might-be-giants/or-so-i-have-read",
+        "title": "Or So I Have Read",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Or so I Have Read"
+    },
+    {
+        "id": 2371290272,
+        "duration": 175293,
+        "url": "https://soundcloud.com/they-might-be-giants/santa-claus-3",
+        "title": "Santa Claus",
+        "album": "Holidayland",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Santa Claus"
+    },
+    {
+        "id": 2371290311,
+        "duration": 127762,
+        "url": "https://soundcloud.com/they-might-be-giants/walking-my-cat-named-dog",
+        "title": "Walking My Cat Named Dog",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Walking My Cat Named Dog"
+    },
+    {
+        "id": 2371290314,
+        "duration": 126505,
+        "url": "https://soundcloud.com/they-might-be-giants/moles-hounds-bears-bees-and-1",
+        "title": "Moles, Hounds, Bears, Bees and Hares",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Moles, Hounds, Bears, Bees and Hares"
+    },
+    {
+        "id": 2371290320,
+        "duration": 137927,
+        "url": "https://soundcloud.com/they-might-be-giants/hello-mrs-wheelyke",
+        "title": "Hello Mrs. Wheelyke",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Hello Mrs. Wheelyke"
+    },
+    {
+        "id": 2371290323,
+        "duration": 157602,
+        "url": "https://soundcloud.com/they-might-be-giants/elephants-feat-danny-weinkauf",
+        "title": "Elephants",
+        "album": "Why?",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Elephants (feat. Danny Weinkauf)"
+    },
+    {
+        "id": 2371290332,
+        "duration": 113800,
+        "url": "https://soundcloud.com/they-might-be-giants/santas-beard-6",
+        "title": "Santa's Beard",
+        "album": "Holidayland",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Santa's Beard",
+        "exclusionReason": "Matching track on main release 'Lincoln'"
+    },
+    {
+        "id": 2371290347,
+        "duration": 183333,
+        "url": "https://soundcloud.com/they-might-be-giants/am-i-awake-5",
+        "title": "Am I Awake?",
+        "album": "Idlewild: A Compilation",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Am I Awake?",
+        "exclusionReason": "Used the version thats not from \"Idlewild: A Compilation\""
+    },
+    {
+        "id": 2371292897,
+        "duration": 39733,
+        "url": "https://soundcloud.com/they-might-be-giants/severe-tire-damage-theme-2",
+        "title": "Severe Tire Damage Theme",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Severe Tire Damage Theme"
+    },
+    {
+        "id": 2371292906,
+        "duration": 129066,
+        "url": "https://soundcloud.com/they-might-be-giants/particle-man-3",
+        "title": "Particle Man",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Particle Man",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371292912,
+        "duration": 181400,
+        "url": "https://soundcloud.com/they-might-be-giants/about-me-2",
+        "title": "About Me",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "About Me",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371292921,
+        "duration": 181533,
+        "url": "https://soundcloud.com/they-might-be-giants/doctor-worm-6",
+        "title": "Doctor Worm",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Doctor Worm"
+    },
+    {
+        "id": 2371292924,
+        "duration": 186026,
+        "url": "https://soundcloud.com/they-might-be-giants/s-e-x-x-y-3",
+        "title": "S-E-X-X-Y",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "S-E-X-X-Y",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371292927,
+        "duration": 219506,
+        "url": "https://soundcloud.com/they-might-be-giants/xtc-vs-adam-ant-3",
+        "title": "XTC vs. Adam Ant",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Xtc vs. Adam Ant",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371293062,
+        "duration": 136066,
+        "url": "https://soundcloud.com/they-might-be-giants/shes-actual-size-3",
+        "title": "She's Actual Size",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "She's Actual Size",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371293071,
+        "duration": 136893,
+        "url": "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine-the-3",
+        "title": "Why Does the Sun Shine?",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371293074,
+        "duration": 191973,
+        "url": "https://soundcloud.com/they-might-be-giants/birdhouse-in-your-soul-3",
+        "title": "Birdhouse in Your Soul",
+        "album": "Severe Tire Damage",
+        "artist": "They Might Be Giants",
+        "originalTitle": "Birdhouse in Your Soul",
+        "exclusionReason": "Live Track"
+    },
+    {
+        "id": 2371443737,
+        "duration": 75346,
+        "url": "https://soundcloud.com/they-might-be-giants/in-the-middle-in-the-middle-2",
+        "title": "In the Middle, In the Middle, In the Middle",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "In the Middle, In the Middle, In the Middle",
+        "exclusionReason": "Matching track on main release 'No!'"
+    },
+    {
+        "id": 2371443767,
+        "duration": 137746,
+        "url": "https://soundcloud.com/they-might-be-giants/four-of-two-2",
+        "title": "Four of Two",
+        "album": "No! (Deluxe Edition)",
+        "artist": "They Might Be Giants (For Kids)",
+        "originalTitle": "Four of Two",
+        "exclusionReason": "Matching track on main release 'No!'"
     },
     {
         "id": 1098164427953,

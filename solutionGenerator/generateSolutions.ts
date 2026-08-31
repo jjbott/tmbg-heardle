@@ -13,8 +13,9 @@ import { findNearDuplicateTitles } from "./findNearDuplicateTitles.js";
 import { fixTitle, fixTitles } from "./fixTitles.js";
 import moment from "moment";
 import { fixAlbums } from "./fixAlbums.js";
+import { remapUrl } from "./remapUrls.js";
 
-const generateStarting = "2026-05-14";
+const generateStarting = "2031-01-01";
 const generateThrough = "2030-12-31";
 
 // At least 6 months before we can see the same answer again
@@ -44,7 +45,7 @@ songs.forEach((s) => {
     // Store off the original so we can still easily differentiate when needed.
     s.originalTitle = s.title;
 });
-    
+
 fixTitles(songs);
 fixAlbums(songs);
 
@@ -58,100 +59,113 @@ songs.forEach((s) => {
     if (!s.album) {
         const albumTrack = albumTracks.find((at) => at.title == s.title);
         if (!albumTrack) {
-            return true;
-        } else {
             // This track does not have an album, but there are no matches with an album, so keep it.
+            return;
+        } else {
             s.exclusionReason = `Has no album, but found matching track on "${albumTrack.album}" with url ${albumTrack.url}`;
         }
     }
 });
 
-// TODO: For debugging, remove
-fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs, null, 4));
+// Filter out anything from a "(Duplicate)" album
+songs
+    .filter((s) => !s.exclusionReason && s.album?.endsWith("(Duplicate)"))
+    .forEach((s) => {
+        s.exclusionReason = "Album is a duplicate";
+    });
 
 filteredData = [];
-songs.forEach((s) => {
-    // Exceptions to the below
-    // We mostly dont want compilations/live albums, but there are exceptions with individual tracks.
-    // Notably "Doctor Worm" is on a "live" album, but it's not live.
-    // TODO: There are probably lots more that we could add
-    const allowedTracks = [
-        "https://soundcloud.com/they-might-be-giants/doctor-worm",
-        "https://soundcloud.com/they-might-be-giants/severe-tire-damage-theme",
-        // At a quick glance I think these 'Then: The Earlier Years' tracks are fine. I hope... *I* like them anyways
-        "https://soundcloud.com/they-might-be-giants/now-that-i-have-everything",
-        "https://soundcloud.com/they-might-be-giants/weep-day",
-        "https://soundcloud.com/they-might-be-giants/im-gettin-sentimental-over-you",
-        "https://soundcloud.com/they-might-be-giants/become-a-robot",
-        // Fairly distinct from the other verion, so not really a dupe
-        "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine-the-1",
-        "https://soundcloud.com/they-might-be-giants/robot-parade-adult-version",
-        "https://soundcloud.com/they-might-be-giants/kiss-me-sun-of-god-alternate"
-    ];
-    if (allowedTracks.find((t) => t == s.url)) {
-        return;
-    }
-
-    // Skip anything from a live album
-    // They tend to start with nonsense, which is unfair.
-    // Many could be fine, but limiting to studio versions for now.
-    if (s.album == "Severe Tire Damage" || s.album == "At Large" || s.album == "Beast of Horns (Sampler)") {
-        s.exclusionReason = "Live Track";
-        return;
-    }
-
-    // Manually skip `Eyeball` EP 
-    if (s.album == "Eyeball" ) {
-        s.exclusionReason = "EP tracks, skipping for now";
-        return;
-    }
-
-    var matches = songs.filter((t) => t.title === s.title && t.url !== s.url);
-    if (matches.length === 0) {
-        return;
-    }
-
-    // Prefer main releases
-    const mainReleases = [
-        "Apollo 18",
-        "BOOK",
-        "Factory Showroom",
-        "Flood",
-        "Glean",
-        "Here Come the 123s",
-        "Here Comes Science",
-        "I Like Fun",
-        "John Henry",
-        "Join Us",
-        "Lincoln",
-        "Long Tall Weekend",
-        "Mink Car",
-        "No!",
-        "The Spine",
-        "The World Is to Dig",
-        "They Might Be Giants: Here Come the ABCs",
-        "They Might Be Giants"
-    ];
-    const songOnMainRelease = mainReleases.find((mr) => mr === s.album);
-    const matchesOnMainRelease = matches.filter((m) => mainReleases.find((mr) => mr === m.album));
-    if (matchesOnMainRelease.length > 0) {
-        if (songOnMainRelease) {
-            // These have matches on other "main" albums.
-            // Leave these alone and let the other be treated as a dupe
-            if (s.album === "No!" || s.album === "Mink Car") {
-                return;
-            }
-
-            // These albums are the ones causing dupes on the above.
-            // Throw for anything else
-            if (s.album !== "They Might Be Giants: Here Come the ABCs" && s.album !== "Long Tall Weekend") {
-                throw new Error(`Song ${s.title} on 'main' release has a match on another 'main' release`);
-            }
+songs
+    .filter((s) => !s.exclusionReason)
+    .forEach((s) => {
+        // Exceptions to the below
+        // We mostly dont want compilations/live albums, but there are exceptions with individual tracks.
+        // Notably "Doctor Worm" is on a "live" album, but it's not live.
+        // TODO: There are probably lots more that we could add
+        const allowedTracks = [
+            "https://soundcloud.com/they-might-be-giants/doctor-worm-6",
+            "https://soundcloud.com/they-might-be-giants/severe-tire-damage-theme-2",
+            // At a quick glance I think these 'Then: The Earlier Years' tracks are fine. I hope... *I* like them anyways
+            "https://soundcloud.com/they-might-be-giants/now-that-i-have-everything",
+            "https://soundcloud.com/they-might-be-giants/weep-day",
+            "https://soundcloud.com/they-might-be-giants/im-gettin-sentimental-over-you",
+            "https://soundcloud.com/they-might-be-giants/become-a-robot",
+            // Fairly distinct from the other verion, so not really a dupe
+            "https://soundcloud.com/they-might-be-giants/why-does-the-sun-shine-the-1",
+            "https://soundcloud.com/they-might-be-giants/robot-parade-adult-version-2",
+            "https://soundcloud.com/they-might-be-giants/kiss-me-sun-of-god-alternate"
+        ];
+        if (allowedTracks.find((t) => t == s.url)) {
+            return;
         }
-        s.exclusionReason = `Matching track on main release '${matchesOnMainRelease[0].album}'`;
-        return;
-    }
-});
+
+        // Skip anything from a live album
+        // They tend to start with nonsense, which is unfair.
+        // Many could be fine, but limiting to studio versions for now.
+        if (s.album == "Severe Tire Damage" || s.album == "At Large" || s.album == "Beast of Horns (Sampler)") {
+            s.exclusionReason = "Live Track";
+            return;
+        }
+
+        // Manually skip `Eyeball` EP
+        if (s.album == "Eyeball") {
+            s.exclusionReason = "EP tracks, skipping for now";
+            return;
+        }
+
+        var matches = songs.filter((t) => t.title === s.title && t.url !== s.url);
+        if (matches.length === 0) {
+            return;
+        }
+
+        // Prefer main releases
+        const mainReleases = [
+            "Apollo 18",
+            "BOOK",
+            "Factory Showroom",
+            "Flood",
+            "Glean",
+            "Here Come the 123s",
+            "Here Comes Science",
+            "I Like Fun",
+            "John Henry",
+            "Join Us",
+            "Lincoln",
+            "Long Tall Weekend",
+            "Mink Car",
+            "Nanobots",
+            "No!",
+            "The Else",
+            "The Spine",
+            "The World Is to Dig",
+            "They Might Be Giants: Here Come the ABCs",
+            "They Might Be Giants"
+        ];
+        const songOnMainRelease = mainReleases.find((mr) => mr === s.album);
+        const matchesOnMainRelease = matches.filter((m) => mainReleases.find((mr) => mr === m.album));
+        if (matchesOnMainRelease.length > 0) {
+            if (songOnMainRelease) {
+                // These have matches on other "main" albums.
+                // Leave these alone and let the other be treated as a dupe
+                if (s.album === "No!" || s.album === "Mink Car") {
+                    return;
+                }
+
+                // These albums are the ones causing dupes on the above.
+                // Throw for anything else
+                if (s.album !== "They Might Be Giants: Here Come the ABCs" && s.album !== "Long Tall Weekend") {
+                    throw new Error(
+                        `Song "${s.title}" on 'main' release "${s.album}" has a match on another 'main' release: "${matchesOnMainRelease[0].album}"`
+                    );
+                }
+            }
+            if (s.album === matchesOnMainRelease[0].album) {
+                throw new Error("Duplicate album match for " + s.title + " on " + s.album);
+            }
+            s.exclusionReason = `Matching track on main release '${matchesOnMainRelease[0].album}'`;
+            return;
+        }
+    });
 
 // TODO: For debugging, remove
 fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs, null, 4));
@@ -230,6 +244,18 @@ Object.keys(byTitle)
             return;
         }
 
+        // Ignore "Idlewild: A Compilation" when it's the only duplicate
+        if (
+            matchingSongs.length == 2 &&
+            matchingSongs.find((s) => s.album === "Idlewild: A Compilation") &&
+            matchingSongs.find((s) => s.album !== "Idlewild: A Compilation")
+        ) {
+            matchingSongs.find((s) => s.album === "Idlewild: A Compilation")!.exclusionReason =
+                'Used the version thats not from "Idlewild: A Compilation"';
+
+            return;
+        }
+
         if (
             matchingSongs.length == 2 &&
             matchingSongs[0].album == "Venue Songs" &&
@@ -245,7 +271,7 @@ Object.keys(byTitle)
 
         const replacementsByUrl: Record<string, string> = {
             "https://soundcloud.com/they-might-be-giants/doctor-worm-bonus-live-version":
-                "https://soundcloud.com/they-might-be-giants/doctor-worm"
+                "https://soundcloud.com/they-might-be-giants/doctor-worm-6"
         };
 
         if (matchingSongs.length == 2) {
@@ -254,9 +280,12 @@ Object.keys(byTitle)
                 hasReplacement[0].exclusionReason = "Replaced with " + replacementsByUrl[hasReplacement[0].url];
                 return;
             } else if (hasReplacement.length > 1) {
-                throw new Error("All matches have a potential replacement");
+                throw new Error("Multiple replacement otions found, not sure which to use");
             }
         }
+
+        // If we've made it here, we have multiple songs with the same title.
+        // They may be removed by editorial changes, so we'll ignore them for now and do a final check at the end.
     });
 
 byTitle = Object.groupBy(
@@ -295,7 +324,6 @@ songs
         // Horibly flawed and inconsistent, but whatever, it has been working.
         // Like, I enjoy "Savoy Truffle", but according to Spotify that's very obsure...
         // Whatever, I'm keeping it. :)
-
 
         // "Album Raises New and Troubling Questions" was removed from Soundcloud.
         // Keeping this code for now though...
@@ -351,8 +379,9 @@ songs
             s.url === "https://soundcloud.com/they-might-be-giants/you-are-old-father-william" ||
             s.url === "https://soundcloud.com/they-might-be-giants/choo-choo-express" ||
             s.url === "https://soundcloud.com/they-might-be-giants/ive-been-seeing-things" ||
-            s.url === "https://soundcloud.com/they-might-be-giants/who-are-the-electors" ||
-            s.url === "https://soundcloud.com/they-might-be-giants/through-being-cool-album"
+            s.url === "https://soundcloud.com/they-might-be-giants/through-being-cool-album" ||
+            // Multiple with this title
+            s.title === "Who Are the Electors?"
         ) {
             s.exclusionReason = "Feels too obsure";
         }
@@ -379,10 +408,36 @@ songs
             s.exclusionReason = "Essentially a duplicate of the main Fake-Believe";
         }
 
-        if (s.url === "https://soundcloud.com/they-might-be-giants/tmbgs-john-f-guest-djs-on-indie-1032-co-public-radios-sunday-rewind") {
+        if (
+            s.url ===
+            "https://soundcloud.com/they-might-be-giants/tmbgs-john-f-guest-djs-on-indie-1032-co-public-radios-sunday-rewind"
+        ) {
             s.exclusionReason = "Radio interview, not a song";
         }
     });
+
+// All editorial changes are done.
+// At this point we should have our final list of songs that will be used.
+// Do a final duplicate title check
+byTitle = Object.groupBy(
+    songs.filter((s) => !s.exclusionReason),
+    (s) => s.title
+);
+for (const title of Object.keys(byTitle).filter((title) => byTitle[title]!.length > 1)) {
+    // We explicitly allowed these above. Probably a better way to whitelist these...
+    if (
+        byTitle[title]!.length === 2 &&
+        (title == "Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)" ||
+            title == "Kiss Me, Son Of God" ||
+            title == "Robot Parade")
+    ) {
+        continue;
+    }
+
+    throw new Error(
+        `Found ${byTitle[title]!.length} songs with the same title "${title}". Please fix these before proceeding.`
+    );
+}
 
 songs
     .filter((s) => !s.exclusionReason)
@@ -409,14 +464,37 @@ songs
         }
     });
 
+// remap any old urls if necessary.
+// We use the urls as an id, so if they've changed it's important that we update them
+for (const oldAnswer of oldPotentialAnswers) {
+    oldAnswer.url = remapUrl(oldAnswer.url);
+}
+
+// Find any other old URLs that need remapping
+const oldToNewMap = new Map<string, string>();
+for (const oldAnswer of oldPotentialAnswers.filter(a => a.url)) {
+    const newAnswer = songs.find((s) => s.url === oldAnswer.url && !s.exclusionReason);
+    if (!newAnswer) {
+        const newMatchesByTitle = songs.filter((s) => s.title.toLowerCase() === oldAnswer.answer.toLowerCase() && !s.exclusionReason);
+        if (newMatchesByTitle.length > 0) {
+            oldToNewMap.set(oldAnswer.url, newMatchesByTitle.map((a) => a.url).join(", "));
+        }
+    }
+}
+if ( oldToNewMap.size > 0 ) {
+    throw new Error("Found new potential URL mappings. Copy them into remapUrl.ts as needed")
+}
+
+// Ensure that all songs that we've ever used are still in the main song list,
+// unless we've since started excluding it
 (oldPotentialAnswers as Array<{ answer: string; url: string }>).forEach((s) => {
-    const song = songs.find((a) => a.url === s.url);
+    let song = songs.find((a) => a.url === s.url);
     if (!song) {
         console.log(`Old potential answer no longer in SoundCloud: ${s.answer}, ${s.url}. Patching!`);
 
         // Add the missing song to the new song list
         // so we still have data to tie to old occurrences.
-        
+
         // For example, game id 1327, `2025-11-17`, `Tubthumping`.
         // That will no longer work since the song is gone.
         // But we need something for `2025-11-17` in the solution array.
@@ -442,7 +520,14 @@ songs
 });
 
 // We've fully processed everything, save off the data including exclusion reasons
-fs.writeFileSync("./cache/processedSongData.json", JSON.stringify(songs.sort((a, b) => a.id - b.id), null, 4));
+fs.writeFileSync(
+    "./cache/processedSongData.json",
+    JSON.stringify(
+        songs.sort((a, b) => a.id - b.id),
+        null,
+        4
+    )
+);
 
 function check(answer: Answer, date: Date, queue: Answer[]) {
     const dateString = moment.utc(date).format("YYYY-MM-DD");
@@ -470,36 +555,36 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
     ];
 
     if (feastOfLights.includes(dateString)) {
-        return answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-1";
-    } else if (answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-1") {
+        return answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-3";
+    } else if (answer.url === "https://soundcloud.com/they-might-be-giants/feast-of-lights-3") {
         return false;
     }
 
-    if (dayString === '01-01') {
+    if (dayString === "01-01") {
         return answer.url === "https://soundcloud.com/they-might-be-giants/careful-what-you-pack-2";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/careful-what-you-pack-2") {
         return false;
     }
 
-    if (dayString === '10-08') {
+    if (dayString === "10-08") {
         return answer.url === "https://soundcloud.com/they-might-be-giants/other-father-song";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/other-father-song") {
         return false;
     }
 
-    if (dayString === '04-26') {
+    if (dayString === "04-26") {
         return answer.url === "https://soundcloud.com/they-might-be-giants/its-not-my-birthday-1";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/its-not-my-birthday-1") {
         return false;
     }
 
-    if (dayString === '08-01') {
+    if (dayString === "08-01") {
         return answer.url === "https://soundcloud.com/they-might-be-giants/stuff-is-way-1";
     } else if (answer.url === "https://soundcloud.com/they-might-be-giants/stuff-is-way-1") {
         return false;
     }
 
-    if (dateString === '2026-04-14') {
+    if (dateString === "2026-04-14") {
         return answer.url === "https://soundcloud.com/they-might-be-giants/wu-tang";
     }
 
@@ -522,10 +607,17 @@ function check(answer: Answer, date: Date, queue: Answer[]) {
         }
     }
 
-    var isXmasSong =
-        answer.url === "https://soundcloud.com/they-might-be-giants/santas-beard-4" ||
-        answer.url === "https://soundcloud.com/they-might-be-giants/santa-claus-1" ||
-        answer.url === "https://soundcloud.com/they-might-be-giants/o-tannenbaum-1";
+    const xmasSongs = [
+        "https://soundcloud.com/they-might-be-giants/santas-beard-4",
+        "https://soundcloud.com/they-might-be-giants/santa-claus-1",
+        "https://soundcloud.com/they-might-be-giants/santa-claus-3",
+        "https://soundcloud.com/they-might-be-giants/o-tannenbaum-1",
+        "https://soundcloud.com/they-might-be-giants/o-tannenbaum-3",
+        // new additions for 2026+
+        "https://soundcloud.com/they-might-be-giants/careless-santa-3"
+    ];
+
+    var isXmasSong = xmasSongs.includes(answer.url);
 
     if (queue.slice(Math.max(queue.length - minDaysBetweenSameAnswer, 0)).some((a) => a.url === answer.url)) {
         return false;
@@ -603,7 +695,8 @@ while (answers[answers.length - 1].date < generateThrough) {
             // Probably because the "special day" code is awful and relies on random chance to pick the correct song.
             // If we fail, just restart the app and try again. We could solve it, but, eh, maybe someday.
             if (n > 100000) {
-                throw new Error("Got stuck generating new answers! Try again");
+                saveAnswers(answers);
+                //throw new Error("Got stuck generating new answers! Try again");
             }
 
             ++n;
@@ -635,15 +728,13 @@ const newPotentialAnswers = songs
 answerIndexes.forEach((index) => {
     const potentialAnswer = oldPotentialAnswers[index];
     if (!newPotentialAnswers.find((a) => a.url === potentialAnswer.url)) {
-        
-        // We may have old answers that we've changes the title of since.
+        // We may have old answers that we've changed the title of since.
         // Fix those up so we dont accidentally end up with duplicate titles in the answer list.
         // TODO: If we enable viewing old games,
         // this may cause problems if their stored answer doesnt match anymore
         potentialAnswer.answer = fixTitle(potentialAnswer.answer, potentialAnswer.url);
 
         newPotentialAnswers.push(potentialAnswer);
-
     }
 });
 
