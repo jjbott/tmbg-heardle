@@ -18,24 +18,44 @@
     let guessesMaybe = Array(config.maxAttempts);
 
     function onCopyToClipboard() {
-        let e = "TMBG Heardle #" + (currentHeardle.id + 1),
-            t = "";
-        gotCorrect
-            ? userGuesses.length < config.maxAttempts / 3
-                ? (t += "🔊")
-                : userGuesses.length < (config.maxAttempts / 3) * 2
-                  ? (t += "🔉")
-                  : userGuesses.length <= config.maxAttempts && (t += "🔈")
-            : (t += "🔇");
-        for (let e = 0; e < config.maxAttempts; e++)
-            userGuesses.length > e
-                ? 1 == userGuesses[e].isCorrect
-                    ? (t += "🟩")
-                    : 1 == userGuesses[e].isSkipped
-                      ? (t += "⬛️")
-                      : (t += "🟥")
-                : (t += "⬜️");
-        let o = e + "\n\n" + t + "\n\nhttps://tmbg-heardle.pages.dev/";
+        let url = new URL('https://tmbg-heardle.pages.dev');        
+        url.searchParams.set('date', currentHeardle.gameDate);
+
+        const title = "TMBG Heardle #" + (currentHeardle.id + 1);
+        let guessGlyphs = "";
+
+        if ( gotCorrect ) {
+            if ( userGuesses.length < config.maxAttempts / 3 ) {
+                guessGlyphs += "🔊"
+            }
+            else if (userGuesses.length < (config.maxAttempts / 3) * 2 ) {
+                guessGlyphs += "🔉"
+            }
+            else {
+                guessGlyphs += "🔈"
+            }
+        }
+        else {
+            guessGlyphs  += "🔇"
+        }
+
+        for (let e = 0; e < config.maxAttempts; e++) {
+            if ( userGuesses.length > e ) {
+                if ( userGuesses[e].isCorrect ) {
+                    guessGlyphs  += "🟩"
+                }
+                else if ( userGuesses[e].isSkipped ) {
+                    guessGlyphs  += "⬛️"
+                }
+                else {
+                    guessGlyphs  += "🟥"
+                }
+            } else {
+                guessGlyphs  += "⬜️";
+            }
+        }
+        let shareText = title + "\n\n" + guessGlyphs  + "\n\n" + url.toString();
+
         if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
@@ -52,7 +72,7 @@
                 setTimeout(() => {
                     copiedMessageActive = false;
                 }, 2e3);
-                return navigator.clipboard.writeText(o);
+                return navigator.clipboard.writeText(shareText);
             } else {
                 return Promise.reject("There was a problem copying your result to the clipboard");
             }
@@ -60,7 +80,7 @@
 
         navigator
             .share({
-                text: o
+                text: shareText
             })
             .then(() => {
                 ga.addEvent("clickSharePanel", {

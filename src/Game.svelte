@@ -69,6 +69,7 @@
         url: $fullAnswerList[answerIndex].url,
         correctAnswer: $fullAnswerList[answerIndex].answer,
         id,
+        gameDate: gameDate.format('YYYY-MM-DD'),
         guessList: [],
         hasFinished: !1,
         hasStarted: !1,
